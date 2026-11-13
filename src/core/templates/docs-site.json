@@ -1,0 +1,23 @@
+{
+  "id": "docs-site",
+  "version": 1,
+  "pack": "documents",
+  "label": "Documentation site",
+  "description": "Markdown docs with a getting-started guide, built into a static site.",
+  "brief": {
+    "fields": {
+      "audience": { "choices": ["developers"] },
+      "tone": { "choices": ["technical"] },
+      "format": { "choices": ["markdown", "html-site"] },
+      "citations": { "choices": ["links"] }
+    }
+  },
+  "task": "Set up a documentation site in this empty folder. Write the pages in Markdown under docs/: index.md (what this is and who it is for), getting-started.md (install and a first example), guides/ with one how-to page, and reference.md with a skeleton to fill in. Build it with VitePress: package.json with the scripts docs:dev, docs:build and docs:preview, and docs/.vitepress/config.mts with the navigation and sidebar for these pages. Add a test script that checks every relative Markdown link points to a page that exists. Add a .gitignore for node_modules and the build output, and a README.md that says how to write a page, preview the site and build it.",
+  "recipe": "write-docs",
+  "create": {
+    "command": "npx vitepress init",
+    "shell": "any",
+    "note": "VitePress asks a few questions. Run it in the new folder before you press Run; the run then builds on what it created."
+  },
+  "tags": ["docs", "markdown", "vitepress"]
+}

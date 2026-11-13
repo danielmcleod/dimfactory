@@ -1,0 +1,108 @@
+name: Codex weekly
+
+# Weekly Codex checks: the generated protocol types are diffed against the latest CLI's, and the P0 stdin replay runs
+# against the latest CLI. Nothing here needs an account, a secret or a token: the generators and the handshake run with
+# an empty temp CODEX_HOME, and no thread or turn is ever started. Actions are pinned to full commit SHAs (the same pins
+# as release.yml).
+
+on:
+  schedule:
+    - cron: '17 5 * * 1' # Mondays, 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: codex-weekly
+  cancel-in-progress: false
+
+jobs:
+  # The latest CLI's generate-ts / generate-json-schema against the committed protocol/v0.160.0. Fails only when a
+  # required method is gone or a shape Dim Factory relies on broke (scripts/gen-codex-types.mjs --check).
+  type-diff:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          # No pnpm here (npm installs the Codex CLI), so no pnpm cache either.
+          package-manager-cache: false
+      - name: Install the latest Codex CLI
+        run: |
+          npm install -g @openai/codex@latest
+          codex --version
+      - name: Diff the generated protocol against the committed one
+        run: node scripts/gen-codex-types.mjs --check --bin codex --report codex-type-diff.md
+      - name: Report
+        if: always()
+        run: test -f codex-type-diff.md && cat codex-type-diff.md >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Upload the report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: codex-type-diff
+          path: codex-type-diff.md
+          if-no-files-found: ignore
+          retention-days: 30
+
+  # P0 stdin replay against the latest CLI: every host frame Dim Factory sends in the committed fixtures validated
+  # against the latest CLI's own schema, then X01b's handshake (initialize, initialized, windowsSandbox/readiness)
+  # replayed live against it. Windows runs the standalone installer (the install command Dim Factory suggests), Linux
+  # the npm package.
+  stdin-replay:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          # No pnpm here (npm installs the Codex CLI), so no pnpm cache either.
+          package-manager-cache: false
+      - name: Install the latest Codex CLI (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"
+          $bin = Join-Path $env:LOCALAPPDATA 'Programs\OpenAI\Codex\bin\codex.exe'
+          & $bin --version
+          "CODEX_BIN=$bin" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+      - name: Install the latest Codex CLI (Linux)
+        if: runner.os != 'Windows'
+        run: |
+          npm install -g @openai/codex@latest
+          echo "CODEX_BIN=$(command -v codex)" >> "$GITHUB_ENV"
+          codex --version
+      - name: The latest CLI's schema
+        shell: bash
+        # The type-diff job judges the difference; this job only needs the bundle.
+        run: node scripts/gen-codex-types.mjs --check --bin "$CODEX_BIN" --schema-out latest-schema || true
+      - name: Every recorded host frame against the latest schema
+        shell: bash
+        run: >-
+          node scripts/codex-fixture-check.mjs --schema latest-schema/codex_app_server_protocol.schemas.json
+          --report codex-fixtures-latest.md
+      - name: The probe handshake against the latest CLI
+        shell: bash
+        run: node scripts/codex-fixture-check.mjs --live-handshake --bin "$CODEX_BIN" --report codex-handshake-latest.md
+      - name: Report
+        if: always()
+        shell: bash
+        run: cat codex-*-latest.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || true
+      - name: Upload the reports
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: codex-stdin-replay-${{ matrix.os }}
+          path: |
+            codex-*-latest.md
+            latest-schema/
+          if-no-files-found: ignore
+          retention-days: 30

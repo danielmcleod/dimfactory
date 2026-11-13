@@ -1,0 +1,238 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "c4a81f06-7e2d-4b93-a5c8-19f0e3d6b2a4"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "I'll check Anthropic's "
+  },
+  {
+    "type": "text",
+    "delta": "official pricing page."
+  },
+  {
+    "type": "context",
+    "used": 39204,
+    "cacheRead": 15202,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "context",
+    "used": 39204,
+    "cacheRead": 39202,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthSearch0001",
+    "name": "WebSearch",
+    "summary": "Anthropic Claude API pricing per million tokens",
+    "phase": "start",
+    "fp": "2cdf0ab2e38e"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthSearch0001",
+    "name": "WebSearch",
+    "summary": "Anthropic Claude API pricing per million tokens",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 80
+  },
+  {
+    "type": "context",
+    "used": 40404,
+    "cacheRead": 39202,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthFetchDenied1",
+    "name": "WebFetch",
+    "summary": "https://pricing-aggregator.example/anthropic",
+    "phase": "start",
+    "fp": "fe47470f4e5e"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthFetchDenied1",
+    "name": "WebFetch",
+    "summary": "https://pricing-aggregator.example/anthropic",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 63
+  },
+  {
+    "type": "context",
+    "used": 41304,
+    "cacheRead": 40402,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthFetchPrice1",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "phase": "start",
+    "fp": "a212386b8460"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthFetchPrice1",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 92
+  },
+  {
+    "type": "context",
+    "used": 42504,
+    "cacheRead": 42202,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthStructBad1",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "start",
+    "fp": "33c98f469b77"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthStructBad1",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "end",
+    "status": "failed",
+    "outTokens": 29
+  },
+  {
+    "type": "context",
+    "used": 43404,
+    "cacheRead": 43102,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthStructBad2",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "start",
+    "fp": "33c98f469b77"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthStructBad2",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "end",
+    "status": "failed",
+    "outTokens": 29
+  },
+  {
+    "type": "context",
+    "used": 44304,
+    "cacheRead": 44002,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthStructBad3",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "start",
+    "fp": "33c98f469b77"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthStructBad3",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "end",
+    "status": "failed",
+    "outTokens": 29
+  },
+  {
+    "type": "context",
+    "used": 44304,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "meta",
+    "key": "usage",
+    "value": {
+      "input": 14,
+      "output": 470,
+      "cacheRead": 180110,
+      "cacheWrite": 28100,
+      "costUsd": 0.15315
+    }
+  },
+  {
+    "type": "error",
+    "message": "Failed to provide valid structured output after 3 attempts",
+    "raw": "{\"type\":\"result\",\"subtype\":\"error_max_structured_output_retries\",\"is_error\":true,\"duration_ms\":11200,\"duration_api_ms\":10800,\"num_turns\":7,\"errors\":[\"Failed to provide valid structured output after 3 attempts\"],\"stop_reason\":\"tool_use\",\"session_id\":\"c4a81f06-7e2d-4b93-a5c8-19f0e3d6b2a4\",\"total_cost_usd\":0.15315,\"usage\":{\"input_tokens\":14,\"cache_creation_input_tokens\":28100,\"cache_read_input_tokens\":180110,\"output_tokens\":470,\"server_tool_use\":{\"web_search_requests\":1,\"web_fetch_requests\":2},\"service_tier\":\"standard\"},\"modelUsage\":{\"claude-sonnet-5-5\":{\"inputTokens\":14,\"outputTokens\":470,\"cacheReadInputTokens\":180110,\"cacheCreationInputTokens\":28100,\"webSearchRequests\":1,\"costUSD\":0.15315,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"canonicalModel\":\"claude-sonnet-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[{\"tool_name\":\"WebFetch\",\"tool_use_id\":\"toolu_01SynthFetchDenied1\",\"tool_input\":{\"url\":\"https://pricing-aggregator.example/anthropic\",\"prompt\":\"List the per-token prices\"}}],\"terminal_reason\":\"structured_output_retry_exhausted\",\"uuid\":\"[REDACTED]\",\"result_index\":0}",
+    "fatal": true,
+    "category": "stream_malformed"
+  }
+]

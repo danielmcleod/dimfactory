@@ -1,0 +1,172 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e29e6-6809-4bb8-81f8-27757e539a3f"
+  },
+  {
+    "type": "text",
+    "delta": "C’ei laremma con scib lat con itte qua `src/index.ts`, turd lorqu temreip con poritiplorusei maporse utte etameld lovenipm."
+  },
+  {
+    "type": "tool",
+    "id": "item_1",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_1",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_2",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_3",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_4",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_3",
+    "name": "shell",
+    "phase": "end",
+    "status": "failed"
+  },
+  {
+    "type": "tool",
+    "id": "item_2",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_4",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_5",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_6",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_7",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_7",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_6",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_5",
+    "name": "shell",
+    "phase": "end",
+    "status": "failed"
+  },
+  {
+    "type": "tool",
+    "id": "item_8",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_8",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_9",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_10",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_11",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_11",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_9",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_10",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "[should] C sit’e adsedpo `src/index.ts` gnaelad con scib: no scib sc inbolab si con ussumtesi, lat `git diff` matec no itsitl ci madunt—con ippo maporse `HEAD`.\n\nPortur venmods con scib do con elamsumt itte, lat C sit madunt us gnaelad con tegnasitmaci."
+  },
+  {
+    "type": "done",
+    "result": "[should] C sit’e adsedpo `src/index.ts` gnaelad con scib: no scib sc inbolab si con ussumtesi, lat `git diff` matec no itsitl ci madunt—con ippo maporse `HEAD`.\n\nPortur venmods con scib do con elamsumt itte, lat C sit madunt us gnaelad con tegnasitmaci.",
+    "usage": {
+      "input": 31764,
+      "output": 1120,
+      "cacheRead": 51968,
+      "cacheWrite": 0,
+      "reasoning": 488
+    }
+  }
+]

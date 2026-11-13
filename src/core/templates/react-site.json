@@ -1,0 +1,160 @@
+{
+  "id": "react-site",
+  "version": 1,
+  "pack": "software",
+  "label": "Website or app (React)",
+  "description": "A website or app in React with Vite and TypeScript, from a working starter with a real look: light and dark, phone to desktop, navigation and loading states. Needs Node.js.",
+  "brief": {
+    "fields": {
+      "projectType": {
+        "choices": ["spa"]
+      },
+      "deliverable": {
+        "choices": ["spa-bundle"]
+      },
+      "platform": {
+        "choices": ["web"]
+      },
+      "language": {
+        "choices": ["typescript"]
+      },
+      "uiFramework": {
+        "choices": ["react"]
+      },
+      "styling": {
+        "choices": ["plain-css"]
+      },
+      "backend": {
+        "choices": ["none"]
+      },
+      "hosting": {
+        "choices": ["static-host"]
+      },
+      "quality": {
+        "choices": ["responsive", "accessible", "dark-mode", "seo"]
+      }
+    }
+  },
+  "task": "Make this website or app with React in this empty folder (Node.js is installed). Dim Factory already put a working starter here (Vite, React and TypeScript): read docs/starter.md first, keep its structure and adapt it to the request: the words in src/content.ts, the pages in src/pages/ and src/App.tsx, the look in src/styles/tokens.css. First run npm install with no package names; add a package only when the request needs one (npm install <name>). Keep what the starter has: design tokens for every colour, size and corner, in light and dark, with at least 4.5:1 contrast for text; a layout that works from a 360 px phone to a wide screen; real navigation (src/lib/router.tsx) with a skip link, visible focus and landmarks; loading, empty and error states for anything that loads (src/components/States.tsx); the not-found page. Write every word in the language of the request, and set <html lang> on every page to that language. No lorem ipsum: write real, specific words for the request, and never invent the owner's facts (prices, hours, addresses, testimonials): keep each as [Fill in: ...] and list them in the README under Things to fill in. Pictures: keep the marked image slots (src/components/ImageSlot.tsx, assets/README.md) instead of stock photos. Nothing comes from other websites (no hot-linked fonts or images, no CDN), and there are no trackers, ads or analytics. Publish-ready: fill in the title, the description and the social preview tags in index.html; keep public/favicon.svg, public/social-preview.png, public/_redirects and the 404.html copy the build makes. No secret key goes in the page or in a VITE_ variable. Keep and extend src/App.test.tsx (Vitest) for each page and what it does. npm test and npm run build must pass, and Dim Factory opens the built page in dist/ to check that it loads without console errors, so run npm run build before you finish. Add a .gitignore for node_modules and dist, and a README.md: what it is, how to open it (npm install, then npm run dev), how to build it for sharing (npm run build makes dist/), Things to fill in, and credits (the starter from Dim Factory, MIT).",
+  "recipe": "new-web-app",
+  "files": [
+    {
+      "from": "react-package-json",
+      "to": "package.json"
+    },
+    {
+      "from": "react-index-html",
+      "to": "index.html"
+    },
+    {
+      "from": "react-vite-config-ts",
+      "to": "vite.config.ts"
+    },
+    {
+      "from": "react-tsconfig-json",
+      "to": "tsconfig.json"
+    },
+    {
+      "from": "react-content-ts",
+      "to": "src/content.ts"
+    },
+    {
+      "from": "react-lib-router-tsx",
+      "to": "src/lib/router.tsx"
+    },
+    {
+      "from": "react-lib-theme-ts",
+      "to": "src/lib/theme.ts"
+    },
+    {
+      "from": "react-lib-useasync-ts",
+      "to": "src/lib/useAsync.ts"
+    },
+    {
+      "from": "react-components-states-tsx",
+      "to": "src/components/States.tsx"
+    },
+    {
+      "from": "react-components-imageslot-tsx",
+      "to": "src/components/ImageSlot.tsx"
+    },
+    {
+      "from": "react-components-themetoggle-tsx",
+      "to": "src/components/ThemeToggle.tsx"
+    },
+    {
+      "from": "react-components-layout-tsx",
+      "to": "src/components/Layout.tsx"
+    },
+    {
+      "from": "react-pages-home-tsx",
+      "to": "src/pages/Home.tsx"
+    },
+    {
+      "from": "react-pages-about-tsx",
+      "to": "src/pages/About.tsx"
+    },
+    {
+      "from": "react-pages-notfound-tsx",
+      "to": "src/pages/NotFound.tsx"
+    },
+    {
+      "from": "react-app-tsx",
+      "to": "src/App.tsx"
+    },
+    {
+      "from": "react-main-tsx",
+      "to": "src/main.tsx"
+    },
+    {
+      "from": "react-styles-tokens-css",
+      "to": "src/styles/tokens.css"
+    },
+    {
+      "from": "react-styles-global-css",
+      "to": "src/styles/global.css"
+    },
+    {
+      "from": "react-app-test-tsx",
+      "to": "src/App.test.tsx"
+    },
+    {
+      "from": "react-public-redirects",
+      "to": "public/_redirects"
+    },
+    {
+      "from": "react-public-favicon-svg",
+      "to": "public/favicon.svg"
+    },
+    {
+      "from": "react-public-social-preview-png",
+      "to": "public/social-preview.png"
+    },
+    {
+      "from": "react-assets-readme-md",
+      "to": "assets/README.md"
+    },
+    {
+      "from": "react-docs-starter-md",
+      "to": "docs/starter.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Tests",
+      "run": ["npm", "run", "test"],
+      "needs": "node"
+    },
+    {
+      "name": "Build",
+      "run": ["npm", "run", "build"],
+      "needs": "node"
+    },
+    {
+      "name": "Page loads (Dim Factory)",
+      "run": ["dimf:pageload", "dist/index.html"]
+    }
+  ],
+  "tags": ["web", "react", "vite", "typescript", "needs-node"],
+  "webStarter": true
+}

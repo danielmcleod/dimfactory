@@ -1,0 +1,6 @@
+# X09h-error-model-unsupported: The profile's configured model, refused for a ChatGPT login: error{willRetry:false} and turn/completed failed with codexErrorInfo "other" and a 400 invalid_request_error → model_unavailable. No token is spent.
+# Recorded with codex-cli 0.160.1 (read-only feature switches: features.apps, features.plugins, features.hooks = false) (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# The first X02 attempt (X02's recipe without a model), on a profile whose configured model the login cannot use; only the header's scenario name was set afterwards.
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/app-server/X09h-error-model-unsupported --id X09h --slug error-model-unsupported --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/X09h-error-model-unsupported/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X09h-error-model-unsupported/pass.json

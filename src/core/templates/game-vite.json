@@ -1,0 +1,73 @@
+{
+  "id": "game-vite",
+  "version": 1,
+  "pack": "games",
+  "label": "Vite + TypeScript game",
+  "description": "A browser game written in TypeScript with Vite: a dev server while you work, a small static build to share. Needs Node.js.",
+  "brief": {
+    "fields": {
+      "genre": {
+        "choices": ["arcade"]
+      },
+      "engine": {
+        "choices": ["vite-ts"]
+      },
+      "controls": {
+        "choices": ["keyboard", "touch"]
+      },
+      "players": {
+        "choices": ["solo"]
+      },
+      "platform": {
+        "choices": ["desktop", "phone"]
+      },
+      "sound": {
+        "choices": ["effects"]
+      },
+      "save": {
+        "choices": ["high-score", "settings"]
+      },
+      "accessibility": {
+        "choices": ["remap", "pause", "reduced-motion", "colour-safe", "no-flashing"]
+      },
+      "deliverable": {
+        "choices": ["single-page", "itch-zip"]
+      },
+      "constraints": {
+        "choices": ["original-art", "no-network", "no-ads"]
+      },
+      "approach": {
+        "choices": ["core-loop-first", "playtested"]
+      }
+    }
+  },
+  "task": "Make a browser game in this empty folder with Vite and TypeScript (Node.js is installed): package.json with the scripts dev (vite), build (tsc --noEmit && vite build, with base \"./\" in vite.config.ts so dist/ works from any folder), preview (vite preview) and test (vitest run); index.html; tsconfig.json; src/main.ts drawing on a canvas that scales to the window. Dim Factory already put starter modules in src/engine/ (MIT, plain JavaScript with JSDoc): loop.js, rng.js, input.js, storage.js and test-hook.js (window.__game, only with ?test=1); docs/game-test-hook.md explains them. Import them from TypeScript (allowJs) and do not rewrite them. Every game has: a title screen with how to play and a start button; play; pause with P or Esc and when the window loses focus; game over or a win with the score and Restart; a Settings screen for keys, sound, reduced motion and a colour-safe palette, saved with storage.js. Big on-screen buttons drive the same actions on a phone. Sound, if any, is made with the Web Audio API after the first key or tap. Draw all art in code. Use original names, characters and art: familiar mechanics are fine, but never copy a famous game's name, characters, logo, art, music or sounds. Everything the game uses is in the project: no CDN, no network, no third-party scripts, ads or trackers, no eval or new Function. Text a player types is shown with textContent. In src/main.js wire the test hook with a state() that reports scene ('title', 'playing', 'paused', 'over' or 'won'), score, lives and level, and a setSeed that restarts with a seed. Write the plan's acceptance criteria as things a player does and sees, and write playtest.json (data, not code) with one scenario per criterion, as docs/game-test-hook.md shows: Dim Factory plays it with real key presses as a Verify check, so a scenario marked must has to pass. Dim Factory plays the built game in dist/: run the build before you finish so dist/ is up to date. Keep the rules in plain modules under src/game/ with no DOM in them, with Vitest tests for them (the same seed gives the same result). Add a .gitignore for node_modules and dist, and a README.md: how to play, how to install and run it (npm install, npm run dev), how to build and share it (npm run build, then zip dist/ for itch.io as an HTML5 game), and credits (the starter files from Dim Factory, MIT). Make it feel good to play: every action gets clear feedback (a sound, a flash or a small movement), the first moments are easy and it gets harder step by step, and the end of a game shows how it went with a quick way to play again.",
+  "recipe": "new-game",
+  "files": [
+    {
+      "from": "game-loop",
+      "to": "src/engine/loop.js"
+    },
+    {
+      "from": "game-rng",
+      "to": "src/engine/rng.js"
+    },
+    {
+      "from": "game-input",
+      "to": "src/engine/input.js"
+    },
+    {
+      "from": "game-storage",
+      "to": "src/engine/storage.js"
+    },
+    {
+      "from": "game-test-hook",
+      "to": "src/engine/test-hook.js"
+    },
+    {
+      "from": "game-test-hook-doc",
+      "to": "docs/game-test-hook.md"
+    }
+  ],
+  "tags": ["game", "vite", "typescript"]
+}

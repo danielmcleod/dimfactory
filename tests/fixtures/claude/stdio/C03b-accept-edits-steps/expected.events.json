@@ -1,0 +1,222 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4ea589-6184-434f-850b-c2050a902568"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25671,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4emvGkaHm03Yd7VjtjMct9",
+    "name": "Bash",
+    "summary": "mkdir doqu",
+    "phase": "start",
+    "fp": "0398082c6953"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4emvGkaHm03Yd7VjtjMct9",
+    "name": "Bash",
+    "summary": "mkdir doqu",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 9
+  },
+  {
+    "type": "liveness",
+    "count": 28
+  },
+  {
+    "type": "context",
+    "used": 25788,
+    "cacheRead": 25669,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eZxB2RIgwlcT0TbDctsPJ",
+    "name": "Write",
+    "summary": "<CWD>\\docs\\a.md",
+    "phase": "start",
+    "fp": "d1e97192d99e"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eZxB2RIgwlcT0TbDctsPJ",
+    "name": "Write",
+    "summary": "<CWD>\\docs\\a.md",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 32
+  },
+  {
+    "type": "liveness",
+    "count": 11
+  },
+  {
+    "type": "context",
+    "used": 26099,
+    "cacheRead": 25786,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eKwNLkf1sfPS7O7fS2VtD",
+    "name": "Bash",
+    "summary": "mv docs/a.md docs/b.md",
+    "phase": "start",
+    "fp": "effbb661c935"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eKwNLkf1sfPS7O7fS2VtD",
+    "name": "Bash",
+    "summary": "mv docs/a.md docs/b.md",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 9
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Cia scise dosum elcimaqua pilosec"
+  },
+  {
+    "type": "text",
+    "delta": " teutdu:\n\n1. `"
+  },
+  {
+    "type": "text",
+    "delta": "mkdir docs` piamsi"
+  },
+  {
+    "type": "text",
+    "delta": "t con `docs` loboreelc."
+  },
+  {
+    "type": "text",
+    "delta": "\n2. Con Utcig sumi"
+  },
+  {
+    "type": "text",
+    "delta": " piamsit `docs/a.m"
+  },
+  {
+    "type": "text",
+    "delta": "d` alisits"
+  },
+  {
+    "type": "text",
+    "delta": "ect `"
+  },
+  {
+    "type": "text",
+    "delta": "a`.\n3. `"
+  },
+  {
+    "type": "text",
+    "delta": "mv docs/a.md do"
+  },
+  {
+    "type": "text",
+    "delta": "cs/b.md` boci"
+  },
+  {
+    "type": "text",
+    "delta": "adm us"
+  },
+  {
+    "type": "text",
+    "delta": ", te co"
+  },
+  {
+    "type": "text",
+    "delta": "n ippo s"
+  },
+  {
+    "type": "text",
+    "delta": "c tur `docs/b.m"
+  },
+  {
+    "type": "text",
+    "delta": "d`"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "context",
+    "used": 26228,
+    "cacheRead": 26097,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 26228,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Cia scise dosum elcimaqua pilosec teutdu:\n\n1. `mkdir docs` piamsit con `docs` loboreelc.\n2. Con Utcig sumi piamsit `docs/a.md` alisitsect `a`.\n3. `mv docs/a.md docs/b.md` bociadm us, te con ippo sc tur `docs/b.md`.",
+    "usage": {
+      "input": 8,
+      "output": 424,
+      "cacheRead": 93342,
+      "cacheWrite": 10436,
+      "costUsd": 0.06466840000000001
+    }
+  }
+]

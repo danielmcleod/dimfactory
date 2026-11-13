@@ -1,0 +1,4 @@
+// Prints a marker and sleeps; ignores stdin (ps snapshot test).
+{"op":"stdout","line":"ready"}
+{"op":"sleep","ms":20000}
+{"op":"exit","code":0}

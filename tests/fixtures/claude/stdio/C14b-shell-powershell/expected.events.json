@@ -1,0 +1,129 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e03f4-73c9-456d-8aa7-6e750294f985"
+  },
+  {
+    "type": "liveness",
+    "count": 9
+  },
+  {
+    "type": "context",
+    "used": 25616,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e9lpuH4xq1DUdRmJ2ZNuV",
+    "name": "PowerShell",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "90b69392070d"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4ebf12-1bce-4c58-8412-df50dda06836",
+    "kind": "shell",
+    "detail": "PowerShell: npm --version\nSedit npm quasume",
+    "expiresAt": 600000,
+    "allowSession": true
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4ebf12-1bce-4c58-8412-df50dda06836",
+        "response": {
+          "behavior": "allow",
+          "updatedInput": {
+            "command": "npm --version",
+            "description": "Sedit npm quasume"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e9lpuH4xq1DUdRmJ2ZNuV",
+    "name": "PowerShell",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 2
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Con quasum sc `npm --version"
+  },
+  {
+    "type": "text",
+    "delta": "` sc `"
+  },
+  {
+    "type": "text",
+    "delta": "11.17.0`."
+  },
+  {
+    "type": "context",
+    "used": 25727,
+    "cacheRead": 25614,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25727,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Con quasum sc `npm --version` sc `11.17.0`.",
+    "usage": {
+      "input": 4,
+      "output": 97,
+      "cacheRead": 41404,
+      "cacheWrite": 9935,
+      "costUsd": 0.048998799999999995
+    }
+  }
+]

@@ -1,0 +1,14 @@
+# AppArmor profile for Dim Factory, installed by the deb (build/linux/after-install.sh) as /etc/apparmor.d/dim-factory.
+# Ubuntu 24.04+ sets kernel.apparmor_restrict_unprivileged_userns=1, which breaks Chromium's namespace sandbox. This
+# is the profile other Electron apps ship: no confinement, only permission to create user namespaces.
+# An AppImage cannot carry such a profile, so the deb is the supported package there. The path is the deb's install
+# path, /opt/<productName>/<executableName>.
+abi <abi/4.0>,
+include <tunables/global>
+
+profile dim-factory "/opt/Dim Factory/dim-factory" flags=(unconfined) {
+  userns,
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/dim-factory>
+}

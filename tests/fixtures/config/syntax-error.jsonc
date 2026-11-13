@@ -1,0 +1,5 @@
+{
+  /* the comma after "fast" is missing */
+  "profile": "fast"
+  "auto": true
+}

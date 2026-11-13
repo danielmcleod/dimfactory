@@ -1,0 +1,108 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e849c-3bb9-4cdb-8305-645bafbe57ea"
+  },
+  {
+    "type": "liveness",
+    "count": 28
+  },
+  {
+    "type": "context",
+    "used": 25598,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eCZeKvPfhbGOJ2rycClog",
+    "name": "Write",
+    "summary": "<CWD>\\NOTES.md",
+    "phase": "start",
+    "fp": "f58cf40261c3"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eCZeKvPfhbGOJ2rycClog",
+    "name": "Write",
+    "summary": "<CWD>\\NOTES.md",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 32
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "C piamsit `NOTES."
+  },
+  {
+    "type": "text",
+    "delta": "md` si con modlore loboreelc lor"
+  },
+  {
+    "type": "text",
+    "delta": "a co"
+  },
+  {
+    "type": "text",
+    "delta": "n amscis alid `hello`."
+  },
+  {
+    "type": "context",
+    "used": 25911,
+    "cacheRead": 25596,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25911,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "C piamsit `NOTES.md` si con modlore loboreelc lora con amscis alid `hello`.",
+    "usage": {
+      "input": 4,
+      "output": 191,
+      "cacheRead": 41386,
+      "cacheWrite": 10119,
+      "costUsd": 0.050671200000000007
+    }
+  }
+]

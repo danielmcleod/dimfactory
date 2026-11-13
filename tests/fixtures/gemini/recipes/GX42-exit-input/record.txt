@@ -1,0 +1,4 @@
+# GX42-exit-input: FatalInputError (exit 42) at startup: the launch flags no longer fit this CLI.
+# Cannot be provoked with Dim Factory's own flags: keep synthesized until observed.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/GX42-exit-input --id GX42 --slug exit-input --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/GX42-exit-input/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/GX42-exit-input/pass.json --responders tests/fixtures/gemini/recipes/GX42-exit-input/responders.mjs --keep-stdin --timeout 900000 -- --acp --skip-trust

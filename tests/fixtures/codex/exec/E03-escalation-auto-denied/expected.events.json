@@ -1,0 +1,34 @@
+[
+  {
+    "type": "session",
+    "id": "019a1c3e-5b2f-7c41-9d8e-0a1b2c3d4e53"
+  },
+  {
+    "type": "tool",
+    "id": "item_0",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_0",
+    "name": "shell",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "text",
+    "delta": "The registry lookup was not allowed; I kept the pinned version."
+  },
+  {
+    "type": "done",
+    "result": "The registry lookup was not allowed; I kept the pinned version.",
+    "usage": {
+      "input": 5120,
+      "output": 200,
+      "cacheRead": 4096,
+      "cacheWrite": 0,
+      "reasoning": 64
+    }
+  }
+]

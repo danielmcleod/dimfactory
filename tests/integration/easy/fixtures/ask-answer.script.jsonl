@@ -1,0 +1,9 @@
+// Fake Claude answering Easy's "Ask about it" (tests/integration/easy) in the project's own folder: the read-only route
+// with no edit, shell or web tools, nothing kept, and a plain answer.
+{"op":"expectArgs","includes":["--permission-mode","dontAsk","--permission-prompts","none","--no-session-persistence"],"excludes":["--permission-prompt-tool","--session-id*","--resume*"]}
+{"op":"expectStdin","match":{"type":"control_request","request":{"subtype":"initialize"}},"capture":{"rid":"request_id"}}
+{"op":"stdout","json":{"type":"control_response","response":{"subtype":"success","request_id":"$rid","response":{"models":[]}}}}
+{"op":"expectStdin","match":{"type":"user","message":{"role":"user"}}}
+{"op":"stdout","json":{"type":"system","subtype":"init","session_id":"ask-session-1","cwd":"$FAKE_CWD","model":"claude-haiku-4","permissionMode":"dontAsk"}}
+{"op":"stdout","json":{"type":"result","subtype":"success","is_error":false,"num_turns":1,"result":"The colours are set at the top of **styles.css** — change the line that says `--accent`.","session_id":"ask-session-1","total_cost_usd":0.004,"usage":{"input_tokens":3000,"output_tokens":60}}}
+{"op": "exit", "code": 0}

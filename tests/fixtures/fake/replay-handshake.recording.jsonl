@@ -1,0 +1,8 @@
+{"kind":"header","schemaVersion":1,"vendor":"fake","route":"stream-json","scenario":"F01-replay-handshake","os":"win32","arch":"x64","argv":["claude","-p","--input-format","stream-json"],"envKeys":[],"hostVersion":"0.1.0","synthesized":true,"synthesizedFrom":"hand-written for the fake CLI's replay tests"}
+{"t":0,"dir":"out","line":"{\"type\":\"system\",\"subtype\":\"init\",\"session_id\":\"sess-recorded-0001\",\"cwd\":\"<CWD>\"}"}
+{"t":5,"dir":"in","line":"{\"type\":\"control_request\",\"request_id\":\"req_recorded_0001\",\"request\":{\"subtype\":\"initialize\"}}"}
+{"t":9,"dir":"out","line":"{\"type\":\"control_response\",\"response\":{\"subtype\":\"success\",\"request_id\":\"req_recorded_0001\",\"response\":{\"models\":[]}}}"}
+{"t":12,"dir":"in","line":"{\"type\":\"user\",\"uuid\":\"<REDACTED>\",\"timestamp\":\"2026-10-05T10:00:00.000Z\",\"cwd\":\"<CWD>\",\"message\":{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"hello\"}]}}"}
+{"t":20,"dir":"err","line":"warning: replayed from a recording"}
+{"t":30,"dir":"out","line":"{\"type\":\"result\",\"subtype\":\"success\",\"result\":\"hi\",\"session_id\":\"sess-recorded-0001\",\"for\":\"req_recorded_0001\"}"}
+{"t":31,"dir":"exit","code":0,"signal":null}

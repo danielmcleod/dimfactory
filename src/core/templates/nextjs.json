@@ -1,0 +1,26 @@
+{
+  "id": "nextjs",
+  "version": 1,
+  "pack": "software",
+  "label": "Next.js app",
+  "description": "A full-stack web app on Next.js (App Router), TypeScript and Tailwind, with tests and a README.",
+  "brief": {
+    "fields": {
+      "projectType": { "choices": ["full-stack"] },
+      "deliverable": { "choices": ["server-app"] },
+      "platform": { "choices": ["web"] },
+      "language": { "choices": ["typescript"] },
+      "uiFramework": { "choices": ["react"] },
+      "styling": { "choices": ["tailwind"] },
+      "backend": { "choices": ["nextjs"] }
+    }
+  },
+  "task": "Scaffold a Next.js app (App Router) with TypeScript and Tailwind CSS in this empty folder. Create package.json with the scripts dev (next dev), build (next build), start (next start), lint and test (vitest run); next.config.ts, tsconfig.json and the Tailwind setup; app/layout.tsx and app/page.tsx with a small working home page, and one API route under app/api/health/route.ts that answers { ok: true }. Set up Vitest with one test for the API route. Add a .gitignore for node_modules and .next, and a README.md that says what the app is and how to install, run, test and build it.",
+  "recipe": "new-web-app",
+  "create": {
+    "command": "npx create-next-app@latest . --ts --tailwind --eslint --app --use-npm",
+    "shell": "any",
+    "note": "Run it in the new folder before you press Run; the run then builds on what it created."
+  },
+  "tags": ["web", "react", "typescript", "nextjs"]
+}

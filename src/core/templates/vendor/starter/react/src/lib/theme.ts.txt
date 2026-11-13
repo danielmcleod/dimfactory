@@ -1,0 +1,53 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// Light and dark. The site follows the computer's setting until the visitor picks one with the toggle; their pick is
+// remembered in this browser (when it allows that) and set as data-theme on <html>, which tokens.css reads.
+import { useCallback, useEffect, useState } from 'react'
+
+export type Theme = 'light' | 'dark'
+
+const KEY = 'theme'
+
+function saved(): Theme | null {
+  try {
+    const v = window.localStorage.getItem(KEY)
+    return v === 'light' || v === 'dark' ? v : null
+  } catch {
+    return null
+  }
+}
+
+function system(): Theme {
+  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+export function useTheme(): { theme: Theme; toggle: () => void } {
+  const [choice, setChoice] = useState<Theme | null>(saved)
+  const [fallback, setFallback] = useState<Theme>(system)
+
+  useEffect(() => {
+    const media = window.matchMedia?.('(prefers-color-scheme: dark)')
+    if (media === undefined) return
+    const onChange = () => setFallback(media.matches ? 'dark' : 'light')
+    media.addEventListener('change', onChange)
+    return () => media.removeEventListener('change', onChange)
+  }, [])
+
+  useEffect(() => {
+    const root = document.documentElement
+    if (choice === null) delete root.dataset.theme
+    else root.dataset.theme = choice
+  }, [choice])
+
+  const theme = choice ?? fallback
+  const toggle = useCallback(() => {
+    const next: Theme = theme === 'dark' ? 'light' : 'dark'
+    setChoice(next)
+    try {
+      window.localStorage.setItem(KEY, next)
+    } catch {
+      // Private windows may refuse storage: the choice then lasts until the page is closed.
+    }
+  }, [theme])
+
+  return { theme, toggle }
+}

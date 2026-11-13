@@ -1,0 +1,4 @@
+# X12c-plan-collaboration-rejected: turn/start refuses collaborationMode (-32602) before any model call: the same thread runs the Plan emulated (planFallback meta, no retry budget); the final message is the plan.
+# Only a server that refuses collaborationMode: keep synthesized until observed (live X12a accepted it).
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X12c-plan-collaboration-rejected --id X12c --slug plan-collaboration-rejected --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X12c-plan-collaboration-rejected/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X12c-plan-collaboration-rejected/pass.json

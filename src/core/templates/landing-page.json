@@ -1,0 +1,19 @@
+{
+  "id": "landing-page",
+  "version": 1,
+  "pack": "design",
+  "label": "Landing page prototype",
+  "description": "A clickable landing page prototype in HTML and CSS, with design tokens, for phone and desktop.",
+  "brief": {
+    "fields": {
+      "fidelity": { "choices": ["clickable"] },
+      "brand": { "choices": ["new"] },
+      "breakpoints": { "choices": ["mobile", "desktop"] },
+      "output": { "choices": ["html-css", "tokens"] }
+    }
+  },
+  "task": "Build a clickable landing page prototype in this empty folder, in plain HTML and CSS with no build step. Create tokens.css with the design tokens (colors, type scale, spacing, radius) as CSS custom properties, styles.css that uses only those tokens, and index.html with a hero (headline, one line of support, a primary call to action), three feature blocks, a place for a customer's words marked [Fill in: a customer's words] (never made up), a pricing or sign-up section and a footer. It must work at phone and desktop widths, meet WCAG AA contrast, and every button and link must go somewhere on the page. Add a README.md that says how to open it and how to change the tokens. Publish-ready: every page has a <title> and a meta description, Open Graph tags with a social preview picture (assets/social-preview.png, 1200 x 630), a favicon (favicon.svg) and a 404.html page that links home. No trackers, ads or analytics, and no fonts, scripts or pictures from other websites: use the system font stack, and where a picture belongs put a marked image slot (a box that says which picture goes there, its file name in assets/ and its size; list them in assets/README.md) instead of a stock photo. Write every word in the language of the request, and set <html lang> on every page to that language. Never invent the owner's facts (prices, hours, addresses, testimonials): mark each [Fill in: ...] and list them in the README.",
+  "recipe": "new-web-app",
+  "checks": [{ "name": "Page loads (Dim Factory)", "run": ["dimf:pageload", "index.html"] }],
+  "tags": ["design", "prototype", "html", "css"]
+}

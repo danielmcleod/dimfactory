@@ -1,0 +1,19 @@
+{
+  "id": "node-cli",
+  "version": 1,
+  "pack": "software",
+  "label": "Node.js command-line tool",
+  "description": "A command-line tool in TypeScript on Node.js, with argument parsing, tests and a README.",
+  "brief": {
+    "fields": {
+      "projectType": { "choices": ["cli"] },
+      "deliverable": { "choices": ["package"] },
+      "language": { "choices": ["typescript"] },
+      "uiFramework": { "choices": ["none"] },
+      "backend": { "choices": ["node"] }
+    }
+  },
+  "task": "Scaffold a Node.js command-line tool in TypeScript in this empty folder. Create package.json with a bin entry, \"type\": \"module\", and the scripts build (tsc), start (run the built CLI) and test (vitest run); tsconfig.json; src/cli.ts that parses its arguments with node:util parseArgs and supports --help and --version; src/index.ts with the tool's logic as plain functions. Set up Vitest with tests for the logic and for --version. Add a .gitignore for node_modules and dist, and a README.md that says what the tool does and how to install, run, test and build it.",
+  "recipe": "new-web-app",
+  "tags": ["cli", "node", "typescript"]
+}

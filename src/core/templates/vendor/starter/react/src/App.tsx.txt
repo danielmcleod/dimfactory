@@ -1,0 +1,37 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// The pages and their addresses. To add a page: make it in src/pages/, add it to PAGES below, and add a link to
+// site.nav in content.ts when it belongs in the menu.
+import { useEffect } from 'react'
+import type { ComponentType } from 'react'
+import { Layout } from './components/Layout'
+import { about, site } from './content'
+import { RouterProvider, useRoute } from './lib/router'
+import { About } from './pages/About'
+import { Home } from './pages/Home'
+import { NotFound } from './pages/NotFound'
+
+const PAGES: Record<string, { title: string | null; page: ComponentType }> = {
+  '/': { title: null, page: Home },
+  '/about': { title: about.title, page: About },
+}
+
+function Page() {
+  const { path } = useRoute()
+  const found = PAGES[path.length > 1 ? path.replace(/\/+$/, '') : path]
+  const title = found === undefined ? 'Page not found' : found.title
+  useEffect(() => {
+    document.title = title === null ? site.name : `${title} · ${site.name}`
+  }, [title])
+  const Current = found?.page ?? NotFound
+  return <Current />
+}
+
+export default function App() {
+  return (
+    <RouterProvider>
+      <Layout>
+        <Page />
+      </Layout>
+    </RouterProvider>
+  )
+}

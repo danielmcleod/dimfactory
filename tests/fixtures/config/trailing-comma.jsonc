@@ -1,0 +1,9 @@
+{
+  "gates": { "afterPlan": false, },
+  "verify": {
+    "runAfter": ["fix",],
+  },
+  "timeouts": {
+    "stallMs": "soon",
+  },
+}

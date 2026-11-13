@@ -1,0 +1,25 @@
+[
+  {
+    "type": "session",
+    "id": "019a1c3e-5b2f-7c41-9d8e-0a1b2c3d4e13"
+  },
+  {
+    "type": "text",
+    "delta": "Here is the change:"
+  },
+  {
+    "type": "text",
+    "delta": " add a --version check to src/cli.ts."
+  },
+  {
+    "type": "done",
+    "result": "Here is the change: add a --version check to src/cli.ts.",
+    "usage": {
+      "input": 3072,
+      "output": 180,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 0
+    }
+  }
+]

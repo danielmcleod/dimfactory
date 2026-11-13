@@ -1,0 +1,9 @@
+{
+  "kind": "pass",
+  "step": "review",
+  "mode": "readonly",
+  "planNative": false,
+  "prompt": "Review the change in src/cli.ts against the plan. List findings as [must]/[should]/[nit].",
+  "trustFolder": false,
+  "model": "grok-4.6"
+}

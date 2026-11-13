@@ -1,0 +1,17 @@
+// JSON-RPC peer round trip, Codex style (no "jsonrpc" header): initialize, an unknown server request (-32601),
+// a known server request answered by a handler, then turn/start answered -32001 once and retried.
+{"op":"expectStdin","match":{"method":"initialize","params":{"clientInfo":{"name":"dim-factory"}}},"capture":{"initId":"id"}}
+{"op":"stdout","json":{"id":"$initId","result":{"userAgent":"fake/1.0"}}}
+{"op":"expectStdin","match":{"method":"initialized"}}
+{"op":"stdout","json":{"id":900,"method":"item/tool/unknownThing","params":{"x":1}}}
+{"op":"expectStdin","match":{"id":900,"error":{"code":-32601}}}
+{"op":"stdout","json":{"id":901,"method":"item/commandExecution/requestApproval","params":{"command":"ls"}}}
+{"op":"expectStdin","match":{"id":901,"result":{"decision":"accept"}}}
+{"op":"stdout","json":{"method":"dim/test/ready","params":{}}}
+{"op":"expectStdin","match":{"method":"turn/start","params":{"threadId":"th_1"}},"capture":{"turn1":"id"}}
+{"op":"stdout","json":{"id":"$turn1","error":{"code":-32001,"message":"Server overloaded; retry later."}}}
+{"op":"expectStdin","match":{"method":"turn/start","params":{"threadId":"th_1"}},"capture":{"turn2":"id"}}
+{"op":"stdout","json":{"method":"turn/started","params":{"turnId":"t1"}}}
+{"op":"stdout","json":{"id":"$turn2","result":{"turn":{"id":"t1"}}}}
+{"op":"expectEof"}
+{"op":"exit","code":0}

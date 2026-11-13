@@ -1,0 +1,201 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e6896-0c3c-4489-808e-104722760cd2"
+  },
+  {
+    "type": "liveness",
+    "count": 19
+  },
+  {
+    "type": "context",
+    "used": 27102,
+    "cacheRead": 17254,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eHTdOOGjwLGJ6ngWjCuoB",
+    "name": "AskUserQuestion",
+    "summary": "Should con usr quabosec ital src/index.ts labove lo si Secetip do Scitem?",
+    "phase": "start",
+    "fp": "4b5744ed7e73"
+  },
+  {
+    "type": "auto-answered",
+    "requestId": "fa4e20ed-1a98-44b9-8138-178d0a68cb2a",
+    "decision": "deny",
+    "tool": "AskUserQuestion",
+    "why": "unsupported"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e20ed-1a98-44b9-8138-178d0a68cb2a",
+        "response": {
+          "behavior": "deny",
+          "message": "This tool needs an interactive prompt that Dim Factory cannot show. Continue without it."
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eHTdOOGjwLGJ6ngWjCuoB",
+    "name": "AskUserQuestion",
+    "summary": "Should con usr quabosec ital src/index.ts labove lo si Secetip do Scitem?",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 25
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "text",
+    "delta": "C lainre'e poru"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "ci conaliinelq duntip, "
+  },
+  {
+    "type": "text",
+    "delta": "te C'u turtur lop"
+  },
+  {
+    "type": "text",
+    "delta": "o ello"
+  },
+  {
+    "type": "text",
+    "delta": "rci:\n\n**"
+  },
+  {
+    "type": "text",
+    "delta": "Should con usr quabosec ital"
+  },
+  {
+    "type": "text",
+    "delta": " `src/index.ts`"
+  },
+  {
+    "type": "text",
+    "delta": " labove lo si Secetip do Scitem?"
+  },
+  {
+    "type": "text",
+    "delta": "**\n\nC turqu'e sedci"
+  },
+  {
+    "type": "text",
+    "delta": "s sci duntl la"
+  },
+  {
+    "type": "text",
+    "delta": "t ett'e bocon. I"
+  },
+  {
+    "type": "text",
+    "delta": "tpo ve pisum elcondu"
+  },
+  {
+    "type": "text",
+    "delta": "n el"
+  },
+  {
+    "type": "text",
+    "delta": "g itte, lat ei"
+  },
+  {
+    "type": "text",
+    "delta": " elg sit"
+  },
+  {
+    "type": "text",
+    "delta": "s co"
+  },
+  {
+    "type": "text",
+    "delta": "n dunti qu"
+  },
+  {
+    "type": "text",
+    "delta": "abosec inam si"
+  },
+  {
+    "type": "text",
+    "delta": " cilo, los"
+  },
+  {
+    "type": "text",
+    "delta": "u ital"
+  },
+  {
+    "type": "text",
+    "delta": " res."
+  },
+  {
+    "type": "context",
+    "used": 27312,
+    "cacheRead": 27100,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 27312,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "C lainre'e poru ci conaliinelq duntip, te C'u turtur lopo ellorci:\n\n**Should con usr quabosec ital `src/index.ts` labove lo si Secetip do Scitem?**\n\nC turqu'e sedcis sci duntl lat ett'e bocon. Itpo ve pisum elcondun elg itte, lat ei elg sits con dunti quabosec inam si cilo, losu ital res.",
+    "usage": {
+      "input": 4,
+      "output": 238,
+      "cacheRead": 44354,
+      "cacheWrite": 10056,
+      "costUsd": 0.0514828
+    }
+  }
+]

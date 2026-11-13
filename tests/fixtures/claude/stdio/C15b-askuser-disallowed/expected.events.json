@@ -1,0 +1,77 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e563c-d627-4dff-805d-97059dbdfcfc"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Should con usr quabosec si"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "src/index.ts` l"
+  },
+  {
+    "type": "text",
+    "delta": "o si Secetip do Scitem?"
+  },
+  {
+    "type": "context",
+    "used": 25637,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 25637,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Should con usr quabosec si `src/index.ts` lo si Secetip do Scitem?",
+    "usage": {
+      "input": 2,
+      "output": 24,
+      "cacheRead": 15790,
+      "cacheWrite": 9845,
+      "costUsd": 0.042782
+    }
+  }
+]

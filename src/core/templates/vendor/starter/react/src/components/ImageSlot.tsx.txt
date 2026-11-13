@@ -1,0 +1,34 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// A marked place for a picture. Until the owner adds their own (into assets/, see assets/README.md), the slot says
+// which picture goes here and the size it needs: no stock photos, and nothing loaded from other websites.
+// With a picture, import it and pass it as `src`:  import shopFront from '../../assets/shop-front.jpg'
+interface ImageSlotProps {
+  /** What the picture shows (also its alt text once it is there). */
+  label: string
+  /** The file it will be, in assets/. */
+  file: string
+  /** Width and height it should have, in pixels. */
+  size: [number, number]
+  src?: string
+}
+
+export function ImageSlot({ label, file, size, src }: ImageSlotProps) {
+  const [w, h] = size
+  if (src !== undefined) {
+    return <img className="image" src={src} alt={label} width={w} height={h} loading="lazy" />
+  }
+  return (
+    <figure className="image-slot" style={{ aspectRatio: `${w} / ${h}` }}>
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="image-slot__icon">
+        <path d="M4 5h16v14H4z M4 15l4-4 4 4 3-3 5 5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="15.5" cy="9" r="1.5" fill="currentColor" />
+      </svg>
+      <figcaption>
+        <strong>Picture to add: {label}</strong>
+        <span>
+          assets/{file}, {w} × {h}
+        </span>
+      </figcaption>
+    </figure>
+  )
+}

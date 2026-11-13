@@ -1,0 +1,224 @@
+{
+  "config": {
+    "protocol_version": "v1.0.0",
+    "scanner_name": "govulncheck",
+    "scanner_version": "v1.1.3",
+    "db": "https://vuln.go.dev",
+    "db_last_modified": "2024-05-01T15:04:05Z",
+    "go_version": "go1.22.2",
+    "scan_level": "symbol",
+    "scan_mode": "source"
+  }
+}
+{
+  "progress": {
+    "message": "Scanning your code and 87 packages across 12 dependent modules for known vulnerabilities..."
+  }
+}
+{
+  "osv": {
+    "schema_version": "1.3.1",
+    "id": "GO-2023-2402",
+    "modified": "2024-01-02T10:00:00Z",
+    "published": "2023-12-18T19:22:09Z",
+    "aliases": [
+      "CVE-2023-48795",
+      "GHSA-45x7-px36-x8w8"
+    ],
+    "summary": "Man-in-the-middle attacker can compromise integrity of secure channel in golang.org/x/crypto",
+    "details": "A protocol weakness allows a MITM attacker to compromise the integrity of the secure channel before it is established {\"see\": \"[RFC 4253]\"}.",
+    "affected": [
+      {
+        "package": {
+          "name": "golang.org/x/crypto",
+          "ecosystem": "Go"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.17.0"
+              }
+            ]
+          }
+        ],
+        "ecosystem_specific": {
+          "imports": [
+            {
+              "path": "golang.org/x/crypto/ssh",
+              "symbols": [
+                "NewClientConn",
+                "NewServerConn"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45x7-px36-x8w8"
+      }
+    ],
+    "database_specific": {
+      "url": "https://pkg.go.dev/vuln/GO-2023-2402",
+      "review_status": "REVIEWED"
+    }
+  }
+}
+{
+  "finding": {
+    "osv": "GO-2023-2402",
+    "fixed_version": "v0.17.0",
+    "trace": [
+      {
+        "module": "golang.org/x/crypto",
+        "version": "v0.14.0"
+      }
+    ]
+  }
+}
+{
+  "finding": {
+    "osv": "GO-2023-2402",
+    "fixed_version": "v0.17.0",
+    "trace": [
+      {
+        "module": "golang.org/x/crypto",
+        "version": "v0.14.0",
+        "package": "golang.org/x/crypto/ssh"
+      }
+    ]
+  }
+}
+{
+  "finding": {
+    "osv": "GO-2023-2402",
+    "fixed_version": "v0.17.0",
+    "trace": [
+      {
+        "module": "golang.org/x/crypto",
+        "version": "v0.14.0",
+        "package": "golang.org/x/crypto/ssh",
+        "function": "NewClientConn",
+        "position": {
+          "filename": "ssh/client.go",
+          "offset": 2394,
+          "line": 83,
+          "column": 6
+        }
+      },
+      {
+        "module": "example.com/app",
+        "package": "example.com/app/internal/remote",
+        "function": "Dial",
+        "position": {
+          "filename": "internal/remote/dial.go",
+          "offset": 512,
+          "line": 27,
+          "column": 21
+        }
+      }
+    ]
+  }
+}
+{
+  "finding": {
+    "osv": "GO-2023-2402",
+    "fixed_version": "v0.17.0",
+    "trace": [
+      {
+        "module": "golang.org/x/crypto",
+        "version": "v0.14.0",
+        "package": "golang.org/x/crypto/ssh",
+        "function": "NewServerConn",
+        "position": {
+          "filename": "ssh/server.go",
+          "offset": 6120,
+          "line": 206,
+          "column": 6
+        }
+      },
+      {
+        "module": "example.com/app",
+        "package": "example.com/app/cmd/server",
+        "function": "main",
+        "position": {
+          "filename": "cmd/server/main.go",
+          "offset": 301,
+          "line": 18,
+          "column": 12
+        }
+      }
+    ]
+  }
+}
+{
+  "osv": {
+    "schema_version": "1.3.1",
+    "id": "GO-2024-2687",
+    "modified": "2024-04-10T00:00:00Z",
+    "published": "2024-04-03T21:12:01Z",
+    "aliases": [
+      "CVE-2023-45288",
+      "GHSA-4v7x-pqxf-cx7m"
+    ],
+    "summary": "HTTP/2 CONTINUATION flood in net/http",
+    "details": "An attacker may cause an HTTP/2 endpoint to read arbitrary amounts of header data by sending an excessive number of CONTINUATION frames.",
+    "affected": [
+      {
+        "package": {
+          "name": "golang.org/x/net",
+          "ecosystem": "Go"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.23.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "database_specific": {
+      "url": "https://pkg.go.dev/vuln/GO-2024-2687",
+      "review_status": "REVIEWED"
+    }
+  }
+}
+{
+  "finding": {
+    "osv": "GO-2024-2687",
+    "fixed_version": "v0.23.0",
+    "trace": [
+      {
+        "module": "golang.org/x/net",
+        "version": "v0.21.0"
+      }
+    ]
+  }
+}
+{
+  "finding": {
+    "osv": "GO-2024-2687",
+    "fixed_version": "v0.23.0",
+    "trace": [
+      {
+        "module": "golang.org/x/net",
+        "version": "v0.21.0",
+        "package": "golang.org/x/net/http2"
+      }
+    ]
+  }
+}

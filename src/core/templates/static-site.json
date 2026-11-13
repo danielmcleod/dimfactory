@@ -1,0 +1,26 @@
+{
+  "id": "static-site",
+  "version": 1,
+  "pack": "software",
+  "label": "Static website",
+  "description": "Plain HTML, CSS and a little JavaScript: no build step, opens in any browser.",
+  "brief": {
+    "fields": {
+      "projectType": { "choices": ["static-site"] },
+      "deliverable": { "choices": ["static-html"] },
+      "platform": { "choices": ["web"] },
+      "language": { "choices": ["javascript"] },
+      "uiFramework": { "choices": ["plain-html"] },
+      "styling": { "choices": ["plain-css"] },
+      "backend": { "choices": ["none"] },
+      "quality": { "choices": ["responsive", "accessible"] }
+    }
+  },
+  "task": "Scaffold a static website in this empty folder with no build step. Create index.html with a header, a main section and a footer, css/styles.css (responsive, readable on a phone), js/main.js with a small progressive enhancement, and an about.html linked from the navigation. Use semantic HTML and good contrast. Add a package.json with one script, test, that runs node --test on tests/site.test.mjs, which checks that every page links its stylesheet and that every internal link points to a file that exists. Add a README.md that says how to open the site (open index.html, or serve the folder with any static server) and how to run the check. Publish-ready: every page has a <title> and a meta description, Open Graph tags with a social preview picture (assets/social-preview.png, 1200 x 630), a favicon (favicon.svg) and a 404.html page that links home. No trackers, ads or analytics, and no fonts, scripts or pictures from other websites: use the system font stack, and where a picture belongs put a marked image slot (a box that says which picture goes there, its file name in assets/ and its size; list them in assets/README.md) instead of a stock photo. Write every word in the language of the request, and set <html lang> on every page to that language. Never invent the owner's facts (prices, hours, addresses, testimonials): mark each [Fill in: ...] and list them in the README.",
+  "recipe": "new-web-app",
+  "checks": [
+    { "name": "Site check", "run": ["npm", "run", "test"], "needs": "node" },
+    { "name": "Page loads (Dim Factory)", "run": ["dimf:pageload", "index.html"] }
+  ],
+  "tags": ["web", "html", "css"]
+}

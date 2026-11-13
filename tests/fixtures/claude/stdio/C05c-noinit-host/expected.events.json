@@ -1,0 +1,130 @@
+[
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4ea8ca-89d1-4821-8e59-94248e44abff"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 27064,
+    "cacheRead": 17254,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4emzatZvZD0pE08YTq396z",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "cf7adb49a315"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4ec42e-e0ca-4485-8985-913132bb8435",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nSedit npm quasume\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4ec42e-e0ca-4485-8985-913132bb8435",
+        "response": {
+          "behavior": "allow",
+          "updatedInput": {
+            "command": "npm --version",
+            "description": "Sedit npm quasume"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4emzatZvZD0pE08YTq396z",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 2
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "`npm --version` turip"
+  },
+  {
+    "type": "text",
+    "delta": "ve `11.17.0`"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "context",
+    "used": 27173,
+    "cacheRead": 27062,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 27173,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "`npm --version` turipve `11.17.0`.",
+    "usage": {
+      "input": 4,
+      "output": 93,
+      "cacheRead": 44316,
+      "cacheWrite": 9917,
+      "costUsd": 0.049469200000000005
+    }
+  }
+]

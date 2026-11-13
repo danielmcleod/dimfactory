@@ -1,0 +1,13 @@
+{
+  "kind": "pass",
+  "step": "implement",
+  "mode": "autoedit",
+  "planNative": false,
+  "prompt": "Add a --version flag to the CLI that prints the package version.",
+  "local": {
+    "id": "ollama",
+    "label": "Ollama",
+    "baseUrl": "http://127.0.0.1:11434/v1",
+    "model": "qwen3-coder:30b"
+  }
+}

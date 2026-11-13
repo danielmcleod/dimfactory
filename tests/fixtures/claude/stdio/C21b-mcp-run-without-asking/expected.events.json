@@ -1,0 +1,138 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e0d62-3bd7-49af-86da-b37a5a157fe7"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25441,
+    "cacheRead": 17226,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 10
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eLNdyh2zmxKX26xAkp8Oc",
+    "name": "ToolSearch",
+    "summary": "select:mcp__probe-echo__echo",
+    "phase": "start",
+    "fp": "a25119ca4d85"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eLNdyh2zmxKX26xAkp8Oc",
+    "name": "ToolSearch",
+    "summary": "select:mcp__probe-echo__echo",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25767,
+    "cacheRead": 25431,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eogdyR5cMl3elYigxX6dq",
+    "name": "mcp__<REDACTED>",
+    "summary": "mcp__<REDACTED>",
+    "phase": "start",
+    "fp": "448c2bf7b48e"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eogdyR5cMl3elYigxX6dq",
+    "name": "mcp__<REDACTED>",
+    "summary": "mcp__<REDACTED>",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 1
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "context",
+    "used": 25918,
+    "cacheRead": 25757,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "in"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 25918,
+    "window": 200000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "in",
+    "usage": {
+      "input": 28,
+      "output": 340,
+      "cacheRead": 68414,
+      "cacheWrite": 8684,
+      "costUsd": 0.0259374
+    }
+  }
+]

@@ -1,0 +1,9 @@
+{
+  // a typo in a pass key
+  "passes": {
+    "review": {
+      "model": "opus",
+      "promptTemplte": "review-strict"
+    }
+  }
+}

@@ -1,0 +1,661 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e83ac-daab-472f-865b-c8cebe18c256"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " laremma"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " quagn"
+  },
+  {
+    "type": "text",
+    "delta": " sedma"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t duntus"
+  },
+  {
+    "type": "text",
+    "delta": "e modlorel"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " ut"
+  },
+  {
+    "type": "text",
+    "delta": "c co"
+  },
+  {
+    "type": "text",
+    "delta": "n quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e eitu"
+  },
+  {
+    "type": "text",
+    "delta": " dunt"
+  },
+  {
+    "type": "text",
+    "delta": "c co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " reconet"
+  },
+  {
+    "type": "text",
+    "delta": " remutbo"
+  },
+  {
+    "type": "text",
+    "delta": " eta"
+  },
+  {
+    "type": "text",
+    "delta": " quaipus"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d qu"
+  },
+  {
+    "type": "text",
+    "delta": "a co"
+  },
+  {
+    "type": "text",
+    "delta": "n secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m npm"
+  },
+  {
+    "type": "text",
+    "delta": " itusa"
+  },
+  {
+    "type": "text",
+    "delta": " lor"
+  },
+  {
+    "type": "text",
+    "delta": "a scicite"
+  },
+  {
+    "type": "text",
+    "delta": " gnausq"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e95c8-0974-4c98-879b-0fc73f58429b",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e95c8-0974-4c98-879b-0fc73f58429b",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 15374,
+    "window": 258400,
+    "cacheRead": 1792,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ebc6d-e25a-469e-89d7-fab1d25cc663",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ebc6d-e25a-469e-89d7-fab1d25cc663",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 15450,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e47d0-e183-427a-8dba-ae4e6da62186",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e47d0-e183-427a-8dba-ae4e6da62186",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 15649,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e57ac-356f-4da1-8a37-0dbe27034558",
+    "name": "edit",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e57ac-356f-4da1-8a37-0dbe27034558",
+    "name": "edit",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16310,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": " pigna"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " sumd"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "packag"
+  },
+  {
+    "type": "text",
+    "delta": "e.jso"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t labove"
+  },
+  {
+    "type": "text",
+    "delta": " us"
+  },
+  {
+    "type": "text",
+    "delta": " ipe"
+  },
+  {
+    "type": "text",
+    "delta": "i `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " sc"
+  },
+  {
+    "type": "text",
+    "delta": " inbolab"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": "’u"
+  },
+  {
+    "type": "text",
+    "delta": " eimodsi"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m npm"
+  },
+  {
+    "type": "text",
+    "delta": " lorsitse"
+  },
+  {
+    "type": "text",
+    "delta": " itusa"
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": ";"
+  },
+  {
+    "type": "text",
+    "delta": " us"
+  },
+  {
+    "type": "text",
+    "delta": " itpiu"
+  },
+  {
+    "type": "text",
+    "delta": " scicite"
+  },
+  {
+    "type": "text",
+    "delta": " gnausq"
+  },
+  {
+    "type": "text",
+    "delta": " etels"
+  },
+  {
+    "type": "text",
+    "delta": "ed co"
+  },
+  {
+    "type": "text",
+    "delta": "n tetural"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e3d55-a6f0-4ee9-8a6f-c9e00b5716c6",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "ask",
+    "kind": "shell",
+    "allowSession": false
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e3d55-a6f0-4ee9-8a6f-c9e00b5716c6",
+    "name": "shell",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "context",
+    "used": 16466,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ef7fd-6aad-4972-8ad7-b0334caafa35",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ef7fd-6aad-4972-8ad7-b0334caafa35",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16659,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Elmo"
+  },
+  {
+    "type": "text",
+    "delta": "d `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " ci"
+  },
+  {
+    "type": "text",
+    "delta": " sedit"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e sumd"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "packag"
+  },
+  {
+    "type": "text",
+    "delta": "e.jso"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " s"
+  },
+  {
+    "type": "text",
+    "delta": "i ["
+  },
+  {
+    "type": "text",
+    "delta": "sr"
+  },
+  {
+    "type": "text",
+    "delta": "c"
+  },
+  {
+    "type": "text",
+    "delta": "/cli"
+  },
+  {
+    "type": "text",
+    "delta": ".ts"
+  },
+  {
+    "type": "text",
+    "delta": "]"
+  },
+  {
+    "type": "text",
+    "delta": "("
+  },
+  {
+    "type": "text",
+    "delta": "/"
+  },
+  {
+    "type": "text",
+    "delta": "<CWD>"
+  },
+  {
+    "type": "text",
+    "delta": "/sr"
+  },
+  {
+    "type": "text",
+    "delta": "c"
+  },
+  {
+    "type": "text",
+    "delta": "/cli"
+  },
+  {
+    "type": "text",
+    "delta": ".ts"
+  },
+  {
+    "type": "text",
+    "delta": ").\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Co"
+  },
+  {
+    "type": "text",
+    "delta": "n `"
+  },
+  {
+    "type": "text",
+    "delta": "npm"
+  },
+  {
+    "type": "text",
+    "delta": " modg"
+  },
+  {
+    "type": "text",
+    "delta": " lotur"
+  },
+  {
+    "type": "text",
+    "delta": "lorpo"
+  },
+  {
+    "type": "text",
+    "delta": " versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " adsecei"
+  },
+  {
+    "type": "text",
+    "delta": " pit"
+  },
+  {
+    "type": "text",
+    "delta": " teinven"
+  },
+  {
+    "type": "text",
+    "delta": "s ut"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n aliporse"
+  },
+  {
+    "type": "text",
+    "delta": " duntip"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " te"
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": " lainr"
+  },
+  {
+    "type": "text",
+    "delta": "e’e"
+  },
+  {
+    "type": "text",
+    "delta": " qu"
+  },
+  {
+    "type": "text",
+    "delta": "a us"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "context",
+    "used": 16951,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "done",
+    "result": "Elmod `--version` ci sedit con quasume sumd `package.json` si [src/cli.ts](/<CWD>/src/cli.ts).\n\nCon `npm modg loturlorpo version` adsecei pit teinvens ut con aliporse duntip, te C lainre’e qua us.",
+    "usage": {
+      "input": 17302,
+      "output": 1093,
+      "cacheRead": 94464,
+      "cacheWrite": 0,
+      "reasoning": 476
+    }
+  }
+]

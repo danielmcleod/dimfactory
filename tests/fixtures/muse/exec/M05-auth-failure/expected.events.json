@@ -1,0 +1,18 @@
+[
+  {
+    "type": "session",
+    "id": "0199d2a0-4c1e-7a3b-8d5f-6e7a8b9c0005"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "model": "muse-spark-1.2"
+    }
+  },
+  {
+    "type": "error",
+    "fatal": true,
+    "category": "auth_required"
+  }
+]

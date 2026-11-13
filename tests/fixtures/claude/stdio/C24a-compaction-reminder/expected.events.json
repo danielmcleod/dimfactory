@@ -1,0 +1,178 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4ef663-7dab-4a55-8c0a-ef1efb35d719"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "context",
+    "used": 26131,
+    "cacheRead": 17943,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 20
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ebgaOX7XkbxwRxkVJ3lDO",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "start",
+    "fp": "2a82c75deae7"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ebgaOX7XkbxwRxkVJ3lDO",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 22
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "context",
+    "used": 26346,
+    "cacheRead": 26121,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "in"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 26346,
+    "window": 200000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "in",
+    "usage": {
+      "input": 18,
+      "output": 187,
+      "cacheRead": 44064,
+      "cacheWrite": 8395,
+      "costUsd": 0.0221494
+    }
+  },
+  {
+    "type": "compaction",
+    "phase": "start"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "compaction",
+    "phase": "end",
+    "trigger": "manual",
+    "preTokens": 26396,
+    "postTokens": 1932
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25071,
+    "window": 200000,
+    "cacheRead": 22029,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  }
+]

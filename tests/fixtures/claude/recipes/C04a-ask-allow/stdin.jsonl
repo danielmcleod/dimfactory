@@ -1,0 +1,5 @@
+{"type":"control_request","request_id":"init-1","request":{"subtype":"initialize"}}
+{"$wait":{"type":"control_response","response":{"request_id":"init-1"}},"$timeoutMs":30000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"Run the shell command 'npm --version' twice (two separate tool calls) and report both outputs."}]},"parent_tool_use_id":null}
+{"$wait":{"type":"result"},"$timeoutMs":240000}
+{"$close":true}

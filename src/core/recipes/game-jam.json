@@ -1,0 +1,44 @@
+{
+  "id": "game-jam",
+  "version": 1,
+  "label": "Game jam",
+  "description": "A game jam prototype: one mechanic for a theme, time-boxed. The smallest playable loop first, no menus beyond start and restart, play-tested by Dim Factory, a short how to play.",
+  "toggles": {
+    "clarify": false,
+    "research": false,
+    "testFirst": false,
+    "security": true,
+    "acceptance": true,
+    "fixRounds": 2,
+    "explain": true
+  },
+  "gates": {
+    "afterPlan": true,
+    "beforeFix": false
+  },
+  "verify": {
+    "enabled": true,
+    "commands": [
+      {
+        "name": "Play-test (Dim Factory)",
+        "run": ["dimf:playtest", "playtest.json"]
+      }
+    ]
+  },
+  "researchLenses": ["game-feel", "mvp-scope"],
+  "brief": {
+    "category": "games",
+    "fields": {
+      "length": {
+        "choices": ["short"]
+      },
+      "constraints": {
+        "choices": ["original-art", "no-network", "no-ads"]
+      },
+      "approach": {
+        "choices": ["core-loop-first", "playtested"]
+      }
+    }
+  },
+  "taskHint": "The jam's theme and the one mechanic to build around it (for example: theme Roots, you grow a vine that must reach the light)"
+}

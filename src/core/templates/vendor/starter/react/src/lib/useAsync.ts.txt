@@ -1,0 +1,33 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// Loading something (from a file, or an API through the site's own server function): the page shows a loading
+// state, then the result, an empty state when there is nothing, or an error state with Try again.
+import { useCallback, useEffect, useState } from 'react'
+
+export type AsyncState<T> =
+  | { status: 'loading' }
+  | { status: 'ready'; data: T }
+  | { status: 'error'; message: string }
+
+export function useAsync<T>(load: () => Promise<T>): AsyncState<T> & { retry: () => void } {
+  const [state, setState] = useState<AsyncState<T>>({ status: 'loading' })
+  const [attempt, setAttempt] = useState(0)
+
+  useEffect(() => {
+    let alive = true
+    setState({ status: 'loading' })
+    load().then(
+      (data) => {
+        if (alive) setState({ status: 'ready', data })
+      },
+      (err: unknown) => {
+        if (alive) setState({ status: 'error', message: err instanceof Error ? err.message : String(err) })
+      },
+    )
+    return () => {
+      alive = false
+    }
+  }, [load, attempt])
+
+  const retry = useCallback(() => setAttempt((n) => n + 1), [])
+  return { ...state, retry }
+}

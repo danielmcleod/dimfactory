@@ -1,0 +1,24 @@
+{
+  "id": "easy-software",
+  "version": 1,
+  "label": "Easy: an app",
+  "description": "Easy mode's recipe for an app made from an idea in a new folder: plain questions first, a look at similar apps, the plan to check, an acceptance and security review, fixes until it passes, and a plain-language explanation.",
+  "toggles": {
+    "clarify": true,
+    "research": true,
+    "testFirst": false,
+    "security": true,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": { "afterPlan": true, "beforeFix": false },
+  "researchLenses": ["comparable", "users", "mvp"],
+  "brief": {
+    "category": "software",
+    "fields": { "quality": { "choices": ["responsive", "accessible", "dark-mode"] } }
+  },
+  "taskHint": "What do you want to make? Who is it for and what should they be able to do?"
+}

@@ -1,0 +1,117 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e0889-59c7-44f1-83b0-9840905d898d"
+  },
+  {
+    "type": "liveness",
+    "count": 9
+  },
+  {
+    "type": "context",
+    "used": 25614,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4etOpheHDSZ4m2ZFmlmB9a",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "2ee557544341"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4e8a85-2e04-45b1-822d-046adbe63c8d",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nPoru npm quasume (temal qua)\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e8a85-2e04-45b1-822d-046adbe63c8d",
+        "response": {
+          "behavior": "deny",
+          "message": "Denied by the user in Dim Factory.",
+          "interrupt": true
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4etOpheHDSZ4m2ZFmlmB9a",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 64
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "context",
+    "used": 25614,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "meta",
+    "key": "usage",
+    "value": {
+      "input": 2,
+      "output": 79,
+      "cacheRead": 15790,
+      "cacheWrite": 9822,
+      "costUsd": 0.043239999999999994
+    }
+  },
+  {
+    "type": "error",
+    "message": "You denied a request; Dim Factory paused the pass.",
+    "raw": "{\"type\":\"result\",\"subtype\":\"error_during_execution\",\"is_error\":true,\"terminal_reason\":\"aborted_tools\",\"stop_reason\":\"tool_use\",\"num_turns\":3,\"errors\":[\"[ede_diagnostic] result_type=user last_content_type=n/a stop_reason=tool_use\"],\"permission_denials\":[\"Bash\"]}",
+    "fatal": true,
+    "category": "permission_denied"
+  }
+]

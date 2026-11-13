@@ -1,0 +1,23 @@
+[
+ {
+  "when": {
+   "type": "control_request",
+   "request_id": "$rid",
+   "request": {
+    "subtype": "can_use_tool"
+   }
+  },
+  "reply": {
+   "type": "control_response",
+   "response": {
+    "subtype": "success",
+    "request_id": "$rid",
+    "response": {
+     "behavior": "deny",
+     "message": "Denied by the user in Dim Factory.",
+     "interrupt": true
+    }
+   }
+  }
+ }
+]

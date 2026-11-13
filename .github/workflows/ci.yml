@@ -1,0 +1,246 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+# Runs on every push to main and every pull request, forks' included, on Windows, macOS and Linux. It needs no secret
+# and no repository variable: a fork's pull request gets none, and nothing here signs (electron-builder skips signing
+# for pull requests and the package job turns certificate discovery off).
+# Actions are pinned to full commit SHAs with their release tag beside them (the same pins as release.yml), except
+# actions/cache, pinned to its exact release tag until its SHA is resolved.
+# CI never calls a real vendor CLI: integration tests run against tests/fake-cli.
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm format:check
+      - run: pnpm typecheck
+
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    # The chaos suite adds about 6 minutes to the integration project on Windows, and coverage some more.
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm fake-cli
+      # The coverage bar, at least 80% lines and 75% branches on core + shared: on Windows (where the
+      # bar was measured) test:coverage runs the unit and integration projects with vitest.config.ts's thresholds,
+      # so falling under the bar fails the build. The other OS run the same two projects without coverage.
+      - if: runner.os == 'Windows'
+        run: pnpm test:coverage
+      - if: runner.os != 'Windows'
+        run: pnpm test
+      - run: pnpm test:renderer
+      - if: runner.os != 'Windows'
+        run: pnpm test:int
+
+  # The full Playwright suite (`_electron` against the built app, isolated DIM_FACTORY_HOME, fake CLIs) on Windows.
+  e2e:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm fake-cli
+      # The runner's screen starts at 1024 x 768, smaller than the app's window: 1920 x 1080 first.
+      - name: Screen size
+        shell: powershell
+        run: ./scripts/ci-screen.ps1
+      - run: pnpm e2e
+      - name: Upload Playwright results
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: e2e-results-windows
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 7
+
+  # macOS and Linux (Linux under a virtual X server): the @smoke subset plus the scenarios that must pass on
+  # all three OS (@cross-os: the full-run, plan-edit, no-findings, stop, reload-mid-stream, kill-relaunch and
+  # performance specs).
+  e2e-smoke:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm fake-cli
+      # Ubuntu 24.04 restricts unprivileged user namespaces (AppArmor), so Chromium falls back to the SUID sandbox
+      # helper, which an npm-installed Electron ships without the root/SUID bits. Set them up instead of disabling
+      # the sandbox or the restriction.
+      - name: Prepare Linux (xvfb, Chromium sandbox helper)
+        if: runner.os == 'Linux'
+        run: |
+          command -v xvfb-run >/dev/null || { sudo apt-get update && sudo apt-get install -y --no-install-recommends xvfb; }
+          sudo chown root:root node_modules/electron/dist/chrome-sandbox
+          sudo chmod 4755 node_modules/electron/dist/chrome-sandbox
+      - name: E2E smoke (Linux)
+        if: runner.os == 'Linux'
+        run: pnpm exec electron-vite build && xvfb-run -a -s "-screen 0 1280x800x24" pnpm exec playwright test --grep "@smoke|@cross-os"
+      - name: E2E smoke (macOS)
+        if: runner.os != 'Linux'
+        run: pnpm exec electron-vite build && pnpm exec playwright test --grep "@smoke|@cross-os"
+      - name: Upload Playwright results
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: e2e-smoke-results-${{ matrix.os }}
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 7
+
+  # electron-builder --dir on every OS, then the packaged app's own `--smoke-test` (scripts/smoke-packaged.mjs). The
+  # Linux leg pins ubuntu-24.04 and keeps its AppArmor user-namespace restriction on, as user machines do; the script
+  # runs the app under xvfb-run itself when there is no display.
+  package:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-24.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      # Unsigned (release.yml signs): never pick up a certificate that happens to be on the runner.
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm package:dir
+      # What the deb's postinst does where user namespaces are restricted, so the smoke keeps Chromium's sandbox on.
+      - name: Prepare Linux (xvfb, Chromium sandbox helper)
+        if: runner.os == 'Linux'
+        run: |
+          command -v xvfb-run >/dev/null || { sudo apt-get update && sudo apt-get install -y --no-install-recommends xvfb; }
+          sudo chown root:root dist/linux-unpacked/chrome-sandbox
+          sudo chmod 4755 dist/linux-unpacked/chrome-sandbox
+      - run: pnpm smoke:packaged
+
+  # The shadow-repo git suites on the oldest git Dim Factory supports (every command it uses exists in 2.17), with
+  # the Diff tab reads and revert round trips (restore on 2.17.1) and snapshot retention (batched update-ref --stdin,
+  # gc, links to folders left out of snapshots, isolated copies removed only when finalized).
+  # Linux builds 2.17.1 from source; Windows uses MinGit 2.17.1(2). Both are cached and selected through
+  # DIM_FACTORY_TEST_GIT, which tests/integration/git/helpers.ts hands to configureGit().
+  git-compat:
+    name: git-compat (${{ matrix.label }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            label: git 2.17.1 source build
+          - os: windows-latest
+            label: MinGit 2.17.1
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      GIT_COMPAT_VERSION: 2.17.1
+      MINGIT_URL: https://github.com/git-for-windows/git/releases/download/v2.17.1.windows.2/MinGit-2.17.1.2-64-bit.zip
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Cache git ${{ env.GIT_COMPAT_VERSION }}
+        id: cache-git
+        uses: actions/cache@v4.2.3
+        with:
+          path: ~/git-${{ env.GIT_COMPAT_VERSION }}
+          key: git-compat-${{ env.GIT_COMPAT_VERSION }}-${{ runner.os }}-${{ runner.arch }}-v1
+
+      - name: Build git ${{ env.GIT_COMPAT_VERSION }} from source
+        if: runner.os == 'Linux' && steps.cache-git.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends build-essential zlib1g-dev
+          curl -fsSL "https://mirrors.edge.kernel.org/pub/software/scm/git/git-${GIT_COMPAT_VERSION}.tar.gz" -o "$RUNNER_TEMP/git.tar.gz"
+          tar -xzf "$RUNNER_TEMP/git.tar.gz" -C "$RUNNER_TEMP"
+          cd "$RUNNER_TEMP/git-${GIT_COMPAT_VERSION}"
+          # git 2.17.1 predates C23, where thread_local is a keyword; newer GCC defaults to C23 and rejects it.
+          make -j"$(nproc)" CFLAGS="-O2 -std=gnu11 -fpermissive" prefix="$HOME/git-${GIT_COMPAT_VERSION}" \
+            NO_GETTEXT=1 NO_TCLTK=1 NO_EXPAT=1 NO_CURL=1 NO_PERL=1 NO_PYTHON=1 NO_OPENSSL=1 install
+
+      - name: Fetch MinGit ${{ env.GIT_COMPAT_VERSION }}
+        if: runner.os == 'Windows' && steps.cache-git.outputs.cache-hit != 'true'
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Invoke-WebRequest -Uri $env:MINGIT_URL -OutFile "$env:RUNNER_TEMP\mingit.zip"
+          Expand-Archive -Path "$env:RUNNER_TEMP\mingit.zip" -DestinationPath "$HOME\git-$env:GIT_COMPAT_VERSION"
+
+      - name: Select git ${{ env.GIT_COMPAT_VERSION }} (Linux)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          GIT="$HOME/git-${GIT_COMPAT_VERSION}/bin/git"
+          "$GIT" --version | grep -F "git version ${GIT_COMPAT_VERSION}"
+          echo "DIM_FACTORY_TEST_GIT=$GIT" >> "$GITHUB_ENV"
+
+      - name: Select git ${{ env.GIT_COMPAT_VERSION }} (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $git = "$HOME\git-$env:GIT_COMPAT_VERSION\cmd\git.exe"
+          $v = & $git --version
+          Write-Output $v
+          if ($v -notlike "git version $env:GIT_COMPAT_VERSION*") { throw "unexpected $v" }
+          "DIM_FACTORY_TEST_GIT=$git" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+
+      - name: Git suites on git ${{ env.GIT_COMPAT_VERSION }}
+        run: pnpm exec vitest run --project integration tests/integration/git tests/integration/diff-settings/git tests/integration/isolated-runs/git tests/integration/isolated-runs/prepare/copyIns.test.ts tests/integration/isolated-runs/prepare/preflight-worktree.test.ts tests/integration/history/refs-gc.test.ts tests/integration/history/links.test.ts tests/integration/history/copies.test.ts tests/integration/history/copies-review.test.ts tests/integration/history/core-history.test.ts

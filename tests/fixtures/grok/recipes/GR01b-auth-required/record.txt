@@ -1,0 +1,4 @@
+# GR01b-auth-required: Not signed in, on Test: initialize answers (it needs no sign-in), session/new answers ACP authRequired (-32000 "Authentication required"). vendor.grok.auth fails auth_required with the sign-in command to copy; Dim Factory never calls authenticate.
+# Needs a fixture profile that is signed out (no auth.json in it, no XAI_API_KEY in --env-file).
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.grok.
+node scripts/record-fixture.mjs --acp --vendor grok --grok-home "<fixture GROK_HOME>" --bin "<the grok executable>" --cwd "<sandbox>" --out tests/fixtures/grok/acp/GR01b-auth-required --id GR01b --slug auth-required --cli-version <x.y.z> --timing off --stdin tests/fixtures/grok/recipes/GR01b-auth-required/stdin.jsonl --pass-file tests/fixtures/grok/recipes/GR01b-auth-required/pass.json --responders tests/fixtures/grok/recipes/GR01b-auth-required/responders.mjs --timeout 900000 -- agent --no-leader stdio

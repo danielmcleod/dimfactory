@@ -1,0 +1,40 @@
+# How this React starter is organised
+
+Dim Factory put these files here when it made the project. They run as they are: `npm install`, then `npm run dev`
+(or `npm run build`, which writes the site to `dist/`). Adapt them to the request; keep what fits and replace what
+does not.
+
+## Where things are
+
+- `src/content.ts`: every word the site shows. `[Fill in: ...]` marks a fact only the owner knows (a name, hours,
+  prices, an address, a customer's words). Replace it with the real fact from the request, or keep the marker and
+  list it in the README's "Things to fill in". Never make a fact up, and never use lorem ipsum.
+- `src/styles/tokens.css`: the look (palette, type scale, spacing, corner radius), light and dark. `global.css`
+  uses only these tokens. Every text colour keeps at least 4.5:1 contrast in both themes.
+- `src/App.tsx`: the pages and their addresses. `src/lib/router.tsx` is a small router (links without reloads, Back
+  and Forward work, `aria-current` on the current link).
+- `src/components/`: the frame of every page (`Layout`, with a skip link, the menu, a phone menu and the footer), the
+  theme toggle, the loading, empty and error states (`States`) and `ImageSlot`, a marked place for a picture.
+- `src/lib/useAsync.ts`: anything that loads shows loading, then the result, an empty state or an error with Try
+  again.
+- `assets/`: the owner's own pictures (see `assets/README.md`). No stock photos and nothing hot-linked.
+- `public/`: files served as they are: `favicon.svg`, `social-preview.png` (1200 × 630, shown when the site is shared)
+  and `_redirects`.
+
+## Publishing
+
+- `index.html` holds the page title, the description and the social preview (`og:` tags). Fill them in.
+- Single-page routing: `public/_redirects` sends every address to the app on Netlify and Cloudflare Pages, and the
+  build copies `dist/index.html` to `dist/404.html` for GitHub Pages, so a shared link to an inner page opens it.
+  On Vercel, add a `vercel.json` with a rewrite of every path to `/index.html`. For a GitHub Pages project site
+  (`user.github.io/name/`), set `base: '/name/'` in `vite.config.ts`.
+- No trackers, ads or analytics, and no fonts, scripts or pictures from other websites.
+- No secret key ever goes in the page or in a `VITE_` variable (those are public). A paid or private API is called
+  through a small server function (Netlify or Cloudflare functions) that keeps the key in the host's settings.
+
+## Checks
+
+`npm test` runs the tests in `src/*.test.tsx` (Vitest). `npm run build` type-checks and builds. Dim Factory also
+opens the built page and checks that it loads without console errors.
+
+Part of the Dim Factory web starter. MIT License: copy, change and share it freely.

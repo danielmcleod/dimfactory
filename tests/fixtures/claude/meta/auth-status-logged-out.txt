@@ -1,0 +1,12 @@
+$ claude auth status   (env: CLAUDE_CONFIG_DIR)
+# exit 1
+# stdout
+{
+  "loggedIn": false,
+  "authMethod": "none",
+  "apiProvider": "firstParty",
+  "analyticsDisabled": false,
+  "projectsDirectory": "~\\AppData\\Local\\Temp\\cfx-cfg-ax68nd\\projects",
+  "configDirectory": "~\\AppData\\Local\\Temp\\cfx-cfg-ax68nd"
+}
+# stderr

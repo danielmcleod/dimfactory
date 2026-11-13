@@ -1,0 +1,351 @@
+{
+  "id": "data",
+  "version": 1,
+  "label": "Data and analysis",
+  "description": "Analysis, charts, reports and dashboards built from data.",
+  "detect": {
+    "keywords": [
+      "data",
+      "dataset",
+      "csv",
+      "excel",
+      "spreadsheet",
+      "xlsx",
+      "chart",
+      "charts",
+      "graph",
+      "graphs",
+      "plot",
+      "plots",
+      "visualize",
+      "visualise",
+      "visualization",
+      "visualisation",
+      "dashboard",
+      "analysis",
+      "analyze",
+      "analyse",
+      "statistics",
+      "pandas",
+      "notebook",
+      "jupyter",
+      "sql query",
+      "metrics",
+      "kpi",
+      "kpis",
+      "report",
+      "forecast",
+      "regression",
+      "pivot table",
+      "trends"
+    ],
+    "files": [
+      "*.ipynb",
+      "*.csv",
+      "*.tsv",
+      "*.parquet",
+      "*.xlsx",
+      "*.xls",
+      "*.sav",
+      "*.rds",
+      "*.Rproj",
+      "dbt_project.yml"
+    ]
+  },
+  "groups": [
+    {
+      "id": "sources",
+      "label": "Data sources",
+      "hint": "Where the data comes from.",
+      "multi": true,
+      "other": true,
+      "options": [
+        { "id": "csv", "label": "CSV files", "keywords": ["csv"] },
+        { "id": "excel", "label": "Excel workbooks", "keywords": ["excel", "xlsx", "spreadsheet"] },
+        { "id": "json", "label": "JSON files", "keywords": ["json"] },
+        { "id": "parquet", "label": "Parquet files", "keywords": ["parquet"] },
+        {
+          "id": "database",
+          "label": "A database",
+          "keywords": ["database", "sql", "postgres", "mysql", "bigquery", "snowflake"]
+        },
+        { "id": "api", "label": "An API", "keywords": ["api", "rest api", "endpoint"] }
+      ]
+    },
+    {
+      "id": "outputs",
+      "label": "Outputs",
+      "hint": "What the analysis produces.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "notebook",
+          "label": "Notebook",
+          "hint": "A Jupyter notebook with code and results.",
+          "keywords": ["notebook", "jupyter"]
+        },
+        { "id": "chart-images", "label": "Chart images", "keywords": ["png", "chart image", "chart images"] },
+        { "id": "html-report", "label": "HTML report", "keywords": ["html report"] },
+        { "id": "dashboard", "label": "Interactive dashboard", "keywords": ["dashboard", "streamlit"] },
+        { "id": "spreadsheet", "label": "Spreadsheet", "keywords": ["spreadsheet", "excel file"] },
+        {
+          "id": "cleaned-data",
+          "label": "Cleaned data files",
+          "keywords": ["clean the data", "cleaned data", "data cleaning"]
+        }
+      ]
+    },
+    {
+      "id": "chartTypes",
+      "label": "Chart types",
+      "hint": "The kinds of charts that fit the question.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "line",
+          "label": "Line",
+          "keywords": ["line chart", "line graph", "over time", "time series"]
+        },
+        { "id": "bar", "label": "Bar", "keywords": ["bar chart", "bar graph"] },
+        { "id": "scatter", "label": "Scatter", "keywords": ["scatter plot", "scatter", "correlation"] },
+        { "id": "map", "label": "Map", "keywords": ["map", "choropleth", "geographic"] },
+        { "id": "table", "label": "Table", "keywords": ["table", "summary table"] },
+        {
+          "id": "distribution",
+          "label": "Distribution",
+          "keywords": ["histogram", "box plot", "distribution"]
+        }
+      ]
+    },
+    {
+      "id": "refresh",
+      "label": "Refresh",
+      "hint": "How often the result is rebuilt with new data.",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "once", "label": "One-off", "keywords": ["one-off", "one time", "once"] },
+        { "id": "daily", "label": "Daily", "keywords": ["daily", "every day"] },
+        { "id": "weekly", "label": "Weekly", "keywords": ["weekly", "every week"] },
+        { "id": "monthly", "label": "Monthly", "keywords": ["monthly", "every month"] },
+        { "id": "live", "label": "Live", "keywords": ["live", "real-time", "realtime"] }
+      ]
+    },
+    {
+      "id": "tooling",
+      "label": "Tools",
+      "hint": "What to do the analysis with.",
+      "multi": true,
+      "other": true,
+      "options": [
+        { "id": "python", "label": "Python (pandas)", "keywords": ["python", "pandas", "polars"] },
+        { "id": "r", "label": "R", "keywords": ["in r", "using r", "tidyverse", "ggplot"] },
+        { "id": "sql", "label": "SQL", "keywords": ["sql"] },
+        { "id": "spreadsheet", "label": "Spreadsheet formulas", "keywords": ["formulas", "excel formulas"] },
+        { "id": "javascript", "label": "JavaScript charts", "keywords": ["d3", "chart.js", "plotly"] }
+      ]
+    }
+  ],
+  "preview": [
+    {
+      "id": "streamlit",
+      "when": { "files": ["streamlit_app.py"] },
+      "run": ["streamlit", "run", "streamlit_app.py", "--server.headless", "true"],
+      "kind": "server",
+      "note": "Serves the Streamlit app."
+    },
+    {
+      "id": "quarto",
+      "when": { "files": ["_quarto.yml"] },
+      "run": ["quarto", "preview", "--no-browser"],
+      "kind": "server",
+      "note": "Renders the Quarto project and serves a live preview."
+    }
+  ],
+  "research": {
+    "lenses": [
+      {
+        "id": "data-quality",
+        "label": "Data quality",
+        "ask": "What data quality problems are common for data like this, and how are they checked?",
+        "web": true
+      },
+      {
+        "id": "provenance",
+        "label": "Provenance",
+        "ask": "Where does the data come from, what are its licences, and how should sources be cited?",
+        "web": true
+      },
+      {
+        "id": "chart-choice",
+        "label": "Chart choice",
+        "ask": "Which chart types present this kind of data honestly and clearly?",
+        "web": true
+      }
+    ]
+  },
+  "deploy": {
+    "targets": [
+      {
+        "id": "github-pages",
+        "label": "GitHub Pages",
+        "classes": ["static-site"],
+        "freeTier": "Included with GitHub's plans for public repositories, within GitHub's usage limits; private sites need a paid plan.",
+        "cost": "Usually no extra charge for a small public site; check the limits on size, bandwidth and builds.",
+        "coldStarts": "None: the built files are served as they are.",
+        "customDomains": "Supported, with an HTTPS certificate once DNS points at GitHub.",
+        "dataResidency": "Served from GitHub's global network; you cannot choose a region.",
+        "configs": ["github-actions"],
+        "needs": "git, and the GitHub CLI (gh) to open the repository",
+        "steps": [
+          {
+            "label": "Commit the workflow, then push it",
+            "run": "git push origin {branch}"
+          },
+          {
+            "label": "In the repository settings, open Pages and set Source to GitHub Actions",
+            "note": "The workflow then publishes the site on every push to the branch it watches."
+          },
+          {
+            "label": "Open the repository in your browser",
+            "run": "gh browse"
+          }
+        ]
+      },
+      {
+        "id": "netlify",
+        "label": "Netlify",
+        "classes": ["static-site"],
+        "freeTier": "A starter tier for personal projects, with monthly limits on bandwidth, build minutes and function calls.",
+        "cost": "Paid plans are billed per team member; usage over the limits is billed or paused, depending on the plan.",
+        "coldStarts": "Static files: none. Functions can take a moment on the first call after they were idle.",
+        "customDomains": "Supported, with HTTPS certificates Netlify manages.",
+        "dataResidency": "Static files come from a global network; where functions run depends on the plan.",
+        "configs": ["netlify"],
+        "needs": "Node.js (the Netlify CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Netlify",
+            "run": "npx netlify-cli login"
+          },
+          {
+            "label": "Link this folder to a Netlify site",
+            "run": "npx netlify-cli init"
+          },
+          {
+            "label": "Deploy a draft to check it",
+            "run": "npx netlify-cli deploy --dir {dir}"
+          },
+          {
+            "label": "Deploy to production",
+            "run": "npx netlify-cli deploy --prod --dir {dir}"
+          }
+        ]
+      },
+      {
+        "id": "render",
+        "label": "Render",
+        "classes": ["server-app"],
+        "freeTier": "A starter instance type for trying things out; it sleeps when idle and has monthly hour limits.",
+        "cost": "Always-on instances and databases are billed per month by size.",
+        "coldStarts": "Starter instances sleep after idle time, so the first request after that is slow.",
+        "customDomains": "Supported, with HTTPS certificates Render manages.",
+        "dataResidency": "You pick a region per service (a few regions in the US, Europe and Asia).",
+        "configs": ["dockerfile", "env-example"],
+        "needs": "git, and a Render account connected to your Git host",
+        "steps": [
+          {
+            "label": "Push the branch to your Git host",
+            "run": "git push origin {branch}"
+          },
+          {
+            "label": "In the Render dashboard, create a Web Service from this repository and choose Docker",
+            "note": "Set each variable from .env.example in the service settings, never in the repository."
+          }
+        ]
+      },
+      {
+        "id": "surge",
+        "label": "Surge",
+        "classes": ["static-site"],
+        "freeTier": "A free plan for static sites on a surge.sh address, with limits. Check the provider's current pricing.",
+        "cost": "A paid plan adds features such as HTTPS on your own domain and password protection.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported: point the domain at Surge, then publish with the domain instead of the surge.sh name. HTTPS on your own domain needs the paid plan.",
+        "dataResidency": "Files are served from Surge's own network; there is no region to choose.",
+        "configs": [],
+        "needs": "Node.js (the Surge CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Build the site first if it has a build step",
+            "note": "The command below publishes the folder as it is: the built files, with index.html at its top."
+          },
+          {
+            "label": "Publish the folder to a surge.sh address",
+            "run": "npx surge {dir} {name}.surge.sh",
+            "note": "The first time, the Surge CLI asks for an email and a password in the terminal to make your account. If the name is taken, pick another."
+          },
+          {
+            "label": "For a single-page app, answer every address with the app",
+            "note": "Copy index.html to 200.html in the same folder before you publish, so links to inner pages load the app."
+          },
+          {
+            "label": "Use your own domain (optional)",
+            "note": "Point the domain at Surge as its help pages say, then run the publish command with your domain in place of the surge.sh address."
+          },
+          {
+            "label": "Take it down when you no longer want it online",
+            "run": "npx surge teardown {name}.surge.sh"
+          }
+        ]
+      },
+      {
+        "id": "firebase-hosting",
+        "label": "Firebase Hosting",
+        "classes": ["static-site"],
+        "freeTier": "The Spark plan includes a no-cost allowance of storage and transfer for Hosting. Check the provider's current pricing.",
+        "cost": "The pay-as-you-go Blaze plan is only needed for some features (such as Cloud Functions); usage past the allowance is billed there.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported, with HTTPS certificates Firebase provisions.",
+        "dataResidency": "Static files are served from a global CDN; the Firebase project has a default location.",
+        "configs": ["firebase", "firebaserc"],
+        "needs": "Node.js and the Firebase CLI (firebase-tools, installed with npm)",
+        "steps": [
+          {
+            "label": "Install the Firebase CLI",
+            "run": "npm install -g firebase-tools"
+          },
+          {
+            "label": "Sign in to Firebase",
+            "run": "firebase login",
+            "note": "It opens your browser to sign in. Dim Factory never signs in for you and never keeps the token."
+          },
+          {
+            "label": "Set up Hosting for this folder",
+            "run": "firebase init hosting",
+            "note": "Pick or create a Firebase project. For the public directory, give the folder with your built files (index.html at its top). For a single-page app, answer Yes to rewriting all URLs to /index.html. Do not let it overwrite your index.html."
+          },
+          {
+            "label": "Check the project id",
+            "note": "If the Deploy step wrote .firebaserc, replace your-firebase-project-id with your own project id (firebase init does this when you pick a project)."
+          },
+          {
+            "label": "Deploy",
+            "run": "firebase deploy --only hosting"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "focus": [
+      "A report about people shows totals, counts and averages: never names, email addresses, phone numbers, street addresses, dates of birth or other personal columns on the page.",
+      "Personal columns are left out of every file the page loads (an embedded data copy such as js/data.js, a cleaned CSV): anyone who opens a shared report can read them.",
+      "A small group in a breakdown (fewer than five people) can point at one person: merge it into a larger group or leave it out.",
+      "The data stays on this computer: no upload to an online service, no analytics or trackers, and no scripts, fonts or pictures from other websites.",
+      "Values from the data file are untrusted: they are shown as text (textContent), never as HTML."
+    ]
+  }
+}

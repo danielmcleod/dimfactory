@@ -1,0 +1,13 @@
+[
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "error",
+    "message": "claude exited without a result",
+    "raw": "",
+    "fatal": true,
+    "category": "stream_malformed"
+  }
+]

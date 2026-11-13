@@ -1,0 +1,37 @@
+{
+  "id": "new-game",
+  "version": 1,
+  "label": "New game",
+  "description": "Start a light browser game: questions first, research on similar games and what makes them fun, the smallest playable loop before polish, an acceptance review written as things a player can do, fixes until it passes, and how to play it.",
+  "toggles": {
+    "clarify": true,
+    "research": true,
+    "testFirst": false,
+    "security": true,
+    "acceptance": true,
+    "fixRounds": 3,
+    "explain": true
+  },
+  "verify": {
+    "enabled": true,
+    "commands": [
+      {
+        "name": "Play-test (Dim Factory)",
+        "run": ["dimf:playtest", "playtest.json"]
+      }
+    ]
+  },
+  "researchLenses": ["comparable-games", "game-feel", "mvp-scope"],
+  "brief": {
+    "category": "games",
+    "fields": {
+      "constraints": {
+        "choices": ["original-art", "no-network", "no-ads"]
+      },
+      "approach": {
+        "choices": ["core-loop-first", "playtested"]
+      }
+    }
+  },
+  "taskHint": "Describe the game: how you play it, how you win or lose, and who it is for"
+}

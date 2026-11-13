@@ -1,0 +1,2 @@
+mcp/servers.json (not committed): one connector of the account, as the C22a listing reported it, under its allow-list name:
+{"mcpServers":{"claude_ai_<name>":{"type":"claudeai-proxy","url":"<its url>","id":"<its id>"}}}

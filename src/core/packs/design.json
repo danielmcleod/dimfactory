@@ -1,0 +1,329 @@
+{
+  "id": "design",
+  "version": 1,
+  "label": "Design",
+  "description": "Wireframes, mockups, prototypes, design systems and visual assets.",
+  "detect": {
+    "keywords": [
+      "design",
+      "redesign",
+      "mockup",
+      "mock-up",
+      "mockups",
+      "wireframe",
+      "wireframes",
+      "prototype",
+      "figma",
+      "interface design",
+      "ux",
+      "logo",
+      "branding",
+      "style guide",
+      "design system",
+      "design tokens",
+      "color palette",
+      "colour palette",
+      "typography",
+      "layout",
+      "icon set",
+      "illustration",
+      "look and feel"
+    ],
+    "files": ["*.fig", "*.sketch", "*.xd", "*.penpot", "design-tokens.json", "tokens.json", "*.ai", "*.psd"]
+  },
+  "groups": [
+    {
+      "id": "fidelity",
+      "label": "Fidelity",
+      "hint": "How finished the design should look.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "wireframe",
+          "label": "Wireframe",
+          "hint": "Layout and flow only, no styling.",
+          "keywords": ["wireframe", "wireframes", "low-fidelity", "lo-fi"]
+        },
+        {
+          "id": "high-fidelity",
+          "label": "High fidelity",
+          "hint": "Final colours, type and spacing.",
+          "keywords": ["high-fidelity", "hi-fi", "pixel-perfect", "polished"]
+        },
+        {
+          "id": "clickable",
+          "label": "Clickable prototype",
+          "hint": "Screens linked so you can click through.",
+          "keywords": ["clickable", "interactive prototype", "click-through"]
+        }
+      ]
+    },
+    {
+      "id": "brand",
+      "label": "Brand",
+      "hint": "Whose look to follow.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "existing",
+          "label": "Existing brand",
+          "hint": "Follow the colours, type and logo already in use.",
+          "keywords": ["our brand", "brand guidelines", "existing brand"]
+        },
+        {
+          "id": "new",
+          "label": "New brand",
+          "hint": "Propose a fresh look.",
+          "keywords": ["new brand", "rebrand", "fresh look"]
+        },
+        {
+          "id": "neutral",
+          "label": "Neutral",
+          "hint": "Clean defaults, easy to restyle later.",
+          "keywords": ["neutral", "minimal", "minimalist"]
+        }
+      ]
+    },
+    {
+      "id": "breakpoints",
+      "label": "Screen sizes",
+      "hint": "The widths the design must cover.",
+      "multi": true,
+      "other": true,
+      "options": [
+        { "id": "mobile", "label": "Phone", "keywords": ["mobile", "phone"] },
+        { "id": "tablet", "label": "Tablet", "keywords": ["tablet", "ipad"] },
+        { "id": "desktop", "label": "Desktop", "keywords": ["desktop"] },
+        { "id": "large", "label": "Large screens", "keywords": ["large screens", "widescreen", "4k"] }
+      ]
+    },
+    {
+      "id": "output",
+      "label": "Output",
+      "hint": "What you get at the end.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "html-css",
+          "label": "HTML and CSS prototype",
+          "keywords": ["html prototype", "html and css"]
+        },
+        {
+          "id": "components",
+          "label": "UI components",
+          "hint": "Reusable components in the project's framework.",
+          "keywords": ["components", "component library"]
+        },
+        { "id": "images", "label": "Images (PNG or SVG)", "keywords": ["png", "svg", "images"] },
+        {
+          "id": "tokens",
+          "label": "Design tokens",
+          "hint": "Colours, type and spacing as data.",
+          "keywords": ["design tokens", "tokens"]
+        },
+        {
+          "id": "spec",
+          "label": "Written spec",
+          "hint": "A description of each screen and state.",
+          "keywords": ["design spec", "specification"]
+        }
+      ]
+    },
+    {
+      "id": "approach",
+      "label": "Approach",
+      "hint": "How Dim Factory should shape the plan.",
+      "multi": true,
+      "other": false,
+      "options": [
+        {
+          "id": "explore-options",
+          "label": "Explore options first",
+          "hint": "Try two or three directions before choosing one.",
+          "effect": "plan",
+          "guidance": "Plan a short exploration step that produces two or three distinct directions side by side, then refine one of them. Say which direction was chosen and why."
+        }
+      ]
+    }
+  ],
+  "research": {
+    "lenses": [
+      {
+        "id": "design-patterns",
+        "label": "Design patterns",
+        "ask": "Which interface patterns do comparable products use for these screens and flows?",
+        "web": true
+      }
+    ]
+  },
+  "deploy": {
+    "targets": [
+      {
+        "id": "netlify",
+        "label": "Netlify",
+        "classes": ["static-site", "spa"],
+        "freeTier": "A starter tier for personal projects, with monthly limits on bandwidth, build minutes and function calls.",
+        "cost": "Paid plans are billed per team member; usage over the limits is billed or paused, depending on the plan.",
+        "coldStarts": "Static files: none. Functions can take a moment on the first call after they were idle.",
+        "customDomains": "Supported, with HTTPS certificates Netlify manages.",
+        "dataResidency": "Static files come from a global network; where functions run depends on the plan.",
+        "configs": ["netlify"],
+        "needs": "Node.js (the Netlify CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Netlify",
+            "run": "npx netlify-cli login"
+          },
+          {
+            "label": "Link this folder to a Netlify site",
+            "run": "npx netlify-cli init"
+          },
+          {
+            "label": "Deploy a draft to check it",
+            "run": "npx netlify-cli deploy --dir {dir}"
+          },
+          {
+            "label": "Deploy to production",
+            "run": "npx netlify-cli deploy --prod --dir {dir}"
+          }
+        ]
+      },
+      {
+        "id": "vercel",
+        "label": "Vercel",
+        "classes": ["static-site", "spa"],
+        "freeTier": "A hobby tier for personal, non-commercial projects, with limits on bandwidth, builds and function time.",
+        "cost": "Commercial use needs a paid plan, billed per member, plus usage over the included amounts.",
+        "coldStarts": "Static files: none. Server functions can start slowly after being idle.",
+        "customDomains": "Supported, with HTTPS certificates Vercel manages.",
+        "dataResidency": "Functions run in a region you pick in the project settings; static files come from a global network.",
+        "configs": ["vercel"],
+        "needs": "Node.js (the Vercel CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Vercel",
+            "run": "npx vercel login"
+          },
+          {
+            "label": "Deploy a preview to check it",
+            "run": "npx vercel"
+          },
+          {
+            "label": "Deploy to production",
+            "run": "npx vercel --prod"
+          }
+        ]
+      },
+      {
+        "id": "github-pages",
+        "label": "GitHub Pages",
+        "classes": ["static-site", "spa"],
+        "freeTier": "Included with GitHub's plans for public repositories, within GitHub's usage limits; private sites need a paid plan.",
+        "cost": "Usually no extra charge for a small public site; check the limits on size, bandwidth and builds.",
+        "coldStarts": "None: the built files are served as they are.",
+        "customDomains": "Supported, with an HTTPS certificate once DNS points at GitHub.",
+        "dataResidency": "Served from GitHub's global network; you cannot choose a region.",
+        "configs": ["github-actions"],
+        "needs": "git, and the GitHub CLI (gh) to open the repository",
+        "steps": [
+          {
+            "label": "Commit the workflow, then push it",
+            "run": "git push origin {branch}"
+          },
+          {
+            "label": "In the repository settings, open Pages and set Source to GitHub Actions",
+            "note": "The workflow then publishes the site on every push to the branch it watches."
+          },
+          {
+            "label": "Open the repository in your browser",
+            "run": "gh browse"
+          }
+        ]
+      },
+      {
+        "id": "surge",
+        "label": "Surge",
+        "classes": ["static-site", "spa"],
+        "freeTier": "A free plan for static sites on a surge.sh address, with limits. Check the provider's current pricing.",
+        "cost": "A paid plan adds features such as HTTPS on your own domain and password protection.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported: point the domain at Surge, then publish with the domain instead of the surge.sh name. HTTPS on your own domain needs the paid plan.",
+        "dataResidency": "Files are served from Surge's own network; there is no region to choose.",
+        "configs": [],
+        "needs": "Node.js (the Surge CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Build the site first if it has a build step",
+            "note": "The command below publishes the folder as it is: the built files, with index.html at its top."
+          },
+          {
+            "label": "Publish the folder to a surge.sh address",
+            "run": "npx surge {dir} {name}.surge.sh",
+            "note": "The first time, the Surge CLI asks for an email and a password in the terminal to make your account. If the name is taken, pick another."
+          },
+          {
+            "label": "For a single-page app, answer every address with the app",
+            "note": "Copy index.html to 200.html in the same folder before you publish, so links to inner pages load the app."
+          },
+          {
+            "label": "Use your own domain (optional)",
+            "note": "Point the domain at Surge as its help pages say, then run the publish command with your domain in place of the surge.sh address."
+          },
+          {
+            "label": "Take it down when you no longer want it online",
+            "run": "npx surge teardown {name}.surge.sh"
+          }
+        ]
+      },
+      {
+        "id": "firebase-hosting",
+        "label": "Firebase Hosting",
+        "classes": ["static-site", "spa"],
+        "freeTier": "The Spark plan includes a no-cost allowance of storage and transfer for Hosting. Check the provider's current pricing.",
+        "cost": "The pay-as-you-go Blaze plan is only needed for some features (such as Cloud Functions); usage past the allowance is billed there.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported, with HTTPS certificates Firebase provisions.",
+        "dataResidency": "Static files are served from a global CDN; the Firebase project has a default location.",
+        "configs": ["firebase", "firebaserc"],
+        "needs": "Node.js and the Firebase CLI (firebase-tools, installed with npm)",
+        "steps": [
+          {
+            "label": "Install the Firebase CLI",
+            "run": "npm install -g firebase-tools"
+          },
+          {
+            "label": "Sign in to Firebase",
+            "run": "firebase login",
+            "note": "It opens your browser to sign in. Dim Factory never signs in for you and never keeps the token."
+          },
+          {
+            "label": "Set up Hosting for this folder",
+            "run": "firebase init hosting",
+            "note": "Pick or create a Firebase project. For the public directory, give the folder with your built files (index.html at its top). For a single-page app, answer Yes to rewriting all URLs to /index.html. Do not let it overwrite your index.html."
+          },
+          {
+            "label": "Check the project id",
+            "note": "If the Deploy step wrote .firebaserc, replace your-firebase-project-id with your own project id (firebase init does this when you pick a project)."
+          },
+          {
+            "label": "Deploy",
+            "run": "firebase deploy --only hosting"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "focus": [
+      "No secret key, token or password in browser code, in the built files or in a VITE_, NEXT_PUBLIC_, REACT_APP_ or PUBLIC_ variable: everything the page loads is public.",
+      "Prefer APIs that need no key. A paid or private key is used only from a small server function (Netlify or Cloudflare functions) that reads it from the host's settings; the page calls that function.",
+      "Keys that are public by design (a Supabase anon key, a Google Maps browser key) are fine in the page only when restricted: row level security on every table, or the key limited to the site's own domain.",
+      "Form input, the address bar and anything an API returns are untrusted: shown as text (React's normal rendering, textContent), never as HTML (no dangerouslySetInnerHTML or innerHTML).",
+      "No third-party trackers, ads or analytics unless the user asked for them, and no scripts, fonts or pictures loaded from other websites.",
+      "A form that sends personal details says what happens to them, and sends them only to the place the user chose."
+    ]
+  }
+}

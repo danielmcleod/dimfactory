@@ -1,0 +1,134 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4eee28-1ee8-42dd-846e-e2f3221a9456"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25618,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eJNnlY7Ce2j4A5oKppfZk",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "cf7adb49a315"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4ec8d9-ace5-462a-8933-c5a70f28bc3d",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nSedit npm quasume\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4ec8d9-ace5-462a-8933-c5a70f28bc3d",
+        "response": {
+          "behavior": "allow",
+          "updatedInput": {
+            "command": "npm --version",
+            "description": "Sedit npm quasume"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eJNnlY7Ce2j4A5oKppfZk",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 2
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Con quasum sc"
+  },
+  {
+    "type": "text",
+    "delta": " `npm --version` sc `"
+  },
+  {
+    "type": "text",
+    "delta": "11.17.0`."
+  },
+  {
+    "type": "context",
+    "used": 25727,
+    "cacheRead": 25616,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25727,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Con quasum sc `npm --version` sc `11.17.0`.",
+    "usage": {
+      "input": 4,
+      "output": 95,
+      "cacheRead": 41406,
+      "cacheWrite": 9935,
+      "costUsd": 0.0489792
+    }
+  }
+]

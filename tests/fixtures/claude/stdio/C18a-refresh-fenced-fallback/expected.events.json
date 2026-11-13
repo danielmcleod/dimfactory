@@ -1,0 +1,1883 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e9819-72e8-4498-84f8-3fb21062cb6f"
+  },
+  {
+    "type": "liveness",
+    "count": 29
+  },
+  {
+    "type": "context",
+    "used": 7217,
+    "cacheRead": 1615,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eceAtDJ6oGznsw8ai7B1V",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "phase": "start",
+    "fp": "da270eaee40d"
+  },
+  {
+    "type": "liveness",
+    "count": 12
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eceAtDJ6oGznsw8ai7B1V",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 620
+  },
+  {
+    "type": "liveness",
+    "count": 9
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eVP8Sw6vt4dPwHTx7HVNy",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "phase": "start",
+    "fp": "0c79fd4ad534"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eVP8Sw6vt4dPwHTx7HVNy",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 5642
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 14428,
+    "cacheRead": 7215,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 36
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eswT0mJ7AVAF2g7sDDtkI",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "phase": "start",
+    "fp": "3e70c27ed77a"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eswT0mJ7AVAF2g7sDDtkI",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 620
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "context",
+    "used": 15590,
+    "cacheRead": 14426,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 36
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efGyJTHcr40cbQD6wlQWT",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "phase": "start",
+    "fp": "c409c78515f5"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efGyJTHcr40cbQD6wlQWT",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 620
+  },
+  {
+    "type": "liveness",
+    "count": 10
+  },
+  {
+    "type": "context",
+    "used": 16655,
+    "cacheRead": 15588,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 17
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4enSP39PHFV945muEyTAf1",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+    "phase": "start",
+    "fp": "23310527ba70"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4enSP39PHFV945muEyTAf1",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 4100
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4el3KzQDBzcX714ooXsIOd",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+    "phase": "start",
+    "fp": "4e6ce8dd23ee"
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4el3KzQDBzcX714ooXsIOd",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 4162
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ezB7ejYuaYr8TZyvzQoKE",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/haiku-5-5/overview",
+    "phase": "start",
+    "fp": "f2d679641cf1"
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ezB7ejYuaYr8TZyvzQoKE",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/haiku-5-5/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 4195
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e24k6N2yrvWhrPXNUb52l",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+    "phase": "start",
+    "fp": "27c725ae3453"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e24k6N2yrvWhrPXNUb52l",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 4278
+  },
+  {
+    "type": "liveness",
+    "count": 10
+  },
+  {
+    "type": "context",
+    "used": 36286,
+    "cacheRead": 16653,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 20
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eB1A8dXCp7x9P0rPuyaN3",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-5/overview",
+    "phase": "start",
+    "fp": "91bffb0215fd"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eB1A8dXCp7x9P0rPuyaN3",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-5/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 3535
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4epqlpjRDHa8044XmPSP6Q",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/sonnet-5/overview",
+    "phase": "start",
+    "fp": "a76495302995"
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4epqlpjRDHa8044XmPSP6Q",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/sonnet-5/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 3705
+  },
+  {
+    "type": "liveness",
+    "count": 9
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efakqMmF8OmcfDkjFEUEd",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/fable-5/overview",
+    "phase": "start",
+    "fp": "08c6d610241e"
+  },
+  {
+    "type": "liveness",
+    "count": 14
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efakqMmF8OmcfDkjFEUEd",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/fable-5/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 3476
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eXvHmgnmrdqi5HgVcmgLe",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-4-8/overview",
+    "phase": "start",
+    "fp": "fb7fb61bcfb9"
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eXvHmgnmrdqi5HgVcmgLe",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-4-8/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 3380
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eCSmyOnHfg7ColWUD4FWo",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-4-7/overview",
+    "phase": "start",
+    "fp": "9a5e06c2977b"
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eCSmyOnHfg7ColWUD4FWo",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-4-7/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 3336
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eg4N6tDpKS1Njhof7IN2r",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-4-6/overview",
+    "phase": "start",
+    "fp": "a317abc32dbb"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eg4N6tDpKS1Njhof7IN2r",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/opus-4-6/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 3527
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e7N6fmZonPBX4zks0cm3y",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/sonnet-4-6/overview",
+    "phase": "start",
+    "fp": "351bacf9100a"
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e7N6fmZonPBX4zks0cm3y",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/sonnet-4-6/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 3541
+  },
+  {
+    "type": "liveness",
+    "count": 10
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e5HsLTe7chthJkwxWMkxK",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/haiku-4-5/overview",
+    "phase": "start",
+    "fp": "fa94ef0e7b44"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e5HsLTe7chthJkwxWMkxK",
+    "name": "WebFetch",
+    "summary": "https://platform.claude.com/docs/en/models/haiku-4-5/overview",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 3829
+  },
+  {
+    "type": "liveness",
+    "count": 12
+  },
+  {
+    "type": "context",
+    "used": 68877,
+    "cacheRead": 36284,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "Reci"
+  },
+  {
+    "type": "text",
+    "delta": "ipets co"
+  },
+  {
+    "type": "text",
+    "delta": "n ipamgnat te"
+  },
+  {
+    "type": "text",
+    "delta": "mdos venr con turse"
+  },
+  {
+    "type": "text",
+    "delta": " JSON tur"
+  },
+  {
+    "type": "text",
+    "delta": ".\n\n```"
+  },
+  {
+    "type": "text",
+    "delta": "json\n{\n  \"generat"
+  },
+  {
+    "type": "text",
+    "delta": "edAt\": \"2026-"
+  },
+  {
+    "type": "text",
+    "delta": "10-12T00:00:"
+  },
+  {
+    "type": "text",
+    "delta": "00Z\",\n  \"ent"
+  },
+  {
+    "type": "text",
+    "delta": "ries\": [\n    {\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"vendor\": \"clau"
+  },
+  {
+    "type": "text",
+    "delta": "de\",\n      \"model\": \"cl"
+  },
+  {
+    "type": "text",
+    "delta": "aude-opus-5-"
+  },
+  {
+    "type": "text",
+    "delta": "5\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "aliases\": [\"opus\""
+  },
+  {
+    "type": "text",
+    "delta": "],\n      \"inputPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 4,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"outputPerMT"
+  },
+  {
+    "type": "text",
+    "delta": "ok\": 20,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheReadPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 0.2,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"cacheWrit"
+  },
+  {
+    "type": "text",
+    "delta": "ePerMTok\": 8"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"source"
+  },
+  {
+    "type": "text",
+    "delta": "Url\": \"https://platfor"
+  },
+  {
+    "type": "text",
+    "delta": "m.claude.com/doc"
+  },
+  {
+    "type": "text",
+    "delta": "s/en/models/"
+  },
+  {
+    "type": "text",
+    "delta": "opus-5-5/overview\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"sourceQuot"
+  },
+  {
+    "type": "text",
+    "delta": "e\": \"Usciqua quabos: "
+  },
+  {
+    "type": "text",
+    "delta": "1M scimaa · Adm quasum"
+  },
+  {
+    "type": "text",
+    "delta": ": 128K scimaa ·"
+  },
+  {
+    "type": "text",
+    "delta": " Doade dognabo: $4"
+  },
+  {
+    "type": "text",
+    "delta": " / Etmo · Quasum"
+  },
+  {
+    "type": "text",
+    "delta": " dognabo: $20 /"
+  },
+  {
+    "type": "text",
+    "delta": " Etmo\"\n    },"
+  },
+  {
+    "type": "text",
+    "delta": "\n    {\n      \"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\": \"claude\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "model\": \"claude-"
+  },
+  {
+    "type": "text",
+    "delta": "sonnet-5-5\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"aliases\": [\""
+  },
+  {
+    "type": "text",
+    "delta": "sonnet\"],\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"inputPerMTok"
+  },
+  {
+    "type": "text",
+    "delta": "\": 2,\n      \"out"
+  },
+  {
+    "type": "text",
+    "delta": "putPerMTok\": "
+  },
+  {
+    "type": "text",
+    "delta": "10,\n      \"cach"
+  },
+  {
+    "type": "text",
+    "delta": "eReadPerMTok\":"
+  },
+  {
+    "type": "text",
+    "delta": " 0.1,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheWritePer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 4,\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"sourceUrl\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"https://platform.clau"
+  },
+  {
+    "type": "text",
+    "delta": "de.com/docs/en/"
+  },
+  {
+    "type": "text",
+    "delta": "models/sonnet-5"
+  },
+  {
+    "type": "text",
+    "delta": "-5/overview\",\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"sourceQuote\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"Usciqua quabos: 1"
+  },
+  {
+    "type": "text",
+    "delta": "M scimaa · Adm quasum:"
+  },
+  {
+    "type": "text",
+    "delta": " 128K scimaa ·"
+  },
+  {
+    "type": "text",
+    "delta": " Doade dognabo: $2 "
+  },
+  {
+    "type": "text",
+    "delta": "/ Etmo · Quasum d"
+  },
+  {
+    "type": "text",
+    "delta": "ognabo: $10 / "
+  },
+  {
+    "type": "text",
+    "delta": "Etmo\"\n    },\n    "
+  },
+  {
+    "type": "text",
+    "delta": "{\n      \"vendor\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"claude\",\n      \"model"
+  },
+  {
+    "type": "text",
+    "delta": "\": \"claude-fable-"
+  },
+  {
+    "type": "text",
+    "delta": "5-1\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "aliases\": [\"fable\""
+  },
+  {
+    "type": "text",
+    "delta": "],\n      \"inputPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 10,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"outputPerMT"
+  },
+  {
+    "type": "text",
+    "delta": "ok\": 50,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheReadPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 0.25,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"cacheWrit"
+  },
+  {
+    "type": "text",
+    "delta": "ePerMTok\": 20"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"source"
+  },
+  {
+    "type": "text",
+    "delta": "Url\": \"https://platfor"
+  },
+  {
+    "type": "text",
+    "delta": "m.claude.com/doc"
+  },
+  {
+    "type": "text",
+    "delta": "s/en/models/fable-"
+  },
+  {
+    "type": "text",
+    "delta": "5-1/overview\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"sourceQuot"
+  },
+  {
+    "type": "text",
+    "delta": "e\": \"Usciqua quabos: "
+  },
+  {
+    "type": "text",
+    "delta": "1M scimaa · Adm quasum"
+  },
+  {
+    "type": "text",
+    "delta": ": 128K scimaa ·"
+  },
+  {
+    "type": "text",
+    "delta": " Doade dognabo: $10"
+  },
+  {
+    "type": "text",
+    "delta": " / Etmo · Quasum"
+  },
+  {
+    "type": "text",
+    "delta": " dognabo: $50 /"
+  },
+  {
+    "type": "text",
+    "delta": " Etmo\"\n    },"
+  },
+  {
+    "type": "text",
+    "delta": "\n    {\n      \"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\": \"claude\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "model\": \"claude-"
+  },
+  {
+    "type": "text",
+    "delta": "haiku-5"
+  },
+  {
+    "type": "text",
+    "delta": "-5\",\n      \"ali"
+  },
+  {
+    "type": "text",
+    "delta": "ases\": ["
+  },
+  {
+    "type": "text",
+    "delta": "],\n      \"inputPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 0."
+  },
+  {
+    "type": "text",
+    "delta": "1,\n      \"outputPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 0.5"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"cacheR"
+  },
+  {
+    "type": "text",
+    "delta": "eadPerMTok\": "
+  },
+  {
+    "type": "text",
+    "delta": "0.01,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheWritePerMT"
+  },
+  {
+    "type": "text",
+    "delta": "ok\": 0.2,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"sourceUrl"
+  },
+  {
+    "type": "text",
+    "delta": "\": \"https://platform.cl"
+  },
+  {
+    "type": "text",
+    "delta": "aude.com/docs/en"
+  },
+  {
+    "type": "text",
+    "delta": "/models/haiku-5"
+  },
+  {
+    "type": "text",
+    "delta": "-5/overview\",\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"sourceQuote\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"Usciqua quabos: 1"
+  },
+  {
+    "type": "text",
+    "delta": "M scimaa · Adm quasum:"
+  },
+  {
+    "type": "text",
+    "delta": " 128K scimaa ·"
+  },
+  {
+    "type": "text",
+    "delta": " Doade dognabo: Sumd $0"
+  },
+  {
+    "type": "text",
+    "delta": ".10 / Etmo ·"
+  },
+  {
+    "type": "text",
+    "delta": " Quasum dognabo: Sumd $"
+  },
+  {
+    "type": "text",
+    "delta": "0.50 / Etmo"
+  },
+  {
+    "type": "text",
+    "delta": "\"\n    },\n    {"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"vendor\": \"cl"
+  },
+  {
+    "type": "text",
+    "delta": "aude\",\n      \"model\": \""
+  },
+  {
+    "type": "text",
+    "delta": "claude-haiku-4"
+  },
+  {
+    "type": "text",
+    "delta": "-5-20251001\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"aliases\": [\""
+  },
+  {
+    "type": "text",
+    "delta": "haiku\", \"claude-"
+  },
+  {
+    "type": "text",
+    "delta": "haiku-4-5\""
+  },
+  {
+    "type": "text",
+    "delta": "],\n      \"inputPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 1,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"outputPerMT"
+  },
+  {
+    "type": "text",
+    "delta": "ok\": 5,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheReadPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 0.1,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"cacheWrit"
+  },
+  {
+    "type": "text",
+    "delta": "ePerMTok\": 2"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"source"
+  },
+  {
+    "type": "text",
+    "delta": "Url\": \"https://platfor"
+  },
+  {
+    "type": "text",
+    "delta": "m.claude.com/doc"
+  },
+  {
+    "type": "text",
+    "delta": "s/en/models/"
+  },
+  {
+    "type": "text",
+    "delta": "haiku-4-5/overview\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"sourceQ"
+  },
+  {
+    "type": "text",
+    "delta": "uote\": \"Usciqua quabos: "
+  },
+  {
+    "type": "text",
+    "delta": "200K scimaa · Adm"
+  },
+  {
+    "type": "text",
+    "delta": " quasum: 64K scima"
+  },
+  {
+    "type": "text",
+    "delta": "a · Doade dognabo: $"
+  },
+  {
+    "type": "text",
+    "delta": "1 / Etmo ·"
+  },
+  {
+    "type": "text",
+    "delta": " Quasum dognabo: $5 "
+  },
+  {
+    "type": "text",
+    "delta": "/ Etmo\"\n    },"
+  },
+  {
+    "type": "text",
+    "delta": "\n    {\n      \"ven"
+  },
+  {
+    "type": "text",
+    "delta": "dor\": \"claude\",\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"model\": \"claude-"
+  },
+  {
+    "type": "text",
+    "delta": "opus-5\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "aliases\": [],\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "inputPerMTok\":"
+  },
+  {
+    "type": "text",
+    "delta": " 5,\n      \"output"
+  },
+  {
+    "type": "text",
+    "delta": "PerMTok\": 25"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"cacheR"
+  },
+  {
+    "type": "text",
+    "delta": "eadPerMTok\": "
+  },
+  {
+    "type": "text",
+    "delta": "0.5,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheWritePerMT"
+  },
+  {
+    "type": "text",
+    "delta": "ok\": 10,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "sourceUrl\": \""
+  },
+  {
+    "type": "text",
+    "delta": "https://platform.claude."
+  },
+  {
+    "type": "text",
+    "delta": "com/docs/en/model"
+  },
+  {
+    "type": "text",
+    "delta": "s/opus-5/overview"
+  },
+  {
+    "type": "text",
+    "delta": "\",\n      \"sourceQ"
+  },
+  {
+    "type": "text",
+    "delta": "uote\": \"Usciqua quabos:"
+  },
+  {
+    "type": "text",
+    "delta": " 1M scimaa ·"
+  },
+  {
+    "type": "text",
+    "delta": " Adm quasum: 128K sci"
+  },
+  {
+    "type": "text",
+    "delta": "maa · Doade dognabo:"
+  },
+  {
+    "type": "text",
+    "delta": " $5 / Etmo ·"
+  },
+  {
+    "type": "text",
+    "delta": " Quasum dognabo: $25"
+  },
+  {
+    "type": "text",
+    "delta": " / Etmo\"\n    "
+  },
+  {
+    "type": "text",
+    "delta": "},\n    {\n      \"v"
+  },
+  {
+    "type": "text",
+    "delta": "endor\": \"claude\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"model\": \"claude-"
+  },
+  {
+    "type": "text",
+    "delta": "sonnet-5\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"aliases\": [],"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"inputPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 2,\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"outputPerMTok"
+  },
+  {
+    "type": "text",
+    "delta": "\": 10,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheReadPerMT"
+  },
+  {
+    "type": "text",
+    "delta": "ok\": 0.2,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"cacheWriteP"
+  },
+  {
+    "type": "text",
+    "delta": "erMTok\": 4,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"sourceUr"
+  },
+  {
+    "type": "text",
+    "delta": "l\": \"https://platform."
+  },
+  {
+    "type": "text",
+    "delta": "claude.com/docs/"
+  },
+  {
+    "type": "text",
+    "delta": "en/models/"
+  },
+  {
+    "type": "text",
+    "delta": "sonnet-5/overview\",\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"sourceQuote\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"Usciqua quabos: 1"
+  },
+  {
+    "type": "text",
+    "delta": "M scimaa · Adm quasum:"
+  },
+  {
+    "type": "text",
+    "delta": " 128K scimaa ·"
+  },
+  {
+    "type": "text",
+    "delta": " Doade dognabo: $2 "
+  },
+  {
+    "type": "text",
+    "delta": "/ Etmo · Quasum d"
+  },
+  {
+    "type": "text",
+    "delta": "ognabo: $10 / "
+  },
+  {
+    "type": "text",
+    "delta": "Etmo\"\n    },\n    "
+  },
+  {
+    "type": "text",
+    "delta": "{\n      \"vendor\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"claude\",\n      \"model"
+  },
+  {
+    "type": "text",
+    "delta": "\": \"claude-fable-"
+  },
+  {
+    "type": "text",
+    "delta": "5\",\n      \"aliase"
+  },
+  {
+    "type": "text",
+    "delta": "s\": [],\n      \"input"
+  },
+  {
+    "type": "text",
+    "delta": "PerMTok\": 10"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"outputPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 50,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"cacheReadP"
+  },
+  {
+    "type": "text",
+    "delta": "erMTok\": 1,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"cacheWrit"
+  },
+  {
+    "type": "text",
+    "delta": "ePerMTok\": 20"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"source"
+  },
+  {
+    "type": "text",
+    "delta": "Url\": \"https://platfor"
+  },
+  {
+    "type": "text",
+    "delta": "m.claude.com/doc"
+  },
+  {
+    "type": "text",
+    "delta": "s/en/models/fable-"
+  },
+  {
+    "type": "text",
+    "delta": "5/overview\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "sourceQuote\": \""
+  },
+  {
+    "type": "text",
+    "delta": "Usciqua quabos: 1M s"
+  },
+  {
+    "type": "text",
+    "delta": "cimaa · Adm quasum: "
+  },
+  {
+    "type": "text",
+    "delta": "128K scimaa · Doade"
+  },
+  {
+    "type": "text",
+    "delta": " dognabo: $10 /"
+  },
+  {
+    "type": "text",
+    "delta": " Etmo · Quasum dog"
+  },
+  {
+    "type": "text",
+    "delta": "nabo: $50 / Et"
+  },
+  {
+    "type": "text",
+    "delta": "mo\"\n    },\n    {"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"vendor\": \""
+  },
+  {
+    "type": "text",
+    "delta": "claude\",\n      \"model\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"claude-opus-4"
+  },
+  {
+    "type": "text",
+    "delta": "-8\",\n      \"ali"
+  },
+  {
+    "type": "text",
+    "delta": "ases\": [],\n      \"in"
+  },
+  {
+    "type": "text",
+    "delta": "putPerMTok\": "
+  },
+  {
+    "type": "text",
+    "delta": "5,\n      \"outputP"
+  },
+  {
+    "type": "text",
+    "delta": "erMTok\": 25,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"cacheRea"
+  },
+  {
+    "type": "text",
+    "delta": "dPerMTok\": 0"
+  },
+  {
+    "type": "text",
+    "delta": ".5,\n      \"ca"
+  },
+  {
+    "type": "text",
+    "delta": "cheWritePerMTok"
+  },
+  {
+    "type": "text",
+    "delta": "\": 10,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "sourceUrl\": \"http"
+  },
+  {
+    "type": "text",
+    "delta": "s://platform.claude.co"
+  },
+  {
+    "type": "text",
+    "delta": "m/docs/en/models/"
+  },
+  {
+    "type": "text",
+    "delta": "opus-4-8/over"
+  },
+  {
+    "type": "text",
+    "delta": "view\",\n      \"sourc"
+  },
+  {
+    "type": "text",
+    "delta": "eQuote\": \"Usciqua quabos"
+  },
+  {
+    "type": "text",
+    "delta": ": 1M scimaa ·"
+  },
+  {
+    "type": "text",
+    "delta": " Adm quasum: 128K s"
+  },
+  {
+    "type": "text",
+    "delta": "cimaa · Doade dognabo"
+  },
+  {
+    "type": "text",
+    "delta": ": $5 / Etmo"
+  },
+  {
+    "type": "text",
+    "delta": " · Quasum dognabo: $"
+  },
+  {
+    "type": "text",
+    "delta": "25 / Etmo\""
+  },
+  {
+    "type": "text",
+    "delta": "\n    },\n    {\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "vendor\": \"claude\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"model\": \"clau"
+  },
+  {
+    "type": "text",
+    "delta": "de-opus-4-7\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"aliases\": ["
+  },
+  {
+    "type": "text",
+    "delta": "],\n      \"inputPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 5,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"outputPerMT"
+  },
+  {
+    "type": "text",
+    "delta": "ok\": 25,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheReadPer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 0.5,"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"cacheWrit"
+  },
+  {
+    "type": "text",
+    "delta": "ePerMTok\": 10"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"source"
+  },
+  {
+    "type": "text",
+    "delta": "Url\": \"https://platfor"
+  },
+  {
+    "type": "text",
+    "delta": "m.claude.com/doc"
+  },
+  {
+    "type": "text",
+    "delta": "s/en/models/"
+  },
+  {
+    "type": "text",
+    "delta": "opus-4-7/overview\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"sourceQuot"
+  },
+  {
+    "type": "text",
+    "delta": "e\": \"Usciqua quabos: "
+  },
+  {
+    "type": "text",
+    "delta": "1M scimaa · Adm quasum"
+  },
+  {
+    "type": "text",
+    "delta": ": 128K scimaa ·"
+  },
+  {
+    "type": "text",
+    "delta": " Doade dognabo: $5"
+  },
+  {
+    "type": "text",
+    "delta": " / Etmo · Quasum"
+  },
+  {
+    "type": "text",
+    "delta": " dognabo: $25 /"
+  },
+  {
+    "type": "text",
+    "delta": " Etmo\"\n    },"
+  },
+  {
+    "type": "text",
+    "delta": "\n    {\n      \"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\": \"claude\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "model\": \"claude-"
+  },
+  {
+    "type": "text",
+    "delta": "opus-4-6\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "aliases\": [],\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"inputPerMTok"
+  },
+  {
+    "type": "text",
+    "delta": "\": 5,\n      \"out"
+  },
+  {
+    "type": "text",
+    "delta": "putPerMTok\": "
+  },
+  {
+    "type": "text",
+    "delta": "25,\n      \"cach"
+  },
+  {
+    "type": "text",
+    "delta": "eReadPerMTok\":"
+  },
+  {
+    "type": "text",
+    "delta": " 0.5,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheWritePer"
+  },
+  {
+    "type": "text",
+    "delta": "MTok\": 10,\n      "
+  },
+  {
+    "type": "text",
+    "delta": "\"sourceUrl\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"https://platform.clau"
+  },
+  {
+    "type": "text",
+    "delta": "de.com/docs/en/"
+  },
+  {
+    "type": "text",
+    "delta": "models/opus-4-6"
+  },
+  {
+    "type": "text",
+    "delta": "/overview\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "sourceQuote\": \""
+  },
+  {
+    "type": "text",
+    "delta": "Usciqua quabos: 1M sci"
+  },
+  {
+    "type": "text",
+    "delta": "maa · Adm quasum: 128"
+  },
+  {
+    "type": "text",
+    "delta": "K scimaa · Doade d"
+  },
+  {
+    "type": "text",
+    "delta": "ognabo: $5 / "
+  },
+  {
+    "type": "text",
+    "delta": "Etmo · Quasum dognabo"
+  },
+  {
+    "type": "text",
+    "delta": ": $25 / Etmo"
+  },
+  {
+    "type": "text",
+    "delta": "\"\n    },\n    {"
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"vendor\": \"cl"
+  },
+  {
+    "type": "text",
+    "delta": "aude\",\n      \"model\": \""
+  },
+  {
+    "type": "text",
+    "delta": "claude-"
+  },
+  {
+    "type": "text",
+    "delta": "sonnet-4-6\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "aliases\": [],\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "inputPerMTok\":"
+  },
+  {
+    "type": "text",
+    "delta": " 3,\n      \"output"
+  },
+  {
+    "type": "text",
+    "delta": "PerMTok\": 15"
+  },
+  {
+    "type": "text",
+    "delta": ",\n      \"cacheR"
+  },
+  {
+    "type": "text",
+    "delta": "eadPerMTok\": "
+  },
+  {
+    "type": "text",
+    "delta": "0.3,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "cacheWritePerMT"
+  },
+  {
+    "type": "text",
+    "delta": "ok\": 6,\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "sourceUrl\": \""
+  },
+  {
+    "type": "text",
+    "delta": "https://platform.claude."
+  },
+  {
+    "type": "text",
+    "delta": "com/docs/en/model"
+  },
+  {
+    "type": "text",
+    "delta": "s/sonnet-4-"
+  },
+  {
+    "type": "text",
+    "delta": "6/overview\",\n      \""
+  },
+  {
+    "type": "text",
+    "delta": "sourceQuote\": \""
+  },
+  {
+    "type": "text",
+    "delta": "Usciqua quabos: 1M s"
+  },
+  {
+    "type": "text",
+    "delta": "cimaa · Adm quasum: "
+  },
+  {
+    "type": "text",
+    "delta": "128K scimaa · Doade"
+  },
+  {
+    "type": "text",
+    "delta": " dognabo: $3 /"
+  },
+  {
+    "type": "text",
+    "delta": " Etmo · Quasum dog"
+  },
+  {
+    "type": "text",
+    "delta": "nabo: $15 / Et"
+  },
+  {
+    "type": "text",
+    "delta": "mo\"\n    }\n  "
+  },
+  {
+    "type": "text",
+    "delta": "],\n  \"newModels\":"
+  },
+  {
+    "type": "text",
+    "delta": " [\n    {\n      \"v"
+  },
+  {
+    "type": "text",
+    "delta": "endor\": \"claude\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"id\": \"claude-"
+  },
+  {
+    "type": "text",
+    "delta": "haiku-5-5\","
+  },
+  {
+    "type": "text",
+    "delta": "\n      \"displayName\": \""
+  },
+  {
+    "type": "text",
+    "delta": "Eitura Usali "
+  },
+  {
+    "type": "text",
+    "delta": "5.5\",\n      \"cont"
+  },
+  {
+    "type": "text",
+    "delta": "extWindow\": 1000"
+  },
+  {
+    "type": "text",
+    "delta": "000,\n      \"sourc"
+  },
+  {
+    "type": "text",
+    "delta": "eUrl\": \"https://plat"
+  },
+  {
+    "type": "text",
+    "delta": "form.claude.com/do"
+  },
+  {
+    "type": "text",
+    "delta": "cs/en/models/"
+  },
+  {
+    "type": "text",
+    "delta": "haiku-5-5/overview"
+  },
+  {
+    "type": "text",
+    "delta": "\"\n    }\n  ],"
+  },
+  {
+    "type": "text",
+    "delta": "\n  \"unverifiabl"
+  },
+  {
+    "type": "text",
+    "delta": "e\": []\n}\n```"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 68877,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Reciipets con ipamgnat temdos venr con turse JSON tur.\n\n```json\n{\n  \"generatedAt\": \"2026-10-12T00:00:00Z\",\n  \"entries\": [\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-opus-5-5\",\n      \"aliases\": [\"opus\"],\n      \"inputPerMTok\": 4,\n      \"outputPerMTok\": 20,\n      \"cacheReadPerMTok\": 0.2,\n      \"cacheWritePerMTok\": 8,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/opus-5-5/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $4 / Etmo · Quasum dognabo: $20 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-sonnet-5-5\",\n      \"aliases\": [\"sonnet\"],\n      \"inputPerMTok\": 2,\n      \"outputPerMTok\": 10,\n      \"cacheReadPerMTok\": 0.1,\n      \"cacheWritePerMTok\": 4,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/sonnet-5-5/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $2 / Etmo · Quasum dognabo: $10 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-fable-5-1\",\n      \"aliases\": [\"fable\"],\n      \"inputPerMTok\": 10,\n      \"outputPerMTok\": 50,\n      \"cacheReadPerMTok\": 0.25,\n      \"cacheWritePerMTok\": 20,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/fable-5-1/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $10 / Etmo · Quasum dognabo: $50 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-haiku-5-5\",\n      \"aliases\": [],\n      \"inputPerMTok\": 0.1,\n      \"outputPerMTok\": 0.5,\n      \"cacheReadPerMTok\": 0.01,\n      \"cacheWritePerMTok\": 0.2,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/haiku-5-5/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: Sumd $0.10 / Etmo · Quasum dognabo: Sumd $0.50 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-haiku-4-5-20251001\",\n      \"aliases\": [\"haiku\", \"claude-haiku-4-5\"],\n      \"inputPerMTok\": 1,\n      \"outputPerMTok\": 5,\n      \"cacheReadPerMTok\": 0.1,\n      \"cacheWritePerMTok\": 2,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/haiku-4-5/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 200K scimaa · Adm quasum: 64K scimaa · Doade dognabo: $1 / Etmo · Quasum dognabo: $5 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-opus-5\",\n      \"aliases\": [],\n      \"inputPerMTok\": 5,\n      \"outputPerMTok\": 25,\n      \"cacheReadPerMTok\": 0.5,\n      \"cacheWritePerMTok\": 10,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/opus-5/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $5 / Etmo · Quasum dognabo: $25 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-sonnet-5\",\n      \"aliases\": [],\n      \"inputPerMTok\": 2,\n      \"outputPerMTok\": 10,\n      \"cacheReadPerMTok\": 0.2,\n      \"cacheWritePerMTok\": 4,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/sonnet-5/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $2 / Etmo · Quasum dognabo: $10 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-fable-5\",\n      \"aliases\": [],\n      \"inputPerMTok\": 10,\n      \"outputPerMTok\": 50,\n      \"cacheReadPerMTok\": 1,\n      \"cacheWritePerMTok\": 20,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/fable-5/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $10 / Etmo · Quasum dognabo: $50 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-opus-4-8\",\n      \"aliases\": [],\n      \"inputPerMTok\": 5,\n      \"outputPerMTok\": 25,\n      \"cacheReadPerMTok\": 0.5,\n      \"cacheWritePerMTok\": 10,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/opus-4-8/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $5 / Etmo · Quasum dognabo: $25 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-opus-4-7\",\n      \"aliases\": [],\n      \"inputPerMTok\": 5,\n      \"outputPerMTok\": 25,\n      \"cacheReadPerMTok\": 0.5,\n      \"cacheWritePerMTok\": 10,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/opus-4-7/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $5 / Etmo · Quasum dognabo: $25 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-opus-4-6\",\n      \"aliases\": [],\n      \"inputPerMTok\": 5,\n      \"outputPerMTok\": 25,\n      \"cacheReadPerMTok\": 0.5,\n      \"cacheWritePerMTok\": 10,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/opus-4-6/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $5 / Etmo · Quasum dognabo: $25 / Etmo\"\n    },\n    {\n      \"vendor\": \"claude\",\n      \"model\": \"claude-sonnet-4-6\",\n      \"aliases\": [],\n      \"inputPerMTok\": 3,\n      \"outputPerMTok\": 15,\n      \"cacheReadPerMTok\": 0.3,\n      \"cacheWritePerMTok\": 6,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/sonnet-4-6/overview\",\n      \"sourceQuote\": \"Usciqua quabos: 1M scimaa · Adm quasum: 128K scimaa · Doade dognabo: $3 / Etmo · Quasum dognabo: $15 / Etmo\"\n    }\n  ],\n  \"newModels\": [\n    {\n      \"vendor\": \"claude\",\n      \"id\": \"claude-haiku-5-5\",\n      \"displayName\": \"Eitura Usali 5.5\",\n      \"contextWindow\": 1000000,\n      \"sourceUrl\": \"https://platform.claude.com/docs/en/models/haiku-5-5/overview\"\n    }\n  ],\n  \"unverifiable\": []\n}\n```",
+    "usage": {
+      "input": 12,
+      "output": 5961,
+      "cacheRead": 91781,
+      "cacheWrite": 67260,
+      "costUsd": 0.3470302
+    }
+  }
+]

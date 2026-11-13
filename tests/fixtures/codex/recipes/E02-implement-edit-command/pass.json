@@ -1,0 +1,9 @@
+{
+  "kind": "pass",
+  "route": "exec",
+  "step": "implement",
+  "mode": "autoedit",
+  "planNative": false,
+  "prompt": "Add a --version flag to the CLI that prints the package version.",
+  "model": "gpt-6-luna"
+}

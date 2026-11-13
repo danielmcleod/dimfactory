@@ -1,0 +1,23 @@
+{
+  "kind": "pass",
+  "step": "fix",
+  "mode": "autoedit",
+  "planNative": false,
+  "prompt": "Fix the findings below.\n[must] cli.ts: --version prints undefined when package.json has no version.",
+  "resume": {
+    "sessionId": "fa4e3f64-e2bf-4328-82ff-3c22aa76c079",
+    "priorUsage": {
+      "input": 21922,
+      "output": 1335,
+      "cacheRead": 145920,
+      "cacheWrite": 0,
+      "reasoning": 457
+    }
+  },
+  "model": "gpt-6-luna",
+  "answers": [
+    {
+      "decision": "allow"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "type": "session",
+    "id": "0199d2a0-4c1e-7a3b-8d5f-6e7a8b9c0002"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "model": "muse-spark-1.2"
+    }
+  },
+  {
+    "type": "tool",
+    "id": "0199d2a0-4c20-7c02-a002-0f1e2d3c4b5a",
+    "name": "write_file",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "0199d2a0-4c20-7c02-a002-0f1e2d3c4b5a",
+    "name": "write_file",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "0199d2a0-4c20-7c02-a004-0f1e2d3c4b5a",
+    "name": "bash",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "0199d2a0-4c20-7c02-a004-0f1e2d3c4b5a",
+    "name": "bash",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "Added --version, which prints the version from package.json. "
+  },
+  {
+    "type": "text",
+    "delta": "The tests pass."
+  },
+  {
+    "type": "done",
+    "result": "Added --version, which prints the version from package.json. The tests pass.",
+    "usage": {
+      "input": 4092,
+      "output": 580,
+      "cacheRead": 17408,
+      "reasoning": 160
+    }
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e08be-7b1a-449d-836b-4234b4d6e424"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 27709,
+    "cacheRead": 21568,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e4DZveX5a25TmyKY3BVKf",
+    "name": "Agent",
+    "summary": "Cilaregnas doitg",
+    "phase": "start",
+    "fp": "62dd9c261879"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "waiting",
+    "tasks": [
+      "Cilaregnas doitg"
+    ]
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e4DZveX5a25TmyKY3BVKf",
+    "name": "Agent",
+    "summary": "Cilaregnas doitg · <REDACTED>",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e4DZveX5a25TmyKY3BVKf",
+    "name": "Agent",
+    "summary": "Cilaregnas doitg · <REDACTED>",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 295
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 28226,
+    "cacheRead": 27699,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "Co"
+  },
+  {
+    "type": "text",
+    "delta": "n doit"
+  },
+  {
+    "type": "text",
+    "delta": "g-cialir pilou s"
+  },
+  {
+    "type": "text",
+    "delta": "c eimodsi"
+  },
+  {
+    "type": "text",
+    "delta": " si con aliquadunt. C"
+  },
+  {
+    "type": "text",
+    "delta": "'ei"
+  },
+  {
+    "type": "text",
+    "delta": " porsum"
+  },
+  {
+    "type": "text",
+    "delta": " con secutal gna"
+  },
+  {
+    "type": "text",
+    "delta": "g us"
+  },
+  {
+    "type": "text",
+    "delta": " eimodcons."
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 28226,
+    "window": 200000,
+    "source": "session"
+  },
+  {
+    "type": "waiting",
+    "tasks": [
+      "Cilaregnas doitg"
+    ]
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "waiting",
+    "tasks": []
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 28810,
+    "window": 200000,
+    "cacheRead": 28218,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "Bas"
+  },
+  {
+    "type": "text",
+    "delta": "h cilaregnas"
+  },
+  {
+    "type": "text",
+    "delta": " sedsec si"
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "'e-"
+  },
+  {
+    "type": "text",
+    "delta": "pis pila;"
+  },
+  {
+    "type": "text",
+    "delta": " Utcig sumi load"
+  },
+  {
+    "type": "text",
+    "delta": "quaport."
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "done",
+    "result": "Bash cilaregnas sedsec si tur'e-pis pila; Utcig sumi loadquaport.",
+    "usage": {
+      "input": 46,
+      "output": 1831,
+      "cacheRead": 82288,
+      "cacheWrite": 13012,
+      "costUsd": 0.039118799999999995
+    }
+  }
+]

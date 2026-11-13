@@ -1,0 +1,5 @@
+// Leaves a grandchild running while the fake itself keeps sleeping (kill-tree test).
+{"op":"spawnGrandchild","sleepMs":30000,"stdout":true}
+{"op":"stdout","line":"ready"}
+{"op":"sleep","ms":60000}
+{"op":"exit","code":0}

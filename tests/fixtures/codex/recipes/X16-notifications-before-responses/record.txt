@@ -1,0 +1,3 @@
+# X16-notifications-before-responses: Ordering edge: thread/started and turn/started arrive before their requests' responses; the session comes from the response, once, before done.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X16-notifications-before-responses --id X16 --slug notifications-before-responses --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X16-notifications-before-responses/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X16-notifications-before-responses/pass.json

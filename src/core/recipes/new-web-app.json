@@ -1,0 +1,25 @@
+{
+  "id": "new-web-app",
+  "version": 1,
+  "label": "New web app",
+  "description": "Start a web app from an idea: questions first, research on similar apps, an acceptance review, fixes until the review is satisfied, and a plain-language explanation at the end.",
+  "toggles": {
+    "clarify": true,
+    "research": true,
+    "testFirst": false,
+    "security": true,
+    "acceptance": true,
+    "fixRounds": 3,
+    "explain": true
+  },
+  "brief": {
+    "category": "software",
+    "fields": {
+      "projectType": { "choices": ["spa"] },
+      "platform": { "choices": ["web"] },
+      "quality": { "choices": ["responsive", "accessible"] },
+      "approach": { "choices": ["walking-skeleton"] }
+    }
+  },
+  "taskHint": "Describe the app: who it is for, the main screens and what someone can do with it"
+}

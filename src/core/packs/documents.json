@@ -1,0 +1,382 @@
+{
+  "id": "documents",
+  "version": 1,
+  "label": "Documents",
+  "description": "Writing: READMEs, guides, reports, articles, proposals and documentation sites.",
+  "detect": {
+    "keywords": [
+      "readme",
+      "documentation",
+      "docs",
+      "user guide",
+      "guide",
+      "tutorial",
+      "how-to",
+      "article",
+      "blog post",
+      "essay",
+      "report",
+      "write-up",
+      "manual",
+      "handbook",
+      "proposal",
+      "whitepaper",
+      "white paper",
+      "changelog",
+      "release notes",
+      "faq",
+      "copywriting",
+      "proofread",
+      "rewrite the text",
+      "cover letter",
+      "newsletter",
+      "press release",
+      "memo",
+      "outline",
+      "chapter",
+      "summary"
+    ],
+    "files": [
+      "mkdocs.yml",
+      "docusaurus.config.js",
+      "docusaurus.config.ts",
+      "book.toml",
+      "_config.yml",
+      "*.md",
+      "*.mdx",
+      "*.rst",
+      "*.adoc",
+      "*.docx",
+      "*.tex"
+    ]
+  },
+  "groups": [
+    {
+      "id": "audience",
+      "label": "Audience",
+      "hint": "Who will read it.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "developers",
+          "label": "Developers",
+          "keywords": ["developers", "engineers", "contributors"]
+        },
+        { "id": "end-users", "label": "End users", "keywords": ["end users", "customers", "users"] },
+        {
+          "id": "executives",
+          "label": "Decision makers",
+          "hint": "Managers and leaders who need the key points fast.",
+          "keywords": ["executives", "leadership", "management", "stakeholders", "board"]
+        },
+        {
+          "id": "general-public",
+          "label": "General public",
+          "keywords": ["general public", "general audience"]
+        },
+        { "id": "internal-team", "label": "Internal team", "keywords": ["internal", "my team", "our team"] },
+        { "id": "academic", "label": "Academic", "keywords": ["academic", "researchers", "peer review"] }
+      ]
+    },
+    {
+      "id": "tone",
+      "label": "Tone",
+      "hint": "How it should sound.",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "formal", "label": "Formal", "keywords": ["formal"] },
+        { "id": "neutral", "label": "Neutral and plain", "keywords": ["plain language", "plain english"] },
+        { "id": "friendly", "label": "Friendly", "keywords": ["friendly", "casual", "conversational"] },
+        { "id": "persuasive", "label": "Persuasive", "keywords": ["persuasive", "convincing", "pitch"] },
+        { "id": "technical", "label": "Technical", "keywords": ["technical"] }
+      ]
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "hint": "About how long it should be.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "short",
+          "label": "Short (one page or less)",
+          "keywords": ["short", "brief", "one page", "one-pager"]
+        },
+        { "id": "medium", "label": "Medium (a few pages)", "keywords": ["a few pages"] },
+        {
+          "id": "long",
+          "label": "Long (a full document)",
+          "keywords": ["detailed", "comprehensive", "in-depth", "long-form"]
+        }
+      ]
+    },
+    {
+      "id": "format",
+      "label": "Format",
+      "hint": "The file type or place it ends up in.",
+      "multi": true,
+      "other": true,
+      "options": [
+        { "id": "markdown", "label": "Markdown", "keywords": ["markdown"] },
+        {
+          "id": "html-site",
+          "label": "Documentation site",
+          "hint": "MkDocs, Docusaurus or plain HTML pages.",
+          "keywords": ["docs site", "documentation site", "mkdocs", "docusaurus", "html page"]
+        },
+        { "id": "pdf", "label": "PDF", "keywords": ["pdf"] },
+        { "id": "docx", "label": "Word document", "keywords": ["word document", "docx", "word file"] },
+        {
+          "id": "slides",
+          "label": "Slides",
+          "keywords": ["slides", "slide deck", "presentation", "powerpoint"]
+        },
+        { "id": "plain-text", "label": "Plain text", "keywords": ["plain text", "txt file"] }
+      ]
+    },
+    {
+      "id": "citations",
+      "label": "Sources and citations",
+      "hint": "Whether claims need sources.",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "none", "label": "No citations", "keywords": ["no citations"] },
+        {
+          "id": "links",
+          "label": "Links to sources",
+          "keywords": ["with links", "link to sources", "cite sources"]
+        },
+        {
+          "id": "formal",
+          "label": "Formal references",
+          "hint": "A reference list in a named style, like APA.",
+          "keywords": ["references", "bibliography", "apa", "mla", "harvard style", "chicago style"]
+        }
+      ]
+    },
+    {
+      "id": "approach",
+      "label": "Approach",
+      "hint": "How Dim Factory should shape the plan.",
+      "multi": true,
+      "other": false,
+      "options": [
+        {
+          "id": "outline-first",
+          "label": "Outline first",
+          "hint": "Agree the headings and key points before writing the prose.",
+          "effect": "plan",
+          "guidance": "Start the plan with an outline: the headings, the key point of each section and its order. Write the prose only after the outline, and keep to it unless the task says otherwise."
+        },
+        {
+          "id": "draft-then-edit",
+          "label": "Draft, then edit",
+          "hint": "Write a full rough draft, then tighten it in a separate pass.",
+          "effect": "plan",
+          "guidance": "Plan a complete rough draft first, then a separate editing pass that cuts repetition, checks facts against the sources and tightens the wording."
+        }
+      ]
+    }
+  ],
+  "preview": [
+    {
+      "id": "mkdocs",
+      "when": { "files": ["mkdocs.yml"] },
+      "run": ["mkdocs", "serve"],
+      "kind": "server",
+      "note": "Serves the MkDocs site and rebuilds it as files change."
+    },
+    {
+      "id": "hugo",
+      "when": { "files": ["hugo.toml"] },
+      "run": ["hugo", "server"],
+      "kind": "server",
+      "note": "Serves the Hugo site with live reload."
+    },
+    {
+      "id": "jekyll",
+      "when": { "files": ["_config.yml", "Gemfile"] },
+      "run": ["bundle", "exec", "jekyll", "serve"],
+      "kind": "server",
+      "note": "Builds and serves the Jekyll site."
+    }
+  ],
+  "research": {
+    "lenses": [
+      {
+        "id": "audience-tone",
+        "label": "Audience and tone",
+        "ask": "Who reads this, what do they already know, and which tone and reading level suit them?",
+        "web": true
+      },
+      {
+        "id": "information-architecture",
+        "label": "Information architecture",
+        "ask": "How do comparable documents organise their content, navigation and headings?",
+        "web": true
+      }
+    ],
+    "defaults": ["comparable", "standards", "audience-tone", "information-architecture", "repository"]
+  },
+  "deploy": {
+    "targets": [
+      {
+        "id": "github-pages",
+        "label": "GitHub Pages",
+        "classes": ["static-site", "docs-site"],
+        "freeTier": "Included with GitHub's plans for public repositories, within GitHub's usage limits; private sites need a paid plan.",
+        "cost": "Usually no extra charge for a small public site; check the limits on size, bandwidth and builds.",
+        "coldStarts": "None: the built files are served as they are.",
+        "customDomains": "Supported, with an HTTPS certificate once DNS points at GitHub.",
+        "dataResidency": "Served from GitHub's global network; you cannot choose a region.",
+        "configs": ["github-actions"],
+        "needs": "git, and the GitHub CLI (gh) to open the repository",
+        "steps": [
+          {
+            "label": "Commit the workflow, then push it",
+            "run": "git push origin {branch}"
+          },
+          {
+            "label": "In the repository settings, open Pages and set Source to GitHub Actions",
+            "note": "The workflow then publishes the site on every push to the branch it watches."
+          },
+          {
+            "label": "Open the repository in your browser",
+            "run": "gh browse"
+          }
+        ]
+      },
+      {
+        "id": "netlify",
+        "label": "Netlify",
+        "classes": ["static-site", "docs-site"],
+        "freeTier": "A starter tier for personal projects, with monthly limits on bandwidth, build minutes and function calls.",
+        "cost": "Paid plans are billed per team member; usage over the limits is billed or paused, depending on the plan.",
+        "coldStarts": "Static files: none. Functions can take a moment on the first call after they were idle.",
+        "customDomains": "Supported, with HTTPS certificates Netlify manages.",
+        "dataResidency": "Static files come from a global network; where functions run depends on the plan.",
+        "configs": ["netlify"],
+        "needs": "Node.js (the Netlify CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Netlify",
+            "run": "npx netlify-cli login"
+          },
+          {
+            "label": "Link this folder to a Netlify site",
+            "run": "npx netlify-cli init"
+          },
+          {
+            "label": "Deploy a draft to check it",
+            "run": "npx netlify-cli deploy --dir {dir}"
+          },
+          {
+            "label": "Deploy to production",
+            "run": "npx netlify-cli deploy --prod --dir {dir}"
+          }
+        ]
+      },
+      {
+        "id": "cloudflare-pages",
+        "label": "Cloudflare Pages",
+        "classes": ["static-site", "docs-site"],
+        "freeTier": "A starter tier with a monthly build limit and generous bandwidth for static files.",
+        "cost": "Paid plans add builds and features; Workers functions are billed by requests over the included amount.",
+        "coldStarts": "Static files: none. Functions start quickly, but have CPU time limits.",
+        "customDomains": "Supported, with HTTPS; easiest when the domain uses Cloudflare DNS.",
+        "dataResidency": "Served from Cloudflare's global network; regional rules need a paid plan.",
+        "configs": [],
+        "needs": "Node.js (Wrangler, the Cloudflare CLI, runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Cloudflare",
+            "run": "npx wrangler login"
+          },
+          {
+            "label": "Build the site first if it has a build step",
+            "note": "The command below uploads the built folder."
+          },
+          {
+            "label": "Deploy the built files",
+            "run": "npx wrangler pages deploy {dir} --project-name {name}"
+          }
+        ]
+      },
+      {
+        "id": "surge",
+        "label": "Surge",
+        "classes": ["static-site", "docs-site"],
+        "freeTier": "A free plan for static sites on a surge.sh address, with limits. Check the provider's current pricing.",
+        "cost": "A paid plan adds features such as HTTPS on your own domain and password protection.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported: point the domain at Surge, then publish with the domain instead of the surge.sh name. HTTPS on your own domain needs the paid plan.",
+        "dataResidency": "Files are served from Surge's own network; there is no region to choose.",
+        "configs": [],
+        "needs": "Node.js (the Surge CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Build the site first if it has a build step",
+            "note": "The command below publishes the folder as it is: the built files, with index.html at its top."
+          },
+          {
+            "label": "Publish the folder to a surge.sh address",
+            "run": "npx surge {dir} {name}.surge.sh",
+            "note": "The first time, the Surge CLI asks for an email and a password in the terminal to make your account. If the name is taken, pick another."
+          },
+          {
+            "label": "For a single-page app, answer every address with the app",
+            "note": "Copy index.html to 200.html in the same folder before you publish, so links to inner pages load the app."
+          },
+          {
+            "label": "Use your own domain (optional)",
+            "note": "Point the domain at Surge as its help pages say, then run the publish command with your domain in place of the surge.sh address."
+          },
+          {
+            "label": "Take it down when you no longer want it online",
+            "run": "npx surge teardown {name}.surge.sh"
+          }
+        ]
+      },
+      {
+        "id": "firebase-hosting",
+        "label": "Firebase Hosting",
+        "classes": ["static-site"],
+        "freeTier": "The Spark plan includes a no-cost allowance of storage and transfer for Hosting. Check the provider's current pricing.",
+        "cost": "The pay-as-you-go Blaze plan is only needed for some features (such as Cloud Functions); usage past the allowance is billed there.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported, with HTTPS certificates Firebase provisions.",
+        "dataResidency": "Static files are served from a global CDN; the Firebase project has a default location.",
+        "configs": ["firebase", "firebaserc"],
+        "needs": "Node.js and the Firebase CLI (firebase-tools, installed with npm)",
+        "steps": [
+          {
+            "label": "Install the Firebase CLI",
+            "run": "npm install -g firebase-tools"
+          },
+          {
+            "label": "Sign in to Firebase",
+            "run": "firebase login",
+            "note": "It opens your browser to sign in. Dim Factory never signs in for you and never keeps the token."
+          },
+          {
+            "label": "Set up Hosting for this folder",
+            "run": "firebase init hosting",
+            "note": "Pick or create a Firebase project. For the public directory, give the folder with your built files (index.html at its top). For a single-page app, answer Yes to rewriting all URLs to /index.html. Do not let it overwrite your index.html."
+          },
+          {
+            "label": "Check the project id",
+            "note": "If the Deploy step wrote .firebaserc, replace your-firebase-project-id with your own project id (firebase init does this when you pick a project)."
+          },
+          {
+            "label": "Deploy",
+            "run": "firebase deploy --only hosting"
+          }
+        ]
+      }
+    ]
+  }
+}

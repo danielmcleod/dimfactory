@@ -1,0 +1,205 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e7fdd-679d-49b2-8389-3daa10b97f3b"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25613,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eDxwEXgTSQVrfa6zchJYe",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "f1447c218176"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4e0d09-7129-4070-8a17-4d4c11ef5c6a",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nSedit npm quasume (temal qua)\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e0d09-7129-4070-8a17-4d4c11ef5c6a",
+        "response": {
+          "behavior": "allow",
+          "updatedInput": {
+            "command": "npm --version",
+            "description": "Sedit npm quasume (temal qua)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eZbpn4jy6e76UULFHexeE",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "0a7713d8a4f4"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eDxwEXgTSQVrfa6zchJYe",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 2
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4e47c6-e077-45bc-8119-ee2bba80bbf7",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nSedit npm quasume (etsecl qua)\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e47c6-e077-45bc-8119-ee2bba80bbf7",
+        "response": {
+          "behavior": "allow",
+          "updatedInput": {
+            "command": "npm --version",
+            "description": "Sedit npm quasume (etsecl qua)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eZbpn4jy6e76UULFHexeE",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 2
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Ipel laa"
+  },
+  {
+    "type": "text",
+    "delta": "l sc `npm --version`"
+  },
+  {
+    "type": "text",
+    "delta": " duntipbo co"
+  },
+  {
+    "type": "text",
+    "delta": "n mode quasum:"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "1. Temal"
+  },
+  {
+    "type": "text",
+    "delta": " qua: `11.17.0"
+  },
+  {
+    "type": "text",
+    "delta": "`\n2. Etsecl qua:"
+  },
+  {
+    "type": "text",
+    "delta": " `11.17.0`"
+  },
+  {
+    "type": "context",
+    "used": 25858,
+    "cacheRead": 25611,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25858,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Ipel laal sc `npm --version` duntipbo con mode quasum:\n\n1. Temal qua: `11.17.0`\n2. Etsecl qua: `11.17.0`",
+    "usage": {
+      "input": 4,
+      "output": 201,
+      "cacheRead": 41401,
+      "cacheWrite": 10066,
+      "costUsd": 0.0505622
+    }
+  }
+]

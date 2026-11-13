@@ -1,0 +1,492 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e8e65-e167-4e70-83a8-f51e3320d858"
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "context",
+    "used": 5260,
+    "cacheRead": 2724,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e1iEPVhbeiMt4myChnBEv",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "start",
+    "fp": "c80c862988c4"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e1iEPVhbeiMt4myChnBEv",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "end",
+    "status": "failed",
+    "outTokens": 51
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 5396,
+    "cacheRead": 5258,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eRpJQKHUSBdvUn0mdWsnO",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "start",
+    "fp": "c80c862988c4"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eRpJQKHUSBdvUn0mdWsnO",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "end",
+    "status": "failed",
+    "outTokens": 51
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "text",
+    "delta": "Con St"
+  },
+  {
+    "type": "text",
+    "delta": "ructuredOutput sumi"
+  },
+  {
+    "type": "text",
+    "delta": " teinvens con doade"
+  },
+  {
+    "type": "text",
+    "delta": " ipe"
+  },
+  {
+    "type": "text",
+    "delta": "l sittu, "
+  },
+  {
+    "type": "text",
+    "delta": "te n"
+  },
+  {
+    "type": "text",
+    "delta": "o quasum pi"
+  },
+  {
+    "type": "text",
+    "delta": "t am"
+  },
+  {
+    "type": "text",
+    "delta": "sitinq.\n\nEl"
+  },
+  {
+    "type": "text",
+    "delta": "g elip ve ci los"
+  },
+  {
+    "type": "text",
+    "delta": "u al"
+  },
+  {
+    "type": "text",
+    "delta": "iutre `{\"generate"
+  },
+  {
+    "type": "text",
+    "delta": "dAt\": \"today\"}`"
+  },
+  {
+    "type": "text",
+    "delta": " lat bodod"
+  },
+  {
+    "type": "text",
+    "delta": " itsit"
+  },
+  {
+    "type": "text",
+    "delta": "l us. Con duntdu sc"
+  },
+  {
+    "type": "text",
+    "delta": "ie temaliam `entries`, `"
+  },
+  {
+    "type": "text",
+    "delta": "newModels`"
+  },
+  {
+    "type": "text",
+    "delta": " lat `unverifiable`"
+  },
+  {
+    "type": "text",
+    "delta": ", te ital"
+  },
+  {
+    "type": "text",
+    "delta": " du"
+  },
+  {
+    "type": "text",
+    "delta": "nti doade s"
+  },
+  {
+    "type": "text",
+    "delta": "it'e"
+  },
+  {
+    "type": "text",
+    "delta": " sitl vene"
+  },
+  {
+    "type": "text",
+    "delta": "iscido.\n\nEi elg itte us"
+  },
+  {
+    "type": "text",
+    "delta": " ci t"
+  },
+  {
+    "type": "text",
+    "delta": "u ellodot, C sit ita"
+  },
+  {
+    "type": "text",
+    "delta": "dtu lor"
+  },
+  {
+    "type": "text",
+    "delta": "a gnas"
+  },
+  {
+    "type": "text",
+    "delta": "c scise eignar elmod ("
+  },
+  {
+    "type": "text",
+    "delta": "qua invenve, tem"
+  },
+  {
+    "type": "text",
+    "delta": "po modcia),"
+  },
+  {
+    "type": "text",
+    "delta": " do utalite"
+  },
+  {
+    "type": "text",
+    "delta": "i con secel"
+  },
+  {
+    "type": "text",
+    "delta": " dognabo lat etse ipl"
+  },
+  {
+    "type": "text",
+    "delta": "o si gnatem"
+  },
+  {
+    "type": "text",
+    "delta": "ci. Itpo ve pisum el"
+  },
+  {
+    "type": "text",
+    "delta": "g'"
+  },
+  {
+    "type": "text",
+    "delta": "s sit"
+  },
+  {
+    "type": "text",
+    "delta": "l."
+  },
+  {
+    "type": "context",
+    "used": 5561,
+    "cacheRead": 5394,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 12
+  },
+  {
+    "type": "context",
+    "used": 5750,
+    "cacheRead": 5559,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eJSrX0E2O4wr0ws7toVBr",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "start",
+    "fp": "c80c862988c4"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eJSrX0E2O4wr0ws7toVBr",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "end",
+    "status": "failed",
+    "outTokens": 51
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "text",
+    "delta": "Con StructuredOutput"
+  },
+  {
+    "type": "text",
+    "delta": " sumi t"
+  },
+  {
+    "type": "text",
+    "delta": "einvens `"
+  },
+  {
+    "type": "text",
+    "delta": "{\"generatedAt\":"
+  },
+  {
+    "type": "text",
+    "delta": " \"today\"}` ippor, "
+  },
+  {
+    "type": "text",
+    "delta": "te no quasum pit amsitinq. Tur"
+  },
+  {
+    "type": "text",
+    "delta": "s pi"
+  },
+  {
+    "type": "text",
+    "delta": "t lo"
+  },
+  {
+    "type": "text",
+    "delta": " relaq piconad lor"
+  },
+  {
+    "type": "text",
+    "delta": "a con dunti doade elg boi"
+  },
+  {
+    "type": "text",
+    "delta": "tsumit.\n\nCon duntdu temalia"
+  },
+  {
+    "type": "text",
+    "delta": "m `entries`, `newMo"
+  },
+  {
+    "type": "text",
+    "delta": "dels` lat `unverifi"
+  },
+  {
+    "type": "text",
+    "delta": "able`"
+  },
+  {
+    "type": "text",
+    "delta": " r"
+  },
+  {
+    "type": "text",
+    "delta": "e quad, lat co"
+  },
+  {
+    "type": "text",
+    "delta": "n doade elg eli"
+  },
+  {
+    "type": "text",
+    "delta": "p ve lol"
+  },
+  {
+    "type": "text",
+    "delta": " ci itsitl g"
+  },
+  {
+    "type": "text",
+    "delta": "nacon gnasc tem,"
+  },
+  {
+    "type": "text",
+    "delta": " te us sit'e"
+  },
+  {
+    "type": "text",
+    "delta": " teel"
+  },
+  {
+    "type": "text",
+    "delta": "utam. C "
+  },
+  {
+    "type": "text",
+    "delta": "turqu'e elmo"
+  },
+  {
+    "type": "text",
+    "delta": "d co"
+  },
+  {
+    "type": "text",
+    "delta": "n los"
+  },
+  {
+    "type": "text",
+    "delta": "umus eignar, inuscon elg adre bodod"
+  },
+  {
+    "type": "text",
+    "delta": " ci itsitl con doade.\n\nCi itl"
+  },
+  {
+    "type": "text",
+    "delta": " turs ellodo"
+  },
+  {
+    "type": "text",
+    "delta": "t, C"
+  },
+  {
+    "type": "text",
+    "delta": " sit itadtu lora gnasc scis"
+  },
+  {
+    "type": "text",
+    "delta": "e eignar elmod (tempo mod"
+  },
+  {
+    "type": "text",
+    "delta": "cia, do por"
+  },
+  {
+    "type": "text",
+    "delta": "sed si"
+  },
+  {
+    "type": "text",
+    "delta": " sumd malasc"
+  },
+  {
+    "type": "text",
+    "delta": "ibote"
+  },
+  {
+    "type": "text",
+    "delta": " Eitura secel"
+  },
+  {
+    "type": "text",
+    "delta": " dognabo)."
+  },
+  {
+    "type": "text",
+    "delta": " Itpo ve pisum elg'"
+  },
+  {
+    "type": "text",
+    "delta": "s sitl."
+  },
+  {
+    "type": "context",
+    "used": 6007,
+    "cacheRead": 5746,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 6007,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Con StructuredOutput sumi teinvens `{\"generatedAt\": \"today\"}` ippor, te no quasum pit amsitinq. Turs pit lo relaq piconad lora con dunti doade elg boitsumit.\n\nCon duntdu temaliam `entries`, `newModels` lat `unverifiable` re quad, lat con doade elg elip ve lol ci itsitl gnacon gnasc tem, te us sit'e teelutam. C turqu'e elmod con losumus eignar, inuscon elg adre bodod ci itsitl con doade.\n\nCi itl turs ellodot, C sit itadtu lora gnasc scise eignar elmod (tempo modcia, do porsed si sumd malascibote Eitura secel dognabo). Itpo ve pisum elg's sitl.",
+    "usage": {
+      "input": 12,
+      "output": 634,
+      "cacheRead": 24681,
+      "cacheWrite": 3281,
+      "costUsd": 0.0244242
+    }
+  }
+]

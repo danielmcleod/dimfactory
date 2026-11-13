@@ -1,0 +1,9 @@
+{"kind":"header","schemaVersion":1,"vendor":"codex","route":"app-server","scenario":"X11b-winsandbox-setup-unelevated","cliVersion":"0.160.1","protocol":"jsonrpc","os":"any","arch":"any","synthesized":true,"synthesizedFrom":"src/core/adapters/codex/protocol/v0.160.0 (generate-ts / generate-json-schema of codex-cli 0.160.1); the live X01b handshake (emittedAtMs, initialize result)","note":"vendor_setup (user click only): windowsSandbox/setupStart {mode:unelevated} → {started:true} → windowsSandbox/setupCompleted success. The re-probe that follows is a new process (X01b shape, status ready). Generator: tests/fixtures/codex/recipes/synthesize.mjs. Re-record live: tests/fixtures/codex/README.md.","argv":["codex.exe","app-server","--listen","stdio://"],"envKeys":["CODEX_HOME"],"envDrop":["^OPENAI_","^CODEX_"],"pass":{"kind":"vendorSetup","call":"windowsSandbox/setupStart","params":{"mode":"unelevated"},"ok":true},"hostVersion":"0.1.0"}
+{"t":0,"dir":"in","line":"{\"id\":1,\"method\":\"initialize\",\"params\":{\"clientInfo\":{\"name\":\"dim-factory\",\"title\":null,\"version\":\"0.1.0\"},\"capabilities\":{\"experimentalApi\":false,\"requestAttestation\":false}}}"}
+{"t":5,"dir":"out","line":"{\"id\":1,\"result\":{\"userAgent\":\"dim/0.160.1 <REDACTED> (dim-factory; 0.1.0)\",\"codexHome\":\"<CODEX_HOME>\",\"platformFamily\":\"windows\",\"platformOs\":\"windows\"}}"}
+{"t":10,"dir":"in","line":"{\"method\":\"initialized\"}"}
+{"t":15,"dir":"in","line":"{\"id\":2,\"method\":\"windowsSandbox/setupStart\",\"params\":{\"mode\":\"unelevated\"}}"}
+{"t":20,"dir":"out","line":"{\"id\":2,\"result\":{\"started\":true}}"}
+{"t":25,"dir":"out","line":"{\"method\":\"windowsSandbox/setupCompleted\",\"params\":{\"mode\":\"unelevated\",\"success\":true,\"error\":null},\"emittedAtMs\":1791602700037}"}
+{"t":30,"dir":"eof"}
+{"t":35,"dir":"exit","code":0,"signal":null}

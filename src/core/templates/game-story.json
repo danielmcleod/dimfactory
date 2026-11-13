@@ -1,0 +1,73 @@
+{
+  "id": "game-story",
+  "version": 1,
+  "pack": "games",
+  "label": "Story or quiz game",
+  "description": "A story with choices or a quiz, written as data the game reads (never run as code), with progress saved: nothing to install.",
+  "brief": {
+    "fields": {
+      "genre": {
+        "choices": ["story"]
+      },
+      "engine": {
+        "choices": ["dom"]
+      },
+      "controls": {
+        "choices": ["mouse", "keyboard", "touch"]
+      },
+      "players": {
+        "choices": ["solo"]
+      },
+      "platform": {
+        "choices": ["desktop", "phone", "tablet"]
+      },
+      "sound": {
+        "choices": ["effects"]
+      },
+      "save": {
+        "choices": ["progress", "settings"]
+      },
+      "accessibility": {
+        "choices": ["remap", "pause", "reduced-motion", "colour-safe", "no-flashing"]
+      },
+      "deliverable": {
+        "choices": ["single-page", "itch-zip"]
+      },
+      "constraints": {
+        "choices": ["original-art", "no-network", "no-ads"]
+      },
+      "approach": {
+        "choices": ["core-loop-first", "playtested"]
+      }
+    }
+  },
+  "task": "Make a browser game in this empty folder that needs nothing installed: index.html, style.css and src/main.js as ES modules, a story or a quiz told on the page with real HTML buttons for the choices (mouse, touch and keyboard, a visible focus ring, fits a phone and a laptop). The story or the questions are data, not code: data/story.json (scenes, text, choices, simple flags) or data/questions.json (questions, answers, the right one, a short explanation). The engine reads it, checks its shape and never evaluates any of it as code; conditions are plain data such as {\"flag\": \"hasKey\"}. Progress is saved so a player can continue later. Dim Factory already put starter modules in src/engine/ (MIT): loop.js (fixed timestep, pauses on blur), rng.js (seeded randomness), input.js (keyboard, pointer, touch buttons, gamepad, remappable), storage.js (versioned local saves that never throw) and test-hook.js (window.__game, only with ?test=1); docs/game-test-hook.md explains the hook. Use them; do not rewrite them. Every game has: a title screen with how to play and a start button; play; pause with P or Esc and by itself when the window loses focus (a Paused screen, then resume); game over or a win with the score and Restart. A Settings screen changes the keys, mutes sound, turns on reduced motion and a colour-safe palette, and resets progress; settings and the best score are saved with storage.js and are still there after a reload. When the brief chooses touch, a phone or a tablet, big on-screen buttons drive the same actions. Sound, if any, is made with the Web Audio API and starts after the first key or tap. Everything the game uses is in the project: no CDN, no network, no third-party scripts, ads or trackers, no eval or new Function. Text a player types is shown with textContent. Use original names, characters and art: familiar mechanics are fine, but never copy a famous game's name, characters, logo, art, music or sounds. In src/main.js wire the test hook with a state() that reports scene ('title', 'playing', 'paused', 'over' or 'won'), score, lives and level. Write the plan's acceptance criteria as things a player does and sees (for example: Arrow keys steer the snake; Your best score is still there after you reload), and write playtest.json (data, not code) with one scenario per criterion, as docs/game-test-hook.md shows. Keep the rules in plain modules under src/game/ with no DOM in them. Add a package.json with one script, test, that runs node --test on tests/*.test.mjs, with tests for the rules (for example: the same seed gives the same result; the score never goes below zero). Add a README.md: how to play (the goal and the controls), how to open it (Play it in Dim Factory, or serve the folder with any static server: browsers do not run modules from a page opened straight from disk), how to run the tests, how to share it (zip the files and upload them to itch.io as an HTML5 game, or put them on a static host), and credits (the starter files are from Dim Factory, MIT; list anything else you used). Make it feel good to play: every action gets clear feedback (a sound, a flash or a small movement), the first moments are easy and it gets harder step by step, and the end of a game shows how it went with a quick way to play again.",
+  "recipe": "new-game",
+  "files": [
+    {
+      "from": "game-loop",
+      "to": "src/engine/loop.js"
+    },
+    {
+      "from": "game-rng",
+      "to": "src/engine/rng.js"
+    },
+    {
+      "from": "game-input",
+      "to": "src/engine/input.js"
+    },
+    {
+      "from": "game-storage",
+      "to": "src/engine/storage.js"
+    },
+    {
+      "from": "game-test-hook",
+      "to": "src/engine/test-hook.js"
+    },
+    {
+      "from": "game-test-hook-doc",
+      "to": "docs/game-test-hook.md"
+    }
+  ],
+  "tags": ["game", "story", "quiz", "no-install"]
+}

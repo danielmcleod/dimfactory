@@ -1,0 +1,8 @@
+{
+  "kind": "pass",
+  "step": "critic",
+  "mode": "readonly",
+  "planNative": false,
+  "prompt": "Critique the change in src/cli.ts: what could break? List findings as [must]/[should]/[nit].",
+  "trustFolder": false
+}

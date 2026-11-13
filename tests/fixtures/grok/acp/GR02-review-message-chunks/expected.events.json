@@ -1,0 +1,35 @@
+[
+  {
+    "type": "session",
+    "id": "0199d2a4-7c1e-7a3b-9f20-3c4d5e6f7003"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR02_01",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR02_01",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "No blocking issues. "
+  },
+  {
+    "type": "text",
+    "delta": "[nit] cli.ts: name the version constant."
+  },
+  {
+    "type": "done",
+    "result": "No blocking issues. [nit] cli.ts: name the version constant.",
+    "usage": {
+      "input": 6144,
+      "output": 210,
+      "cacheRead": 18432,
+      "costUsd": 0.0213
+    }
+  }
+]

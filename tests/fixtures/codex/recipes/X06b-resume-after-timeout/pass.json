@@ -1,0 +1,36 @@
+{
+  "kind": "pass",
+  "step": "implement",
+  "mode": "autoedit",
+  "planNative": false,
+  "prompt": "continue",
+  "resume": {
+    "sessionId": "fa4e34d9-d153-4cc4-8f30-0850bd01b332",
+    "priorUsage": {
+      "input": 17064,
+      "output": 621,
+      "cacheRead": 45312,
+      "cacheWrite": 0,
+      "reasoning": 320
+    }
+  },
+  "allowRules": [
+    {
+      "vendor": "codex",
+      "kind": "shell",
+      "tool": "shell",
+      "match": {
+        "argv": [
+          "\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\"",
+          "-Command",
+          "'npm",
+          "modg",
+          "loturlorpo",
+          "quasume'"
+        ]
+      },
+      "source": "exact"
+    }
+  ],
+  "model": "gpt-6-luna"
+}

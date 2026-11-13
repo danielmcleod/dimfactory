@@ -1,0 +1,125 @@
+# electron-builder 26: NSIS / dmg / deb with an AppArmor profile + AppImage, with the Electron fuses set below
+# (releases: docs/RELEASING.md). `dependencies` is empty and electron-vite bundles every import, so the app is
+# out/** + package.json and ships no node_modules.
+# Nothing in this file signs. release.yml builds through scripts/release.mjs, which sets the version from the release
+# tag and picks the signing: by default none on Windows and an ad hoc signature on macOS (identity "-", no hardened
+# runtime, no notarization; scripts/release.mjs builderConfig), and Azure Artifact Signing or Developer ID +
+# notarization only when that OS's secrets are set. `pnpm package` and `pnpm package:dir` build unsigned.
+# Must equal APP_ID in src/main/constants.ts: the Windows AUMID (toast notifications) and the macOS bundle id.
+appId: com.dimfactory.desktop
+productName: Dim Factory
+copyright: Copyright © 2026 The Dim Factory authors
+
+directories:
+  output: dist
+  buildResources: build
+
+files:
+  - out/**
+  - package.json
+asar: true
+npmRebuild: false
+# Read by src/main/tray.ts (and the window icon, src/main/window.ts) from <resources>/tray when packaged.
+# Every icon is generated from build/logo.svg and build/logo-tray.svg by scripts/make-tray-icons.mjs (pnpm icons:tray).
+extraResources:
+  - from: build/tray
+    to: tray
+  # The licence and the third-party notices go with the app: <resources>/LICENSE, <resources>/THIRD_PARTY_NOTICES.md.
+  # No installer licence page: MIT asks nothing of the person installing, so a page to click through would only add a
+  # step to every install and upgrade and read like an agreement it is not. electron-builder puts Electron's and
+  # Chromium's licences next to the executable itself.
+  - from: LICENSE
+    to: LICENSE
+  - from: THIRD_PARTY_NOTICES.md
+    to: THIRD_PARTY_NOTICES.md
+# No auto-update. release.yml uploads the installers to a draft GitHub release itself; a build never publishes.
+publish: null
+
+electronFuses:
+  runAsNode: false
+  enableCookieEncryption: true
+  enableNodeOptionsEnvironmentVariable: false
+  enableNodeCliInspectArguments: false
+  enableEmbeddedAsarIntegrityValidation: true
+  onlyLoadAppFromAsar: true
+  loadBrowserProcessSpecificV8Snapshot: false
+  # Off: the renderer is served as app://dim-factory/ (src/main/renderer-files.ts), not over file:// from the asar, so no
+  # page gets file://'s extra privileges (reading other local files among them), and main refuses every file:// request
+  # of the window's session. (It was on while the window used loadFile.)
+  grantFileProtocolExtraPrivileges: false
+  # Flipping fuses rewrites the Electron binary, which voids its ad-hoc signature; an unsigned arm64 macOS build
+  # would then be killed at launch. Re-signing ad hoc keeps an unsigned build runnable; a Developer ID build is signed
+  # again after the fuses are flipped.
+  resetAdHocDarwinSignature: true
+
+win:
+  icon: build/icon.ico
+  target:
+    - target: nsis
+      arch: [x64]
+# Assisted installer, per-user by default: "Only for me" is preselected and needs no administrator rights. "Anyone who
+# uses this computer" installs per-machine with elevation; src/main/shortcut.ts handles that shortcut too
+# ("needsAdmin").
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  artifactName: ${name}-setup-${version}.${ext}
+  # Adds the ToastActivatorCLSID to the Start-menu shortcut (Windows toast actions) and removes
+  # Electron's toast activator registration on uninstall.
+  include: build/installer.nsh
+
+# One dmg per architecture (Apple silicon and Intel), both built on release.yml's arm64 macOS runner; the Intel dmg
+# is smoke-tested on an Intel runner (release.yml's smoke-mac-intel job).
+mac:
+  icon: build/icon.icns
+  target:
+    - target: dmg
+      arch: [arm64, x64]
+  category: public.app-category.developer-tools
+  # For a Developer ID build. An unsigned release build turns it off with its ad hoc signature (library validation
+  # would refuse the ad hoc signed frameworks), as electron-builder's identity documentation says.
+  hardenedRuntime: true
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  # scripts/release.mjs turns notarization on only when the Developer ID certificate and notarization secrets are set.
+  notarize: false
+  # Ask notifications show Allow/Deny as alerts (takes effect on a signed bundle).
+  extendInfo:
+    NSUserNotificationAlertStyle: alert
+dmg:
+  artifactName: ${name}-${version}-${arch}.${ext}
+
+linux:
+  # 16x16.png to 512x512.png: the deb and the AppImage install each into the hicolor icon theme.
+  icon: build/icons
+  target:
+    - target: deb
+      arch: [x64]
+    - target: AppImage
+      arch: [x64]
+  category: Development
+  executableName: dim-factory
+  synopsis: Cross-model orchestration of vendor coding CLIs
+  # A placeholder on purpose: the repository names no maintainer and no person. Replace it before publishing a deb
+  # that should name one (docs/RELEASING.md "One-time setup").
+  maintainer: Dim Factory maintainers <maintainers@dimfactory.invalid>
+  # Linux identity. Electron's desktop name (the Wayland app_id, and the launcher entry setBadgeCount
+  # updates) is package.json desktopName, else a slug of productName; both give the dim-factory.desktop the packages
+  # install. desktopName states it, so renaming the product cannot split the two, and syncDesktopName names the
+  # installed file after it. X11 windows carry the class "Dim Factory", which StartupWMClass matches.
+  syncDesktopName: true
+  desktop:
+    entry:
+      StartupWMClass: Dim Factory
+# deb is the primary Linux package: it installs to /opt/Dim Factory/dim-factory and loads an AppArmor profile that allows
+# the user namespaces Chromium's sandbox needs on Ubuntu 24.04+. The AppImage cannot carry a profile (it runs from a
+# random mount point), so there it only starts once the user adds a profile or runs it with --no-sandbox.
+# The deb's homepage field comes from the GitHub repository (scripts/release.mjs), as no homepage is set here.
+deb:
+  artifactName: ${name}_${version}_${arch}.${ext}
+  appArmorProfile: build/linux/apparmor-profile
+  afterInstall: build/linux/after-install.sh
+  afterRemove: build/linux/after-remove.sh
+appImage:
+  artifactName: ${name}-${version}-${arch}.${ext}

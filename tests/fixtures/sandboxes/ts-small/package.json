@@ -1,0 +1,14 @@
+{
+  "name": "ts-small",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tiny TypeScript greeting CLI used as a Dim Factory test sandbox.",
+  "scripts": {
+    "start": "node src/cli.ts",
+    "test": "node --test src/index.test.ts"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

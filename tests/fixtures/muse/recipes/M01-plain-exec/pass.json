@@ -1,0 +1,9 @@
+{
+  "kind": "pass",
+  "route": "exec",
+  "step": "implement",
+  "mode": "autoedit",
+  "planNative": false,
+  "trustFolder": true,
+  "prompt": "Explain in two sentences what src/cli.ts does. Do not change any file."
+}

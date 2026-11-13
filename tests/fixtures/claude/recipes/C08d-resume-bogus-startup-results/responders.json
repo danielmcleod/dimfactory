@@ -1,0 +1,23 @@
+[
+ {
+  "when": {
+   "type": "control_request",
+   "request_id": "$rid",
+   "request": {
+    "subtype": "can_use_tool",
+    "input": "$input"
+   }
+  },
+  "reply": {
+   "type": "control_response",
+   "response": {
+    "subtype": "success",
+    "request_id": "$rid",
+    "response": {
+     "behavior": "allow",
+     "updatedInput": "$input"
+    }
+   }
+  }
+ }
+]

@@ -1,0 +1,532 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4ee100-5d64-4516-8620-0ddd6fda39e2"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "context-breakdown",
+    "at": "start",
+    "breakdown": {
+      "total": 38436,
+      "window": 200000,
+      "percent": 19,
+      "autoCompactAt": 167000,
+      "skills": [
+        {
+          "kind": "skill",
+          "name": "dataviz",
+          "tokens": 362,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "claude-api",
+          "tokens": 271,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "code-review",
+          "tokens": 251,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 240,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "update-config",
+          "tokens": 177,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "schedule",
+          "tokens": 95,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "run",
+          "tokens": 92,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "loop",
+          "tokens": 86,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "workflow-authoring",
+          "tokens": 63,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "keybindings-help",
+          "tokens": 62,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "plugin-authoring",
+          "tokens": 62,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "fewer-permission-prompts",
+          "tokens": 48,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "simplify",
+          "tokens": 47,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "security-review",
+          "tokens": 23,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "init",
+          "tokens": 17,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 9,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 9,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 7,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 7,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 6,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 6,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 6,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 6,
+          "from": "vendor"
+        }
+      ],
+      "mcp": [],
+      "memory": [],
+      "agents": [
+        {
+          "kind": "agent",
+          "name": "<REDACTED>",
+          "tokens": 131,
+          "from": "vendor"
+        },
+        {
+          "kind": "agent",
+          "name": "<REDACTED>",
+          "tokens": 121,
+          "from": "vendor"
+        },
+        {
+          "kind": "agent",
+          "name": "<REDACTED>",
+          "tokens": 116,
+          "from": "vendor"
+        }
+      ]
+    }
+  },
+  {
+    "type": "context",
+    "used": 38436,
+    "window": 200000,
+    "source": "breakdown"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 25424,
+    "window": 200000,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 24
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4earLw3pf2fUyq7M08qN6l",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "start",
+    "fp": "2a82c75deae7"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4earLw3pf2fUyq7M08qN6l",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 156
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "context",
+    "used": 25796,
+    "window": 200000,
+    "cacheRead": 25414,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "Co"
+  },
+  {
+    "type": "text",
+    "delta": "n sumsedpo ititb mo"
+  },
+  {
+    "type": "text",
+    "delta": "d: **Quaipus,"
+  },
+  {
+    "type": "text",
+    "delta": " parseArgs, ustep**"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "done",
+    "result": "Con sumsedpo ititb mod: **Quaipus, parseArgs, ustep**",
+    "usage": {
+      "input": 18,
+      "output": 194,
+      "cacheRead": 25414,
+      "cacheWrite": 25788,
+      "costUsd": 0.0551054
+    }
+  },
+  {
+    "type": "context-breakdown",
+    "at": "end",
+    "breakdown": {
+      "total": 35309,
+      "window": 200000,
+      "percent": 18,
+      "autoCompactAt": 167000,
+      "skills": [
+        {
+          "kind": "skill",
+          "name": "dataviz",
+          "tokens": 362,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "claude-api",
+          "tokens": 271,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "code-review",
+          "tokens": 251,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 240,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "update-config",
+          "tokens": 177,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "schedule",
+          "tokens": 95,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "run",
+          "tokens": 92,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "loop",
+          "tokens": 86,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "workflow-authoring",
+          "tokens": 63,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "keybindings-help",
+          "tokens": 62,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "plugin-authoring",
+          "tokens": 62,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "fewer-permission-prompts",
+          "tokens": 48,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "simplify",
+          "tokens": 47,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "security-review",
+          "tokens": 23,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "init",
+          "tokens": 17,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 9,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 9,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 8,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 7,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 7,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 6,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 6,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 6,
+          "from": "vendor"
+        },
+        {
+          "kind": "skill",
+          "name": "<REDACTED>",
+          "tokens": 6,
+          "from": "vendor"
+        }
+      ],
+      "mcp": [],
+      "memory": [],
+      "agents": [
+        {
+          "kind": "agent",
+          "name": "<REDACTED>",
+          "tokens": 131,
+          "from": "vendor"
+        },
+        {
+          "kind": "agent",
+          "name": "<REDACTED>",
+          "tokens": 121,
+          "from": "vendor"
+        },
+        {
+          "kind": "agent",
+          "name": "<REDACTED>",
+          "tokens": 116,
+          "from": "vendor"
+        }
+      ]
+    }
+  },
+  {
+    "type": "context",
+    "used": 25796,
+    "window": 200000,
+    "source": "breakdown"
+  }
+]

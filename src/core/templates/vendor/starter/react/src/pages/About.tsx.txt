@@ -1,0 +1,20 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+import { about } from '../content'
+import { ImageSlot } from '../components/ImageSlot'
+
+export function About() {
+  return (
+    <section className="section">
+      <div className="container prose">
+        <h1>{about.title}</h1>
+        <p className="lead">{about.lead}</p>
+        {about.body.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+        <ImageSlot label="A picture of you or your place" file="about.jpg" size={[1200, 800]} />
+        <h2 id="contact">{about.contactTitle}</h2>
+        <p>{about.contact}</p>
+      </div>
+    </section>
+  )
+}

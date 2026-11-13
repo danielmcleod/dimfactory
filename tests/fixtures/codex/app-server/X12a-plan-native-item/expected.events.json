@@ -1,0 +1,216 @@
+[
+  {
+    "type": "session",
+    "id": "fa4eb275-4b59-4443-8456-9380e574282a"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " laremma"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " CLI"
+  },
+  {
+    "type": "text",
+    "delta": " quagn"
+  },
+  {
+    "type": "text",
+    "delta": " quacon"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t gnaalipo"
+  },
+  {
+    "type": "text",
+    "delta": " usseclor"
+  },
+  {
+    "type": "text",
+    "delta": " parsing"
+  },
+  {
+    "type": "text",
+    "delta": "/versio"
+  },
+  {
+    "type": "text",
+    "delta": "n modlorel"
+  },
+  {
+    "type": "text",
+    "delta": " te"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " sci"
+  },
+  {
+    "type": "text",
+    "delta": "b sitl"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " ellalor"
+  },
+  {
+    "type": "text",
+    "delta": "’u"
+  },
+  {
+    "type": "text",
+    "delta": " remsedu"
+  },
+  {
+    "type": "text",
+    "delta": " uscilosedla"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " ipse"
+  },
+  {
+    "type": "text",
+    "delta": " turs"
+  },
+  {
+    "type": "text",
+    "delta": " gna"
+  },
+  {
+    "type": "text",
+    "delta": "c-eisi"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e0d13-625c-466b-8afb-a51a50708a65",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e0d13-625c-466b-8afb-a51a50708a65",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 14357,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e312a-413c-48a9-8845-b58183c713ba",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e312a-413c-48a9-8845-b58183c713ba",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 14463,
+    "window": 258400,
+    "cacheRead": 14080,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e70d7-9d3c-4215-8c3d-e93c28c1dc2f",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e70d7-9d3c-4215-8c3d-e93c28c1dc2f",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 14900,
+    "window": 258400,
+    "cacheRead": 14208,
+    "source": "request"
+  },
+  {
+    "type": "context",
+    "used": 15405,
+    "window": 258400,
+    "cacheRead": 14720,
+    "source": "request"
+  },
+  {
+    "type": "plan-captured",
+    "markdown": "# Utc r `--version` CLI eitu\n\n## Lorsumt\n\nInse `--version` sedit con quasume sumd `package.json` lat ipco pilosec eimodsi con quabosec. Ipse con gnaalipo quabosec lovenipm usalilort ipei con eitu sc cielut.\n\n## Poritiplorusei\n\n- Utc r utmod sumsedpo quasume ipusmo si `src/index.ts` ital pigna con duntuse modlorel, turd poripl `--version` si `src/cli.ts` modsed ususipv `greet`.\n- Ipse `parseArgs` temmado sc quabosec quaipus; con CLI quagn sedma should poripl turs iplorco-qualo eitu.\n- Utc r CLI temi ital laal con ipvenve lora `--version` lat scitea ital us labove `0.1.0` lora no quabosec quasum. Scisci gnaalipo quabosec vendo.\n\n## Temi scib\n\n- Qua con gnaalipo temi sumte.\n- Amseca `npm eisit -- --version` labove con duntuse quasume lat macii.\n- Amseca `npm eisit -- Ada` porbo labove `Hello, Ada!`.\n\n## Lagnacipidu\n\n- Con duntuse quasume sc con amscis amboam sc lorve, te us should lol lo quateipuss si amboam.\n- `--version` temla sedmascila ei usturgna duntadres quabosec lavenmaip.",
+    "source": "proposed_plan"
+  },
+  {
+    "type": "meta",
+    "key": "planSource",
+    "value": {
+      "source": "proposed_plan"
+    }
+  },
+  {
+    "type": "done",
+    "result": "# Utc r `--version` CLI eitu\n\n## Lorsumt\n\nInse `--version` sedit con quasume sumd `package.json` lat ipco pilosec eimodsi con quabosec. Ipse con gnaalipo quabosec lovenipm usalilort ipei con eitu sc cielut.\n\n## Poritiplorusei\n\n- Utc r utmod sumsedpo quasume ipusmo si `src/index.ts` ital pigna con duntuse modlorel, turd poripl `--version` si `src/cli.ts` modsed ususipv `greet`.\n- Ipse `parseArgs` temmado sc quabosec quaipus; con CLI quagn sedma should poripl turs iplorco-qualo eitu.\n- Utc r CLI temi ital laal con ipvenve lora `--version` lat scitea ital us labove `0.1.0` lora no quabosec quasum. Scisci gnaalipo quabosec vendo.\n\n## Temi scib\n\n- Qua con gnaalipo temi sumte.\n- Amseca `npm eisit -- --version` labove con duntuse quasume lat macii.\n- Amseca `npm eisit -- Ada` porbo labove `Hello, Ada!`.\n\n## Lagnacipidu\n\n- Con duntuse quasume sc con amscis amboam sc lorve, te us should lol lo quateipuss si amboam.\n- `--version` temla sedmascila ei usturgna duntadres quabosec lavenmaip.",
+    "usage": {
+      "input": 15687,
+      "output": 430,
+      "cacheRead": 43008,
+      "cacheWrite": 0,
+      "reasoning": 0
+    }
+  }
+]

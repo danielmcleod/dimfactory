@@ -1,0 +1,5 @@
+# M01-plain-exec: A plain Implement under --disable-approval with no tool: the session stream, the model Muse configured, one model call (no usage, as captured), the answer as run.output.delta text, then run.terminal.completed with the full text; exit 0.
+# Any signed-in Muse (META_API_KEY in --env-file).
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; Muse signs in with the key, never the everyday sign-in.
+# <fixture Muse home> is an isolated folder that stands in for the home (never the everyday one): its .config/muse is the profile recorded.
+node scripts/record-fixture.mjs --muse --muse-home "<fixture Muse home>" --bin "<the muse executable>" --cwd "<sandbox>" --out tests/fixtures/muse/exec/M01-plain-exec --id M01 --slug plain-exec --cli-version <muse --version> --timing off --env-file "<a file with META_API_KEY=...>" --pass-file tests/fixtures/muse/recipes/M01-plain-exec/pass.json --timeout 900000 -- exec --json --prompt-file "<repo>/tests/fixtures/muse/recipes/M01-plain-exec/prompt.md" --trust-workspace --disable-approval --sandbox-network restricted

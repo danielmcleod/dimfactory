@@ -1,0 +1,5 @@
+[
+  { "match": { "argvIncludes": ["--version"] }, "script": "version.script.jsonl", "repeat": true },
+  { "match": { "argvIncludes": ["-p"] }, "script": "first.script.jsonl" },
+  { "match": { "argvIncludes": ["-p"] }, "script": "second.script.jsonl" }
+]

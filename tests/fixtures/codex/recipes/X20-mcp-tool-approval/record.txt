@@ -1,0 +1,9 @@
+# X20-mcp-tool-approval: Implement calls a tool of an MCP server; Codex asks to approve it as an mcpServer/elicitation/request (mode form, _meta.codex_approval_kind, an empty requestedSchema), allow -> accept, the tool runs, the turn completes.
+# Recorded with codex-cli 0.160.1 (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# The model is pinned as Dim Factory sends a picked one (gpt-6-luna).
+# The MCP server stands in for one of the user's config.toml servers: tnote.mjs (this folder) copied into <sandbox>, named with -c overrides
+# before app-server (the adapter itself never names an MCP server; the replay matches any argv).
+# responders.mjs answers every server request as the adapter does on a pass that may ask (MCP approvals relayed).
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small plus tnote.mjs as <sandbox>.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/app-server/X20-mcp-tool-approval --id X20 --slug mcp-tool-approval --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/X20-mcp-tool-approval/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X20-mcp-tool-approval/pass.json --responders tests/fixtures/codex/recipes/X20-mcp-tool-approval/responders.mjs -- -c "mcp_servers.tnote.command=\"node\"" -c "mcp_servers.tnote.args=[\"tnote.mjs\"]" app-server --listen stdio://

@@ -1,0 +1,412 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e574a-9112-4b26-82b3-be629e0c55e6"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "asked": "gpt-6-luna",
+      "replaced": "gpt-5.6-sol"
+    }
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " laremma"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " sci"
+  },
+  {
+    "type": "text",
+    "delta": "b la"
+  },
+  {
+    "type": "text",
+    "delta": "t `"
+  },
+  {
+    "type": "text",
+    "delta": "sr"
+  },
+  {
+    "type": "text",
+    "delta": "c/index"
+  },
+  {
+    "type": "text",
+    "delta": ".ts"
+  },
+  {
+    "type": "text",
+    "delta": "`"
+  },
+  {
+    "type": "text",
+    "delta": " itt"
+  },
+  {
+    "type": "text",
+    "delta": "e,"
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d porsum"
+  },
+  {
+    "type": "text",
+    "delta": " tursecremt"
+  },
+  {
+    "type": "text",
+    "delta": " findings"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e5e05-714b-4109-8e09-7887fe7c0dfb",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e5e05-714b-4109-8e09-7887fe7c0dfb",
+    "name": "shell",
+    "phase": "end",
+    "status": "failed"
+  },
+  {
+    "type": "context",
+    "used": 16400,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "model": "gpt-6-luna",
+      "replaced": "gpt-5.6-sol"
+    }
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "No modlore"
+  },
+  {
+    "type": "text",
+    "delta": "-sedm"
+  },
+  {
+    "type": "text",
+    "delta": " itt"
+  },
+  {
+    "type": "text",
+    "delta": "e modgn"
+  },
+  {
+    "type": "text",
+    "delta": "a ad"
+  },
+  {
+    "type": "text",
+    "delta": ";"
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": "’u"
+  },
+  {
+    "type": "text",
+    "delta": " masedsec"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " conalipo"
+  },
+  {
+    "type": "text",
+    "delta": "r itsitl"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t ellalor"
+  },
+  {
+    "type": "text",
+    "delta": " utlac"
+  },
+  {
+    "type": "text",
+    "delta": " qua"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " sci"
+  },
+  {
+    "type": "text",
+    "delta": "b."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e7062-2769-42d1-8af0-d8b8ce661ea8",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e7062-2769-42d1-8af0-d8b8ce661ea8",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16815,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e0ce4-4a23-47d2-8976-76c2e2af984d",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e0ce4-4a23-47d2-8976-76c2e2af984d",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 17250,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "No findings"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "sr"
+  },
+  {
+    "type": "text",
+    "delta": "c/index"
+  },
+  {
+    "type": "text",
+    "delta": ".ts"
+  },
+  {
+    "type": "text",
+    "delta": "`"
+  },
+  {
+    "type": "text",
+    "delta": " sec"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "no sumlote"
+  },
+  {
+    "type": "text",
+    "delta": " s"
+  },
+  {
+    "type": "text",
+    "delta": "i con"
+  },
+  {
+    "type": "text",
+    "delta": " modlore"
+  },
+  {
+    "type": "text",
+    "delta": " sedm"
+  },
+  {
+    "type": "text",
+    "delta": " do"
+  },
+  {
+    "type": "text",
+    "delta": " ussitm"
+  },
+  {
+    "type": "text",
+    "delta": " iniptur"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t C"
+  },
+  {
+    "type": "text",
+    "delta": " lainr"
+  },
+  {
+    "type": "text",
+    "delta": "e’e"
+  },
+  {
+    "type": "text",
+    "delta": " elq"
+  },
+  {
+    "type": "text",
+    "delta": "u con"
+  },
+  {
+    "type": "text",
+    "delta": " sci"
+  },
+  {
+    "type": "text",
+    "delta": "b s"
+  },
+  {
+    "type": "text",
+    "delta": "i con"
+  },
+  {
+    "type": "text",
+    "delta": " ussumtesi"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " te"
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": " si"
+  },
+  {
+    "type": "text",
+    "delta": "t’e"
+  },
+  {
+    "type": "text",
+    "delta": " adsedpo"
+  },
+  {
+    "type": "text",
+    "delta": " c"
+  },
+  {
+    "type": "text",
+    "delta": "i poritiploruse"
+  },
+  {
+    "type": "text",
+    "delta": "i gnaelad"
+  },
+  {
+    "type": "text",
+    "delta": " us"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "context",
+    "used": 18372,
+    "window": 258400,
+    "cacheRead": 16896,
+    "source": "request"
+  },
+  {
+    "type": "done",
+    "result": "No findings. `src/index.ts` sec no sumlote si con modlore sedm do ussitm iniptur, lat C lainre’e elqu con scib si con ussumtesi, te C sit’e adsedpo ci poritiplorusei gnaelad us.",
+    "usage": {
+      "input": 35117,
+      "output": 696,
+      "cacheRead": 33024,
+      "cacheWrite": 0,
+      "reasoning": 365
+    }
+  }
+]

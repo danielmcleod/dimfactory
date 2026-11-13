@@ -1,0 +1,8 @@
+{
+  "kind": "pass",
+  "step": "research",
+  "mode": "readonly",
+  "planNative": false,
+  "prompt": "Research how CLIs usually offer a --version flag, with sources. Do not change files.",
+  "web": true
+}

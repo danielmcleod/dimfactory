@@ -1,0 +1,168 @@
+{
+  "id": "operations",
+  "version": 1,
+  "label": "Operations",
+  "description": "Runbooks, procedures, scripts and configuration for running systems.",
+  "detect": {
+    "keywords": [
+      "runbook",
+      "sop",
+      "standard operating procedure",
+      "playbook",
+      "ansible",
+      "terraform",
+      "deployment",
+      "infrastructure",
+      "server setup",
+      "provision",
+      "provisioning",
+      "backup",
+      "backups",
+      "monitoring",
+      "alerting",
+      "incident",
+      "on-call",
+      "migration plan",
+      "cron",
+      "kubernetes",
+      "k8s",
+      "helm",
+      "nginx",
+      "dns",
+      "ssl certificate",
+      "firewall",
+      "rollback",
+      "disaster recovery",
+      "maintenance window"
+    ],
+    "files": [
+      "*.tf",
+      "*.tfvars",
+      "terragrunt.hcl",
+      "ansible.cfg",
+      "playbook.yml",
+      "site.yml",
+      "inventory.ini",
+      "Chart.yaml",
+      "kustomization.yaml",
+      "Vagrantfile",
+      "*.pkr.hcl"
+    ]
+  },
+  "groups": [
+    {
+      "id": "deliverable",
+      "label": "Deliverable",
+      "hint": "What the work produces.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "sop",
+          "label": "Procedure (SOP)",
+          "hint": "Step-by-step instructions for people.",
+          "keywords": ["sop", "standard operating procedure", "procedure"]
+        },
+        {
+          "id": "runbook",
+          "label": "Runbook",
+          "hint": "What to do when something happens.",
+          "keywords": ["runbook", "incident response"]
+        },
+        { "id": "script", "label": "Script", "keywords": ["script", "bash script", "powershell script"] },
+        {
+          "id": "config-as-code",
+          "label": "Configuration as code",
+          "hint": "Terraform, Ansible, Helm or similar.",
+          "keywords": ["infrastructure as code", "config as code", "iac"]
+        },
+        {
+          "id": "migration-plan",
+          "label": "Migration plan",
+          "keywords": ["migration plan", "migrate", "cutover"]
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "label": "Environment",
+      "hint": "Where it runs.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "linux-servers",
+          "label": "Linux servers",
+          "keywords": ["linux", "ubuntu", "debian", "rhel"]
+        },
+        {
+          "id": "windows-servers",
+          "label": "Windows servers",
+          "keywords": ["windows server", "active directory"]
+        },
+        { "id": "aws", "label": "AWS", "keywords": ["aws", "amazon web services", "ec2"] },
+        { "id": "azure", "label": "Azure", "keywords": ["azure"] },
+        { "id": "gcp", "label": "Google Cloud", "keywords": ["gcp", "google cloud"] },
+        { "id": "kubernetes", "label": "Kubernetes", "keywords": ["kubernetes", "k8s"] },
+        {
+          "id": "on-premises",
+          "label": "On premises",
+          "keywords": ["on-prem", "on premises", "on-premises", "data center"]
+        }
+      ]
+    },
+    {
+      "id": "tooling",
+      "label": "Tools",
+      "hint": "What the automation uses.",
+      "multi": true,
+      "other": true,
+      "options": [
+        { "id": "bash", "label": "Bash", "keywords": ["bash", "shell script"] },
+        { "id": "powershell", "label": "PowerShell", "keywords": ["powershell"] },
+        { "id": "terraform", "label": "Terraform", "keywords": ["terraform", "opentofu"] },
+        { "id": "ansible", "label": "Ansible", "keywords": ["ansible"] },
+        { "id": "helm", "label": "Helm or Kustomize", "keywords": ["helm", "kustomize"] },
+        { "id": "github-actions", "label": "GitHub Actions", "keywords": ["github actions"] }
+      ]
+    },
+    {
+      "id": "risk",
+      "label": "Risk and approval",
+      "hint": "How careful the change must be.",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "low", "label": "Low risk", "hint": "Safe to run as written.", "keywords": ["low risk"] },
+        {
+          "id": "dry-run",
+          "label": "Dry run first",
+          "hint": "Show what would change before changing it.",
+          "keywords": ["dry run", "dry-run", "what-if"]
+        },
+        {
+          "id": "approval",
+          "label": "Needs sign-off",
+          "hint": "Each risky step waits for a person to approve it.",
+          "keywords": ["approval", "sign-off", "change request"]
+        },
+        {
+          "id": "production",
+          "label": "Production, with rollback",
+          "hint": "Every step has a way back.",
+          "keywords": ["production", "rollback", "zero downtime"]
+        }
+      ]
+    }
+  ],
+  "research": {
+    "lenses": [
+      {
+        "id": "runbook-practice",
+        "label": "Runbook practice",
+        "ask": "How do teams usually write and keep runbooks, procedures or migration plans like this?",
+        "web": true
+      }
+    ]
+  }
+}

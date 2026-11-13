@@ -1,0 +1,21 @@
+{
+  "id": "write-docs",
+  "version": 1,
+  "label": "Write docs",
+  "description": "Write or update documentation: the audience and tone asked first, an outline before the text, and a plain-language summary at the end.",
+  "toggles": {
+    "clarify": true,
+    "research": false,
+    "security": false,
+    "acceptance": true,
+    "explain": true
+  },
+  "brief": {
+    "category": "documents",
+    "fields": {
+      "format": { "choices": ["markdown"] },
+      "approach": { "choices": ["outline-first"] }
+    }
+  },
+  "taskHint": "What to document, who will read it, and where it should live"
+}

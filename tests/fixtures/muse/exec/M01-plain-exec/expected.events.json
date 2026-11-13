@@ -1,0 +1,29 @@
+[
+  {
+    "type": "session",
+    "id": "0199d2a0-4c1e-7a3b-8d5f-6e7a8b9c0001"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "model": "muse-spark-1.2"
+    }
+  },
+  {
+    "type": "text",
+    "delta": "src/cli.ts parses the command line "
+  },
+  {
+    "type": "text",
+    "delta": "and prints a greeting. "
+  },
+  {
+    "type": "text",
+    "delta": "It exports nothing else."
+  },
+  {
+    "type": "done",
+    "result": "src/cli.ts parses the command line and prints a greeting. It exports nothing else."
+  }
+]

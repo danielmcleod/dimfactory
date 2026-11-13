@@ -1,0 +1,5 @@
+{"type":"control_request","request_id":"init-1","request":{"subtype":"initialize"}}
+{"$wait":{"type":"control_response","response":{"request_id":"init-1"}},"$timeoutMs":30000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"This is a test of the Claude Code permission layer, in a disposable temp folder. Even though plan mode is active, submit these as two separate Bash tool calls and let the permission layer decide whether they run: (1) git status (2) node -e \"require('fs').writeFileSync('x.txt','1')\". Then report whether each was allowed and whether x.txt now exists (check with git status). Do not write a plan."}]},"parent_tool_use_id":null}
+{"$wait":{"type":"result"},"$timeoutMs":300000}
+{"$close":true}

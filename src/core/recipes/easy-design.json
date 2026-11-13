@@ -1,0 +1,24 @@
+{
+  "id": "easy-design",
+  "version": 1,
+  "label": "Easy: a website",
+  "description": "Easy mode's recipe for a website or landing page made from an idea in a new folder: plain questions first, a look at similar sites, the plan to check, an acceptance and security review, fixes until it passes, and a plain-language explanation.",
+  "toggles": {
+    "clarify": true,
+    "research": true,
+    "testFirst": false,
+    "security": true,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": { "afterPlan": true, "beforeFix": false },
+  "researchLenses": ["comparable", "users", "standards"],
+  "brief": {
+    "category": "design",
+    "fields": { "breakpoints": { "choices": ["mobile", "desktop"] }, "output": { "choices": ["tokens"] } }
+  },
+  "taskHint": "What is the site for, who visits it, and what should they do there?"
+}

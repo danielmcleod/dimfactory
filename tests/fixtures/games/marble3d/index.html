@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tilt Garden</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #eef3f7;
+        --ink: #1b2733;
+        --muted: #4a5866;
+        --accent: #2b6cb0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: var(--bg);
+        color: var(--ink);
+        font: 16px/1.4 system-ui, sans-serif;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        padding: 16px;
+      }
+      header {
+        display: flex;
+        width: min(92vw, 520px);
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      #hud {
+        margin: 0;
+        font-variant-numeric: tabular-nums;
+        color: var(--muted);
+      }
+      .stage {
+        position: relative;
+        width: min(92vw, 520px);
+        height: min(92vw, 520px);
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px rgb(0 0 0 / 0.12);
+      }
+      #overlay {
+        position: absolute;
+        inset: auto 0 40% 0;
+        margin: 0 auto;
+        width: fit-content;
+        padding: 10px 18px;
+        border-radius: 10px;
+        background: rgb(255 255 255 / 0.88);
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+      #overlay[hidden] {
+        display: none;
+      }
+      #message {
+        margin: 0;
+        min-height: 1.4em;
+        color: var(--muted);
+      }
+      .touch {
+        display: grid;
+        grid-template-columns: repeat(3, 64px);
+        gap: 8px;
+      }
+      .touch button {
+        height: 56px;
+        border: 0;
+        border-radius: 12px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 1.4rem;
+      }
+      .touch .up {
+        grid-column: 2;
+      }
+      .touch .left {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .touch .down {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .touch .right {
+        grid-column: 3;
+        grid-row: 2;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .touch {
+          display: none;
+        }
+      }
+    </style>
+    <!-- three.js comes from the project's own node_modules (npm install), served from the same folder: no CDN. -->
+    <script type="importmap">
+      { "imports": { "three": "./node_modules/three/build/three.module.js" } }
+    </script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Tilt Garden</h1>
+        <p id="hud">Score 0 · Best 0</p>
+      </header>
+      <div class="stage">
+        <canvas id="board" width="520" height="520" aria-label="The garden board where the marble rolls"></canvas>
+        <p id="overlay">Tilt Garden</p>
+      </div>
+      <p id="message" role="status"></p>
+      <div class="touch" aria-label="Touch controls">
+        <button class="up" data-action="up" aria-label="Up">▲</button>
+        <button class="left" data-action="left" aria-label="Left">◀</button>
+        <button class="down" data-action="down" aria-label="Down">▼</button>
+        <button class="right" data-action="right" aria-label="Right">▶</button>
+      </div>
+    </main>
+    <script type="module">
+      import * as THREE from 'three'
+      import { createLoop } from './src/engine/loop.js'
+      import { createInput } from './src/engine/input.js'
+      import { createRng } from './src/engine/rng.js'
+      import { createStorage } from './src/engine/storage.js'
+      import { installTestHook, prefersReducedMotion } from './src/engine/test-hook.js'
+
+      // The rules: a marble rolls on a square board (from -HALF to HALF on x and z) and picks up gems.
+      const HALF = 4.5
+      const ACCEL = 9
+      const FRICTION = 0.92
+      const RADIUS = 0.35
+      const canvas = document.getElementById('board')
+      const hud = document.getElementById('hud')
+      const overlay = document.getElementById('overlay')
+      const message = document.getElementById('message')
+      const saves = createStorage({ key: 'tilt-garden', version: 1, defaults: { best: 0 } })
+      const input = createInput()
+      for (const b of document.querySelectorAll('.touch button')) input.attachTouchButton(b, b.dataset.action)
+      input.attachTouchButton(canvas, 'action')
+      const reduced = prefersReducedMotion()
+
+      let rng = createRng(1)
+      let best = saves.load().best
+      let game
+
+      function placeGem() {
+        return { x: rng.int(-4, 4), z: rng.int(-4, 4) }
+      }
+
+      function fresh() {
+        return { scene: 'title', score: 0, x: 0, z: 0, vx: 0, vz: 0, gem: placeGem() }
+      }
+
+      const round = (n) => Math.round(n * 1000) / 1000
+
+      function update(dt) {
+        input.update()
+        if (input.pressed('pause')) {
+          if (game.scene === 'playing') loop.pause()
+          else if (game.scene === 'paused') loop.resume()
+        }
+        if (input.pressed('action') && game.scene === 'title') game.scene = 'playing'
+        if (game.scene !== 'playing') return
+        if (input.isDown('up')) game.vz -= ACCEL * dt
+        if (input.isDown('down')) game.vz += ACCEL * dt
+        if (input.isDown('left')) game.vx -= ACCEL * dt
+        if (input.isDown('right')) game.vx += ACCEL * dt
+        game.vx *= FRICTION
+        game.vz *= FRICTION
+        game.x = Math.max(-HALF, Math.min(HALF, game.x + game.vx * dt))
+        game.z = Math.max(-HALF, Math.min(HALF, game.z + game.vz * dt))
+        if (Math.hypot(game.x - game.gem.x, game.z - game.gem.z) < RADIUS + 0.4) {
+          game.score += 10
+          if (game.score > best) {
+            best = game.score
+            saves.save({ best })
+          }
+          game.gem = placeGem()
+        }
+      }
+
+      // The picture: three.js draws the board, the marble and the gem in render().
+      let renderer = null
+      try {
+        renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true })
+      } catch {
+        message.textContent = 'This game needs WebGL, which this browser does not offer.'
+      }
+      const scene = new THREE.Scene()
+      scene.background = new THREE.Color(0xdde8f0)
+      const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100)
+      camera.position.set(0, 9, 9)
+      camera.lookAt(0, 0, 0)
+      scene.add(new THREE.HemisphereLight(0xffffff, 0x88aa77, 1.4))
+      const sun = new THREE.DirectionalLight(0xffffff, 1.6)
+      sun.position.set(3, 8, 4)
+      scene.add(sun)
+      const board = new THREE.Mesh(
+        new THREE.BoxGeometry(HALF * 2 + 1, 0.4, HALF * 2 + 1),
+        new THREE.MeshStandardMaterial({ color: 0x6aa84f }),
+      )
+      board.position.y = -0.2
+      scene.add(board)
+      const grid = new THREE.GridHelper(HALF * 2 + 1, 10, 0x3d6b2b, 0x4f8a3a)
+      grid.position.y = 0.01
+      scene.add(grid)
+      const marble = new THREE.Mesh(
+        new THREE.SphereGeometry(RADIUS, 32, 16),
+        new THREE.MeshStandardMaterial({ color: 0x2b6cb0, roughness: 0.3, metalness: 0.2 }),
+      )
+      scene.add(marble)
+      const gem = new THREE.Mesh(
+        new THREE.OctahedronGeometry(0.35),
+        new THREE.MeshStandardMaterial({ color: 0xd69e2e, emissive: 0x553300 }),
+      )
+      scene.add(gem)
+
+      function render() {
+        marble.position.set(game.x, RADIUS, game.z)
+        gem.position.set(game.gem.x, 0.5, game.gem.z)
+        if (!reduced) gem.rotation.y = loop.ticks / 40
+        if (renderer !== null) {
+          const size = canvas.clientWidth
+          if (canvas.width !== Math.round(size * Math.min(devicePixelRatio, 2))) {
+            renderer.setPixelRatio(Math.min(devicePixelRatio, 2))
+            renderer.setSize(size, size, false)
+          }
+          renderer.render(scene, camera)
+        }
+        const big = { title: 'Tilt Garden', paused: 'Paused', over: 'Game over' }[game.scene]
+        overlay.hidden = big === undefined
+        if (big !== undefined) overlay.textContent = big
+        const words = {
+          title: 'Press Space to start. Arrow keys roll the marble. P or Esc pauses.',
+          playing: 'Roll onto the gold gems.',
+          paused: 'Paused. Press P or Esc to carry on.',
+          over: `Game over: ${game.score} points.`,
+        }
+        hud.textContent = `Score ${game.score} · Best ${best}`
+        message.textContent = renderer === null ? message.textContent : words[game.scene]
+      }
+
+      game = fresh()
+      const loop = createLoop({
+        update,
+        render,
+        onPause: () => {
+          if (game.scene === 'playing') game.scene = 'paused'
+        },
+        onResume: () => {
+          if (game.scene === 'paused') game.scene = 'playing'
+        },
+      })
+      addEventListener('keydown', (e) => {
+        if (!loop.paused || !['KeyP', 'Escape', 'Space'].includes(e.code)) return
+        input.update()
+        loop.resume()
+      })
+      installTestHook({
+        loop,
+        input,
+        rng,
+        state: () => ({
+          scene: game.scene,
+          score: game.score,
+          lives: 1,
+          level: 1,
+          marble: { x: round(game.x), z: round(game.z) },
+          gem: { ...game.gem },
+          webgl: renderer !== null,
+          three: THREE.REVISION,
+        }),
+        setSeed: (n) => {
+          rng = createRng(n)
+          game = fresh()
+        },
+      })
+      loop.start()
+    </script>
+  </body>
+</html>

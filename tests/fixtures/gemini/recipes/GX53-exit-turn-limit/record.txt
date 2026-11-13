@@ -1,0 +1,4 @@
+# GX53-exit-turn-limit: FatalTurnLimitedError (exit 53) during the turn.
+# Needs maxSessionTurns 1 in the fixture profile; usually ends as G10d instead.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/GX53-exit-turn-limit --id GX53 --slug exit-turn-limit --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/GX53-exit-turn-limit/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/GX53-exit-turn-limit/pass.json --responders tests/fixtures/gemini/recipes/GX53-exit-turn-limit/responders.mjs --keep-stdin --timeout 900000 -- --acp --skip-trust

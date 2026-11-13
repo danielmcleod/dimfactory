@@ -1,0 +1,283 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4ee595-0268-44f9-84bd-f4dd15541238"
+  },
+  {
+    "type": "liveness",
+    "count": 9
+  },
+  {
+    "type": "context",
+    "used": 25377,
+    "cacheRead": 15786,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4evPbRdUA1XOdoDwh5AHRJ",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "f1447c218176"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4e229e-beab-4841-8f17-35e2b4b82ca1",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nSedit npm quasume (temal qua)\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e229e-beab-4841-8f17-35e2b4b82ca1",
+        "response": {
+          "behavior": "deny",
+          "message": "Denied by the user in Dim Factory."
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4evPbRdUA1XOdoDwh5AHRJ",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 9
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e7FZzv5FDAW6f1dos2K7O",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "0a7713d8a4f4"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4ed6b4-2de1-46af-8b6a-3c29d4968688",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nSedit npm quasume (etsecl qua)\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4ed6b4-2de1-46af-8b6a-3c29d4968688",
+        "response": {
+          "behavior": "deny",
+          "message": "Denied by the user in Dim Factory."
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e7FZzv5FDAW6f1dos2K7O",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 9
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Ipel `"
+  },
+  {
+    "type": "text",
+    "delta": "npm --version` quatu rem"
+  },
+  {
+    "type": "text",
+    "delta": "l sedsec ut con porb si"
+  },
+  {
+    "type": "text",
+    "delta": " Vensedloc, te eielsit"
+  },
+  {
+    "type": "text",
+    "delta": " rem la"
+  },
+  {
+    "type": "text",
+    "delta": "t C sits no quasum ci"
+  },
+  {
+    "type": "text",
+    "delta": " porsum. C tu"
+  },
+  {
+    "type": "text",
+    "delta": "rqu'e adlosum do"
+  },
+  {
+    "type": "text",
+    "delta": " remmo temsedr"
+  },
+  {
+    "type": "text",
+    "delta": " eltu"
+  },
+  {
+    "type": "text",
+    "delta": "r, ipcid con qua"
+  },
+  {
+    "type": "text",
+    "delta": "sit sitsu elg turamtem iplo"
+  },
+  {
+    "type": "text",
+    "delta": ".\n\nEi elg itte co"
+  },
+  {
+    "type": "text",
+    "delta": "n quasume"
+  },
+  {
+    "type": "text",
+    "delta": ", elipu"
+  },
+  {
+    "type": "text",
+    "delta": "si co"
+  },
+  {
+    "type": "text",
+    "delta": "n qua"
+  },
+  {
+    "type": "text",
+    "delta": "tu la"
+  },
+  {
+    "type": "text",
+    "delta": "t C'ei qua"
+  },
+  {
+    "type": "text",
+    "delta": " iplo ippor."
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": " sit scie "
+  },
+  {
+    "type": "text",
+    "delta": "ami PowerShell ello"
+  },
+  {
+    "type": "text",
+    "delta": "rci sc"
+  },
+  {
+    "type": "text",
+    "delta": " Bash ei ital"
+  },
+  {
+    "type": "text",
+    "delta": "'u pis"
+  },
+  {
+    "type": "text",
+    "delta": "ecq ci doq"
+  },
+  {
+    "type": "text",
+    "delta": "ua."
+  },
+  {
+    "type": "context",
+    "used": 25636,
+    "cacheRead": 25375,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25636,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Ipel `npm --version` quatu reml sedsec ut con porb si Vensedloc, te eielsit rem lat C sits no quasum ci porsum. C turqu'e adlosum do remmo temsedr eltur, ipcid con quasit sitsu elg turamtem iplo.\n\nEi elg itte con quasume, elipusi con quatu lat C'ei qua iplo ippor. C sit scie ami PowerShell ellorci sc Bash ei ital'u pisecq ci doqua.",
+    "usage": {
+      "input": 4,
+      "output": 258,
+      "cacheRead": 41161,
+      "cacheWrite": 9848,
+      "costUsd": 0.0502122
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "mine": {
+      "implement": { "vendr": "claude", "model": "sonnet" }
+    }
+  },
+  "isolation": {
+    "worktree": {
+      "instal": "auto"
+    }
+  }
+}

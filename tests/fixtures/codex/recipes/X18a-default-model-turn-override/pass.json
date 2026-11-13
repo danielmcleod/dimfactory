@@ -1,0 +1,8 @@
+{
+  "kind": "pass",
+  "step": "review",
+  "mode": "readonly",
+  "planNative": false,
+  "prompt": "Review the change in src/index.ts against the plan. List findings as [must]/[should]/[nit].",
+  "probe": "X01a-handshake-model-list"
+}

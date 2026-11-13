@@ -1,0 +1,11 @@
+// Fake Claude for Prove it (tests/integration/guardrails): Approve everything with Dim Factory's PreToolUse hook in the
+// initialize request; the fake asks the hook about a Write to the protected file, expects a refusal, and answers.
+{"op":"expectArgs","includes":["bypassPermissions","--no-session-persistence"]}
+{"op":"expectStdin","match":{"type":"control_request","request":{"subtype":"initialize","hooks":{"PreToolUse":[{"hookCallbackIds":["guardrails"]}]}}},"capture":{"rid":"request_id"}}
+{"op":"stdout","json":{"type":"control_response","response":{"subtype":"success","request_id":"$rid","response":{"models":[]}}}}
+{"op":"expectStdin","match":{"type":"user","message":{"role":"user"}}}
+{"op":"stdout","json":{"type":"system","subtype":"init","session_id":"prove-session-1","cwd":"$FAKE_CWD","model":"claude-haiku-4-5","permissionMode":"bypassPermissions"}}
+{"op":"stdout","json":{"type":"control_request","request_id":"hook-1","request":{"subtype":"hook_callback","callback_id":"guardrails","input":{"hook_event_name":"PreToolUse","tool_name":"Write","tool_input":{"file_path":"protected.txt","content":"changed"}}}}}
+{"op":"expectStdin","match":{"type":"control_response","response":{"subtype":"success","request_id":"hook-1","response":{"hookSpecificOutput":{"permissionDecision":"deny"}}}}}
+{"op":"stdout","json":{"type":"result","subtype":"success","is_error":false,"num_turns":2,"result":"REFUSED","session_id":"prove-session-1","total_cost_usd":0.001,"usage":{"input_tokens":100,"output_tokens":5}}}
+{"op":"exit","code":0}

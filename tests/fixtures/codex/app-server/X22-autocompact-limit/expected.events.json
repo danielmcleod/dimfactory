@@ -1,0 +1,173 @@
+[
+  {
+    "type": "session",
+    "id": "fa4eb36f-1dda-4609-84a0-101907c74799"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " qu"
+  },
+  {
+    "type": "text",
+    "delta": "a ut"
+  },
+  {
+    "type": "text",
+    "delta": "te ipvenv"
+  },
+  {
+    "type": "text",
+    "delta": "e remamlorlo"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t venelgn"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m tem"
+  },
+  {
+    "type": "text",
+    "delta": " remdun"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4eb790-4b7a-40a3-8ae6-d911f8fd3e41",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4eb790-4b7a-40a3-8ae6-d911f8fd3e41",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ea694-7be1-4346-8138-188b35a82684",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ea694-7be1-4346-8138-188b35a82684",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e435d-a4fb-4dc5-872e-d8d393c552cb",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e435d-a4fb-4dc5-872e-d8d393c552cb",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 13181,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "compaction",
+    "phase": "start"
+  },
+  {
+    "type": "context",
+    "used": 7398,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "compaction",
+    "phase": "end"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "3"
+  },
+  {
+    "type": "text",
+    "delta": "x"
+  },
+  {
+    "type": "text",
+    "delta": "n "
+  },
+  {
+    "type": "text",
+    "delta": "3"
+  },
+  {
+    "type": "text",
+    "delta": "sq"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "30"
+  },
+  {
+    "type": "text",
+    "delta": "w"
+  },
+  {
+    "type": "context",
+    "used": 13396,
+    "window": 258400,
+    "cacheRead": 12672,
+    "source": "request"
+  },
+  {
+    "type": "done",
+    "result": "3xn 3sq 30w",
+    "usage": {
+      "input": 13585,
+      "output": 320,
+      "cacheRead": 12672,
+      "cacheWrite": 0,
+      "reasoning": 0
+    }
+  }
+]

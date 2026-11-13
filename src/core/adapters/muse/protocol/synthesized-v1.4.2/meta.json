@@ -1,0 +1,51 @@
+{
+  "vendor": "muse",
+  "route": "exec",
+  "synthesized": true,
+  "targetCliVersion": "1.4.2",
+  "fetched": "2026-10-11",
+  "files": ["exec-records.schema.json"],
+  "liveSchema": null,
+  "sources": [
+    {
+      "what": "Official: muse exec flags (--json JSONL on stdout, --prompt-file, --session-id, --disable-approval, --yolo, --max-model-steps), exit codes 0/1/2/130/143",
+      "url": "https://dev.meta.ai/docs/muse-code/extending",
+      "fetched": "2026-10-11"
+    },
+    {
+      "what": "Official: approval modes, --disable-approval keeps the sandbox, --yolo drops approval and sandbox and trusts the workspace, sandbox writes and network",
+      "url": "https://dev.meta.ai/docs/muse-code/permissions",
+      "fetched": "2026-10-11"
+    },
+    {
+      "what": "Official: install commands, `muse serve` runs the session protocol and `muse schema` prints its JSON schema, default model muse-spark-1.2",
+      "url": "https://dev.meta.ai/docs/muse-code",
+      "fetched": "2026-10-11"
+    },
+    {
+      "what": "Official: META_API_KEY before a stored key before a browser sign-in; `muse auth set`, `muse logout`",
+      "url": "https://dev.meta.ai/docs/muse-code/auth",
+      "fetched": "2026-10-11"
+    },
+    {
+      "what": "Official: settings at ~/.config/muse/settings.json (schema_version 1), --trust-workspace, --model",
+      "url": "https://dev.meta.ai/docs/muse-code/configuration",
+      "fetched": "2026-10-11"
+    },
+    {
+      "what": "Official: releases up to 1.4.2; 1.4.0 a failed exec run shows its reason on the final stderr line, a first run without a terminal names --trust-workspace; 1.4.2 exec returns the run's result when cleanup stalls",
+      "url": "https://dev.meta.ai/docs/muse-code/changelog",
+      "fetched": "2026-10-11"
+    },
+    {
+      "what": "Secondhand: the record envelope and payload types (MuseRecord, MusePayload, TaskLifecycleEvent, RunTerminal) and the captured streams under test_cases/ (Muse Code 0.1.0-R708.1)",
+      "url": "https://docs.rs/crate/muse-codes/0.1.4/source/src/io/mod.rs",
+      "fetched": "2026-10-11"
+    },
+    {
+      "what": "Secondhand: a captured tool-use stream (write_file, read_file, run.terminal.completed)",
+      "url": "https://docs.rs/crate/muse-codes/0.1.4/source/test_cases/meta_tool_use.jsonl",
+      "fetched": "2026-10-11"
+    }
+  ]
+}

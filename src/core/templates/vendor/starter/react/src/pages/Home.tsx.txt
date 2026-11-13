@@ -1,0 +1,96 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+import { home, updates as allUpdates } from '../content'
+import type { Feature, Update } from '../content'
+import { ImageSlot } from '../components/ImageSlot'
+import { Empty, ErrorState, Loading } from '../components/States'
+import { Link } from '../lib/router'
+import { useAsync } from '../lib/useAsync'
+
+/**
+ * Where the updates come from. They are in content.ts now; to load them from somewhere else later (a file, or an API
+ * through the site's own server function, never with a secret key in the page), change only this function.
+ */
+async function loadUpdates(): Promise<Update[]> {
+  return allUpdates
+}
+
+const ICONS: Record<Feature['icon'], string> = {
+  spark: 'M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6',
+  heart: 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z',
+  clock: 'M12 7v5l3 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z',
+}
+
+function Updates() {
+  const state = useAsync(loadUpdates)
+  if (state.status === 'loading') return <Loading label="Loading updates…" />
+  if (state.status === 'error') return <ErrorState message={state.message} onRetry={state.retry} />
+  if (state.data.length === 0) return <Empty title={home.updatesEmpty} />
+  return (
+    <ul className="updates" aria-label={home.updatesTitle}>
+      {state.data.map((u) => (
+        <li key={u.id} className="card update">
+          {/* A date in content.ts is a calendar day: read in UTC, it shows the same day everywhere. */}
+          <time className="update__date" dateTime={u.date}>
+            {new Date(u.date).toLocaleDateString(undefined, {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+              timeZone: 'UTC',
+            })}
+          </time>
+          <h3 className="update__title">{u.title}</h3>
+          <p>{u.text}</p>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+export function Home() {
+  return (
+    <>
+      <section className="hero">
+        <div className="container hero__inner">
+          <div className="hero__text">
+            <p className="eyebrow">{home.eyebrow}</p>
+            <h1>{home.title}</h1>
+            <p className="lead">{home.lead}</p>
+            <div className="actions">
+              <Link to={home.primaryAction.to} className="button">
+                {home.primaryAction.label}
+              </Link>
+              <Link to={home.secondaryAction.to} className="button button--secondary">
+                {home.secondaryAction.label}
+              </Link>
+            </div>
+          </div>
+          <ImageSlot label="Main picture for the home page" file="hero.jpg" size={[1200, 900]} />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="features-title">
+        <div className="container">
+          <h2 id="features-title">{home.featuresTitle}</h2>
+          <ul className="grid">
+            {home.features.map((f) => (
+              <li key={f.title} className="card feature">
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="feature__icon">
+                  <path d={ICONS[f.icon]} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                </svg>
+                <h3>{f.title}</h3>
+                <p>{f.text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="section section--alt" aria-labelledby="updates-title">
+        <div className="container">
+          <h2 id="updates-title">{home.updatesTitle}</h2>
+          <Updates />
+        </div>
+      </section>
+    </>
+  )
+}

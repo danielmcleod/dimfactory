@@ -1,0 +1,15 @@
+{
+  "kind": "pass",
+  "step": "implement",
+  "mode": "autoedit",
+  "planNative": false,
+  "prompt": "First run `npm test -- --watch`, then add a --version flag to the CLI that prints the package version.",
+  "stop": {
+    "after": {
+      "type": "tool",
+      "phase": "start"
+    },
+    "reason": "user"
+  },
+  "model": "gpt-6-luna"
+}

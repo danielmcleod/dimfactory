@@ -1,0 +1,152 @@
+[
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e05c0-2963-42d5-841b-d604b4e0af61"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25583,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4elof5gCHg7ToXEL02H7Sb",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "cf7adb49a315"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4elof5gCHg7ToXEL02H7Sb",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 9
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "text",
+    "delta": "C lainre'e qua `np"
+  },
+  {
+    "type": "text",
+    "delta": "m --version`: co"
+  },
+  {
+    "type": "text",
+    "delta": "n Bash sumi dunti"
+  },
+  {
+    "type": "text",
+    "delta": "pbo \""
+  },
+  {
+    "type": "text",
+    "delta": "Turs ipvenve temaliam aliporse\","
+  },
+  {
+    "type": "text",
+    "delta": " te con ipvenve pit lol"
+  },
+  {
+    "type": "text",
+    "delta": " elseddun. Etco"
+  },
+  {
+    "type": "text",
+    "delta": "n sc no quasum c"
+  },
+  {
+    "type": "text",
+    "delta": "i porsum.\n\nElg sit elipusi co"
+  },
+  {
+    "type": "text",
+    "delta": "n ipvenv"
+  },
+  {
+    "type": "text",
+    "delta": "e la"
+  },
+  {
+    "type": "text",
+    "delta": "t C"
+  },
+  {
+    "type": "text",
+    "delta": "'ei qua"
+  },
+  {
+    "type": "text",
+    "delta": " us ippor, do C sit lop co"
+  },
+  {
+    "type": "text",
+    "delta": "n PowerShell sumi ello"
+  },
+  {
+    "type": "text",
+    "delta": "rci."
+  },
+  {
+    "type": "context",
+    "used": 25699,
+    "cacheRead": 25581,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25699,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "C lainre'e qua `npm --version`: con Bash sumi duntipbo \"Turs ipvenve temaliam aliporse\", te con ipvenve pit lol elseddun. Etcon sc no quasum ci porsum.\n\nElg sit elipusi con ipvenve lat C'ei qua us ippor, do C sit lop con PowerShell sumi ellorci.",
+    "usage": {
+      "input": 4,
+      "output": 151,
+      "cacheRead": 41371,
+      "cacheWrite": 9907,
+      "costUsd": 0.0494202
+    }
+  }
+]

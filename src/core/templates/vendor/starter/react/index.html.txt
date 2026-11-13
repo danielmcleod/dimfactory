@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- Part of the Dim Factory web starter. MIT License: copy, change and share it freely. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Publish checklist: the title, description and social preview below say what the site is when it is shared. -->
+    <title>[Fill in: site name]</title>
+    <meta name="description" content="[Fill in: one sentence that says what the site is for]" />
+    <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[Fill in: site name]" />
+    <meta property="og:description" content="[Fill in: one sentence that says what the site is for]" />
+    <meta property="og:image" content="/social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <noscript>This site needs JavaScript turned on.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

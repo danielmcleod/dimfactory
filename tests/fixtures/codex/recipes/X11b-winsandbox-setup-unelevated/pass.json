@@ -1,0 +1,8 @@
+{
+  "kind": "vendorSetup",
+  "call": "windowsSandbox/setupStart",
+  "params": {
+    "mode": "unelevated"
+  },
+  "ok": true
+}

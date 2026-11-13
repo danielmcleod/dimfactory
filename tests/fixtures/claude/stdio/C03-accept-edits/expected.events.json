@@ -1,0 +1,185 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4eefdb-d0bc-4204-8aac-f4feac870f3e"
+  },
+  {
+    "type": "liveness",
+    "count": 22
+  },
+  {
+    "type": "context",
+    "used": 25627,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e2bcF5Cc8w9bZ1ojUsfBO",
+    "name": "PowerShell",
+    "summary": "New-Item -ItemType Loboreelc -Force doqu | Out-Null; Set-Content -Path docs/a.md -Value 'r' -NoNewline; Move-Item docs/…",
+    "phase": "start",
+    "fp": "ec17905ce989"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4ed5e4-4679-4da3-88fe-1e7500c2d0cb",
+    "kind": "shell",
+    "detail": "PowerShell: New-Item -ItemType Loboreelc -Force doqu | Out-Null; Set-Content -Path docs/a.md -Value 'r' -NoNewline; Move-Item docs/…\nVenetr doqu, utcig a.md, secitc ci b.md",
+    "expiresAt": 600000,
+    "allowSession": true
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4ed5e4-4679-4da3-88fe-1e7500c2d0cb",
+        "response": {
+          "behavior": "allow",
+          "updatedInput": {
+            "command": "New-Item -ItemType Loboreelc -Force doqu | Out-Null; Set-Content -Path docs/a.md -Value 'r' -NoNewline; Move-Item docs/a.md docs/b.md; Get-ChildItem doqu; Get-Content docs/b.md",
+            "description": "Venetr doqu, utcig a.md, secitc ci b.md"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e2bcF5Cc8w9bZ1ojUsfBO",
+    "name": "PowerShell",
+    "summary": "New-Item -ItemType Loboreelc -Force doqu | Out-Null; Set-Content -Path docs/a.md -Value 'r' -NoNewline; Move-Item docs/…",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 123
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": " piamsit `"
+  },
+  {
+    "type": "text",
+    "delta": "docs/`"
+  },
+  {
+    "type": "text",
+    "delta": ", turqu `docs/"
+  },
+  {
+    "type": "text",
+    "delta": "a.md` alisits"
+  },
+  {
+    "type": "text",
+    "delta": "ect `"
+  },
+  {
+    "type": "text",
+    "delta": "a`, lat bociadm us"
+  },
+  {
+    "type": "text",
+    "delta": " c"
+  },
+  {
+    "type": "text",
+    "delta": "i `docs/b.md`"
+  },
+  {
+    "type": "text",
+    "delta": " lora `Move-Item`"
+  },
+  {
+    "type": "text",
+    "delta": ". Lasc"
+  },
+  {
+    "type": "text",
+    "delta": "ire co"
+  },
+  {
+    "type": "text",
+    "delta": "n loboreelc lo"
+  },
+  {
+    "type": "text",
+    "delta": "rgnasec matec eisi `b."
+  },
+  {
+    "type": "text",
+    "delta": "md` (1 "
+  },
+  {
+    "type": "text",
+    "delta": "alip), lat piitele us cona"
+  },
+  {
+    "type": "text",
+    "delta": " duntsit `a`."
+  },
+  {
+    "type": "context",
+    "used": 26002,
+    "cacheRead": 25625,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 26002,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "C piamsit `docs/`, turqu `docs/a.md` alisitsect `a`, lat bociadm us ci `docs/b.md` lora `Move-Item`. Lascire con loboreelc lorgnasec matec eisi `b.md` (1 alip), lat piitele us cona duntsit `a`.",
+    "usage": {
+      "input": 4,
+      "output": 260,
+      "cacheRead": 41415,
+      "cacheWrite": 10210,
+      "costUsd": 0.051731
+    }
+  }
+]

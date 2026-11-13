@@ -1,0 +1,722 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e3f64-e2bf-4328-82ff-3c22aa76c079"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " laremma"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " quagn"
+  },
+  {
+    "type": "text",
+    "delta": " sedma"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t duntus"
+  },
+  {
+    "type": "text",
+    "delta": "e modlorel"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " ut"
+  },
+  {
+    "type": "text",
+    "delta": "c `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " laali"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n duntus"
+  },
+  {
+    "type": "text",
+    "delta": "e’u"
+  },
+  {
+    "type": "text",
+    "delta": " sumlord"
+  },
+  {
+    "type": "text",
+    "delta": "u quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e,"
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d qu"
+  },
+  {
+    "type": "text",
+    "delta": "a co"
+  },
+  {
+    "type": "text",
+    "delta": "n secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m npm"
+  },
+  {
+    "type": "text",
+    "delta": " itusa"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": " E"
+  },
+  {
+    "type": "text",
+    "delta": "i co"
+  },
+  {
+    "type": "text",
+    "delta": "n scicite"
+  },
+  {
+    "type": "text",
+    "delta": " sumc"
+  },
+  {
+    "type": "text",
+    "delta": " sc"
+  },
+  {
+    "type": "text",
+    "delta": " tesitc"
+  },
+  {
+    "type": "text",
+    "delta": "i s"
+  },
+  {
+    "type": "text",
+    "delta": "i co"
+  },
+  {
+    "type": "text",
+    "delta": "n tetural"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " adsecei"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n gnaamte"
+  },
+  {
+    "type": "text",
+    "delta": "m modboadte"
+  },
+  {
+    "type": "text",
+    "delta": "m la"
+  },
+  {
+    "type": "text",
+    "delta": "t eltet"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e41be-fd57-4f49-8ddd-a8672ca42bd6",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e41be-fd57-4f49-8ddd-a8672ca42bd6",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 15824,
+    "window": 258400,
+    "cacheRead": 1792,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e6ac2-9850-42a3-8108-20c7b3e2485f",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e6ac2-9850-42a3-8108-20c7b3e2485f",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 15918,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "context",
+    "used": 16609,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e9c24-f92e-4bac-8d6e-74b76029d526",
+    "name": "edit",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e9c24-f92e-4bac-8d6e-74b76029d526",
+    "name": "edit",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16849,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ed35b-77b8-41e1-8f0a-9c3405839ed3",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "context",
+    "used": 16930,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "context",
+    "used": 17053,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " itsit"
+  },
+  {
+    "type": "text",
+    "delta": "l sc"
+  },
+  {
+    "type": "text",
+    "delta": " s"
+  },
+  {
+    "type": "text",
+    "delta": "i amit"
+  },
+  {
+    "type": "text",
+    "delta": "e."
+  },
+  {
+    "type": "text",
+    "delta": " Co"
+  },
+  {
+    "type": "text",
+    "delta": "n secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m `"
+  },
+  {
+    "type": "text",
+    "delta": "npm"
+  },
+  {
+    "type": "text",
+    "delta": " view"
+  },
+  {
+    "type": "text",
+    "delta": "`"
+  },
+  {
+    "type": "text",
+    "delta": " ipvenv"
+  },
+  {
+    "type": "text",
+    "delta": "e sc"
+  },
+  {
+    "type": "text",
+    "delta": " porbo"
+  },
+  {
+    "type": "text",
+    "delta": " reeimod"
+  },
+  {
+    "type": "text",
+    "delta": " pilosec"
+  },
+  {
+    "type": "text",
+    "delta": " quasum"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " pisu"
+  },
+  {
+    "type": "text",
+    "delta": "m quacon"
+  },
+  {
+    "type": "text",
+    "delta": " ci"
+  },
+  {
+    "type": "text",
+    "delta": " tetural"
+  },
+  {
+    "type": "text",
+    "delta": " scicite"
+  },
+  {
+    "type": "text",
+    "delta": " gnausq"
+  },
+  {
+    "type": "text",
+    "delta": " uslau"
+  },
+  {
+    "type": "text",
+    "delta": " loadquapor"
+  },
+  {
+    "type": "text",
+    "delta": "t;"
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": "’u"
+  },
+  {
+    "type": "text",
+    "delta": " gnapi"
+  },
+  {
+    "type": "text",
+    "delta": "doi"
+  },
+  {
+    "type": "text",
+    "delta": " us"
+  },
+  {
+    "type": "text",
+    "delta": " lor"
+  },
+  {
+    "type": "text",
+    "delta": "a scicite"
+  },
+  {
+    "type": "text",
+    "delta": " modboadte"
+  },
+  {
+    "type": "text",
+    "delta": "m."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ea6a5-975b-4a49-851c-6988992bd28e",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "ask",
+    "kind": "shell",
+    "allowSession": false
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ea6a5-975b-4a49-851c-6988992bd28e",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 17276,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ed35b-77b8-41e1-8f0a-9c3405839ed3",
+    "name": "shell",
+    "phase": "end",
+    "status": "failed"
+  },
+  {
+    "type": "context",
+    "used": 17420,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e0145-c70f-464a-85c1-8e793d236998",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e0145-c70f-464a-85c1-8e793d236998",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 17518,
+    "window": 258400,
+    "cacheRead": 17152,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Elmo"
+  },
+  {
+    "type": "text",
+    "delta": "d `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " ci"
+  },
+  {
+    "type": "text",
+    "delta": " sedit"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n duntus"
+  },
+  {
+    "type": "text",
+    "delta": "e quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e sumd"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "packag"
+  },
+  {
+    "type": "text",
+    "delta": "e.jso"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " s"
+  },
+  {
+    "type": "text",
+    "delta": "i ["
+  },
+  {
+    "type": "text",
+    "delta": "sr"
+  },
+  {
+    "type": "text",
+    "delta": "c"
+  },
+  {
+    "type": "text",
+    "delta": "/cli"
+  },
+  {
+    "type": "text",
+    "delta": ".ts"
+  },
+  {
+    "type": "text",
+    "delta": "]("
+  },
+  {
+    "type": "text",
+    "delta": "<CWD>"
+  },
+  {
+    "type": "text",
+    "delta": "/sr"
+  },
+  {
+    "type": "text",
+    "delta": "c"
+  },
+  {
+    "type": "text",
+    "delta": "/cli"
+  },
+  {
+    "type": "text",
+    "delta": ".ts"
+  },
+  {
+    "type": "text",
+    "delta": ").\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "`"
+  },
+  {
+    "type": "text",
+    "delta": "npm"
+  },
+  {
+    "type": "text",
+    "delta": " modg"
+  },
+  {
+    "type": "text",
+    "delta": " lotur"
+  },
+  {
+    "type": "text",
+    "delta": "lorpo"
+  },
+  {
+    "type": "text",
+    "delta": " versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " duntipb"
+  },
+  {
+    "type": "text",
+    "delta": "o **"
+  },
+  {
+    "type": "text",
+    "delta": "7"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "2**"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": " se"
+  },
+  {
+    "type": "text",
+    "delta": "d lol"
+  },
+  {
+    "type": "text",
+    "delta": " qu"
+  },
+  {
+    "type": "text",
+    "delta": "a vendo"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "context",
+    "used": 17780,
+    "window": 258400,
+    "cacheRead": 17152,
+    "source": "request"
+  },
+  {
+    "type": "done",
+    "result": "Elmod `--version` ci sedit con duntuse quasume sumd `package.json` si [src/cli.ts](<CWD>/src/cli.ts).\n\n`npm modg loturlorpo version` duntipbo **7.0.2**. C sed lol qua vendo.",
+    "usage": {
+      "input": 21922,
+      "output": 1335,
+      "cacheRead": 145920,
+      "cacheWrite": 0,
+      "reasoning": 457
+    }
+  }
+]

@@ -1,0 +1,7 @@
+﻿{
+  // CRLF line endings and a UTF-8 BOM (Notepad)
+  "ui": {
+    "theme": "dark",
+    "acent": "rose"
+  }
+}

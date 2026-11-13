@@ -1,0 +1,9 @@
+[
+  {
+    "type": "error",
+    "message": "No conversation found with session ID: fa4ecb4e-ac4a-4078-8783-fa1e4b132e44",
+    "raw": "No conversation found with session ID: fa4ecb4e-ac4a-4078-8783-fa1e4b132e44",
+    "fatal": true,
+    "category": "resume_failed"
+  }
+]

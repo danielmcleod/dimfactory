@@ -1,0 +1,4 @@
+# G10e-refusal: The prompt ends with stopReason refusal → content_policy (no heal).
+# Cannot be provoked on demand: keep synthesized until observed.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/G10e-refusal --id G10e --slug refusal --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/G10e-refusal/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/G10e-refusal/pass.json --responders tests/fixtures/gemini/recipes/G10e-refusal/responders.mjs --timeout 900000 -- --acp --skip-trust

@@ -1,0 +1,220 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e1417-cab2-4978-80a3-ddeea647c6fb"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25616,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eAZAao2z9ORy2ufY9Jaqw",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "f1447c218176"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4e74ea-cfdc-46d5-8dbc-0db69b896193",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nSedit npm quasume (temal qua)\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "allow-rule",
+    "rule": {
+      "vendor": "claude",
+      "kind": "shell",
+      "tool": "Bash",
+      "match": {
+        "argv": [
+          "npm",
+          "--version"
+        ]
+      },
+      "source": "vendor-suggestion",
+      "nativeRules": [
+        "Bash(npm --version)"
+      ]
+    }
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e74ea-cfdc-46d5-8dbc-0db69b896193",
+        "response": {
+          "behavior": "allow",
+          "updatedInput": {
+            "command": "npm --version",
+            "description": "Sedit npm quasume (temal qua)"
+          },
+          "updatedPermissions": [
+            {
+              "type": "addRules",
+              "rules": [
+                {
+                  "toolName": "Bash",
+                  "ruleContent": "npm --version"
+                }
+              ],
+              "behavior": "allow",
+              "destination": "session"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eAZAao2z9ORy2ufY9Jaqw",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 2
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25729,
+    "cacheRead": 25614,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ejDMHC7eMVY5eWUiGGyHG",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "0a7713d8a4f4"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ejDMHC7eMVY5eWUiGGyHG",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 2
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Ipel laa"
+  },
+  {
+    "type": "text",
+    "delta": "l sc `npm --version`"
+  },
+  {
+    "type": "text",
+    "delta": " duntipbo co"
+  },
+  {
+    "type": "text",
+    "delta": "n mode quasum:\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "1. Temal"
+  },
+  {
+    "type": "text",
+    "delta": " sumc"
+  },
+  {
+    "type": "text",
+    "delta": ": `11.17.0`"
+  },
+  {
+    "type": "text",
+    "delta": "\n2. Etsecl sumc: `"
+  },
+  {
+    "type": "text",
+    "delta": "11.17.0`"
+  },
+  {
+    "type": "context",
+    "used": 25842,
+    "cacheRead": 25727,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25842,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Ipel laal sc `npm --version` duntipbo con mode quasum:\n\n1. Temal sumc: `11.17.0`\n2. Etsecl sumc: `11.17.0`",
+    "usage": {
+      "input": 6,
+      "output": 204,
+      "cacheRead": 67131,
+      "cacheWrite": 10050,
+      "costUsd": 0.0556782
+    }
+  }
+]

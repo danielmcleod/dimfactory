@@ -1,0 +1,3 @@
+# Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+# Netlify and Cloudflare Pages: every address opens the app, and its router shows the right page.
+/*    /index.html   200

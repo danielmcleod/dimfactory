@@ -1,0 +1,130 @@
+[
+  {
+    "type": "session",
+    "id": "fa4ea343-ddc9-4011-82e0-28d668ad4bcf"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " qu"
+  },
+  {
+    "type": "text",
+    "delta": "a co"
+  },
+  {
+    "type": "text",
+    "delta": "n secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m temi"
+  },
+  {
+    "type": "text",
+    "delta": " ipvenv"
+  },
+  {
+    "type": "text",
+    "delta": "e temal"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d laremma"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t duntus"
+  },
+  {
+    "type": "text",
+    "delta": "e modlorel"
+  },
+  {
+    "type": "text",
+    "delta": " ci"
+  },
+  {
+    "type": "text",
+    "delta": " ut"
+  },
+  {
+    "type": "text",
+    "delta": "c `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4eeab9-5ba8-41a2-8075-127516599403",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "context",
+    "used": 15381,
+    "window": 258400,
+    "cacheRead": 1792,
+    "source": "request"
+  },
+  {
+    "type": "meta",
+    "key": "usage",
+    "value": {
+      "input": 13468,
+      "output": 121,
+      "cacheRead": 1792,
+      "cacheWrite": 0,
+      "reasoning": 32
+    }
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4eeab9-5ba8-41a2-8075-127516599403",
+    "name": "shell",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "error",
+    "fatal": true,
+    "category": "user_cancelled"
+  }
+]

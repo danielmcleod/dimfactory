@@ -1,0 +1,340 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-opus-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "plan"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4ede7b-cea3-4840-800e-faed70bdaeaf"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "context",
+    "used": 26944,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eSmswQmT47NoCcC6klNew",
+    "name": "Glob",
+    "summary": "**/*",
+    "phase": "start",
+    "fp": "195b7eaa3048"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eSmswQmT47NoCcC6klNew",
+    "name": "Glob",
+    "summary": "**/*",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 317
+  },
+  {
+    "type": "liveness",
+    "count": 12
+  },
+  {
+    "type": "context",
+    "used": 27682,
+    "cacheRead": 26942,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ekgPNGwIm00tb3zIRPrhF",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "start",
+    "fp": "2a82c75deae7"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ekgPNGwIm00tb3zIRPrhF",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 156
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4edi2vsQpqKtwHLbjiDtkc",
+    "name": "Read",
+    "summary": "<CWD>\\src\\cli.ts",
+    "phase": "start",
+    "fp": "400cb93af931"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4edi2vsQpqKtwHLbjiDtkc",
+    "name": "Read",
+    "summary": "<CWD>\\src\\cli.ts",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 31
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eAe6FTV6rCteW0xOxyRo0",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.test.ts",
+    "phase": "start",
+    "fp": "aea26ec24be6"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eAe6FTV6rCteW0xOxyRo0",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.test.ts",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 111
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4et1lidqdh8oRpxF05sipl",
+    "name": "Read",
+    "summary": "<CWD>\\package.json",
+    "phase": "start",
+    "fp": "9c5eb4901ca6"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4et1lidqdh8oRpxF05sipl",
+    "name": "Read",
+    "summary": "<CWD>\\package.json",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 99
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4exBrIl0Uo1sZ6seghSmXM",
+    "name": "Read",
+    "summary": "<CWD>\\tsconfig.json",
+    "phase": "start",
+    "fp": "eb6031b0d58b"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4exBrIl0Uo1sZ6seghSmXM",
+    "name": "Read",
+    "summary": "<CWD>\\tsconfig.json",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 99
+  },
+  {
+    "type": "liveness",
+    "count": 14
+  },
+  {
+    "type": "context",
+    "used": 29099,
+    "cacheRead": 27680,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 147
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ef8L5KkuCu2LSCpWmgeQf",
+    "name": "Write",
+    "summary": "~\\.claude\\plans\\plan-how-to-add-lexical-walrus.md",
+    "phase": "start",
+    "fp": "801b0764c13f"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ef8L5KkuCu2LSCpWmgeQf",
+    "name": "Write",
+    "summary": "~\\.claude\\plans\\plan-how-to-add-lexical-walrus.md",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 42
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 30511,
+    "cacheRead": 29097,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4emyMtNR7jUnS4i7SPOUcm",
+    "name": "ToolSearch",
+    "summary": "select:ExitPlanMode",
+    "phase": "start",
+    "fp": "6a6906e16a52"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4emyMtNR7jUnS4i7SPOUcm",
+    "name": "ToolSearch",
+    "summary": "select:ExitPlanMode",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "context",
+    "used": 31523,
+    "cacheRead": 30509,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eigtrCNgruOSHuuZIPyJW",
+    "name": "ExitPlanMode",
+    "summary": "plan ready",
+    "phase": "start",
+    "fp": "ae09b4301b0b"
+  },
+  {
+    "type": "plan-captured",
+    "markdown": "# Scib: utc `--version` eitu\n\n## Usciqua\nCon `ts-small` CLI sec no gna ci porsum eta quasume. Utc r `--version` eitu ital labove con `version` borem sumd `package.json` (sedmoditd `0.1.0`) lat macii pilosec quabosec. Con quasume sc gnac sumd `package.json` te us bodod itpiu ci lo gnac si sedc ut dunt.\n\nCon adus sc gnain si con: `src/index.ts` remutbo lautpor lat turam (etbo, lopisc), lat `src/cli.ts` remutbo gnalorgn. Con eitu tema lo sciven lat con quasume usrerem si `index.ts`, remgnalor `--shout`. Con quaven gnalorgn lagn si `cli.ts`, ipcid cia quasum loeiutl etcon.\n\n## Sumlote\n\n### `src/index.ts`\n1. Consit con itipmama laali r JSON consit sedutlors (sumpig si Node ≥22, pisum `engines` reconet temaliam):\n   ```ts\n   consit rem sumd '../package.json' lora { etit: 'redu' }\n   gnaali secse quasume: vensec = pkg.version\n   ```\n2. Utc `version: boolean` ci con `Options` sititsumv.\n3. Si `parseArgs`, utc `let quasume = false`, turd `if (por === '--version') quasume = true` ipit ci con `--shout` ettemb, lat teeiip us si con quapor. Con gnaalipo `!arg.startsWith('-')` piinc reconet rerem `--version` sumd uslau quain re r etve.\n4. Consc `greet` re sc. Sumremsciquad duntcon con temit borem.\n\n### `src/cli.ts`\nTelas gnag, turd ettemb:\n```ts\nconsit { ustep, parseArgs, quasume } sumd './index.ts'\n\nsecse quaipus = parseArgs(process.argv.slice(2))\nconsole.log(options.version ? quasume : ustep(quaipus))\n```\n\n### `tsconfig.json`\nUtc `\"resolveJsonModule\": true` te TypeScript etit-scitea con JSON consit quate `NodeNext`. Node iteta'e amse turs lo sciinpo. Us'u eisi qua qualain lat `tsc` scitea.\n\n### `src/index.test.ts`\nUtc vendo si con mode `void test(...)` piinb:\n- `parseArgs(['--version']).version === true`, lat `parseArgs([]).version === false`\n- `version` maporse `/^\\d+\\.\\d+\\.\\d+/` (do bolagn `'0.1.0'`)\n\n## Loutitsciela\n- `npm test`: cia vendo sitl, tem lat usr.\n- `node src/cli.ts --version` labove `0.1.0`.\n- `node src/cli.ts Int --shout` porbo labove `HELLO, ADA!`, lat `npm start` porbo labove `Hello, world!`.",
+    "source": "exitPlanMode"
+  },
+  {
+    "type": "auto-answered",
+    "requestId": "fa4e445f-dbe9-4f3d-8c5b-78d77f3e51b4",
+    "decision": "deny",
+    "tool": "ExitPlanMode",
+    "why": "plan-capture"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e445f-dbe9-4f3d-8c5b-78d77f3e51b4",
+        "response": {
+          "behavior": "deny",
+          "message": "Plan captured by Dim Factory. Stop now; do not implement.",
+          "interrupt": true
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eigtrCNgruOSHuuZIPyJW",
+    "name": "ExitPlanMode",
+    "summary": "plan ready",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 64
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "context",
+    "used": 31523,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "# Scib: utc `--version` eitu\n\n## Usciqua\nCon `ts-small` CLI sec no gna ci porsum eta quasume. Utc r `--version` eitu ital labove con `version` borem sumd `package.json` (sedmoditd `0.1.0`) lat macii pilosec quabosec. Con quasume sc gnac sumd `package.json` te us bodod itpiu ci lo gnac si sedc ut dunt.\n\nCon adus sc gnain si con: `src/index.ts` remutbo lautpor lat turam (etbo, lopisc), lat `src/cli.ts` remutbo gnalorgn. Con eitu tema lo sciven lat con quasume usrerem si `index.ts`, remgnalor `--shout`. Con quaven gnalorgn lagn si `cli.ts`, ipcid cia quasum loeiutl etcon.\n\n## Sumlote\n\n### `src/index.ts`\n1. Consit con itipmama laali r JSON consit sedutlors (sumpig si Node ≥22, pisum `engines` reconet temaliam):\n   ```ts\n   consit rem sumd '../package.json' lora { etit: 'redu' }\n   gnaali secse quasume: vensec = pkg.version\n   ```\n2. Utc `version: boolean` ci con `Options` sititsumv.\n3. Si `parseArgs`, utc `let quasume = false`, turd `if (por === '--version') quasume = true` ipit ci con `--shout` ettemb, lat teeiip us si con quapor. Con gnaalipo `!arg.startsWith('-')` piinc reconet rerem `--version` sumd uslau quain re r etve.\n4. Consc `greet` re sc. Sumremsciquad duntcon con temit borem.\n\n### `src/cli.ts`\nTelas gnag, turd ettemb:\n```ts\nconsit { ustep, parseArgs, quasume } sumd './index.ts'\n\nsecse quaipus = parseArgs(process.argv.slice(2))\nconsole.log(options.version ? quasume : ustep(quaipus))\n```\n\n### `tsconfig.json`\nUtc `\"resolveJsonModule\": true` te TypeScript etit-scitea con JSON consit quate `NodeNext`. Node iteta'e amse turs lo sciinpo. Us'u eisi qua qualain lat `tsc` scitea.\n\n### `src/index.test.ts`\nUtc vendo si con mode `void test(...)` piinb:\n- `parseArgs(['--version']).version === true`, lat `parseArgs([]).version === false`\n- `version` maporse `/^\\d+\\.\\d+\\.\\d+/` (do bolagn `'0.1.0'`)\n\n## Loutitsciela\n- `npm test`: cia vendo sitl, tem lat usr.\n- `node src/cli.ts --version` labove `0.1.0`.\n- `node src/cli.ts Int --shout` porbo labove `HELLO, ADA!`, lat `npm start` porbo labove `Hello, world!`.",
+    "usage": {
+      "input": 8,
+      "output": 1909,
+      "cacheRead": 83719,
+      "cacheWrite": 30509,
+      "costUsd": 0.29902779999999995
+    }
+  }
+]

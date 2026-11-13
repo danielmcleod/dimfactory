@@ -1,0 +1,13 @@
+{
+  "kind": "pass",
+  "step": "implement",
+  "mode": "autoedit",
+  "planNative": false,
+  "prompt": "Add a --version flag to the CLI that prints the package version. Also add a file ../X04-version.txt (outside this folder) that contains the version.",
+  "answers": [
+    {
+      "decision": "allow"
+    }
+  ],
+  "model": "gpt-6-luna"
+}

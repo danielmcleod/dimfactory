@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.ico binary
+*.icns binary
+# Recordings must stay byte-exact (including CRLF cases).
+tests/fixtures/** -text
+# Bundled third-party libraries are checked by their sha256: kept byte-exact.
+src/core/templates/vendor/third-party/** -text

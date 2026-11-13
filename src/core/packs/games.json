@@ -1,0 +1,769 @@
+{
+  "id": "games",
+  "version": 1,
+  "label": "Games",
+  "description": "Light web games: one page that runs offline in a browser, drawn in 2D (or very light 3D), with original art and local saves.",
+  "detect": {
+    "keywords": [
+      "game",
+      "games",
+      "gameplay",
+      "video game",
+      "browser game",
+      "arcade",
+      "platformer",
+      "roguelike",
+      "game jam",
+      "high score",
+      "high scores",
+      "sudoku",
+      "crossword",
+      "word search",
+      "hangman",
+      "solitaire",
+      "tic-tac-toe",
+      "tic tac toe",
+      "connect four",
+      "chess",
+      "checkers",
+      "trivia",
+      "interactive fiction",
+      "text adventure",
+      "choose your own adventure",
+      "escape room",
+      "endless runner",
+      "dungeon crawler",
+      "clicker",
+      "sprite",
+      "sprites",
+      "phaser"
+    ],
+    "files": ["playtest.json", "game.js", "game.html", "*.tmx", "*.aseprite", "*.ase", ".itch.toml"]
+  },
+  "groups": [
+    {
+      "id": "genre",
+      "label": "Kind of game",
+      "hint": "What playing it feels like.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "arcade",
+          "label": "Arcade",
+          "hint": "Quick rounds with a score: steer, dodge, catch or shoot.",
+          "keywords": [
+            "snake",
+            "brick breaker",
+            "paddle",
+            "space shooter",
+            "falling blocks",
+            "tap to fly",
+            "asteroids",
+            "space rocks"
+          ]
+        },
+        {
+          "id": "puzzle",
+          "label": "Puzzle",
+          "hint": "Think it through: grids, tiles, logic.",
+          "keywords": [
+            "puzzle",
+            "puzzle game",
+            "match-3",
+            "match three",
+            "sliding puzzle",
+            "nonogram",
+            "logic puzzle"
+          ]
+        },
+        {
+          "id": "word",
+          "label": "Word game",
+          "hint": "Guess, find or make words.",
+          "keywords": ["word game", "anagram", "anagrams", "five-letter", "spelling bee"]
+        },
+        {
+          "id": "card-board",
+          "label": "Card or board game",
+          "hint": "Cards, tiles or a board, against the computer or a friend.",
+          "keywords": ["card game", "board game", "memory game", "memory pairs", "matching pairs", "dominoes"]
+        },
+        {
+          "id": "idle",
+          "label": "Idle or clicker",
+          "hint": "Numbers go up while you click, upgrade and come back later.",
+          "keywords": ["idle game", "incremental game", "cookie clicker"]
+        },
+        {
+          "id": "story",
+          "label": "Story or adventure",
+          "hint": "Read, choose and explore; the story is written as data.",
+          "keywords": ["story game", "visual novel", "adventure game", "branching story"]
+        },
+        {
+          "id": "quiz",
+          "label": "Quiz or trivia",
+          "hint": "Questions and answers, with a score at the end.",
+          "keywords": ["quiz", "quiz game", "pub quiz", "flashcards"]
+        },
+        {
+          "id": "platformer",
+          "label": "Platformer",
+          "hint": "Run and jump through levels.",
+          "keywords": ["jump and run", "side-scroller", "side scroller"]
+        },
+        {
+          "id": "top-down",
+          "label": "Top-down",
+          "hint": "Move around a map seen from above.",
+          "keywords": ["top-down", "top down", "maze game"]
+        },
+        {
+          "id": "typing",
+          "label": "Typing",
+          "hint": "Type fast and right.",
+          "keywords": ["typing game", "typing tutor", "typing test"]
+        },
+        {
+          "id": "learning",
+          "label": "Learning",
+          "hint": "Practice maths, spelling, shapes or colours.",
+          "keywords": ["maths game", "math game", "spelling game", "educational game", "learning game"]
+        },
+        {
+          "id": "party",
+          "label": "Party",
+          "hint": "Several people around one screen.",
+          "keywords": ["party game", "buzzer"]
+        },
+        {
+          "id": "helper",
+          "label": "Game helper",
+          "hint": "A tool for playing: dice, scores, brackets, name generators, level editors.",
+          "keywords": [
+            "dice roller",
+            "score keeper",
+            "scorekeeper",
+            "initiative tracker",
+            "tournament bracket",
+            "level editor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "controls",
+      "label": "Controls",
+      "hint": "How people play it.",
+      "multi": true,
+      "other": true,
+      "options": [
+        { "id": "keyboard", "label": "Keyboard", "keywords": ["arrow keys", "wasd", "keyboard controls"] },
+        { "id": "mouse", "label": "Mouse", "keywords": ["mouse controls", "point and click"] },
+        {
+          "id": "touch",
+          "label": "Touch",
+          "hint": "Big on-screen buttons or taps on a phone or tablet.",
+          "keywords": ["touch controls", "touchscreen", "touch screen", "swipe"]
+        },
+        { "id": "gamepad", "label": "Gamepad", "keywords": ["gamepad", "game controller", "joystick"] },
+        {
+          "id": "one-button",
+          "label": "One button",
+          "hint": "Everything with one key or one tap.",
+          "keywords": ["one button", "one-button", "one tap", "one-tap"]
+        }
+      ]
+    },
+    {
+      "id": "players",
+      "label": "Players",
+      "hint": "Who plays, and where.",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "solo", "label": "One player", "keywords": ["single player", "single-player", "one player"] },
+        {
+          "id": "vs-computer",
+          "label": "Against the computer",
+          "keywords": ["against the computer", "vs the computer", "computer opponent"]
+        },
+        {
+          "id": "same-device",
+          "label": "Two on one device",
+          "hint": "Two players share one keyboard or screen.",
+          "keywords": ["two players", "2 players", "two player", "2 player", "local multiplayer"]
+        },
+        {
+          "id": "pass-and-play",
+          "label": "Pass and play",
+          "hint": "Players take turns on the same device.",
+          "keywords": ["pass and play", "pass-and-play", "hot seat", "hot-seat"]
+        },
+        {
+          "id": "play-by-link",
+          "label": "Play by link",
+          "hint": "The game's state travels in a link you send; no server.",
+          "keywords": ["play by link", "send a link to my friend"]
+        },
+        {
+          "id": "online",
+          "label": "Online with a server",
+          "hint": "Needs a server you host. Not in Easy mode.",
+          "keywords": ["online multiplayer", "multiplayer online", "real-time multiplayer"]
+        }
+      ]
+    },
+    {
+      "id": "engine",
+      "label": "Built with",
+      "hint": "What draws the game. Nothing is loaded from the internet.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "canvas",
+          "label": "Plain canvas",
+          "hint": "JavaScript drawing on a canvas: arcade, idle and typing games.",
+          "keywords": ["html canvas", "canvas game"]
+        },
+        {
+          "id": "dom",
+          "label": "HTML grid",
+          "hint": "Buttons and grids in the page: puzzles, words, cards, stories, quizzes.",
+          "keywords": ["html grid", "dom game"]
+        },
+        {
+          "id": "phaser",
+          "label": "Phaser",
+          "hint": "A 2D game library, copied into the project with its licence.",
+          "keywords": ["phaser"]
+        },
+        {
+          "id": "threejs",
+          "label": "three.js",
+          "hint": "Light 3D. Optional: installed into the project with npm, not bundled with Dim Factory. Needs Node.js.",
+          "keywords": ["three.js", "threejs"]
+        },
+        {
+          "id": "vite-ts",
+          "label": "Vite and TypeScript",
+          "hint": "A build step; needs Node.js installed.",
+          "keywords": ["vite", "typescript game"]
+        }
+      ]
+    },
+    {
+      "id": "artStyle",
+      "label": "Look",
+      "hint": "All art is original: drawn in code or from your own files.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "shapes",
+          "label": "Simple shapes",
+          "keywords": ["simple shapes", "geometric", "minimalist"]
+        },
+        { "id": "pixel", "label": "Pixel art", "keywords": ["pixel art", "8-bit", "pixelated"] },
+        { "id": "hand-drawn", "label": "Hand-drawn", "keywords": ["hand-drawn", "hand drawn", "doodle"] },
+        { "id": "emoji", "label": "Emoji", "keywords": ["emoji", "emojis"] },
+        { "id": "retro", "label": "Retro", "keywords": ["retro", "old-school", "neon"] },
+        {
+          "id": "my-photos",
+          "label": "My photos",
+          "hint": "Photos you add to the project.",
+          "keywords": [
+            "my photos",
+            "our photos",
+            "family photos",
+            "photos of",
+            "with photos",
+            "with our photos",
+            "with my photos",
+            "pictures of"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "difficulty",
+      "label": "Difficulty",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "gentle",
+          "label": "Gentle",
+          "hint": "Forgiving, for beginners and kids.",
+          "keywords": ["relaxing", "cozy"]
+        },
+        { "id": "normal", "label": "Normal" },
+        { "id": "hard", "label": "Hard", "keywords": ["really hard", "challenging"] },
+        {
+          "id": "ramps-up",
+          "label": "Gets harder as you go",
+          "keywords": ["gets harder", "difficulty curve"]
+        }
+      ]
+    },
+    {
+      "id": "length",
+      "label": "How long a game is",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "short", "label": "A minute or two", "keywords": ["quick game", "short rounds"] },
+        { "id": "medium", "label": "About ten minutes" },
+        { "id": "long", "label": "Many sittings", "hint": "Progress is saved between visits." },
+        {
+          "id": "endless",
+          "label": "Endless",
+          "hint": "Play until you lose; beat your best score.",
+          "keywords": ["endless"]
+        }
+      ]
+    },
+    {
+      "id": "sound",
+      "label": "Sound",
+      "hint": "Made in the browser; sound starts after the first key or tap.",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "none", "label": "No sound", "keywords": ["no sound", "silent"] },
+        { "id": "effects", "label": "Sound effects", "keywords": ["sound effects"] },
+        { "id": "effects-music", "label": "Effects and music", "keywords": ["background music"] }
+      ]
+    },
+    {
+      "id": "save",
+      "label": "Saves",
+      "hint": "Kept on this device only.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "high-score",
+          "label": "Best score",
+          "keywords": ["high score", "high scores", "best score", "best scores"]
+        },
+        { "id": "progress", "label": "Progress", "keywords": ["save progress", "save my progress"] },
+        { "id": "settings", "label": "Settings" },
+        { "id": "none", "label": "Nothing saved" }
+      ]
+    },
+    {
+      "id": "platform",
+      "label": "Where it is played",
+      "multi": true,
+      "other": true,
+      "options": [
+        { "id": "desktop", "label": "Computer", "keywords": ["laptop", "desktop"] },
+        { "id": "phone", "label": "Phone", "keywords": ["phone", "my phone", "mobile game"] },
+        { "id": "tablet", "label": "Tablet", "keywords": ["tablet", "ipad"] },
+        {
+          "id": "installable",
+          "label": "Installable",
+          "hint": "Can be added to a phone's home screen and played offline.",
+          "keywords": ["add to home screen", "installable"]
+        }
+      ]
+    },
+    {
+      "id": "audience",
+      "label": "Who it is for",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "everyone", "label": "Everyone" },
+        {
+          "id": "kids",
+          "label": "Kids",
+          "hint": "Kid-safe: no chat, links, ads or purchases; gentle and calm.",
+          "keywords": ["for kids", "for children", "my kids", "toddler", "preschool"]
+        },
+        { "id": "teens-adults", "label": "Teens and adults" }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "label": "Accessibility",
+      "multi": true,
+      "other": true,
+      "options": [
+        { "id": "remap", "label": "Change the keys", "keywords": ["remap", "rebind keys"] },
+        { "id": "pause", "label": "Pause any time" },
+        { "id": "reduced-motion", "label": "Less motion", "keywords": ["reduced motion"] },
+        {
+          "id": "colour-safe",
+          "label": "Colour-blind safe",
+          "keywords": ["colour blind", "color blind", "colorblind"]
+        },
+        { "id": "no-flashing", "label": "No flashing", "keywords": ["no flashing"] },
+        { "id": "big-targets", "label": "Big buttons and text", "keywords": ["big buttons", "large text"] }
+      ]
+    },
+    {
+      "id": "deliverable",
+      "label": "What you get",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "single-page",
+          "label": "A page that opens offline",
+          "hint": "index.html and its files; open it in any browser."
+        },
+        {
+          "id": "itch-zip",
+          "label": "Ready for itch.io",
+          "hint": "A folder you zip and upload as an HTML5 game.",
+          "keywords": ["itch.io", "itch"]
+        },
+        {
+          "id": "installable-app",
+          "label": "Installable web app",
+          "hint": "Plays offline after the first visit.",
+          "keywords": ["pwa", "offline game"]
+        },
+        {
+          "id": "game-server",
+          "label": "A game server you host",
+          "hint": "For online multiplayer: needs a server you host. Full mode only, never in Easy mode.",
+          "keywords": ["game server", "multiplayer server"]
+        }
+      ]
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "original-art",
+          "label": "Original names and art",
+          "hint": "Mechanics can be familiar; names, characters and art are new."
+        },
+        {
+          "id": "no-network",
+          "label": "No internet needed",
+          "hint": "Everything the game uses is in the project.",
+          "keywords": ["works offline", "no internet"]
+        },
+        { "id": "small-download", "label": "Small download", "keywords": ["small download", "lightweight"] },
+        { "id": "no-ads", "label": "No ads or tracking", "keywords": ["no ads"] }
+      ]
+    },
+    {
+      "id": "approach",
+      "label": "Approach",
+      "hint": "How Dim Factory should shape the plan.",
+      "multi": true,
+      "other": false,
+      "options": [
+        {
+          "id": "core-loop-first",
+          "label": "Core loop first",
+          "hint": "The smallest playable version before art and menus.",
+          "effect": "plan",
+          "guidance": "Plan the smallest playable loop first (start, play, score, lose or win, restart) with plain shapes, and make it fun before adding art, sound, menus or extra levels. Every step leaves the game playable."
+        },
+        {
+          "id": "playtested",
+          "label": "Playtested",
+          "hint": "Goals written as things a player can do and see.",
+          "effect": "plan",
+          "guidance": "Write every acceptance criterion as something a player does and sees (\"Arrow keys steer the snake\", \"Your best score is still there after you reload\"). Turn each one into a scenario in playtest.json that the test hook (?test=1) can play."
+        },
+        {
+          "id": "milestones",
+          "label": "Milestones",
+          "hint": "Stages that each end in a playable game.",
+          "effect": "plan",
+          "guidance": "Split the plan into a few ordered milestones (core loop, then rules and scoring, then polish and settings). Each ends in a playable game and says how to check it before the next one starts."
+        }
+      ]
+    }
+  ],
+  "security": {
+    "focus": [
+      "No eval, new Function or string timers anywhere, including level editors, share codes and save loading: parse data with JSON.parse and check its shape.",
+      "Text a player types (names, level titles, messages) is shown as text (textContent), never inserted as HTML.",
+      "Saves, share codes and links are untrusted input: a broken, edited or oversized one must not crash the game or run code.",
+      "No third-party scripts, ads, analytics or trackers, and nothing loaded from a CDN: everything the game uses is in the project.",
+      "Kid-safe for a kids' game: no chat or shared free text, no outside links, ads or purchases, no flashing more than three times a second, nothing stored but local scores and settings.",
+      "No gambling or real money: no betting, loot boxes, paid random rewards or crypto.",
+      "Multiplayer: the server decides the rules and checks every move; the game in the browser is never trusted.",
+      "Personal photos stay in the project folder: the game never uploads them or sends them anywhere."
+    ],
+    "when": [
+      {
+        "group": "deliverable",
+        "option": "game-server",
+        "focus": [
+          "The game server binds 127.0.0.1 while you develop; listening on other addresses is a deliberate setting (HOST) for hosting it behind HTTPS.",
+          "The server checks the Origin of every WebSocket connection against an allow list and refuses the rest.",
+          "Every message is capped in size (2 KB) and rate (about 20 a second per player); bad, oversized or flooding clients get an error or are cut off, and the server never crashes.",
+          "The server is authoritative: it keeps the game state, checks every move against the rules and whose turn it is, and sends each player only what they may see.",
+          "No accounts or passwords: players meet with random, hard-to-guess room codes; rooms are capped in number and closed when empty.",
+          "The server's file handler serves only the game's public files: never server code, package files, dotfiles or paths outside the folder."
+        ]
+      }
+    ]
+  },
+  "namesToAvoid": [
+    "Tetris",
+    "Pac-Man",
+    "Ms. Pac-Man",
+    "Super Mario",
+    "Mario Kart",
+    "Zelda",
+    "Pokemon",
+    "Minecraft",
+    "Fortnite",
+    "Roblox",
+    "Angry Birds",
+    "Candy Crush",
+    "Flappy Bird",
+    "Sonic the Hedgehog",
+    "Space Invaders",
+    "Donkey Kong",
+    "Frogger",
+    "Galaga",
+    "Wordle",
+    "Bejeweled",
+    "Street Fighter",
+    "Mortal Kombat",
+    "Final Fantasy",
+    "Animal Crossing",
+    "Stardew Valley",
+    "Call of Duty",
+    "Grand Theft Auto",
+    "Scrabble",
+    "Boggle",
+    "Yahtzee",
+    "Jenga",
+    "Lemmings",
+    "Crossy Road",
+    "Subway Surfers",
+    "Temple Run",
+    "Fruit Ninja",
+    "Doodle Jump",
+    "Geometry Dash",
+    "Cut the Rope",
+    "Plants vs. Zombies",
+    "Clash of Clans",
+    "Overwatch",
+    "Hollow Knight",
+    "Undertale",
+    "Metroid",
+    "Pikachu"
+  ],
+  "preview": [
+    {
+      "id": "game-server",
+      "when": { "files": ["server.js", "playtest.json"] },
+      "run": ["node", "server.js"],
+      "kind": "server",
+      "note": "The online game's own server. Needs a server you host to play with people elsewhere; here it runs on this computer only (127.0.0.1).",
+      "url": "http://127.0.0.1:8787/"
+    }
+  ],
+  "research": {
+    "lenses": [
+      {
+        "id": "comparable-games",
+        "label": "Comparable games",
+        "ask": "Which existing games are closest to this idea, what makes them fun, and what do players praise or complain about? Name mechanics, not trademarked characters or art to copy.",
+        "web": true
+      },
+      {
+        "id": "game-feel",
+        "label": "Game feel",
+        "ask": "What makes a game like this feel good to play (responsive controls, feedback, animation, sound, screen shake within reason) and which small touches matter most?",
+        "web": true
+      },
+      {
+        "id": "mvp-scope",
+        "label": "Smallest fun version",
+        "ask": "What is the smallest version of this game that is already fun to play, and what should wait for later?",
+        "web": true
+      },
+      {
+        "id": "controls-a11y",
+        "label": "Controls and accessibility",
+        "ask": "Which controls do players expect on a keyboard, a phone and a gamepad, and which accessibility options (remapping, pause, reduced motion, colour-blind safe palettes, no flashing) apply?",
+        "web": true
+      },
+      {
+        "id": "difficulty-curve",
+        "label": "Difficulty curve",
+        "ask": "How should difficulty start and grow in a game like this so beginners are not stuck and good players are not bored?",
+        "web": true
+      },
+      {
+        "id": "engine-choice",
+        "label": "Engine choice",
+        "ask": "For a small browser game like this, is plain canvas or an HTML grid enough, or does a bundled library help? Weigh size, licence and offline use.",
+        "web": true
+      },
+      {
+        "id": "originality",
+        "label": "Originality",
+        "ask": "Which names, characters, logos and art styles in this genre are trademarked or closely tied to one game, so this game should avoid them while keeping the mechanics?",
+        "web": true
+      }
+    ],
+    "defaults": ["comparable-games", "game-feel", "mvp-scope"]
+  },
+  "deploy": {
+    "targets": [
+      {
+        "id": "itch-io",
+        "label": "itch.io",
+        "classes": ["static-site", "spa"],
+        "freeTier": "No upload fee for a browser game; you choose whether to charge, and what share of any sales itch.io keeps.",
+        "cost": "No charge to host a free game; check itch.io's current terms before you sell one.",
+        "coldStarts": "None: the game's files are served as they are.",
+        "customDomains": "The game gets a page on itch.io under your account's address.",
+        "dataResidency": "Served from itch.io's own servers; you cannot choose a region.",
+        "configs": [],
+        "steps": [
+          {
+            "label": "Make a zip of the game's files, with index.html at the top of the zip",
+            "note": "On Windows, select the files inside the folder, right-click, then Send to and Compressed (zipped) folder. On a Mac, select them, right-click and Compress."
+          },
+          {
+            "label": "Sign in to itch.io, open the menu under your name and choose Upload new project"
+          },
+          {
+            "label": "Set Kind of project to HTML, upload the zip and tick This file will be played in the browser"
+          },
+          {
+            "label": "Set the embed size to fit the game and turn on the fullscreen button"
+          },
+          {
+            "label": "Save it as a draft, play it on its page, then make it public",
+            "note": "A draft page is visible only to you until you publish it."
+          }
+        ]
+      },
+      {
+        "id": "github-pages",
+        "label": "GitHub Pages",
+        "classes": ["static-site", "spa"],
+        "freeTier": "Included with GitHub's plans for public repositories, within GitHub's usage limits; private sites need a paid plan.",
+        "cost": "Usually no extra charge for a small public site; check the limits on size, bandwidth and builds.",
+        "coldStarts": "None: the files are served as they are.",
+        "customDomains": "Supported, with an HTTPS certificate once DNS points at GitHub.",
+        "dataResidency": "Served from GitHub's global network; you cannot choose a region.",
+        "configs": ["github-actions"],
+        "needs": "git, and the GitHub CLI (gh) to open the repository",
+        "steps": [
+          {
+            "label": "Commit the workflow, then push it",
+            "run": "git push origin {branch}"
+          },
+          {
+            "label": "In the repository settings, open Pages and set Source to GitHub Actions",
+            "note": "The workflow then publishes the game on every push to the branch it watches."
+          },
+          {
+            "label": "Open the repository in your browser",
+            "run": "gh browse"
+          }
+        ]
+      },
+      {
+        "id": "netlify",
+        "label": "Netlify",
+        "classes": ["static-site", "spa"],
+        "freeTier": "A starter tier for personal projects, with monthly limits on bandwidth, build minutes and function calls.",
+        "cost": "Paid plans are billed per team member; usage over the limits is billed or paused, depending on the plan.",
+        "coldStarts": "None for the game's files.",
+        "customDomains": "Supported, with HTTPS certificates Netlify manages.",
+        "dataResidency": "Static files come from a global network.",
+        "configs": ["netlify"],
+        "needs": "Node.js (the Netlify CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Netlify",
+            "run": "npx netlify-cli login"
+          },
+          {
+            "label": "Link this folder to a Netlify site",
+            "run": "npx netlify-cli init"
+          },
+          {
+            "label": "Deploy a draft to check it",
+            "run": "npx netlify-cli deploy --dir {dir}"
+          },
+          {
+            "label": "Deploy to production",
+            "run": "npx netlify-cli deploy --prod --dir {dir}"
+          }
+        ]
+      },
+      {
+        "id": "cloudflare-pages",
+        "label": "Cloudflare Pages",
+        "classes": ["static-site", "spa"],
+        "freeTier": "A starter tier with a monthly build limit and generous bandwidth for static files.",
+        "cost": "Paid plans add builds and features; check the current limits before you rely on them.",
+        "coldStarts": "None for the game's files.",
+        "customDomains": "Supported, with HTTPS; easiest when the domain uses Cloudflare DNS.",
+        "dataResidency": "Served from Cloudflare's global network; regional rules need a paid plan.",
+        "configs": [],
+        "needs": "Node.js (Wrangler, the Cloudflare CLI, runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Cloudflare",
+            "run": "npx wrangler login"
+          },
+          {
+            "label": "Deploy the game's files",
+            "run": "npx wrangler pages deploy {dir} --project-name {name}"
+          }
+        ]
+      },
+      {
+        "id": "surge",
+        "label": "Surge",
+        "classes": ["static-site", "spa"],
+        "freeTier": "A free plan for static sites on a surge.sh address, with limits. Check the provider's current pricing.",
+        "cost": "A paid plan adds features such as HTTPS on your own domain and password protection.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported: point the domain at Surge, then publish with the domain instead of the surge.sh name. HTTPS on your own domain needs the paid plan.",
+        "dataResidency": "Files are served from Surge's own network; there is no region to choose.",
+        "configs": [],
+        "needs": "Node.js (the Surge CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Build the site first if it has a build step",
+            "note": "The command below publishes the folder as it is: the built files, with index.html at its top."
+          },
+          {
+            "label": "Publish the folder to a surge.sh address",
+            "run": "npx surge {dir} {name}.surge.sh",
+            "note": "The first time, the Surge CLI asks for an email and a password in the terminal to make your account. If the name is taken, pick another."
+          },
+          {
+            "label": "For a single-page app, answer every address with the app",
+            "note": "Copy index.html to 200.html in the same folder before you publish, so links to inner pages load the app."
+          },
+          {
+            "label": "Use your own domain (optional)",
+            "note": "Point the domain at Surge as its help pages say, then run the publish command with your domain in place of the surge.sh address."
+          },
+          {
+            "label": "Take it down when you no longer want it online",
+            "run": "npx surge teardown {name}.surge.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+$ claude auth status
+# exit 0
+# stdout
+{
+  "loggedIn": true,
+  "authMethod": "claude.ai",
+  "apiProvider": "firstParty",
+  "analyticsDisabled": false,
+  "projectsDirectory": "~\\.claude\\projects",
+  "configDirectory": "~\\.claude",
+  "email": "user@example.invalid",
+  "orgId": "fa4ecd37-18e0-4e76-82b3-32064caf37d8",
+  "orgName": "Example Organization",
+  "subscriptionType": "example"
+}
+# stderr

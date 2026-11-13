@@ -1,0 +1,18 @@
+{
+  "id": "easy-change",
+  "version": 1,
+  "label": "Easy: make a change",
+  "description": "Easy mode's recipe for a change to a project it made: questions only when the change is unclear, no research, the plan to check, an acceptance review, fixes until it passes, and a plain-language explanation.",
+  "toggles": {
+    "clarify": true,
+    "research": false,
+    "testFirst": false,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": { "afterPlan": true, "beforeFix": false },
+  "taskHint": "What should change?"
+}

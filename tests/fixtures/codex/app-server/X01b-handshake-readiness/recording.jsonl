@@ -1,0 +1,10 @@
+{"kind":"header","schemaVersion":1,"vendor":"codex","route":"app-server","scenario":"X01b-handshake-readiness","cliVersion":"0.160.1","protocol":"jsonrpc","os":"win32","arch":"x64","argv":["codex.exe","app-server","--listen","stdio://"],"envKeys":["CODEX_HOME"],"envDrop":["^OPENAI_","^CODEX_"],"pass":{"kind":"probe","note":"Recorded live from codex-cli 0.160.1 with an empty temp CODEX_HOME: no account, no thread, no tokens. The handshake the probe runs (vendor.codex.protocol, vendor.codex.winSandbox)."},"conductorVersion":"0.1.0","synthesized":true,"synthesizedFrom":"a codex 0.160.1 recording of this scenario, rewritten by scripts/synthesize-fixtures.mjs: ids, times, account data, model lists and all model text and tool output are generated"}
+{"t":0,"dir":"in","line":"{\"id\":1,\"method\":\"initialize\",\"params\":{\"clientInfo\":{\"name\":\"conductor\",\"title\":null,\"version\":\"0.1.0\"},\"capabilities\":{\"experimentalApi\":false,\"requestAttestation\":false}}}"}
+{"t":0,"dir":"err","line":"WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"<TMP>\\\\\" (codex_home: AbsolutePathBuf(\"<CODEX_HOME>\"))"}
+{"t":0,"dir":"out","line":"{\"id\":1,\"result\":{\"userAgent\":\"conductor/0.160.1 <REDACTED> (conductor; 0.1.0)\",\"codexHome\":\"<CODEX_HOME>\",\"platformFamily\":\"windows\",\"platformOs\":\"windows\"}}"}
+{"t":0,"dir":"in","line":"{\"method\":\"initialized\"}"}
+{"t":0,"dir":"in","line":"{\"id\":2,\"method\":\"windowsSandbox/readiness\"}"}
+{"t":0,"dir":"out","line":"{\"method\":\"remoteControl/status/changed\",\"params\":{\"status\":\"disabled\",\"serverName\":\"host\",\"installationId\":\"<REDACTED>\",\"environmentId\":null},\"emittedAtMs\":1893456000275}"}
+{"t":0,"dir":"out","line":"{\"id\":2,\"result\":{\"status\":\"notConfigured\"}}"}
+{"t":0,"dir":"eof"}
+{"t":0,"dir":"exit","code":0,"signal":null}

@@ -1,0 +1,336 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e2006-8987-42c4-8bf6-bb6cf99c4932"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " laremma"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " sci"
+  },
+  {
+    "type": "text",
+    "delta": "b la"
+  },
+  {
+    "type": "text",
+    "delta": "t con"
+  },
+  {
+    "type": "text",
+    "delta": " itt"
+  },
+  {
+    "type": "text",
+    "delta": "e qua"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "sr"
+  },
+  {
+    "type": "text",
+    "delta": "c/index"
+  },
+  {
+    "type": "text",
+    "delta": ".ts"
+  },
+  {
+    "type": "text",
+    "delta": "`,"
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d porsum"
+  },
+  {
+    "type": "text",
+    "delta": " eisi"
+  },
+  {
+    "type": "text",
+    "delta": " tursecremt"
+  },
+  {
+    "type": "text",
+    "delta": " findings"
+  },
+  {
+    "type": "text",
+    "delta": " lor"
+  },
+  {
+    "type": "text",
+    "delta": "a itquautb"
+  },
+  {
+    "type": "text",
+    "delta": " venm"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e273f-4ac7-4e5c-8782-ce2e3b475f4f",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e273f-4ac7-4e5c-8782-ce2e3b475f4f",
+    "name": "shell",
+    "phase": "end",
+    "status": "failed"
+  },
+  {
+    "type": "context",
+    "used": 12818,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e4e66-3f6f-4e2d-821a-b26eadc6fc14",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e4e66-3f6f-4e2d-821a-b26eadc6fc14",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 12923,
+    "window": 258400,
+    "cacheRead": 12544,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e1d90-8866-4a24-8371-e8e6c96dcaa2",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e1d90-8866-4a24-8371-e8e6c96dcaa2",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 14549,
+    "window": 258400,
+    "cacheRead": 12672,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e6ad2-0fd3-4552-87ad-75fe5d7c73ee",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e6ad2-0fd3-4552-87ad-75fe5d7c73ee",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 14985,
+    "window": 258400,
+    "cacheRead": 14208,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ef3bb-10a0-410d-85e0-9c15e8d0f8e1",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ef3bb-10a0-410d-85e0-9c15e8d0f8e1",
+    "name": "shell",
+    "phase": "end",
+    "status": "failed"
+  },
+  {
+    "type": "context",
+    "used": 18302,
+    "window": 258400,
+    "cacheRead": 14720,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "No findings"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "sr"
+  },
+  {
+    "type": "text",
+    "delta": "c/index"
+  },
+  {
+    "type": "text",
+    "delta": ".ts"
+  },
+  {
+    "type": "text",
+    "delta": "`"
+  },
+  {
+    "type": "text",
+    "delta": " sec"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "no sumlote"
+  },
+  {
+    "type": "text",
+    "delta": " s"
+  },
+  {
+    "type": "text",
+    "delta": "i con"
+  },
+  {
+    "type": "text",
+    "delta": " modlore"
+  },
+  {
+    "type": "text",
+    "delta": " sedm"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t C"
+  },
+  {
+    "type": "text",
+    "delta": " lainr"
+  },
+  {
+    "type": "text",
+    "delta": "e’e"
+  },
+  {
+    "type": "text",
+    "delta": " elq"
+  },
+  {
+    "type": "text",
+    "delta": "u r"
+  },
+  {
+    "type": "text",
+    "delta": " sci"
+  },
+  {
+    "type": "text",
+    "delta": "b s"
+  },
+  {
+    "type": "text",
+    "delta": "i con"
+  },
+  {
+    "type": "text",
+    "delta": " utlorladop"
+  },
+  {
+    "type": "text",
+    "delta": " ci"
+  },
+  {
+    "type": "text",
+    "delta": " adsedpo"
+  },
+  {
+    "type": "text",
+    "delta": " gnaelad"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "context",
+    "used": 18788,
+    "window": 258400,
+    "cacheRead": 17920,
+    "source": "request"
+  },
+  {
+    "type": "done",
+    "result": "No findings. `src/index.ts` sec no sumlote si con modlore sedm, lat C lainre’e elqu r scib si con utlorladop ci adsedpo gnaelad.",
+    "usage": {
+      "input": 19432,
+      "output": 869,
+      "cacheRead": 72064,
+      "cacheWrite": 0,
+      "reasoning": 414
+    }
+  }
+]

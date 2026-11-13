@@ -1,0 +1,44 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// The three states every part of a page that loads something needs: loading, empty and error. Each is written for
+// the people using the site, says what is happening, and keeps the layout steady.
+import type { ReactNode } from 'react'
+
+export function Loading({ label = 'Loading…' }: { label?: string }) {
+  return (
+    <div className="state" role="status" aria-live="polite">
+      <span className="spinner" aria-hidden="true" />
+      <span>{label}</span>
+    </div>
+  )
+}
+
+export function Empty({ title, children }: { title: string; children?: ReactNode }) {
+  return (
+    <div className="state state--empty">
+      <p className="state__title">{title}</p>
+      {children}
+    </div>
+  )
+}
+
+export function ErrorState({
+  title = 'This part could not be loaded',
+  message,
+  onRetry,
+}: {
+  title?: string
+  message?: string
+  onRetry?: () => void
+}) {
+  return (
+    <div className="state state--error" role="alert">
+      <p className="state__title">{title}</p>
+      {message !== undefined && <p className="state__detail">{message}</p>}
+      {onRetry !== undefined && (
+        <button type="button" className="button button--secondary" onClick={onRetry}>
+          Try again
+        </button>
+      )}
+    </div>
+  )
+}

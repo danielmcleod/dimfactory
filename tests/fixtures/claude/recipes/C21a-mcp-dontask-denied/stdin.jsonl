@@ -1,0 +1,5 @@
+{"type":"control_request","request_id":"init-1","request":{"subtype":"initialize"}}
+{"$wait":{"type":"control_response","response":{"request_id":"init-1"}},"$timeoutMs":30000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"Call the echo tool of the probe-echo MCP server once with the text \"hi\", then reply with exactly what it returned, or the error if it was refused."}]},"parent_tool_use_id":null}
+{"$wait":{"type":"result"},"$timeoutMs":300000}
+{"$close":true}

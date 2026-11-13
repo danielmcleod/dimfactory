@@ -1,0 +1,11 @@
+[
+  {
+    "type": "session",
+    "id": "7c4e9a12-3b5d-4f60-8a1b-2c3d4e5f6019"
+  },
+  {
+    "type": "error",
+    "fatal": true,
+    "category": "turn_limit"
+  }
+]

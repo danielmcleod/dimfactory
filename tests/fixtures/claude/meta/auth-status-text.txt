@@ -1,0 +1,7 @@
+$ claude auth status --text
+# exit 0
+# stdout
+Login method: Claude Example Plan account
+Organization: Example Organization
+Email: user@example.invalid
+# stderr

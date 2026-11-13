@@ -1,0 +1,20 @@
+{
+  "id": "easy-documents",
+  "version": 1,
+  "label": "Easy: a document or guide",
+  "description": "Easy mode's recipe for a guide or document made from an idea in a new folder: plain questions about the readers and tone, the plan to check, an acceptance review, fixes until it passes, and a plain-language explanation.",
+  "toggles": {
+    "clarify": true,
+    "research": false,
+    "testFirst": false,
+    "security": false,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": { "afterPlan": true, "beforeFix": false },
+  "brief": { "category": "documents", "fields": {} },
+  "taskHint": "What should it explain, and who will read it?"
+}

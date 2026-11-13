@@ -1,0 +1,4 @@
+# E08-resume-unknown-thread: `exec resume <UUID>` of an unknown thread: an error on stderr and exit 1, no JSONL → resume_failed.
+# The argv resume UUID must be a never-used UUIDv7.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --vendor codex --route exec --output-file -o --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/exec/E08-resume-unknown-thread --id E08 --slug resume-unknown-thread --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/E08-resume-unknown-thread/stdin.jsonl --pass-file tests/fixtures/codex/recipes/E08-resume-unknown-thread/pass.json -- exec --json --color never --skip-git-repo-check --sandbox workspace-write --cd "<sandbox>" -c "approvals_reviewer=\"user\"" -o "<a temp file>" resume 019a1c3e-5b2f-7c41-9d8e-0a1b2c3d4e58 -

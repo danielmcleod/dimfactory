@@ -1,0 +1,5 @@
+# X24-compaction-steer: X22's read-only pass under a low automatic compaction limit, then, once the contextCompaction item completes, turn/steer with the post-compaction reminder as a text input (the reminder names a codeword; the prompt asks for it on a second line). The steer is accepted and the final answer gives the codeword.
+# Recorded with codex-cli 0.160.1 (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/app-server/X24-compaction-steer --id X24 --slug compaction-steer --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/X24-compaction-steer/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X24-compaction-steer/pass.json -- -c model_auto_compact_token_limit=20000 app-server --listen stdio://

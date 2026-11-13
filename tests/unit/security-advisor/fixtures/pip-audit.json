@@ -1,0 +1,34 @@
+{
+  "dependencies": [
+    {
+      "name": "requests",
+      "version": "2.25.0",
+      "vulns": [
+        {
+          "id": "PYSEC-2023-74",
+          "fix_versions": ["2.31.0"],
+          "aliases": ["CVE-2023-32681", "GHSA-j8r2-6x86-q33q"],
+          "description": "Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Proxy-Authorization headers to destination servers when redirected to an HTTPS endpoint.\nThis is a product of how rebuild_proxies reattaches the header."
+        }
+      ]
+    },
+    {
+      "name": "Flask",
+      "version": "2.2.0",
+      "vulns": [
+        {
+          "id": "GHSA-m2qf-hxjv-5gpq",
+          "fix_versions": ["2.2.5", "2.3.2"],
+          "aliases": ["CVE-2023-30861"],
+          "description": ""
+        }
+      ]
+    },
+    { "name": "urllib3", "version": "2.0.7", "vulns": [] },
+    {
+      "name": "internal-tools",
+      "skip_reason": "Dependency not found on PyPI and could not be audited: internal-tools (0.1.0)"
+    }
+  ],
+  "fixes": []
+}

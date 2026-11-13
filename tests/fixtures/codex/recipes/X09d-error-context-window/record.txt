@@ -1,0 +1,4 @@
+# X09d-error-context-window: turn/completed failed with codexErrorInfo "contextWindowExceeded" → context_exceeded.
+# Needs a prompt over the context window (a large diff).
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X09d-error-context-window --id X09d --slug error-context-window --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X09d-error-context-window/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X09d-error-context-window/pass.json

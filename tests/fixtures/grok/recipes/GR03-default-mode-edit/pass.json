@@ -1,0 +1,9 @@
+{
+  "kind": "study",
+  "step": "implement",
+  "mode": "autoedit",
+  "planNative": false,
+  "prompt": "Add a --version flag to the CLI that prints the package version.",
+  "trustFolder": false,
+  "study": "default-mode-edit"
+}

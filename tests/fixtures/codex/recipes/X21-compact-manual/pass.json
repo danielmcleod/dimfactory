@@ -1,0 +1,8 @@
+{
+  "kind": "pass",
+  "step": "review",
+  "mode": "readonly",
+  "planNative": false,
+  "prompt": "Read src/index.ts and reply with one line naming its exported functions.",
+  "model": "gpt-6-luna"
+}

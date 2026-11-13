@@ -1,0 +1,36 @@
+{
+  "id": "easy-game",
+  "version": 1,
+  "label": "Easy: a game",
+  "description": "Easy mode's recipe for a game made from an idea in a new folder: plain questions about how it is played, a look at similar games, the plan as things a player can do, an acceptance and security review, fixes until it passes, and how to play it.",
+  "toggles": {
+    "clarify": true,
+    "research": true,
+    "testFirst": false,
+    "security": true,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": {
+    "afterPlan": true,
+    "beforeFix": false
+  },
+  "verify": {
+    "enabled": true,
+    "commands": [
+      {
+        "name": "Play-test (Dim Factory)",
+        "run": ["dimf:playtest", "playtest.json"]
+      }
+    ]
+  },
+  "researchLenses": ["comparable-games", "game-feel", "mvp-scope"],
+  "brief": {
+    "category": "games",
+    "fields": {}
+  },
+  "taskHint": "What game do you want? How do you play it, and who is it for?"
+}

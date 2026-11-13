@@ -1,0 +1,9 @@
+[
+  {
+    "type": "error",
+    "message": "Error: --session-id can only be used with --continue or --resume if --fork-session is also specified.",
+    "raw": "Error: --session-id can only be used with --continue or --resume if --fork-session is also specified.",
+    "fatal": true,
+    "category": "unknown"
+  }
+]

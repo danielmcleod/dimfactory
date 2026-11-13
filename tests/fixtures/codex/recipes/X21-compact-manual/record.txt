@@ -1,0 +1,6 @@
+# X21-compact-manual: a read-only turn, then thread/compact/start on its thread: a compaction turn with a contextCompaction item (started, then completed) and a usage total whose `last` is the context after compaction (totalTokens only, inputTokens 0). No deprecated thread/compacted came.
+# Recorded with codex-cli 0.160.1 (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# The model is pinned as Dim Factory sends a picked one (gpt-6-luna).
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/app-server/X21-compact-manual --id X21 --slug compact-manual --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/X21-compact-manual/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X21-compact-manual/pass.json

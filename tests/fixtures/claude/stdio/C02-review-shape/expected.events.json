@@ -1,0 +1,301 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e58e3-0f12-49d9-8368-cd68e5a434e3"
+  },
+  {
+    "type": "liveness",
+    "count": 12
+  },
+  {
+    "type": "context",
+    "used": 25163,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eLPuoctj4yh3hTEXebdnW",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "start",
+    "fp": "2a82c75deae7"
+  },
+  {
+    "type": "liveness",
+    "count": 11
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eyITpOkSxV08L0iOXZG3K",
+    "name": "Bash",
+    "summary": "node -e \"require('fs').writeFileSync('x.txt','1')\"",
+    "phase": "start",
+    "fp": "ee3f71d19955"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eLPuoctj4yh3hTEXebdnW",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 156
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eyITpOkSxV08L0iOXZG3K",
+    "name": "Bash",
+    "summary": "node -e \"require('fs').writeFileSync('x.txt','1')\"",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 208
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "**Adlorbo si `src/"
+  },
+  {
+    "type": "text",
+    "delta": "index.ts`:**"
+  },
+  {
+    "type": "text",
+    "delta": "\n- `Options` (sititsum"
+  },
+  {
+    "type": "text",
+    "delta": "v)"
+  },
+  {
+    "type": "text",
+    "delta": " se"
+  },
+  {
+    "type": "text",
+    "delta": "c co"
+  },
+  {
+    "type": "text",
+    "delta": "n eignar `name: string` la"
+  },
+  {
+    "type": "text",
+    "delta": "t `shout: boolean`"
+  },
+  {
+    "type": "text",
+    "delta": ".\n- `parseArg"
+  },
+  {
+    "type": "text",
+    "delta": "s("
+  },
+  {
+    "type": "text",
+    "delta": "argv: ippipila string["
+  },
+  {
+    "type": "text",
+    "delta": "]): Options` s"
+  },
+  {
+    "type": "text",
+    "delta": "c r gnaeilai.\n- `greet"
+  },
+  {
+    "type": "text",
+    "delta": "({"
+  },
+  {
+    "type": "text",
+    "delta": " etve, inuti }:"
+  },
+  {
+    "type": "text",
+    "delta": " Quaipus): string` sc r gnaeilai."
+  },
+  {
+    "type": "text",
+    "delta": "\n\n**Utci"
+  },
+  {
+    "type": "text",
+    "delta": "g ipvenve:** Us"
+  },
+  {
+    "type": "text",
+    "delta": " pit lol admodad. Co"
+  },
+  {
+    "type": "text",
+    "delta": "n Bash sumi sedsec `"
+  },
+  {
+    "type": "text",
+    "delta": "node -e \"require('f"
+  },
+  {
+    "type": "text",
+    "delta": "s').writeFileSync('"
+  },
+  {
+    "type": "text",
+    "delta": "x.txt','1')\""
+  },
+  {
+    "type": "text",
+    "delta": "`"
+  },
+  {
+    "type": "text",
+    "delta": " inuscon Eitura Adus sc eimodsi"
+  },
+  {
+    "type": "text",
+    "delta": " si \""
+  },
+  {
+    "type": "text",
+    "delta": "tur'e pis\" pila."
+  },
+  {
+    "type": "text",
+    "delta": " C pibo'e lop temsedr"
+  },
+  {
+    "type": "text",
+    "delta": " eltu"
+  },
+  {
+    "type": "text",
+    "delta": "r ci utci"
+  },
+  {
+    "type": "text",
+    "delta": "g co"
+  },
+  {
+    "type": "text",
+    "delta": "n ippo, ipci"
+  },
+  {
+    "type": "text",
+    "delta": "d ital etsit "
+  },
+  {
+    "type": "text",
+    "delta": "sedpirem con quasit. `"
+  },
+  {
+    "type": "text",
+    "delta": "x.txt` pi"
+  },
+  {
+    "type": "text",
+    "delta": "t lol piamsit.\n\nEi elg itte co"
+  },
+  {
+    "type": "text",
+    "delta": "n ipvenve qua, el"
+  },
+  {
+    "type": "text",
+    "delta": "g'"
+  },
+  {
+    "type": "text",
+    "delta": "ei amse ci itsitl con cilaregnas "
+  },
+  {
+    "type": "text",
+    "delta": "pila do doqua ital"
+  },
+  {
+    "type": "text",
+    "delta": " ipvenve."
+  },
+  {
+    "type": "text",
+    "delta": " Itpo ve gna"
+  },
+  {
+    "type": "text",
+    "delta": "g elg sit"
+  },
+  {
+    "type": "text",
+    "delta": "s la"
+  },
+  {
+    "type": "text",
+    "delta": "t C'ei lop ippor"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "context",
+    "used": 25887,
+    "cacheRead": 25161,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25887,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "**Adlorbo si `src/index.ts`:**\n- `Options` (sititsumv) sec con eignar `name: string` lat `shout: boolean`.\n- `parseArgs(argv: ippipila string[]): Options` sc r gnaeilai.\n- `greet({ etve, inuti }: Quaipus): string` sc r gnaeilai.\n\n**Utcig ipvenve:** Us pit lol admodad. Con Bash sumi sedsec `node -e \"require('fs').writeFileSync('x.txt','1')\"` inuscon Eitura Adus sc eimodsi si \"tur'e pis\" pila. C pibo'e lop temsedr eltur ci utcig con ippo, ipcid ital etsit sedpirem con quasit. `x.txt` pit lol piamsit.\n\nEi elg itte con ipvenve qua, elg'ei amse ci itsitl con cilaregnas pila do doqua ital ipvenve. Itpo ve gnag elg sits lat C'ei lop ippor.",
+    "usage": {
+      "input": 4,
+      "output": 417,
+      "cacheRead": 25161,
+      "cacheWrite": 25885,
+      "costUsd": 0.1127502
+    }
+  }
+]

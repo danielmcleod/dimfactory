@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "lenses": [
+    {
+      "id": "comparable",
+      "label": "Comparable products",
+      "ask": "What do similar products offer? Which features are table stakes and which are differentiators?",
+      "web": true
+    },
+    {
+      "id": "standards",
+      "label": "Industry standards",
+      "ask": "Which standards, conventions and best practices apply (for example WCAG, OWASP, REST and HTTP semantics, file formats)?",
+      "web": true
+    },
+    {
+      "id": "users",
+      "label": "Users and accessibility",
+      "ask": "Who uses this, what do they expect, and which accessibility needs are common?",
+      "web": true
+    },
+    {
+      "id": "technology",
+      "label": "Technology options",
+      "ask": "Which stacks and libraries fit, with their licensing, maturity and trade-offs?",
+      "web": true
+    },
+    {
+      "id": "pitfalls",
+      "label": "Pitfalls",
+      "ask": "What commonly goes wrong in projects like this?",
+      "web": true
+    },
+    {
+      "id": "compliance",
+      "label": "Security, privacy and compliance",
+      "ask": "Which data is sensitive, and which regulations may apply (for example GDPR, HIPAA, PCI, COPPA)?",
+      "web": true
+    },
+    {
+      "id": "costs",
+      "label": "Costs and hosting",
+      "ask": "What will it cost to run? Which free tiers exist and what are their limits?",
+      "web": true
+    },
+    {
+      "id": "mvp",
+      "label": "MVP scope",
+      "ask": "What is the smallest version worth shipping, and what can wait?",
+      "web": true
+    },
+    {
+      "id": "repository",
+      "label": "This repository",
+      "ask": "What already exists in this repository that the plan must build on (code, conventions, dependencies, tests)? Read the code only; do not search the web for this lens.",
+      "web": false
+    }
+  ],
+  "defaults": ["comparable", "standards", "pitfalls", "mvp", "repository"]
+}

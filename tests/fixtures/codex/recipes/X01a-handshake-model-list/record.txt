@@ -1,0 +1,5 @@
+# X01a-handshake-model-list: The model picker: initialize, then model/list.
+# Recorded with codex-cli 0.160.1 (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/app-server/X01a-handshake-model-list --id X01a --slug handshake-model-list --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/X01a-handshake-model-list/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X01a-handshake-model-list/pass.json

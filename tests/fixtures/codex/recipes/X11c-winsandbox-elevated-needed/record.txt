@@ -1,0 +1,4 @@
+# X11c-winsandbox-elevated-needed: The unelevated setup fails: the user is offered the elevated `codex sandbox setup --elevated --current-user` (shell_copy). Dim Factory never elevates.
+# The Codex Windows sandbox procedure, step 3 only if X11b fails.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X11c-winsandbox-elevated-needed --id X11c --slug winsandbox-elevated-needed --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X11c-winsandbox-elevated-needed/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X11c-winsandbox-elevated-needed/pass.json

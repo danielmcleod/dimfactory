@@ -1,0 +1,12 @@
+{"id":1,"method":"initialize","params":{"clientInfo":{"name":"dim-factory","title":null,"version":"0.1.0"},"capabilities":{"experimentalApi":false,"requestAttestation":false}}}
+{"$wait":{"id":1},"$timeoutMs":120000}
+{"method":"initialized"}
+{"id":2,"method":"thread/start","params":{"cwd":"$cwd","model":"gpt-6-luna","sandbox":"read-only","approvalPolicy":"never","approvalsReviewer":"user","ephemeral":true,"config":{"features.apps":false,"features.plugins":false,"features.hooks":false}}}
+{"$wait":{"id":2},"$timeoutMs":120000,"$capture":{"threadId":"result.thread.id"}}
+{"id":3,"method":"turn/start","params":{"threadId":"$threadId","input":[{"type":"text","text":"Read src/index.ts and reply with one line naming its exported functions.","text_elements":[]}]}}
+{"$wait":{"id":3},"$timeoutMs":120000}
+{"$wait":{"method":"turn/completed"},"$timeoutMs":600000}
+{"id":4,"method":"thread/compact/start","params":{"threadId":"$threadId"}}
+{"$wait":{"id":4},"$timeoutMs":120000}
+{"$wait":{"method":"item/completed","params":{"item":{"type":"contextCompaction"}}},"$timeoutMs":600000}
+{"$sleep":5000}

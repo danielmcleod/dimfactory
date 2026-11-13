@@ -1,0 +1,15 @@
+node_modules/
+out/
+dist/
+coverage/
+tests/.bin/
+*.log
+__pycache__/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/

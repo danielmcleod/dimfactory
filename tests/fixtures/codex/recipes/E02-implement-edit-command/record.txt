@@ -1,0 +1,7 @@
+# E02-implement-edit-command: exec workspace-write Implement (never --ephemeral): in-sandbox commands and a file_change (item.started and item.completed).
+# Recorded with codex-cli 0.160.1 (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# The model is pinned as Dim Factory sends a picked one (gpt-6-luna, model/list default): the profile configures a model a ChatGPT login is refused (X09h).
+# The -o folder <sandbox>\.dimfactory must exist (Dim Factory itself uses a temp folder; the replay masks the path).
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --vendor codex --route exec --output-file -o --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/exec/E02-implement-edit-command --id E02 --slug implement-edit-command --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/E02-implement-edit-command/stdin.jsonl --pass-file tests/fixtures/codex/recipes/E02-implement-edit-command/pass.json -- exec --json --color never --skip-git-repo-check --sandbox workspace-write --cd "<sandbox>" -c "approvals_reviewer=\"user\"" -m gpt-6-luna -o "<sandbox>\.dimfactory\last-message.txt" -

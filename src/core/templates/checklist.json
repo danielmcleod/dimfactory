@@ -1,0 +1,17 @@
+{
+  "id": "checklist",
+  "version": 1,
+  "pack": "operations",
+  "label": "Checklist (print or tick on screen)",
+  "description": "A plain checklist page: print it, or tick the steps on screen (the ticks are remembered in the browser). Nothing to install.",
+  "brief": {
+    "fields": {
+      "deliverable": { "choices": ["sop"] },
+      "risk": { "choices": ["low"] }
+    }
+  },
+  "task": "Make a plain checklist in this empty folder that needs nothing installed. Write checklist.md with the steps in order, grouped under short headings when there are many, each step one short line someone can tick (- [ ] Unlock the front door), with a short note under a step only when it needs one. Add checklist.html with the same steps as a page: a title, a line saying what it is for, and each step as a real checkbox with its label. Ticking works on screen and is remembered in the browser (localStorage, one key per step), with a Clear all ticks button; the page prints cleanly on paper (a print stylesheet: no buttons, empty boxes to tick by hand, nothing cut off between pages). Style it with styles.css so it reads well on a phone and a desktop with good contrast, and use no scripts, fonts or pictures from other websites. Keep checklist.md and checklist.html saying the same thing. This is a checklist for people, not a computer: no services, servers, deploy or roll-back steps, scripts or incident templates. Never invent the owner's facts (opening times, prices, names, phone numbers, policies): write a marked [Fill in: what goes here] slot and list every slot in the README under Things to fill in. Write every word in the language of the request, and set <html lang> to that language. Add a README.md that says how to open it (open checklist.html), how to print it, that the ticks are kept only in that browser, and that to change the steps you ask for a change with Make a change in Dim Factory, which keeps both copies in step.",
+  "recipe": "write-docs",
+  "checks": [{ "name": "Page loads (Dim Factory)", "run": ["dimf:pageload", "checklist.html"] }],
+  "tags": ["checklist", "printable", "no-install"]
+}

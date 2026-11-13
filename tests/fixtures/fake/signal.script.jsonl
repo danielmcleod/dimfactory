@@ -1,0 +1,8 @@
+// POSIX only: SIGTERM jumps to "stop".
+{"op":"onSignal","goto":"stop","signals":["SIGTERM"]}
+{"op":"stdout","line":"ready"}
+{"op":"sleep","ms":20000}
+{"op":"exit","code":0}
+{"op":"label","name":"stop"}
+{"op":"stdout","line":"signal $signal"}
+{"op":"exit","code":143}

@@ -1,0 +1,53 @@
+[
+  {
+    "type": "session",
+    "id": "0199d2a0-4c1e-7a3b-8d5f-6e7a8b9c0004"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "model": "muse-spark-1.2"
+    }
+  },
+  {
+    "type": "tool",
+    "id": "0199d2a0-4c20-7c04-a002-0f1e2d3c4b5a",
+    "name": "bash",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "0199d2a0-4c20-7c04-a002-0f1e2d3c4b5a",
+    "name": "bash",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "0199d2a0-4c20-7c04-a004-0f1e2d3c4b5a",
+    "name": "edit_file",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "0199d2a0-4c20-7c04-a004-0f1e2d3c4b5a",
+    "name": "edit_file",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "Upgraded the dev dependencies and adjusted one import."
+  },
+  {
+    "type": "done",
+    "result": "Upgraded the dev dependencies and adjusted one import.",
+    "usage": {
+      "input": 5640,
+      "output": 640,
+      "cacheRead": 15360,
+      "reasoning": 200
+    }
+  }
+]

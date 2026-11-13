@@ -1,0 +1,143 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e9589-b2e6-4857-8d21-1114b3e46c61"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "context",
+    "used": 26142,
+    "cacheRead": 17943,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 22
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4euD4vyGqXtsgc1jjXITiY",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "start",
+    "fp": "2a82c75deae7"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4euD4vyGqXtsgc1jjXITiY",
+    "name": "Read",
+    "summary": "<CWD>\\src\\index.ts",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 156
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 26533,
+    "cacheRead": 26132,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "in"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 26533,
+    "window": 200000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "in",
+    "usage": {
+      "input": 18,
+      "output": 206,
+      "cacheRead": 44075,
+      "cacheWrite": 8582,
+      "costUsd": 0.0226195
+    }
+  },
+  {
+    "type": "compaction",
+    "phase": "start"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "compaction",
+    "phase": "end",
+    "trigger": "manual",
+    "preTokens": 26599,
+    "postTokens": 2160
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  }
+]

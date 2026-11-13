@@ -1,0 +1,119 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e552c-582d-4e25-8f64-0ec076b4fe97"
+  },
+  {
+    "type": "liveness",
+    "count": 12
+  },
+  {
+    "type": "context",
+    "used": 25638,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eXghWGbmRL200GJ9rbgi9",
+    "name": "Bash",
+    "summary": "node -e \"setTimeout(()=>{},20000)\"",
+    "phase": "start",
+    "fp": "6acc05b0d3bc"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4ed2fd-0dcd-4db0-8cd0-e6d2c729aa76",
+    "kind": "shell",
+    "detail": "Bash: node -e \"setTimeout(()=>{},20000)\"\nQua 20 etsecl node adips\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4ed2fd-0dcd-4db0-8cd0-e6d2c729aa76",
+        "response": {
+          "behavior": "allow",
+          "updatedInput": {
+            "command": "node -e \"setTimeout(()=>{},20000)\"",
+            "description": "Qua 20 etsecl node adips"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eXghWGbmRL200GJ9rbgi9",
+    "name": "Bash",
+    "summary": "node -e \"setTimeout(()=>{},20000)\"",
+    "phase": "end",
+    "status": "failed",
+    "outTokens": 64
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "context",
+    "used": 25638,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "meta",
+    "key": "usage",
+    "value": {
+      "input": 2,
+      "output": 94,
+      "cacheRead": 15790,
+      "cacheWrite": 9846,
+      "costUsd": 0.043486000000000004
+    }
+  },
+  {
+    "type": "error",
+    "message": "Stopped by you.",
+    "raw": "{\"type\":\"result\",\"subtype\":\"error_during_execution\",\"is_error\":true,\"terminal_reason\":\"aborted_tools\",\"stop_reason\":\"tool_use\",\"num_turns\":3,\"errors\":[\"[ede_diagnostic] result_type=user last_content_type=n/a stop_reason=tool_use\"]}",
+    "fatal": true,
+    "category": "user_cancelled"
+  }
+]

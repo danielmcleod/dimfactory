@@ -1,0 +1,3 @@
+{"op":"expectArgs","includes":["-p"]}
+{"op":"stdout","line":"second"}
+{"op":"exit","code":0}

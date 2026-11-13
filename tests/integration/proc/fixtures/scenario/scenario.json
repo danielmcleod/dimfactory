@@ -1,0 +1,8 @@
+[
+  { "match": { "argvIncludes": ["--version"] }, "script": "../version.script.jsonl", "repeat": true },
+  {
+    "match": { "argvIncludes": ["-p"] },
+    "script": "../../../../fixtures/fake/echo-handshake.script.jsonl",
+    "repeat": true
+  }
+]

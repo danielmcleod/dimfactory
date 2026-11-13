@@ -1,0 +1,289 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "game-loop",
+      "origin": "starter",
+      "name": "Fixed-timestep game loop",
+      "path": "starter/game/loop.js",
+      "sha256": "9c4f3f8fd74ac439a53baffdbc0aafe42078cf00c19ecd56f9acebcff0cdc41e",
+      "license": "MIT"
+    },
+    {
+      "id": "game-rng",
+      "origin": "starter",
+      "name": "Seeded random numbers",
+      "path": "starter/game/rng.js",
+      "sha256": "5ce78949d90a2b4bc6511aa14a93f5e8f1e5c56ca9db0651364e937f45f81d82",
+      "license": "MIT"
+    },
+    {
+      "id": "game-input",
+      "origin": "starter",
+      "name": "Keyboard, pointer, touch and gamepad input",
+      "path": "starter/game/input.js",
+      "sha256": "2984c9f346f71e14054d24c5b7f0e7975e1ad5a882ab97ec6fe39efbd0283982",
+      "license": "MIT"
+    },
+    {
+      "id": "game-storage",
+      "origin": "starter",
+      "name": "Safe local saves",
+      "path": "starter/game/storage.js",
+      "sha256": "85b036743f7cc58baff3f427fb9a178b1d7ea00d55cb69af85e7ac03854a8599",
+      "license": "MIT"
+    },
+    {
+      "id": "game-test-hook",
+      "origin": "starter",
+      "name": "Test hook (window.__game, only with ?test=1)",
+      "path": "starter/game/test-hook.js",
+      "sha256": "da21ba681375490b8a0d21e0e80491d84b308f18c957c0133b246b840bfa21d6",
+      "license": "MIT"
+    },
+    {
+      "id": "game-test-hook-doc",
+      "origin": "starter",
+      "name": "How the test hook and playtest.json work",
+      "path": "starter/game/game-test-hook.md",
+      "sha256": "79a3b40f82b51bdf9c01627c42e13e975e47d06c694de90fbd0a53952e98118b",
+      "license": "MIT"
+    },
+    {
+      "id": "game-server",
+      "origin": "starter",
+      "name": "Online game server (rooms, Origin check, size and rate caps)",
+      "path": "starter/game-online/server.js",
+      "sha256": "988e0357457c9ebc5ea8fa6228c6ce48729687c3465d8480b5e65617a86b74ba",
+      "license": "MIT"
+    },
+    {
+      "id": "game-rooms",
+      "origin": "starter",
+      "name": "Authoritative rooms with room codes",
+      "path": "starter/game-online/rooms.js",
+      "sha256": "7de94849b04851b4ba3b1bb74bb7d04128ad02f8936309b7d4dfd8c929b50f21",
+      "license": "MIT"
+    },
+    {
+      "id": "game-server-doc",
+      "origin": "starter",
+      "name": "How the online game server works and how to host it",
+      "path": "starter/game-online/game-server.md",
+      "sha256": "52bef7c4ec91b43df432bf785754fd3ecaa85a9e92b52632917c470bda6c5f42",
+      "license": "MIT"
+    },
+    {
+      "id": "phaser",
+      "origin": "third-party",
+      "name": "Phaser",
+      "version": "3.90.0",
+      "homepage": "https://phaser.io",
+      "path": "third-party/phaser/phaser.min.js",
+      "sha256": "e92ddef111ba42e92d316979c732311757093688ea1810591cb7aa2858eba7a7",
+      "license": "MIT",
+      "licenseFile": "third-party/phaser/LICENSE.md",
+      "licenseSha256": "080f3d5539e766bb556df5b8e86c4f5d581ece35c692b80956ca352b84d29134"
+    },
+    {
+      "id": "react-package-json",
+      "origin": "starter",
+      "name": "React starter: package.json (scripts dev, build, preview, test)",
+      "path": "starter/react/package.json.txt",
+      "sha256": "78ede8128997e3a794d9532cf9b139643df6e90d64765b1cbda4db20e0c9da69",
+      "license": "MIT"
+    },
+    {
+      "id": "react-index-html",
+      "origin": "starter",
+      "name": "React starter: index.html (title, description, social preview, favicon)",
+      "path": "starter/react/index.html.txt",
+      "sha256": "069939a8b335a83e142bad228f42d940312a7862fe5ea2d9b5d000d970201ba9",
+      "license": "MIT"
+    },
+    {
+      "id": "react-vite-config-ts",
+      "origin": "starter",
+      "name": "React starter: Vite config (single-page fallback, Vitest)",
+      "path": "starter/react/vite.config.ts.txt",
+      "sha256": "a6d9683f2d34b1c74e2cae6f4e16b21355507cfb8fcd72fd4bdf1e0c60697965",
+      "license": "MIT"
+    },
+    {
+      "id": "react-tsconfig-json",
+      "origin": "starter",
+      "name": "React starter: TypeScript config",
+      "path": "starter/react/tsconfig.json.txt",
+      "sha256": "0a6e69dc648882aeb15f9c72b74c4aaf6b7007d03e5b9f0517abe195da33e286",
+      "license": "MIT"
+    },
+    {
+      "id": "react-content-ts",
+      "origin": "starter",
+      "name": "React starter: the words of the site",
+      "path": "starter/react/src/content.ts.txt",
+      "sha256": "8f51754dd9399b694209aeb9725fc61344a04c5a529397d0e8d6c2cb442481d0",
+      "license": "MIT"
+    },
+    {
+      "id": "react-lib-router-tsx",
+      "origin": "starter",
+      "name": "React starter: small router",
+      "path": "starter/react/src/lib/router.tsx.txt",
+      "sha256": "f7e34e71098a96688cbdc273e0f57da1dbe69d986798eb0fcc5a824ccb561932",
+      "license": "MIT"
+    },
+    {
+      "id": "react-lib-theme-ts",
+      "origin": "starter",
+      "name": "React starter: light and dark theme",
+      "path": "starter/react/src/lib/theme.ts.txt",
+      "sha256": "85446255cf030b06fc9a941b7ffe661fe7184fc0d2c0fb1be18804d6373f2a92",
+      "license": "MIT"
+    },
+    {
+      "id": "react-lib-useasync-ts",
+      "origin": "starter",
+      "name": "React starter: loading, ready and error states",
+      "path": "starter/react/src/lib/useAsync.ts.txt",
+      "sha256": "d38fd51c87dcd1d424af74709589ca3f079467d7e841cb6003a815b7b2fa0b40",
+      "license": "MIT"
+    },
+    {
+      "id": "react-components-states-tsx",
+      "origin": "starter",
+      "name": "React starter: loading, empty and error views",
+      "path": "starter/react/src/components/States.tsx.txt",
+      "sha256": "b93ad1b1b1f5b7b5e6ab372080d5e0b221cc3a1b7f1e2e806914baaf508eaadf",
+      "license": "MIT"
+    },
+    {
+      "id": "react-components-imageslot-tsx",
+      "origin": "starter",
+      "name": "React starter: marked picture slot",
+      "path": "starter/react/src/components/ImageSlot.tsx.txt",
+      "sha256": "8620322aa9a4bd4aa733bf6a854656510bf75a6e79e20b1cc9b0d2b79c6de2af",
+      "license": "MIT"
+    },
+    {
+      "id": "react-components-themetoggle-tsx",
+      "origin": "starter",
+      "name": "React starter: theme toggle",
+      "path": "starter/react/src/components/ThemeToggle.tsx.txt",
+      "sha256": "6cc0082ae60a640b14af7065e6402d46f7a2f2454348048eac3caecd3830b0dc",
+      "license": "MIT"
+    },
+    {
+      "id": "react-components-layout-tsx",
+      "origin": "starter",
+      "name": "React starter: page frame and navigation",
+      "path": "starter/react/src/components/Layout.tsx.txt",
+      "sha256": "bdbb8e292fd03cc55ef52733d6eac0c7560521e8f079521b8a68faa09980a871",
+      "license": "MIT"
+    },
+    {
+      "id": "react-pages-home-tsx",
+      "origin": "starter",
+      "name": "React starter: home page",
+      "path": "starter/react/src/pages/Home.tsx.txt",
+      "sha256": "5aaf8a7ee148093fc0030bfd8d992207dd33ea524af4618538febdbc7bb40055",
+      "license": "MIT"
+    },
+    {
+      "id": "react-pages-about-tsx",
+      "origin": "starter",
+      "name": "React starter: about page",
+      "path": "starter/react/src/pages/About.tsx.txt",
+      "sha256": "cb6ef7dcba233350fe2988f8b61709e791f552ba78abb8337ce9c064bb866568",
+      "license": "MIT"
+    },
+    {
+      "id": "react-pages-notfound-tsx",
+      "origin": "starter",
+      "name": "React starter: not-found page",
+      "path": "starter/react/src/pages/NotFound.tsx.txt",
+      "sha256": "d7076477b156a8b5e6191f0a245b344484943dee97d6f720247e7ba0b36140c5",
+      "license": "MIT"
+    },
+    {
+      "id": "react-app-tsx",
+      "origin": "starter",
+      "name": "React starter: pages and addresses",
+      "path": "starter/react/src/App.tsx.txt",
+      "sha256": "e1d295ea4b9cee2d5d0d9a874b02054106b0c6146cccf5adf825bbeb4c0da2f9",
+      "license": "MIT"
+    },
+    {
+      "id": "react-main-tsx",
+      "origin": "starter",
+      "name": "React starter: entry point",
+      "path": "starter/react/src/main.tsx.txt",
+      "sha256": "6ced2d762f24492ba7fe3e47719bea33cbb292aeda5e8096f2cc800c263ec2f5",
+      "license": "MIT"
+    },
+    {
+      "id": "react-styles-tokens-css",
+      "origin": "starter",
+      "name": "React starter: design tokens",
+      "path": "starter/react/src/styles/tokens.css.txt",
+      "sha256": "54777a2c5e40559b207a2d85282751fd6e0e7213cb234562461019083b0486f6",
+      "license": "MIT"
+    },
+    {
+      "id": "react-styles-global-css",
+      "origin": "starter",
+      "name": "React starter: styles",
+      "path": "starter/react/src/styles/global.css.txt",
+      "sha256": "b9f22fff48f5b08fb7837ef8373757c444ec7f94e79d14982e445552d02b0868",
+      "license": "MIT"
+    },
+    {
+      "id": "react-app-test-tsx",
+      "origin": "starter",
+      "name": "React starter: tests",
+      "path": "starter/react/src/App.test.tsx.txt",
+      "sha256": "666417cbdbcd70c984414b3b5bd8863ba7f9454552a21f3b599e72d51e370e4d",
+      "license": "MIT"
+    },
+    {
+      "id": "react-public-redirects",
+      "origin": "starter",
+      "name": "React starter: single-page routing for Netlify and Cloudflare",
+      "path": "starter/react/public/_redirects.txt",
+      "sha256": "51665a5c1461bf1db58e116a281cd8f947ec1e232c70507ee36713362979126e",
+      "license": "MIT"
+    },
+    {
+      "id": "react-public-favicon-svg",
+      "origin": "starter",
+      "name": "React starter: favicon",
+      "path": "starter/react/public/favicon.svg.txt",
+      "sha256": "c54c7aa2d61a511510760391bf5ed774192c50b9e0edc5fe3efab39079ddd43c",
+      "license": "MIT"
+    },
+    {
+      "id": "react-public-social-preview-png",
+      "origin": "starter",
+      "name": "React starter: social preview picture",
+      "path": "starter/react/public/social-preview.png",
+      "sha256": "ae9044cdb13d56fe15188c28c021ffef6c976105b87e5876e2f3d16b2185e92a",
+      "license": "MIT"
+    },
+    {
+      "id": "react-assets-readme-md",
+      "origin": "starter",
+      "name": "React starter: where pictures go",
+      "path": "starter/react/assets/README.md.txt",
+      "sha256": "6ab6631050df754a1cdbb69a8557a71f1d34503b4e4cfe80a2b33bbd21fd789f",
+      "license": "MIT"
+    },
+    {
+      "id": "react-docs-starter-md",
+      "origin": "starter",
+      "name": "React starter: how the starter is organised",
+      "path": "starter/react/docs/starter.md.txt",
+      "sha256": "4cdaaae703a832bda068668cde886e09534e793528ef14110fae5fbdce3ad9dd",
+      "license": "MIT"
+    }
+  ]
+}

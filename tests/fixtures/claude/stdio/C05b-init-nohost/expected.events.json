@@ -1,0 +1,136 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e8006-8d11-4194-8db9-3a872228faf0"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25584,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eKtviBdwAq2rIY6UZ3rzw",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "cf7adb49a315"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eKtviBdwAq2rIY6UZ3rzw",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 9
+  },
+  {
+    "type": "liveness",
+    "count": 6
+  },
+  {
+    "type": "text",
+    "delta": "Con ipvenve `"
+  },
+  {
+    "type": "text",
+    "delta": "npm --version` itp"
+  },
+  {
+    "type": "text",
+    "delta": "iu aliporse la"
+  },
+  {
+    "type": "text",
+    "delta": "t pit lol"
+  },
+  {
+    "type": "text",
+    "delta": " qua, te C sit"
+  },
+  {
+    "type": "text",
+    "delta": "s no quasum c"
+  },
+  {
+    "type": "text",
+    "delta": "i porsum."
+  },
+  {
+    "type": "text",
+    "delta": " Elipusi us la"
+  },
+  {
+    "type": "text",
+    "delta": "t C'"
+  },
+  {
+    "type": "text",
+    "delta": "ei qua"
+  },
+  {
+    "type": "text",
+    "delta": " us ippor."
+  },
+  {
+    "type": "context",
+    "used": 25700,
+    "cacheRead": 25582,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25700,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Con ipvenve `npm --version` itpiu aliporse lat pit lol qua, te C sits no quasum ci porsum. Elipusi us lat C'ei qua us ippor.",
+    "usage": {
+      "input": 4,
+      "output": 114,
+      "cacheRead": 41372,
+      "cacheWrite": 9908,
+      "costUsd": 0.0490544
+    }
+  }
+]

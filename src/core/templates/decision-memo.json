@@ -1,0 +1,18 @@
+{
+  "id": "decision-memo",
+  "version": 1,
+  "pack": "research-writing",
+  "label": "Decision memo",
+  "description": "A short memo that compares options and recommends one, with sources.",
+  "brief": {
+    "fields": {
+      "questionType": { "choices": ["recommend"] },
+      "depth": { "choices": ["standard"] },
+      "sources": { "choices": ["official", "community"] },
+      "output": { "choices": ["report"] }
+    }
+  },
+  "task": "Set up a decision memo in this empty folder. Write memo.md with these sections: the decision to make and its deadline, the context, the options (at least three, including doing nothing), the criteria and how each option scores against them in a table, the risks of each, the recommendation and why, and the open questions. Cite every factual claim with a link in a Sources section at the end. Keep it to about two pages. Add a README.md that says what the memo is about and how to update it.",
+  "recipe": "write-docs",
+  "tags": ["writing", "decision", "memo"]
+}

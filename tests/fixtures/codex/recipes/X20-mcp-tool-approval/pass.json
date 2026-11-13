@@ -1,0 +1,13 @@
+{
+  "kind": "pass",
+  "step": "implement",
+  "mode": "autoedit",
+  "planNative": false,
+  "prompt": "Call the save_note tool of the tnote MCP server once with the text \"hello\". Do nothing else, then reply with one short sentence.",
+  "answers": [
+    {
+      "decision": "allow"
+    }
+  ],
+  "model": "gpt-6-luna"
+}

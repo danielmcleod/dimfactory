@@ -1,0 +1,5 @@
+{"type":"control_request","request_id":"init-1","request":{"subtype":"initialize"}}
+{"$wait":{"type":"control_response","response":{"request_id":"init-1"}},"$timeoutMs":15000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"Read src/index.ts with the Read tool and summarize it in one sentence."}]},"parent_tool_use_id":null}
+{"$wait":{"type":"result"},"$timeoutMs":300000}
+{"$close":true}

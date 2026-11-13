@@ -1,0 +1,101 @@
+[
+  {
+    "type": "session",
+    "id": "019a1c3e-5b2f-7c41-9d8e-0a1b2c3d4e19"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "model": "gpt-5.6-terra"
+    }
+  },
+  {
+    "type": "tool",
+    "id": "ws_19a",
+    "name": "web_search",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "ws_19a",
+    "name": "web_search",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "{\"summary\":[\"A --version flag is expected of every CLI.\"],\"features\":[{\"feature\":\"Print the version with --version\",\"priority\":\"must\",\"sources\":[\"https://clig.dev/\"]}],\"standards\":[{\"standard\":\"GNU --version output\",\"why\":\"Scripts parse it\",\"sources\":[\"https://clig.dev/\"]}],\"options\":[{\"topic\":\"Where the version comes from\",\"opt"
+  },
+  {
+    "type": "text",
+    "delta": "ions\":[\"package.json\",\"a constant\"],\"recommendation\":\"package.json\",\"rationale\":\"One source of truth\",\"sources\":[\"repo:package.json\"]}],\"risks\":[{\"risk\":\"A bundled build can print a stale version\",\"sources\":[\"https://clig.dev/\"]}],\"questions\":[],\"sources\":[{\"url\":\"https://clig.dev/\",\"title\":\"Command Line Interface Guidelines\"}]}"
+  },
+  {
+    "type": "meta",
+    "key": "structuredOutput",
+    "value": {
+      "summary": [
+        "A --version flag is expected of every CLI."
+      ],
+      "features": [
+        {
+          "feature": "Print the version with --version",
+          "priority": "must",
+          "sources": [
+            "https://clig.dev/"
+          ]
+        }
+      ],
+      "standards": [
+        {
+          "standard": "GNU --version output",
+          "why": "Scripts parse it",
+          "sources": [
+            "https://clig.dev/"
+          ]
+        }
+      ],
+      "options": [
+        {
+          "topic": "Where the version comes from",
+          "options": [
+            "package.json",
+            "a constant"
+          ],
+          "recommendation": "package.json",
+          "rationale": "One source of truth",
+          "sources": [
+            "repo:package.json"
+          ]
+        }
+      ],
+      "risks": [
+        {
+          "risk": "A bundled build can print a stale version",
+          "sources": [
+            "https://clig.dev/"
+          ]
+        }
+      ],
+      "questions": [],
+      "sources": [
+        {
+          "url": "https://clig.dev/",
+          "title": "Command Line Interface Guidelines"
+        }
+      ]
+    }
+  },
+  {
+    "type": "done",
+    "result": "{\"summary\":[\"A --version flag is expected of every CLI.\"],\"features\":[{\"feature\":\"Print the version with --version\",\"priority\":\"must\",\"sources\":[\"https://clig.dev/\"]}],\"standards\":[{\"standard\":\"GNU --version output\",\"why\":\"Scripts parse it\",\"sources\":[\"https://clig.dev/\"]}],\"options\":[{\"topic\":\"Where the version comes from\",\"options\":[\"package.json\",\"a constant\"],\"recommendation\":\"package.json\",\"rationale\":\"One source of truth\",\"sources\":[\"repo:package.json\"]}],\"risks\":[{\"risk\":\"A bundled build can print a stale version\",\"sources\":[\"https://clig.dev/\"]}],\"questions\":[],\"sources\":[{\"url\":\"https://clig.dev/\",\"title\":\"Command Line Interface Guidelines\"}]}",
+    "usage": {
+      "input": 6144,
+      "output": 640,
+      "cacheRead": 12288,
+      "cacheWrite": 0,
+      "reasoning": 256
+    }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "type": "session",
+    "id": "019a1c3e-5b2f-7c41-9d8e-0a1b2c3d4e04"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "model": "gpt-5.6-terra"
+    }
+  },
+  {
+    "type": "tool",
+    "name": "todo"
+  },
+  {
+    "type": "tool",
+    "id": "call_04a",
+    "name": "edit",
+    "phase": "start"
+  },
+  {
+    "type": "ask",
+    "kind": "edit",
+    "allowSession": true
+  },
+  {
+    "type": "tool",
+    "id": "call_04a",
+    "name": "edit",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "Added `--version` "
+  },
+  {
+    "type": "text",
+    "delta": "to src/cli.ts."
+  },
+  {
+    "type": "done",
+    "result": "Added `--version` to src/cli.ts.",
+    "usage": {
+      "input": 8192,
+      "output": 1450,
+      "cacheRead": 16384,
+      "cacheWrite": 0,
+      "reasoning": 512
+    }
+  }
+]

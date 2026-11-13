@@ -1,0 +1,88 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// Everything the site says lives here, so the words are easy to change in one place.
+// [Fill in: ...] marks a fact only the owner knows (a name, opening hours, prices, an address, a quote from a
+// customer). Replace it with the real fact; never make one up. The README lists what is still to fill in.
+
+export interface NavItem {
+  to: string
+  label: string
+}
+
+export interface Feature {
+  title: string
+  text: string
+  icon: 'spark' | 'heart' | 'clock'
+}
+
+export interface Update {
+  id: string
+  date: string
+  title: string
+  text: string
+}
+
+export const site = {
+  name: 'Bramble & Rye',
+  tagline: 'A neighbourhood bakery in Leeds',
+  description: 'Sourdough, seasonal bakes and a weekly newsletter from Bramble & Rye, a neighbourhood bakery in Leeds.',
+  nav: [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+  ] satisfies NavItem[],
+  footer: 'Bramble & Rye, a neighbourhood bakery in Leeds. Open [Fill in: opening hours].',
+}
+
+export const home = {
+  eyebrow: 'Neighbourhood bakery, Leeds',
+  title: 'Slow sourdough and seasonal bakes, made down the road',
+  lead: 'Every loaf at Bramble & Rye rises for a full day before it meets the oven. Drop in for bread and something sweet, or sign up to hear what is baking each week.',
+  primaryAction: { to: '/about', label: 'Meet the bakery' },
+  secondaryAction: { to: '/about#contact', label: 'Get the newsletter' },
+  featuresTitle: 'What comes out of the oven',
+  features: [
+    {
+      icon: 'spark',
+      title: 'Sourdough every morning',
+      text: 'Country loaves, rye and seeded bread, shaped by hand and baked before the doors open.',
+    },
+    {
+      icon: 'heart',
+      title: 'Seasonal bakes',
+      text: 'Fruit buns in spring, plum tarts in autumn: the counter follows what is ripe.',
+    },
+    {
+      icon: 'clock',
+      title: 'A weekly newsletter',
+      text: 'One short email a week with what is new on the counter. No spam, easy to leave.',
+    },
+  ] satisfies Feature[],
+  updatesTitle: 'Latest from the bakery',
+  updatesEmpty: 'There are no updates yet. New ones will show here.',
+}
+
+export const about = {
+  title: 'About',
+  lead: 'Bramble & Rye is a small bakery in Leeds that bakes slowly on purpose.',
+  body: [
+    'We use long fermentation for every loaf, which gives sourdough its flavour and keeps it fresh for days.',
+    '[Fill in: a few words about who runs the bakery and how it started]',
+  ],
+  contactTitle: 'Get the newsletter',
+  contact: 'Sign up on the home page, or visit us at [Fill in: the bakery address].',
+}
+
+/** News, events or other short entries shown on the home page (newest first). */
+export const updates: Update[] = [
+  {
+    id: 'rye-week',
+    date: '2026-10-20',
+    title: 'Rye week is back',
+    text: 'Dark rye, caraway rye and a honey rye loaf, every day this week.',
+  },
+  {
+    id: 'plum-tarts',
+    date: '2026-10-06',
+    title: 'Plum tarts on the counter',
+    text: 'The last of the season, with an almond crumble on top.',
+  },
+]

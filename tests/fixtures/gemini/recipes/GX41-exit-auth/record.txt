@@ -1,0 +1,4 @@
+# GX41-exit-auth: FatalAuthenticationError: the CLI exits 41 before ACP starts, plain text on stderr.
+# An auth method in settings.json that cannot work (e.g. gemini-api-key without the key).
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/GX41-exit-auth --id GX41 --slug exit-auth --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/GX41-exit-auth/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/GX41-exit-auth/pass.json --responders tests/fixtures/gemini/recipes/GX41-exit-auth/responders.mjs --keep-stdin --timeout 900000 -- --acp --skip-trust

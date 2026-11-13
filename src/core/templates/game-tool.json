@@ -1,0 +1,73 @@
+{
+  "id": "game-tool",
+  "version": 1,
+  "pack": "games",
+  "label": "Game helper (dice, scores, brackets)",
+  "description": "A small helper for playing games: a dice roller, a scorekeeper, an initiative tracker, a bracket or a name generator. Plain HTML, saved on this device, nothing to install.",
+  "brief": {
+    "fields": {
+      "genre": {
+        "choices": ["helper"]
+      },
+      "engine": {
+        "choices": ["dom"]
+      },
+      "controls": {
+        "choices": ["mouse", "keyboard", "touch"]
+      },
+      "players": {
+        "choices": ["same-device"]
+      },
+      "platform": {
+        "choices": ["desktop", "phone", "tablet"]
+      },
+      "sound": {
+        "choices": ["none"]
+      },
+      "save": {
+        "choices": ["progress", "settings"]
+      },
+      "accessibility": {
+        "choices": ["big-targets", "colour-safe", "reduced-motion"]
+      },
+      "deliverable": {
+        "choices": ["single-page"]
+      },
+      "constraints": {
+        "choices": ["original-art", "no-network", "no-ads"]
+      },
+      "approach": {
+        "choices": ["core-loop-first", "playtested"]
+      }
+    }
+  },
+  "task": "Make a small game helper in this empty folder that needs nothing installed: index.html, style.css and src/main.js as ES modules, built with real HTML (buttons, inputs, lists, tables), not a canvas: a dice roller, scorekeeper, initiative or turn tracker, tournament bracket, team picker or name generator, as the idea says. It works with a mouse, touch and the keyboard (a visible focus ring, a label on every input), fits a phone at the table and a laptop, and a screen reader reads every result (an aria-live region for rolls and changes). Dim Factory already put starter modules in src/engine/ (MIT): rng.js (seeded randomness: every roll and shuffle uses it), storage.js (versioned local saves that never throw), input.js, loop.js and test-hook.js (window.__game, only with ?test=1); docs/game-test-hook.md explains them. Use them; do not rewrite them. Everything is saved with storage.js in this browser (localStorage) and is still there after a reload, with Undo for the last change, Reset with a confirmation, and Export and Import as a JSON file whose shape is checked before it is used. Player names and notes are shown with textContent. Lists (names, words, monsters) are original and kept as JSON under data/. Use original names, characters and art: familiar mechanics are fine, but never copy a famous game's name, characters, logo, art, music or sounds. Everything the game uses is in the project: no CDN, no network, no third-party scripts, ads or trackers, no eval or new Function. Text a player types is shown with textContent. In src/main.js wire the test hook with a state() that reports scene ('title' or 'playing'), score (the main number, like the last roll's total), lives and level (0 when unused) and the helper's own small fields (the last roll, the players and their scores), and a setSeed that restarts the random numbers. Write the plan's acceptance criteria as things a person does and sees (for example: Roll 2d6 shows two dice and their total; Scores are still there after a reload), and write playtest.json (data, not code) with one scenario per criterion, as docs/game-test-hook.md shows: Dim Factory plays it as a Verify check. Keep the rules (dice notation, bracket seeding, turn order) in plain modules under src/game/ with no DOM in them, and add a package.json with one script, test, that runs node --test on tests/*.test.mjs. Add a README.md: what it does, how to open it, how to run the tests, and how to share it (any static host). Make it feel good to play: every action gets clear feedback (a sound, a flash or a small movement), the first moments are easy and it gets harder step by step, and the end of a game shows how it went with a quick way to play again.",
+  "recipe": "new-game",
+  "files": [
+    {
+      "from": "game-loop",
+      "to": "src/engine/loop.js"
+    },
+    {
+      "from": "game-rng",
+      "to": "src/engine/rng.js"
+    },
+    {
+      "from": "game-input",
+      "to": "src/engine/input.js"
+    },
+    {
+      "from": "game-storage",
+      "to": "src/engine/storage.js"
+    },
+    {
+      "from": "game-test-hook",
+      "to": "src/engine/test-hook.js"
+    },
+    {
+      "from": "game-test-hook-doc",
+      "to": "docs/game-test-hook.md"
+    }
+  ],
+  "tags": ["game", "helper", "no-install"]
+}

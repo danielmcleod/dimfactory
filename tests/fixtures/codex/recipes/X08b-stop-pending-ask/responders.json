@@ -1,0 +1,25 @@
+[
+  {
+    "when": {
+      "method": "item/commandExecution/requestApproval",
+      "id": "$id"
+    },
+    "reply": null,
+    "once": true
+  },
+  {
+    "when": {
+      "method": "serverRequest/resolved",
+      "params": {
+        "requestId": "$rid"
+      }
+    },
+    "reply": {
+      "id": "$rid",
+      "result": {
+        "decision": "cancel"
+      }
+    },
+    "once": true
+  }
+]

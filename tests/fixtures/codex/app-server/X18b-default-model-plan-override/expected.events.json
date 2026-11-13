@@ -1,0 +1,280 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e502e-5a4c-415f-8c43-255f7c6470f8"
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "asked": "gpt-6-luna",
+      "replaced": "gpt-5.6-sol"
+    }
+  },
+  {
+    "type": "meta",
+    "key": "modelUsed",
+    "value": {
+      "model": "gpt-6-luna",
+      "replaced": "gpt-5.6-sol"
+    }
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " laremma"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " CLI"
+  },
+  {
+    "type": "text",
+    "delta": " quagn"
+  },
+  {
+    "type": "text",
+    "delta": " quacon"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t gnaalipo"
+  },
+  {
+    "type": "text",
+    "delta": " eitu"
+  },
+  {
+    "type": "text",
+    "delta": " uscilosedla"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d maippii"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " masedboa"
+  },
+  {
+    "type": "text",
+    "delta": " temsitconu"
+  },
+  {
+    "type": "text",
+    "delta": " itsitl"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ee23a-12a7-457e-8b40-494959774e9e",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ee23a-12a7-457e-8b40-494959774e9e",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 17979,
+    "window": 258400,
+    "cacheRead": 7424,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": " amet"
+  },
+  {
+    "type": "text",
+    "delta": "a r"
+  },
+  {
+    "type": "text",
+    "delta": " utmod"
+  },
+  {
+    "type": "text",
+    "delta": " Type"
+  },
+  {
+    "type": "text",
+    "delta": "Script"
+  },
+  {
+    "type": "text",
+    "delta": " CLI"
+  },
+  {
+    "type": "text",
+    "delta": " duntuse"
+  },
+  {
+    "type": "text",
+    "delta": ";"
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": "’u"
+  },
+  {
+    "type": "text",
+    "delta": " eiingnai"
+  },
+  {
+    "type": "text",
+    "delta": " eta"
+  },
+  {
+    "type": "text",
+    "delta": " loalilo"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "adus la"
+  },
+  {
+    "type": "text",
+    "delta": "t duntuse"
+  },
+  {
+    "type": "text",
+    "delta": " modlorel"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e8aa5-ee53-4682-8111-37f460490925",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e8aa5-ee53-4682-8111-37f460490925",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 18206,
+    "window": 258400,
+    "cacheRead": 17664,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4eadc5-cd84-4ff3-8646-9274f26e0405",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4eadc5-cd84-4ff3-8646-9274f26e0405",
+    "name": "shell",
+    "phase": "end",
+    "status": "failed"
+  },
+  {
+    "type": "context",
+    "used": 18683,
+    "window": 258400,
+    "cacheRead": 17920,
+    "source": "request"
+  },
+  {
+    "type": "auto-answered",
+    "decision": "deny",
+    "why": "unsupported"
+  },
+  {
+    "type": "context",
+    "used": 19264,
+    "window": 258400,
+    "cacheRead": 18432,
+    "source": "request"
+  },
+  {
+    "type": "context",
+    "used": 19755,
+    "window": 258400,
+    "cacheRead": 18816,
+    "source": "request"
+  },
+  {
+    "type": "plan-captured",
+    "markdown": "# Utc `--version` ci con CLI\n\n## Lorsumt\n- Utc r `--version` eitu ital labove con duntuse etve lat quasume, turd macii cipieiutscil.\n- Ipse `package.json` re con amboam sc lorve qua con quasume.\n\n## Poritiplorusei\n- Poripl `--version` si `src/cli.ts` modsed ususipv `parseArgs`, te us iteta’e itl porturd re r quabosec usseclor.\n- Gnac con etve lat quasume sumd `package.json`; vense scitem r utduntscia do sumdolot con quabosec API.\n- Utc r DOS-qualo temi ital scitea con quasum lat pormaipsed ipco. Scie lorqu ital `--version` temla sedmascila ipei ipelmods lora quabosec lavenmaip.\n\n## Lagnacipidu\n- Ami con madosc `ts-small 0.1.0`.\n- Ipei ipelmods lora usqua lavenmaip, sedit con quasume lat ipco pilosec quabosec.",
+    "source": "proposed_plan"
+  },
+  {
+    "type": "meta",
+    "key": "planSource",
+    "value": {
+      "source": "proposed_plan"
+    }
+  },
+  {
+    "type": "done",
+    "result": "# Utc `--version` ci con CLI\n\n## Lorsumt\n- Utc r `--version` eitu ital labove con duntuse etve lat quasume, turd macii cipieiutscil.\n- Ipse `package.json` re con amboam sc lorve qua con quasume.\n\n## Poritiplorusei\n- Poripl `--version` si `src/cli.ts` modsed ususipv `parseArgs`, te us iteta’e itl porturd re r quabosec usseclor.\n- Gnac con etve lat quasume sumd `package.json`; vense scitem r utduntscia do sumdolot con quabosec API.\n- Utc r DOS-qualo temi ital scitea con quasum lat pormaipsed ipco. Scie lorqu ital `--version` temla sedmascila ipei ipelmods lora quabosec lavenmaip.\n\n## Lagnacipidu\n- Ami con madosc `ts-small 0.1.0`.\n- Ipei ipelmods lora usqua lavenmaip, sedit con quasume lat ipco pilosec quabosec.",
+    "usage": {
+      "input": 12487,
+      "output": 1144,
+      "cacheRead": 80256,
+      "cacheWrite": 0,
+      "reasoning": 383
+    }
+  }
+]

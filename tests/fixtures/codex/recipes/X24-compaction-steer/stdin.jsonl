@@ -1,0 +1,11 @@
+{"id":1,"method":"initialize","params":{"clientInfo":{"name":"dim-factory","title":null,"version":"0.1.0"},"capabilities":{"experimentalApi":false,"requestAttestation":false}}}
+{"$wait":{"id":1},"$timeoutMs":120000}
+{"method":"initialized"}
+{"id":2,"method":"thread/start","params":{"cwd":"$cwd","model":"gpt-6-luna","sandbox":"read-only","approvalPolicy":"never","approvalsReviewer":"user","ephemeral":true,"config":{"features.apps":false,"features.plugins":false,"features.hooks":false}}}
+{"$wait":{"id":2},"$timeoutMs":120000,"$capture":{"threadId":"result.thread.id"}}
+{"id":3,"method":"turn/start","params":{"threadId":"$threadId","input":[{"type":"text","text":"Run these three commands one at a time, each exactly as written, without piping, filtering or summarising their output: node -e \"for (let i = 0; i < 1500; i++) console.log(i, (i * 7919 % 10007).toString(36), (i * 104729 % 99991).toString(36))\" then node -e \"for (let i = 0; i < 1500; i++) console.log(i, (i * 7907 % 10009).toString(36), (i * 104723 % 99989).toString(36))\" then node -e \"for (let i = 0; i < 1500; i++) console.log(i, (i * 7901 % 10037).toString(36), (i * 104717 % 99971).toString(36))\" . Then reply with one line: the second value on row 750 of each output. On a second line write the project codeword if a reminder gave you one, otherwise NONE.","text_elements":[]}]}}
+{"$wait":{"id":3},"$timeoutMs":120000,"$capture":{"turnId":"result.turn.id"}}
+{"$wait":{"method":"item/completed","params":{"item":{"type":"contextCompaction"}}},"$timeoutMs":900000}
+{"id":4,"method":"turn/steer","params":{"threadId":"$threadId","expectedTurnId":"$turnId","input":[{"type":"text","text":"Reminder after the context was summarised: the project codeword is HERON-42. Keep to the plan.","text_elements":[]}]}}
+{"$wait":{"id":4},"$timeoutMs":120000}
+{"$wait":{"method":"turn/completed"},"$timeoutMs":900000}

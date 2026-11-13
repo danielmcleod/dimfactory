@@ -1,0 +1,80 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e447a-2fd2-48cb-88db-bf16f6b5ca11"
+  },
+  {
+    "type": "context",
+    "used": 16142,
+    "window": 258400,
+    "cacheRead": 12032,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e301a-0502-4e6c-8838-f82e2cfbc1f1",
+    "name": "mcp:<REDACTED>/<REDACTED>",
+    "phase": "start"
+  },
+  {
+    "type": "ask",
+    "kind": "other",
+    "allowSession": false
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e301a-0502-4e6c-8838-f82e2cfbc1f1",
+    "name": "mcp:<REDACTED>/<REDACTED>",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16268,
+    "window": 258400,
+    "cacheRead": 15744,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "Boet"
+  },
+  {
+    "type": "text",
+    "delta": "a con"
+  },
+  {
+    "type": "text",
+    "delta": " scie"
+  },
+  {
+    "type": "text",
+    "delta": " “"
+  },
+  {
+    "type": "text",
+    "delta": "modsi"
+  },
+  {
+    "type": "text",
+    "delta": ".”"
+  },
+  {
+    "type": "context",
+    "used": 16314,
+    "window": 258400,
+    "cacheRead": 16000,
+    "source": "request"
+  },
+  {
+    "type": "done",
+    "result": "Boeta con scie “modsi.”",
+    "usage": {
+      "input": 4726,
+      "output": 222,
+      "cacheRead": 43776,
+      "cacheWrite": 0,
+      "reasoning": 133
+    }
+  }
+]

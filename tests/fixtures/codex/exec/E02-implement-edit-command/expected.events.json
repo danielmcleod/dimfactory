@@ -1,0 +1,81 @@
+[
+  {
+    "type": "session",
+    "id": "fa4ec6e7-16ee-424f-805e-001798afaa98"
+  },
+  {
+    "type": "text",
+    "delta": "C’ei venuss con CLI quagn sedma lat duntuse modlorel, turd boin `--version` ci sedit con duntuse’u sumlordu quasume."
+  },
+  {
+    "type": "tool",
+    "id": "item_1",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_1",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_2",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_2",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_3",
+    "name": "edit",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_3",
+    "name": "edit",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_4",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_4",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Elmod `--version` ci con CLI. Us labove con quasume sumd `package.json` (`0.1.0`); usqua lavenmaip porbo ami con quabosec lovenipm.\n\nC pibo’e qua vendo."
+  },
+  {
+    "type": "done",
+    "result": "Elmod `--version` ci con CLI. Us labove con quasume sumd `package.json` (`0.1.0`); usqua lavenmaip porbo ami con quabosec lovenipm.\n\nC pibo’e qua vendo.",
+    "usage": {
+      "input": 7867,
+      "output": 704,
+      "cacheRead": 69376,
+      "cacheWrite": 0,
+      "reasoning": 329
+    }
+  }
+]

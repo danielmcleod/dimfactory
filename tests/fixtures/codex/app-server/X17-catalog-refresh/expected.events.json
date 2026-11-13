@@ -1,0 +1,4219 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e99c0-0675-427a-8580-af128263c431"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e74e7-7978-4a5c-8fca-8ee6ab237cdf",
+    "name": "web_search",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e74e7-7978-4a5c-8fca-8ee6ab237cdf",
+    "name": "web_search",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 14886,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e5e85-4860-4e2c-84de-83b0e7f803b6",
+    "name": "web_search",
+    "phase": "start"
+  },
+  {
+    "type": "meta",
+    "key": "pagesRead",
+    "value": {
+      "id": "exec-fa4e5e85-4860-4e2c-84de-83b0e7f803b6",
+      "urls": [
+        "https://developers.openai.com/api/docs/pricing?content_language=English",
+        "https://developers.openai.com/api/docs/models",
+        "https://developers.openai.com/api/docs/models/all",
+        "https://developers.openai.com/api/docs/models/gpt-5.5",
+        "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+        "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      ]
+    }
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e5e85-4860-4e2c-84de-83b0e7f803b6",
+    "name": "web_search",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 23385,
+    "window": 258400,
+    "cacheRead": 14464,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ed087-1d23-45df-8d48-badf660c5b7d",
+    "name": "web_search",
+    "phase": "start"
+  },
+  {
+    "type": "meta",
+    "key": "pagesRead",
+    "value": {
+      "id": "exec-fa4ed087-1d23-45df-8d48-badf660c5b7d",
+      "urls": [
+        "https://developers.openai.com/api/docs/pricing?content_language=English",
+        "https://developers.openai.com/api/docs/models/gpt-5.5",
+        "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+      ]
+    }
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ed087-1d23-45df-8d48-badf660c5b7d",
+    "name": "web_search",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 31729,
+    "window": 258400,
+    "cacheRead": 22912,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e78a9-994c-434f-8aa2-5de667a2f4bc",
+    "name": "web_search",
+    "phase": "start"
+  },
+  {
+    "type": "meta",
+    "key": "pagesRead",
+    "value": {
+      "id": "exec-fa4e78a9-994c-434f-8aa2-5de667a2f4bc",
+      "urls": [
+        "https://developers.openai.com/api/docs/models/gpt-5.5",
+        "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+        "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+        "https://developers.openai.com/api/docs/pricing?content_language=English"
+      ]
+    }
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e78a9-994c-434f-8aa2-5de667a2f4bc",
+    "name": "web_search",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 38079,
+    "window": 258400,
+    "cacheRead": 31360,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ea647-9c63-4796-83c3-2af36cb5ea64",
+    "name": "web_search",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ea647-9c63-4796-83c3-2af36cb5ea64",
+    "name": "web_search",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 46864,
+    "window": 258400,
+    "cacheRead": 37760,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "{\"generate"
+  },
+  {
+    "type": "text",
+    "delta": "dAt"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "20"
+  },
+  {
+    "type": "text",
+    "delta": "26-"
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": "T"
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": "Z"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "entries"
+  },
+  {
+    "type": "text",
+    "delta": "\":["
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "model"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-l"
+  },
+  {
+    "type": "text",
+    "delta": "una"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "aliases"
+  },
+  {
+    "type": "text",
+    "delta": "\":[]"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "input"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "output"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Rea"
+  },
+  {
+    "type": "text",
+    "delta": "dPer"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "01"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Write"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "125"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/pr"
+  },
+  {
+    "type": "text",
+    "delta": "icing"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Quote"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-l"
+  },
+  {
+    "type": "text",
+    "delta": "una"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "50"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "01"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "125"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "25"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "deprecate"
+  },
+  {
+    "type": "text",
+    "delta": "d\":"
+  },
+  {
+    "type": "text",
+    "delta": "false"
+  },
+  {
+    "type": "text",
+    "delta": "},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "model"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "aliases"
+  },
+  {
+    "type": "text",
+    "delta": "\":[]"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "input"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "4"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "output"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "20"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Rea"
+  },
+  {
+    "type": "text",
+    "delta": "dPer"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "4"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Write"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/pr"
+  },
+  {
+    "type": "text",
+    "delta": "icing"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Quote"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "4"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "20"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "40"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "deprecate"
+  },
+  {
+    "type": "text",
+    "delta": "d\":"
+  },
+  {
+    "type": "text",
+    "delta": "false"
+  },
+  {
+    "type": "text",
+    "delta": "},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "model"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-ter"
+  },
+  {
+    "type": "text",
+    "delta": "ra"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "aliases"
+  },
+  {
+    "type": "text",
+    "delta": "\":[]"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "input"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "output"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Rea"
+  },
+  {
+    "type": "text",
+    "delta": "dPer"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Write"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/models"
+  },
+  {
+    "type": "text",
+    "delta": "/g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-ter"
+  },
+  {
+    "type": "text",
+    "delta": "ra"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Quote"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "Itade"
+  },
+  {
+    "type": "text",
+    "delta": " doipad"
+  },
+  {
+    "type": "text",
+    "delta": " mod"
+  },
+  {
+    "type": "text",
+    "delta": " secse"
+  },
+  {
+    "type": "text",
+    "delta": "c lo"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "25"
+  },
+  {
+    "type": "text",
+    "delta": "x"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " se"
+  },
+  {
+    "type": "text",
+    "delta": "cquas"
+  },
+  {
+    "type": "text",
+    "delta": "c doade"
+  },
+  {
+    "type": "text",
+    "delta": " quaa"
+  },
+  {
+    "type": "text",
+    "delta": "l venu"
+  },
+  {
+    "type": "text",
+    "delta": ".\",\""
+  },
+  {
+    "type": "text",
+    "delta": "deprecate"
+  },
+  {
+    "type": "text",
+    "delta": "d\":"
+  },
+  {
+    "type": "text",
+    "delta": "false"
+  },
+  {
+    "type": "text",
+    "delta": "},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "model"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-l"
+  },
+  {
+    "type": "text",
+    "delta": "una"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "aliases"
+  },
+  {
+    "type": "text",
+    "delta": "\":[]"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "input"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "output"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Rea"
+  },
+  {
+    "type": "text",
+    "delta": "dPer"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Write"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "25"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/models"
+  },
+  {
+    "type": "text",
+    "delta": "/g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-l"
+  },
+  {
+    "type": "text",
+    "delta": "una"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Quote"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "Itade"
+  },
+  {
+    "type": "text",
+    "delta": " doipad"
+  },
+  {
+    "type": "text",
+    "delta": " mod"
+  },
+  {
+    "type": "text",
+    "delta": " secse"
+  },
+  {
+    "type": "text",
+    "delta": "c lo"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "25"
+  },
+  {
+    "type": "text",
+    "delta": "x"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " se"
+  },
+  {
+    "type": "text",
+    "delta": "cquas"
+  },
+  {
+    "type": "text",
+    "delta": "c doade"
+  },
+  {
+    "type": "text",
+    "delta": " quaa"
+  },
+  {
+    "type": "text",
+    "delta": "l venu"
+  },
+  {
+    "type": "text",
+    "delta": ".\",\""
+  },
+  {
+    "type": "text",
+    "delta": "deprecate"
+  },
+  {
+    "type": "text",
+    "delta": "d\":"
+  },
+  {
+    "type": "text",
+    "delta": "false"
+  },
+  {
+    "type": "text",
+    "delta": "},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "model"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "aliases"
+  },
+  {
+    "type": "text",
+    "delta": "\":[]"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "input"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "output"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "30"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Rea"
+  },
+  {
+    "type": "text",
+    "delta": "dPer"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Write"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "null"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/models"
+  },
+  {
+    "type": "text",
+    "delta": "/g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Quote"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "Doade"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "n$"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "nModin"
+  },
+  {
+    "type": "text",
+    "delta": "t doade"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "n$"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "50"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "nQuasum"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "n$"
+  },
+  {
+    "type": "text",
+    "delta": "30"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "deprecate"
+  },
+  {
+    "type": "text",
+    "delta": "d\":"
+  },
+  {
+    "type": "text",
+    "delta": "false"
+  },
+  {
+    "type": "text",
+    "delta": "},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "model"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-as"
+  },
+  {
+    "type": "text",
+    "delta": "tra"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "aliases"
+  },
+  {
+    "type": "text",
+    "delta": "\":[]"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "input"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "output"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "50"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Rea"
+  },
+  {
+    "type": "text",
+    "delta": "dPer"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Write"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/pr"
+  },
+  {
+    "type": "text",
+    "delta": "icing"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Quote"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-as"
+  },
+  {
+    "type": "text",
+    "delta": "tra"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "50"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "50"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "25"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "deprecate"
+  },
+  {
+    "type": "text",
+    "delta": "d\":"
+  },
+  {
+    "type": "text",
+    "delta": "false"
+  },
+  {
+    "type": "text",
+    "delta": "},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "model"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "aliases"
+  },
+  {
+    "type": "text",
+    "delta": "\":[]"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "input"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "output"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Rea"
+  },
+  {
+    "type": "text",
+    "delta": "dPer"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Write"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/pr"
+  },
+  {
+    "type": "text",
+    "delta": "icing"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Quote"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "50"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": " |"
+  },
+  {
+    "type": "text",
+    "delta": " $"
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "deprecate"
+  },
+  {
+    "type": "text",
+    "delta": "d\":"
+  },
+  {
+    "type": "text",
+    "delta": "false"
+  },
+  {
+    "type": "text",
+    "delta": "},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "model"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "aliases"
+  },
+  {
+    "type": "text",
+    "delta": "\":[]"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "input"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "output"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "10"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Rea"
+  },
+  {
+    "type": "text",
+    "delta": "dPer"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "2,\""
+  },
+  {
+    "type": "text",
+    "delta": "cache"
+  },
+  {
+    "type": "text",
+    "delta": "Write"
+  },
+  {
+    "type": "text",
+    "delta": "Per"
+  },
+  {
+    "type": "text",
+    "delta": "MT"
+  },
+  {
+    "type": "text",
+    "delta": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "5"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/models"
+  },
+  {
+    "type": "text",
+    "delta": "/g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Quote"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "Inam"
+  },
+  {
+    "type": "text",
+    "delta": " scimaa"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "nMal"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "M"
+  },
+  {
+    "type": "text",
+    "delta": " scimaa"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "nDoade"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "n$"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "00"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "nModin"
+  },
+  {
+    "type": "text",
+    "delta": "t doade"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "n$"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "20"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "nItade"
+  },
+  {
+    "type": "text",
+    "delta": " doipad"
+  },
+  {
+    "type": "text",
+    "delta": "\\"
+  },
+  {
+    "type": "text",
+    "delta": "n\\"
+  },
+  {
+    "type": "text",
+    "delta": "n$"
+  },
+  {
+    "type": "text",
+    "delta": "2."
+  },
+  {
+    "type": "text",
+    "delta": "50"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "deprecate"
+  },
+  {
+    "type": "text",
+    "delta": "d\":"
+  },
+  {
+    "type": "text",
+    "delta": "false"
+  },
+  {
+    "type": "text",
+    "delta": "}"
+  },
+  {
+    "type": "text",
+    "delta": "],\""
+  },
+  {
+    "type": "text",
+    "delta": "new"
+  },
+  {
+    "type": "text",
+    "delta": "Models"
+  },
+  {
+    "type": "text",
+    "delta": "\":["
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "i"
+  },
+  {
+    "type": "text",
+    "delta": "d\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-as"
+  },
+  {
+    "type": "text",
+    "delta": "tra"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "display"
+  },
+  {
+    "type": "text",
+    "delta": "Name"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "GPT"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": " Ussum"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "context"
+  },
+  {
+    "type": "text",
+    "delta": "Window"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "105"
+  },
+  {
+    "type": "text",
+    "delta": "000"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/models"
+  },
+  {
+    "type": "text",
+    "delta": "\"},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "i"
+  },
+  {
+    "type": "text",
+    "delta": "d\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "display"
+  },
+  {
+    "type": "text",
+    "delta": "Name"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "GPT"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": " Inl"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "context"
+  },
+  {
+    "type": "text",
+    "delta": "Window"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "105"
+  },
+  {
+    "type": "text",
+    "delta": "000"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/models"
+  },
+  {
+    "type": "text",
+    "delta": "\"},"
+  },
+  {
+    "type": "text",
+    "delta": "{\"vendor"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "codex\",\""
+  },
+  {
+    "type": "text",
+    "delta": "i"
+  },
+  {
+    "type": "text",
+    "delta": "d\":\""
+  },
+  {
+    "type": "text",
+    "delta": "g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "display"
+  },
+  {
+    "type": "text",
+    "delta": "Name"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "GPT"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": " Inl"
+  },
+  {
+    "type": "text",
+    "delta": "\",\""
+  },
+  {
+    "type": "text",
+    "delta": "context"
+  },
+  {
+    "type": "text",
+    "delta": "Window"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "105"
+  },
+  {
+    "type": "text",
+    "delta": "000"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": ",\""
+  },
+  {
+    "type": "text",
+    "delta": "source"
+  },
+  {
+    "type": "text",
+    "delta": "Url"
+  },
+  {
+    "type": "text",
+    "delta": "\":\""
+  },
+  {
+    "type": "text",
+    "delta": "https"
+  },
+  {
+    "type": "text",
+    "delta": ":"
+  },
+  {
+    "type": "text",
+    "delta": "//developers"
+  },
+  {
+    "type": "text",
+    "delta": ".ope"
+  },
+  {
+    "type": "text",
+    "delta": "nai"
+  },
+  {
+    "type": "text",
+    "delta": ".com"
+  },
+  {
+    "type": "text",
+    "delta": "/api"
+  },
+  {
+    "type": "text",
+    "delta": "/docs"
+  },
+  {
+    "type": "text",
+    "delta": "/models"
+  },
+  {
+    "type": "text",
+    "delta": "/g"
+  },
+  {
+    "type": "text",
+    "delta": "pt"
+  },
+  {
+    "type": "text",
+    "delta": "-"
+  },
+  {
+    "type": "text",
+    "delta": "6"
+  },
+  {
+    "type": "text",
+    "delta": "-sol"
+  },
+  {
+    "type": "text",
+    "delta": "\"}"
+  },
+  {
+    "type": "text",
+    "delta": "],\""
+  },
+  {
+    "type": "text",
+    "delta": "u"
+  },
+  {
+    "type": "text",
+    "delta": "nver"
+  },
+  {
+    "type": "text",
+    "delta": "ifiable"
+  },
+  {
+    "type": "text",
+    "delta": "\":"
+  },
+  {
+    "type": "text",
+    "delta": "[]}"
+  },
+  {
+    "type": "context",
+    "used": 54141,
+    "window": 258400,
+    "cacheRead": 46080,
+    "source": "request"
+  },
+  {
+    "type": "meta",
+    "key": "structuredOutput",
+    "value": {
+      "generatedAt": "2029-12-16T20:16:32Z",
+      "entries": [
+        {
+          "vendor": "codex",
+          "model": "gpt-6-luna",
+          "aliases": [],
+          "inputPerMTok": 0.1,
+          "outputPerMTok": 0.5,
+          "cacheReadPerMTok": 0.01,
+          "cacheWritePerMTok": 0.125,
+          "sourceUrl": "https://developers.openai.com/api/docs/pricing",
+          "sourceQuote": "gpt-6-luna  | $0.10  | $0.50  | $0.01  | $0.125  | $0.25",
+          "deprecated": false
+        },
+        {
+          "vendor": "codex",
+          "model": "gpt-5.6-sol",
+          "aliases": [],
+          "inputPerMTok": 4,
+          "outputPerMTok": 20,
+          "cacheReadPerMTok": 0.4,
+          "cacheWritePerMTok": 5,
+          "sourceUrl": "https://developers.openai.com/api/docs/pricing",
+          "sourceQuote": "gpt-5.6-sol  | $4.00  | $20.00  | $0.40  | $5.00  | $10.00",
+          "deprecated": false
+        },
+        {
+          "vendor": "codex",
+          "model": "gpt-5.6-terra",
+          "aliases": [],
+          "inputPerMTok": 2,
+          "outputPerMTok": 12,
+          "cacheReadPerMTok": 0.2,
+          "cacheWritePerMTok": 2.5,
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+          "sourceQuote": "Itade doipad mod secsec lo 1.25x con secquasc doade quaal venu.",
+          "deprecated": false
+        },
+        {
+          "vendor": "codex",
+          "model": "gpt-5.6-luna",
+          "aliases": [],
+          "inputPerMTok": 0.2,
+          "outputPerMTok": 1.2,
+          "cacheReadPerMTok": 0.02,
+          "cacheWritePerMTok": 0.25,
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+          "sourceQuote": "Itade doipad mod secsec lo 1.25x con secquasc doade quaal venu.",
+          "deprecated": false
+        },
+        {
+          "vendor": "codex",
+          "model": "gpt-5.5",
+          "aliases": [],
+          "inputPerMTok": 5,
+          "outputPerMTok": 30,
+          "cacheReadPerMTok": 0.5,
+          "cacheWritePerMTok": null,
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-5.5",
+          "sourceQuote": "Doade\n\n$5.00\n\nModint doade\n\n$0.50\n\nQuasum\n\n$30.00",
+          "deprecated": false
+        },
+        {
+          "vendor": "codex",
+          "model": "gpt-6-astra",
+          "aliases": [],
+          "inputPerMTok": 10,
+          "outputPerMTok": 50,
+          "cacheReadPerMTok": 1,
+          "cacheWritePerMTok": 12.5,
+          "sourceUrl": "https://developers.openai.com/api/docs/pricing",
+          "sourceQuote": "gpt-6-astra  | $10.00  | $50.00  | $1.00  | $12.50  | $25.00",
+          "deprecated": false
+        },
+        {
+          "vendor": "codex",
+          "model": "gpt-6.1-sol",
+          "aliases": [],
+          "inputPerMTok": 2,
+          "outputPerMTok": 10,
+          "cacheReadPerMTok": 0.1,
+          "cacheWritePerMTok": 2.5,
+          "sourceUrl": "https://developers.openai.com/api/docs/pricing",
+          "sourceQuote": "gpt-6.1-sol  | $2.00  | $10.00  | $0.10  | $2.50  | $5.00",
+          "deprecated": false
+        },
+        {
+          "vendor": "codex",
+          "model": "gpt-6-sol",
+          "aliases": [],
+          "inputPerMTok": 2,
+          "outputPerMTok": 10,
+          "cacheReadPerMTok": 0.2,
+          "cacheWritePerMTok": 2.5,
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+          "sourceQuote": "Inam scimaa\n\nMal 1M scimaa\n\nDoade\n\n$2.00\n\nModint doade\n\n$0.20\n\nItade doipad\n\n$2.50",
+          "deprecated": false
+        }
+      ],
+      "newModels": [
+        {
+          "vendor": "codex",
+          "id": "gpt-6-astra",
+          "displayName": "GPT-6 Ussum",
+          "contextWindow": 1050000,
+          "sourceUrl": "https://developers.openai.com/api/docs/models"
+        },
+        {
+          "vendor": "codex",
+          "id": "gpt-6.1-sol",
+          "displayName": "GPT-6.1 Inl",
+          "contextWindow": 1050000,
+          "sourceUrl": "https://developers.openai.com/api/docs/models"
+        },
+        {
+          "vendor": "codex",
+          "id": "gpt-6-sol",
+          "displayName": "GPT-6 Inl",
+          "contextWindow": 1050000,
+          "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-sol"
+        }
+      ],
+      "unverifiable": []
+    }
+  },
+  {
+    "type": "done",
+    "result": "{\"generatedAt\":\"2029-12-16T20:16:32Z\",\"entries\":[{\"vendor\":\"codex\",\"model\":\"gpt-6-luna\",\"aliases\":[],\"inputPerMTok\":0.1,\"outputPerMTok\":0.5,\"cacheReadPerMTok\":0.01,\"cacheWritePerMTok\":0.125,\"sourceUrl\":\"https://developers.openai.com/api/docs/pricing\",\"sourceQuote\":\"gpt-6-luna  | $0.10  | $0.50  | $0.01  | $0.125  | $0.25\",\"deprecated\":false},{\"vendor\":\"codex\",\"model\":\"gpt-5.6-sol\",\"aliases\":[],\"inputPerMTok\":4,\"outputPerMTok\":20,\"cacheReadPerMTok\":0.4,\"cacheWritePerMTok\":5,\"sourceUrl\":\"https://developers.openai.com/api/docs/pricing\",\"sourceQuote\":\"gpt-5.6-sol  | $4.00  | $20.00  | $0.40  | $5.00  | $10.00\",\"deprecated\":false},{\"vendor\":\"codex\",\"model\":\"gpt-5.6-terra\",\"aliases\":[],\"inputPerMTok\":2,\"outputPerMTok\":12,\"cacheReadPerMTok\":0.2,\"cacheWritePerMTok\":2.5,\"sourceUrl\":\"https://developers.openai.com/api/docs/models/gpt-5.6-terra\",\"sourceQuote\":\"Itade doipad mod secsec lo 1.25x con secquasc doade quaal venu.\",\"deprecated\":false},{\"vendor\":\"codex\",\"model\":\"gpt-5.6-luna\",\"aliases\":[],\"inputPerMTok\":0.2,\"outputPerMTok\":1.2,\"cacheReadPerMTok\":0.02,\"cacheWritePerMTok\":0.25,\"sourceUrl\":\"https://developers.openai.com/api/docs/models/gpt-5.6-luna\",\"sourceQuote\":\"Itade doipad mod secsec lo 1.25x con secquasc doade quaal venu.\",\"deprecated\":false},{\"vendor\":\"codex\",\"model\":\"gpt-5.5\",\"aliases\":[],\"inputPerMTok\":5,\"outputPerMTok\":30,\"cacheReadPerMTok\":0.5,\"cacheWritePerMTok\":null,\"sourceUrl\":\"https://developers.openai.com/api/docs/models/gpt-5.5\",\"sourceQuote\":\"Doade\\n\\n$5.00\\n\\nModint doade\\n\\n$0.50\\n\\nQuasum\\n\\n$30.00\",\"deprecated\":false},{\"vendor\":\"codex\",\"model\":\"gpt-6-astra\",\"aliases\":[],\"inputPerMTok\":10,\"outputPerMTok\":50,\"cacheReadPerMTok\":1,\"cacheWritePerMTok\":12.5,\"sourceUrl\":\"https://developers.openai.com/api/docs/pricing\",\"sourceQuote\":\"gpt-6-astra  | $10.00  | $50.00  | $1.00  | $12.50  | $25.00\",\"deprecated\":false},{\"vendor\":\"codex\",\"model\":\"gpt-6.1-sol\",\"aliases\":[],\"inputPerMTok\":2,\"outputPerMTok\":10,\"cacheReadPerMTok\":0.1,\"cacheWritePerMTok\":2.5,\"sourceUrl\":\"https://developers.openai.com/api/docs/pricing\",\"sourceQuote\":\"gpt-6.1-sol  | $2.00  | $10.00  | $0.10  | $2.50  | $5.00\",\"deprecated\":false},{\"vendor\":\"codex\",\"model\":\"gpt-6-sol\",\"aliases\":[],\"inputPerMTok\":2,\"outputPerMTok\":10,\"cacheReadPerMTok\":0.2,\"cacheWritePerMTok\":2.5,\"sourceUrl\":\"https://developers.openai.com/api/docs/models/gpt-6-sol\",\"sourceQuote\":\"Inam scimaa\\n\\nMal 1M scimaa\\n\\nDoade\\n\\n$2.00\\n\\nModint doade\\n\\n$0.20\\n\\nItade doipad\\n\\n$2.50\",\"deprecated\":false}],\"newModels\":[{\"vendor\":\"codex\",\"id\":\"gpt-6-astra\",\"displayName\":\"GPT-6 Ussum\",\"contextWindow\":1050000,\"sourceUrl\":\"https://developers.openai.com/api/docs/models\"},{\"vendor\":\"codex\",\"id\":\"gpt-6.1-sol\",\"displayName\":\"GPT-6.1 Inl\",\"contextWindow\":1050000,\"sourceUrl\":\"https://developers.openai.com/api/docs/models\"},{\"vendor\":\"codex\",\"id\":\"gpt-6-sol\",\"displayName\":\"GPT-6 Inl\",\"contextWindow\":1050000,\"sourceUrl\":\"https://developers.openai.com/api/docs/models/gpt-6-sol\"}],\"unverifiable\":[]}",
+    "usage": {
+      "input": 53693,
+      "output": 2815,
+      "cacheRead": 152576,
+      "cacheWrite": 0,
+      "reasoning": 1164
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{"type":"control_request","request_id":"init-1","request":{"subtype":"initialize","hooks":{"SessionStart":[{"hookCallbackIds":["compaction-reminder"]}]}}}
+{"$wait":{"type":"control_response","response":{"request_id":"init-1"}},"$timeoutMs":30000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"Read src/index.ts and reply with one word: ok"}]},"parent_tool_use_id":null}
+{"$wait":{"type":"result"},"$timeoutMs":240000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"/compact"}]},"parent_tool_use_id":null}
+{"$wait":{"type":"system","subtype":"compact_boundary"},"$timeoutMs":300000}
+{"$wait":{"type":"result"},"$timeoutMs":300000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"What is the project codeword from the reminder after the summary? Reply with the codeword only, or NONE if you were not given one."}]},"parent_tool_use_id":null}
+{"$wait":{"type":"result"},"$timeoutMs":240000}
+{"$close":true}

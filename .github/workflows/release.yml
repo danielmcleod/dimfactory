@@ -1,0 +1,287 @@
+name: Release
+
+# Release builds, unsigned first: Windows NSIS (unsigned), macOS dmgs (ad hoc signed, not notarized), Linux deb +
+# AppImage, with SHA256SUMS over everything. docs/RELEASING.md describes how releases
+# are built, how to cut one, and how to turn signing on later.
+#
+# A tag v* builds Windows, macOS and Linux, checks each build, and attaches every installer and SHA256SUMS to a DRAFT
+# release for that tag, with notes made from .github/release-notes.md; nothing is public until the user publishes the
+# draft. Run by hand on a tag, it does the same and updates that tag's draft. Run by hand on a branch, it is a dry run:
+# the same builds, unsigned, as workflow artifacts, and no release job.
+# Signing is dormant: an OS signs only when every secret it needs is set (scripts/release.mjs); none set builds
+# unsigned and says so in the log, some set fails the build. The secrets belong to the `release` environment, whose
+# deployment rule admits only v* tags: a tag run's build job runs in it, a branch run's in `release-dry-run` (no
+# secrets), so a dry run never signs. With the repository variable REQUIRE_SIGNED_RELEASE set to true, a final tag
+# (vX.Y.Z) must sign Windows and macOS or its build fails before anything is built. No step needs a secret to pass.
+# Each secret reaches only the build step of the OS that uses it.
+# Every action is pinned to a full commit SHA with its release tag beside it (resolved with git ls-remote and the
+# GitHub API on 2026-10-12; each release at least two weeks old then).
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  # The version (a tag vX.Y.Z or vX.Y.Z-pre must carry package.json's X.Y.Z) and the OS-independent check.
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      tag: ${{ steps.version.outputs.tag }}
+      prerelease: ${{ steps.version.outputs.prerelease }}
+      release: ${{ steps.version.outputs.release }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      # No dependency cache in a release: a cache another workflow wrote could otherwise end up in the installers.
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Version
+        id: version
+        run: node scripts/release.mjs version
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+
+  # Per OS: the unit tests, the installers (signed only when that OS's secrets are set), the signature checks, and the
+  # packaged app's --smoke-test (scripts/smoke-packaged.mjs) on what was built.
+  # macOS: one dmg per architecture, both from the arm64 runner, which smoke-tests the Apple silicon app; the Intel
+  # dmg is smoke-tested by the smoke-mac-intel job.
+  build:
+    name: build (${{ matrix.platform }})
+    needs: prepare
+    # Only a tag run reaches the signing secrets (docs/RELEASING.md "Secrets"): `release` admits v* tags only, and
+    # `release-dry-run` holds none, so a manual run on a branch builds unsigned whatever that branch contains.
+    environment: ${{ needs.prepare.outputs.release == 'true' && 'release' || 'release-dry-run' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            platform: win
+          - os: macos-latest
+            platform: mac
+          - os: ubuntu-latest
+            platform: linux
+    runs-on: ${{ matrix.os }}
+    # Notarization of the two macOS apps can take a while.
+    timeout-minutes: 90
+    env:
+      VERSION: ${{ needs.prepare.outputs.version }}
+      # Empty for a dry run.
+      TAG: ${{ needs.prepare.outputs.tag }}
+      # A repository variable, not a secret: "true" makes a final tag refuse to ship unsigned. Unset by default.
+      REQUIRE_SIGNED_RELEASE: ${{ vars.REQUIRE_SIGNED_RELEASE }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm fake-cli
+      - run: pnpm test
+      - run: pnpm build
+
+      - name: Build the installers
+        id: build
+        shell: bash
+        env:
+          # Windows: Azure Artifact Signing (formerly Trusted Signing). docs/RELEASING.md "Secrets".
+          AZURE_TENANT_ID: ${{ matrix.platform == 'win' && secrets.AZURE_TENANT_ID || '' }}
+          AZURE_CLIENT_ID: ${{ matrix.platform == 'win' && secrets.AZURE_CLIENT_ID || '' }}
+          AZURE_CLIENT_SECRET: ${{ matrix.platform == 'win' && secrets.AZURE_CLIENT_SECRET || '' }}
+          AZURE_SIGNING_ENDPOINT: ${{ matrix.platform == 'win' && secrets.AZURE_SIGNING_ENDPOINT || '' }}
+          AZURE_SIGNING_ACCOUNT: ${{ matrix.platform == 'win' && secrets.AZURE_SIGNING_ACCOUNT || '' }}
+          AZURE_SIGNING_CERT_PROFILE: ${{ matrix.platform == 'win' && secrets.AZURE_SIGNING_CERT_PROFILE || '' }}
+          AZURE_SIGNING_PUBLISHER: ${{ matrix.platform == 'win' && secrets.AZURE_SIGNING_PUBLISHER || '' }}
+          # macOS: the Developer ID Application certificate, then one notarization set (the API key wins if both).
+          MAC_CSC_LINK: ${{ matrix.platform == 'mac' && secrets.MAC_CSC_LINK || '' }}
+          MAC_CSC_KEY_PASSWORD: ${{ matrix.platform == 'mac' && secrets.MAC_CSC_KEY_PASSWORD || '' }}
+          APPLE_API_KEY_P8: ${{ matrix.platform == 'mac' && secrets.APPLE_API_KEY_P8 || '' }}
+          APPLE_API_KEY_ID: ${{ matrix.platform == 'mac' && secrets.APPLE_API_KEY_ID || '' }}
+          APPLE_API_ISSUER: ${{ matrix.platform == 'mac' && secrets.APPLE_API_ISSUER || '' }}
+          APPLE_ID: ${{ matrix.platform == 'mac' && secrets.APPLE_ID || '' }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ matrix.platform == 'mac' && secrets.APPLE_APP_SPECIFIC_PASSWORD || '' }}
+          APPLE_TEAM_ID: ${{ matrix.platform == 'mac' && secrets.APPLE_TEAM_ID || '' }}
+        run: node scripts/release.mjs build --platform "${{ matrix.platform }}" --version "$VERSION" --tag "$TAG"
+
+      # Says in the log (and the run summary) when signing was skipped, so an unsigned build is never a surprise.
+      - name: Signing status
+        shell: bash
+        env:
+          SIGNED: ${{ steps.build.outputs.signed }}
+          PLATFORM: ${{ matrix.platform }}
+        run: |
+          if [ "$SIGNED" = "true" ]; then
+            echo "Signing: the $PLATFORM build is signed; its signature checks run next."
+          elif [ "$PLATFORM" = "linux" ]; then
+            echo "Signing: Linux packages are not signed; SHA256SUMS covers them."
+          else
+            what="unsigned"
+            if [ "$PLATFORM" = "mac" ]; then what="ad hoc signed, not notarized"; fi
+            line="Signing skipped: no $PLATFORM signing secrets are configured, so this build is $what. The Developer ID, Authenticode and notarization checks are skipped."
+            echo "$line"
+            echo "$line" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Check the Windows signatures
+        if: matrix.platform == 'win' && steps.build.outputs.signed == 'true'
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          foreach ($f in @("dist/release/dim-factory-setup-$env:VERSION.exe", 'dist/win-unpacked/Dim Factory.exe')) {
+            $s = Get-AuthenticodeSignature -FilePath $f
+            if ($s.Status -ne 'Valid') { throw "${f}: $($s.Status) $($s.StatusMessage)" }
+            Write-Output "${f}: $($s.SignerCertificate.Subject)"
+          }
+      - name: Check the macOS signatures and notarization
+        if: matrix.platform == 'mac' && steps.build.outputs.signed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          for app in "dist/mac-arm64/Dim Factory.app" "dist/mac/Dim Factory.app"; do
+            codesign --verify --deep --strict --verbose=2 "$app"
+            spctl --assess --type execute --verbose=4 "$app"
+            xcrun stapler validate "$app"
+          done
+      # Unsigned macOS builds are ad hoc signed (scripts/release.mjs builderConfig): Apple silicon kills an app with no
+      # signature at launch. Both architectures' apps must carry a valid ad hoc signature.
+      - name: Check the macOS ad hoc signatures
+        if: matrix.platform == 'mac' && steps.build.outputs.signed != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          for app in "dist/mac-arm64/Dim Factory.app" "dist/mac/Dim Factory.app"; do
+            codesign --verify --deep --strict --verbose=2 "$app"
+            codesign --display --verbose=2 "$app" 2>&1 | grep -F 'Signature=adhoc'
+          done
+      # The configured fuses against every packaged app this OS built (scripts/release.mjs packagedApps: both macOS
+      # architectures). REQUIRE_PACKAGED turns a missing app into a failure instead of a skipped test.
+      - name: Check the packaged fuse wire
+        env:
+          REQUIRE_PACKAGED: '1'
+        run: pnpm exec vitest run --project unit tests/unit/security/fuses.test.ts
+
+      # What the deb's postinst does where user namespaces are restricted, so the smoke keeps Chromium's sandbox on.
+      - name: Prepare Linux (xvfb, Chromium sandbox helper)
+        if: matrix.platform == 'linux'
+        shell: bash
+        run: |
+          command -v xvfb-run >/dev/null || { sudo apt-get update && sudo apt-get install -y --no-install-recommends xvfb; }
+          sudo chown root:root dist/linux-unpacked/chrome-sandbox
+          sudo chmod 4755 dist/linux-unpacked/chrome-sandbox
+      - name: Smoke the packaged app
+        run: pnpm smoke:packaged
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: dim-factory-${{ needs.prepare.outputs.version }}-${{ matrix.platform }}
+          path: dist/release/
+          if-no-files-found: error
+          retention-days: 30
+          # Installers are compressed already.
+          compression-level: 0
+
+  # The Intel macOS dmg, on an Intel Mac. The build's arm64 runner can only run the Intel app under Rosetta, where it
+  # took one to three minutes to start and ran its own checks out of time, warm or not. Here the dmg the build
+  # uploaded is mounted and the app in it runs its --smoke-test natively: the file a person downloads, on the kind of
+  # Mac it is for.
+  smoke-mac-intel:
+    name: smoke (mac, Intel)
+    needs: [prepare, build]
+    runs-on: macos-15-intel
+    timeout-minutes: 30
+    env:
+      VERSION: ${{ needs.prepare.outputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: dim-factory-${{ needs.prepare.outputs.version }}-mac
+          path: release
+      - name: Smoke the app in the Intel dmg
+        shell: bash
+        run: |
+          set -euo pipefail
+          mount="$RUNNER_TEMP/dim-factory-intel"
+          hdiutil attach "release/dim-factory-$VERSION-x64.dmg" -nobrowse -readonly -mountpoint "$mount"
+          trap 'hdiutil detach "$mount" -force || true' EXIT
+          codesign --verify --deep --strict --verbose=2 "$mount/Dim Factory.app"
+          node scripts/smoke-packaged.mjs --app "$mount/Dim Factory.app/Contents/MacOS/Dim Factory"
+
+  # Only for a tag: every installer checked against its build's manifest, SHA256SUMS over all of them, the notes from
+  # .github/release-notes.md, then the draft.
+  release:
+    needs: [prepare, build, smoke-mac-intel]
+    if: needs.prepare.outputs.release == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ needs.prepare.outputs.version }}
+      TAG: ${{ needs.prepare.outputs.tag }}
+      PRERELEASE: ${{ needs.prepare.outputs.prerelease }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: dim-factory-${{ needs.prepare.outputs.version }}-*
+          path: release
+          merge-multiple: true
+      - name: Check every installer, write SHA256SUMS and the notes
+        env:
+          REQUIRE_SIGNED_RELEASE: ${{ vars.REQUIRE_SIGNED_RELEASE }}
+        run: node scripts/release.mjs collect --dir release --version "$VERSION"
+      - name: Check SHA256SUMS with sha256sum
+        working-directory: release
+        run: sha256sum --check --strict SHA256SUMS
+      - name: Create or update the draft release
+        working-directory: release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mapfile -t files < files.txt
+          if state=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft 2>/dev/null); then
+            if [ "$state" != "true" ]; then
+              echo "::error::The release $TAG is already published, so this run changes nothing. Tag a new version."
+              exit 1
+            fi
+            gh release upload "$TAG" "${files[@]}" --clobber --repo "$GITHUB_REPOSITORY"
+            gh release edit "$TAG" --notes-file notes.md --repo "$GITHUB_REPOSITORY"
+          else
+            flags=()
+            if [ "$PRERELEASE" = "true" ]; then flags+=(--prerelease); fi
+            gh release create "$TAG" "${files[@]}" --draft --verify-tag --title "Dim Factory $VERSION" \
+              --notes-file notes.md "${flags[@]}" --repo "$GITHUB_REPOSITORY"
+          fi
+          echo "Draft release $TAG: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases" >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "folder": "v0.160.0",
+  "cliVersion": "0.160.1",
+  "generatedBy": "scripts/gen-codex-types.mjs",
+  "commands": [
+    "codex app-server generate-ts --experimental --out <tmp>/ts",
+    "codex app-server generate-json-schema --experimental --out <tmp>/schema-experimental",
+    "codex app-server generate-json-schema --out <tmp>/schema-stable (methods.json experimental flags only)"
+  ],
+  "codexHome": "empty temp directory",
+  "files": 878,
+  "sha256": "05c3def486ca59f0b7204c9c76595a9573112c5ab656e36b7f96528ab7322ab4"
+}

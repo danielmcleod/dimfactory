@@ -1,0 +1,160 @@
+/* Renderer stylesheet: Tailwind 4 (CSS-first) with the design tokens
+   mapped to colour utilities (bg-background, text-muted-foreground, bg-st-running/15, text-auto, bg-diff-add-bg …),
+   a class-based dark variant, and the base layer (system font stack, focus ring, reduced motion). */
+@import 'tailwindcss';
+@import './tokens.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+
+  --color-st-queued: var(--st-queued);
+  --color-st-running: var(--st-running);
+  --color-st-waiting: var(--st-waiting);
+  --color-st-stalled: var(--st-stalled);
+  --color-st-paused: var(--st-paused);
+  --color-st-done: var(--st-done);
+  --color-st-skipped: var(--st-skipped);
+  --color-st-failed: var(--st-failed);
+  --color-st-cancelled: var(--st-cancelled);
+  --color-auto: var(--auto);
+
+  --color-diff-add: var(--diff-add);
+  --color-diff-del: var(--diff-del);
+  --color-diff-add-bg: var(--diff-add-bg);
+  --color-diff-del-bg: var(--diff-del-bg);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial,
+    sans-serif;
+  --font-mono:
+    ui-monospace, 'Cascadia Mono', 'Cascadia Code', 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+    'DejaVu Sans Mono', monospace;
+}
+
+/* Vendor output: monospace at the configurable stream size (Settings → Appearance; lib/theme.ts setStreamFontSize). */
+@utility stream-text {
+  font-family: var(--font-mono);
+  font-size: var(--stream-font-size);
+  line-height: 1.5;
+}
+
+/* An allowed inner scroll region (UI standard: one scroll region per screen): pair it with data-scroll-region="<name>"
+   and a fixed height or max-height. A wheel at its ends never scrolls the page behind it, and its scrollbar takes its
+   room from the start, so content never reflows when the bar appears. */
+@utility scroll-region {
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+/* The page's one scroller, <main> (components/shell/Shell.tsx). Its scroll padding is what the browser keeps clear
+   when it brings something into view for the user (keyboard focus, the text cursor while typing, a scrollIntoView):
+   the page's sticky bars (--page-pad-top / --page-pad-bottom) and a card's sticky action row (--page-pad-row), all set
+   by components/shell/mainScroll.ts. While focus is in that row the row's share is dropped: the row is in view
+   wherever it sticks, and padding for it would make the browser scroll the page under it for nothing. The same goes
+   for the bars themselves (data-sticky-bar="top" / "bottom": the Run view's sticky block and SummaryBar, the
+   Dashboard's compact Run bar): a control in a bar sits inside the padding kept for that bar, so while focus is in
+   it, that side's padding is dropped, and Tab through the bar's controls never scrolls the page. */
+@utility page-scroller {
+  --page-pad-row-now: var(--page-pad-row, 0px);
+  scroll-padding-top: var(--page-pad-top, 0px);
+  scroll-padding-bottom: calc(var(--page-pad-bottom, 0px) + var(--page-pad-row-now));
+  &:has([data-sticky-actions]:focus-within) {
+    --page-pad-row-now: 0px;
+  }
+  &:has([data-sticky-bar='top']:focus-within) {
+    scroll-padding-top: 0px;
+  }
+  &:has([data-sticky-bar='bottom']:focus-within) {
+    scroll-padding-bottom: 0px;
+  }
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--border);
+  }
+
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  /* The shell is locked to the window (UI standard: one scroll region per screen): the document never scrolls, only
+     <main> (components/shell/Shell.tsx) does. #root clips rather than hides, so nothing can scroll it, not even
+     scrollIntoView or a focus() deep in the page. */
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  html,
+  body {
+    overflow: hidden;
+  }
+  #root {
+    overflow: clip;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--primary) 25%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

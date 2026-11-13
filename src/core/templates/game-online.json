@@ -1,0 +1,86 @@
+{
+  "id": "game-online",
+  "version": 1,
+  "pack": "games",
+  "label": "Online multiplayer game (needs a server you host)",
+  "description": "A turn-based game two people play from two computers: Dim Factory's own Node server (ws) decides every move, with room codes and no accounts. Needs a server you host. Full mode only.",
+  "brief": {
+    "fields": {
+      "genre": {
+        "choices": ["card-board"]
+      },
+      "engine": {
+        "choices": ["dom"]
+      },
+      "controls": {
+        "choices": ["mouse", "keyboard", "touch"]
+      },
+      "players": {
+        "choices": ["online"]
+      },
+      "platform": {
+        "choices": ["desktop", "phone"]
+      },
+      "sound": {
+        "choices": ["effects"]
+      },
+      "save": {
+        "choices": ["settings"]
+      },
+      "accessibility": {
+        "choices": ["remap", "pause", "reduced-motion", "colour-safe", "no-flashing"]
+      },
+      "deliverable": {
+        "choices": ["game-server"]
+      },
+      "constraints": {
+        "choices": ["original-art", "no-ads"]
+      },
+      "approach": {
+        "choices": ["core-loop-first", "playtested"]
+      }
+    }
+  },
+  "task": "Make an online multiplayer browser game in this empty folder: a turn-based game two players play from two computers, through a server you host. Dim Factory already put the server in place (MIT): server.js (run with node server.js; it serves the game's files and runs rooms over WebSockets at /play, binds 127.0.0.1 unless HOST is set, checks each connection's Origin, caps messages at 2 KB and about 20 a second) and src/server/rooms.js (rooms with random room codes, no accounts); docs/game-server.md explains them. Do not weaken them. Write the rules in src/game/rules.js as a plain module with no DOM or network: initialState(playerCount), applyMove(state, playerIndex, move) that checks every move and whose turn it is and answers { ok, state } or { ok: false, reason }, and view(state, playerIndex) with only what that player may see. The server is the only judge: the page never decides a move. The page (index.html, style.css, src/main.js as ES modules, a grid of real HTML buttons) creates a room or joins one by its code, connects to the same server's /play over ws or wss, sends moves and draws the state the server sends. When the server cannot be reached it says so and offers pass and play on one device with the same rules, without errors in the console. Dim Factory also put starter modules in src/engine/ (MIT): loop.js, rng.js, input.js (keyboard, pointer, touch, remappable), storage.js and test-hook.js (window.__game, only with ?test=1); docs/game-test-hook.md explains the hook. Every game has: a title screen with how to play; play; pause with P or Esc and when the window loses focus; game over or a win with Restart. A Settings screen changes the keys, mutes sound, turns on reduced motion and a colour-safe palette. Big buttons work on a phone. Use original names, characters and art: familiar mechanics are fine, but never copy a famous game's name, characters, logo, art, music or sounds. Everything the game uses is in the project: no CDN, no third-party scripts, ads or trackers, no eval or new Function. Text a player types (a name) is shown with textContent and capped in length. Wire the test hook with a state() that reports scene ('title', 'playing', 'paused', 'over' or 'won'), score, lives, level and whose turn it is, playing pass and play. Write the plan's acceptance criteria as things a player does and sees, and write playtest.json (data, not code) with one scenario per criterion, as docs/game-test-hook.md shows. Add a package.json with the ws dependency and two scripts: start (node server.js) and test (node --test on tests/*.test.mjs), with tests for the rules (a move out of turn is refused; a finished game takes no moves). Add a README.md: how to play (the goal and the controls), that online play needs a server you host, how to run it here (npm install, then node server.js, open http://127.0.0.1:8787/), how to host it (HOST, PORT and ALLOWED_ORIGINS behind your own HTTPS), how to run the tests, and credits (the starter files are from Dim Factory, MIT; ws, MIT).",
+  "recipe": "new-game",
+  "files": [
+    {
+      "from": "game-server",
+      "to": "server.js"
+    },
+    {
+      "from": "game-rooms",
+      "to": "src/server/rooms.js"
+    },
+    {
+      "from": "game-server-doc",
+      "to": "docs/game-server.md"
+    },
+    {
+      "from": "game-loop",
+      "to": "src/engine/loop.js"
+    },
+    {
+      "from": "game-rng",
+      "to": "src/engine/rng.js"
+    },
+    {
+      "from": "game-input",
+      "to": "src/engine/input.js"
+    },
+    {
+      "from": "game-storage",
+      "to": "src/engine/storage.js"
+    },
+    {
+      "from": "game-test-hook",
+      "to": "src/engine/test-hook.js"
+    },
+    {
+      "from": "game-test-hook-doc",
+      "to": "docs/game-test-hook.md"
+    }
+  ],
+  "tags": ["game", "multiplayer", "online", "server", "needs-node"],
+  "fullOnly": true
+}

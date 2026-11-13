@@ -1,0 +1,5 @@
+{"id":1,"method":"initialize","params":{"clientInfo":{"name":"dim-factory","title":null,"version":"0.1.0"},"capabilities":{"experimentalApi":false,"requestAttestation":false}}}
+{"$wait":{"id":1},"$timeoutMs":120000}
+{"method":"initialized"}
+{"id":2,"method":"thread/resume","params":{"threadId":"$threadId","excludeTurns":true,"cwd":"$cwd","sandbox":"workspace-write","approvalPolicy":"on-request","approvalsReviewer":"user"}}
+{"$wait":{"id":2},"$timeoutMs":120000,"$capture":{"threadId":"result.thread.id"}}

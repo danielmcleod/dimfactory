@@ -1,0 +1,80 @@
+{
+  "id": "game-3d-lite",
+  "version": 1,
+  "pack": "games",
+  "label": "Light 3D game (three.js)",
+  "description": "A small 3D game (a marble run, a maze, a flight through rings) on three.js, which the project installs itself with npm (MIT). Optional: Dim Factory does not bundle it. Needs Node.js.",
+  "brief": {
+    "fields": {
+      "genre": {
+        "choices": ["arcade"]
+      },
+      "engine": {
+        "choices": ["threejs"]
+      },
+      "controls": {
+        "choices": ["keyboard", "touch"]
+      },
+      "players": {
+        "choices": ["solo"]
+      },
+      "platform": {
+        "choices": ["desktop", "phone"]
+      },
+      "sound": {
+        "choices": ["effects"]
+      },
+      "save": {
+        "choices": ["high-score", "settings"]
+      },
+      "accessibility": {
+        "choices": ["remap", "pause", "reduced-motion", "colour-safe", "no-flashing"]
+      },
+      "deliverable": {
+        "choices": ["single-page", "itch-zip"]
+      },
+      "constraints": {
+        "choices": ["original-art", "no-network", "no-ads"]
+      },
+      "approach": {
+        "choices": ["core-loop-first", "playtested"]
+      }
+    }
+  },
+  "task": "Make a light 3D browser game in this empty folder on three.js, with no build step (Node.js is installed). Dim Factory does not bundle three.js: the project installs it. First write package.json with \"three\": \"^0.186.1\" in dependencies and one script, test, that runs node --test on tests/*.test.mjs, then run npm install with no package names. index.html maps three to the project's own copy with <script type=\"importmap\">{\"imports\":{\"three\":\"./node_modules/three/build/three.module.js\"}}</script> before <script type=\"module\" src=\"src/main.js\">, and the code imports from 'three' (core only: no addons or loaders). Never load three.js from a CDN and never copy it out of node_modules. If the folder already uses Vite, import 'three' the usual way instead. Dim Factory already put starter modules in src/engine/ (MIT): loop.js (fixed 60 Hz step), rng.js (seeded randomness), input.js (keyboard, touch buttons, gamepad, remappable), storage.js (versioned local saves that never throw) and test-hook.js (window.__game, only with ?test=1); docs/game-test-hook.md explains the hook. Run the rules on loop.js (update with its fixed dt; three.js draws in render), so stepping the hook is exact. Keep it light: one WebGLRenderer on a canvas that fills the window (pixel ratio at most 2), a few meshes from built-in geometries, simple lights, no shadows or post-processing, all art made in code. With reduced motion, no camera shake or swoops. Without WebGL, show a short message instead of a blank page. Every game has: a title screen with how to play and a start button; play; pause with P or Esc and when the window loses focus; game over or a win with the score and Restart; a Settings screen for keys, sound, reduced motion and a colour-safe palette, saved with storage.js. Menus and the score are HTML over the canvas. Big on-screen buttons drive the same actions on a phone. Sound, if any, is made with the Web Audio API after the first key or tap. Use original names, characters and art: familiar mechanics are fine, but never copy a famous game's name, characters, logo, art, music or sounds. Everything the game uses is in the project: no CDN, no network, no third-party scripts, ads or trackers, no eval or new Function. Text a player types is shown with textContent. In src/main.js wire the test hook with a state() that reports scene ('title', 'playing', 'paused', 'over' or 'won'), score, lives and level, and a setSeed that restarts with a seed. Write the plan's acceptance criteria as things a player does and sees, and write playtest.json (data, not code) with one scenario per criterion, as docs/game-test-hook.md shows: Dim Factory plays it with real key presses as a Verify check, so a scenario marked must has to pass. Keep the rules (levels as data, movement, scoring) in plain modules under src/game/ with no DOM or three.js in them, with tests (the same seed gives the same result). Add a .gitignore for node_modules and a README.md: how to play, how to install and open it (npm install, then Play it in Dim Factory or serve the folder with any static server), how to run the tests, how to share it (zip index.html, src/, node_modules/three/build/ and node_modules/three/LICENSE, and upload to itch.io as an HTML5 game), and credits (three.js, MIT, installed with npm; the starter files from Dim Factory, MIT). Make it feel good to play: every action gets clear feedback (a sound, a flash or a small movement), the first moments are easy and it gets harder step by step, and the end of a game shows how it went with a quick way to play again.",
+  "recipe": "new-game",
+  "files": [
+    {
+      "from": "game-loop",
+      "to": "src/engine/loop.js"
+    },
+    {
+      "from": "game-rng",
+      "to": "src/engine/rng.js"
+    },
+    {
+      "from": "game-input",
+      "to": "src/engine/input.js"
+    },
+    {
+      "from": "game-storage",
+      "to": "src/engine/storage.js"
+    },
+    {
+      "from": "game-test-hook",
+      "to": "src/engine/test-hook.js"
+    },
+    {
+      "from": "game-test-hook-doc",
+      "to": "docs/game-test-hook.md"
+    }
+  ],
+  "installs": [
+    {
+      "package": "three",
+      "name": "three.js",
+      "license": "MIT"
+    }
+  ],
+  "tags": ["game", "threejs", "3d", "needs-node"]
+}

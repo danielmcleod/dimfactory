@@ -1,0 +1,17 @@
+// branch / label / goto / onStdinEof: answer each decision until the host closes stdin.
+{"op":"onStdinEof","goto":"eof"}
+{"op":"stdout","line":"ready"}
+{"op":"label","name":"loop"}
+{"op":"branch","on":{"stdinMatch":true},"cases":[{"match":{"decision":"allow"},"capture":{"who":"tool"},"goto":"allow"},{"match":{"decision":"deny"},"goto":"deny"}],"default":"other"}
+{"op":"label","name":"allow"}
+{"op":"stdout","json":{"result":"allowed","tool":"$who"}}
+{"op":"goto","label":"loop"}
+{"op":"label","name":"deny"}
+{"op":"stdout","json":{"result":"denied"}}
+{"op":"goto","label":"loop"}
+{"op":"label","name":"other"}
+{"op":"stdout","json":{"result":"other"}}
+{"op":"goto","label":"loop"}
+{"op":"label","name":"eof"}
+{"op":"stdout","line":"bye"}
+{"op":"exit","code":3}

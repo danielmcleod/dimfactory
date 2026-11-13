@@ -1,0 +1,13 @@
+{"op":"stdout","line":"{"}
+{"op":"stdout","line":"  \"loggedIn\": true,"}
+{"op":"stdout","line":"  \"authMethod\": \"claude.ai\","}
+{"op":"stdout","line":"  \"apiProvider\": \"firstParty\","}
+{"op":"stdout","line":"  \"analyticsDisabled\": false,"}
+{"op":"stdout","line":"  \"projectsDirectory\": \"~\\\\.claude\\\\projects\","}
+{"op":"stdout","line":"  \"configDirectory\": \"~\\\\.claude\","}
+{"op":"stdout","line":"  \"email\": \"user@example.invalid\","}
+{"op":"stdout","line":"  \"orgId\": \"<REDACTED>\","}
+{"op":"stdout","line":"  \"orgName\": \"<REDACTED>\","}
+{"op":"stdout","line":"  \"subscriptionType\": \"max\""}
+{"op":"stdout","line":"}"}
+{"op":"exit","code":0}

@@ -1,0 +1,203 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e0c92-7c8c-4d09-8828-f2019f58d3a7"
+  },
+  {
+    "type": "liveness",
+    "count": 9
+  },
+  {
+    "type": "context",
+    "used": 25616,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e9dEs813wFuuv0QI4387H",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "start",
+    "fp": "2ee557544341"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "ask",
+    "requestId": "fa4e97a0-7635-4395-87eb-12cf88168d71",
+    "kind": "shell",
+    "detail": "Bash: npm --version\nPoru npm quasume (temal qua)\nThis command requires approval",
+    "expiresAt": 600000,
+    "allowSession": true,
+    "reason": "This command requires approval"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e97a0-7635-4395-87eb-12cf88168d71",
+        "response": {
+          "behavior": "deny",
+          "message": "Denied by the user in Dim Factory."
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4e9dEs813wFuuv0QI4387H",
+    "name": "Bash",
+    "summary": "npm --version",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 9
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25742,
+    "cacheRead": 25614,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "Co"
+  },
+  {
+    "type": "text",
+    "delta": "n temal"
+  },
+  {
+    "type": "text",
+    "delta": " `npm --version` sumc pi"
+  },
+  {
+    "type": "text",
+    "delta": "t sedsec si"
+  },
+  {
+    "type": "text",
+    "delta": " Vensedloc, te C "
+  },
+  {
+    "type": "text",
+    "delta": "turqu'e qua us lat sit"
+  },
+  {
+    "type": "text",
+    "delta": "s no quasum"
+  },
+  {
+    "type": "text",
+    "delta": " c"
+  },
+  {
+    "type": "text",
+    "delta": "i porsum. C sc"
+  },
+  {
+    "type": "text",
+    "delta": "ie turqu'e te"
+  },
+  {
+    "type": "text",
+    "delta": "mi con etsecl sumc.\n\nEi elg i"
+  },
+  {
+    "type": "text",
+    "delta": "tte us qua, lad"
+  },
+  {
+    "type": "text",
+    "delta": " ve etus t"
+  },
+  {
+    "type": "text",
+    "delta": "emreip c"
+  },
+  {
+    "type": "text",
+    "delta": "i elt"
+  },
+  {
+    "type": "text",
+    "delta": "et lor"
+  },
+  {
+    "type": "text",
+    "delta": "a Bash do ami Power"
+  },
+  {
+    "type": "text",
+    "delta": "Shell ellorci, do temreip"
+  },
+  {
+    "type": "text",
+    "delta": " C should do"
+  },
+  {
+    "type": "text",
+    "delta": "po us."
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "context",
+    "used": 25742,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Con temal `npm --version` sumc pit sedsec si Vensedloc, te C turqu'e qua us lat sits no quasum ci porsum. C scie turqu'e temi con etsecl sumc.\n\nEi elg itte us qua, lad ve etus temreip ci eltet lora Bash do ami PowerShell ellorci, do temreip C should dopo us.",
+    "usage": {
+      "input": 4,
+      "output": 288,
+      "cacheRead": 41404,
+      "cacheWrite": 9950,
+      "costUsd": 0.050968799999999995
+    }
+  }
+]

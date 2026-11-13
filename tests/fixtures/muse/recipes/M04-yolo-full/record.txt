@@ -1,0 +1,5 @@
+# M04-yolo-full: Full mode (Auto only): --yolo, no sandbox and no prompts (Muse also trusts the folder for the run). A network command and an edit run unasked; the run total (x-assumed) is on run.terminal.completed; exit 0.
+# --yolo runs with no sandbox: only in a disposable scratch copy, never a real project.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; Muse signs in with the key, never the everyday sign-in.
+# <fixture Muse home> is an isolated folder that stands in for the home (never the everyday one): its .config/muse is the profile recorded.
+node scripts/record-fixture.mjs --muse --muse-home "<fixture Muse home>" --bin "<the muse executable>" --cwd "<sandbox>" --out tests/fixtures/muse/exec/M04-yolo-full --id M04 --slug yolo-full --cli-version <muse --version> --timing off --env-file "<a file with META_API_KEY=...>" --pass-file tests/fixtures/muse/recipes/M04-yolo-full/pass.json --timeout 900000 -- exec --json --prompt-file "<repo>/tests/fixtures/muse/recipes/M04-yolo-full/prompt.md" --trust-workspace --yolo

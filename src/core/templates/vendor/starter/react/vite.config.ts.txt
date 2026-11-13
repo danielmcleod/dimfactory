@@ -1,0 +1,36 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+import { copyFileSync, existsSync } from 'node:fs'
+import { resolve } from 'node:path'
+import react from '@vitejs/plugin-react'
+import type { Plugin } from 'vite'
+import { defineConfig } from 'vitest/config'
+
+/**
+ * After a build, dist/404.html is a copy of dist/index.html. Hosts that show 404.html for an address they do not know
+ * (GitHub Pages) then open the app, and its own router shows the right page. public/_redirects does the same on
+ * Netlify and Cloudflare Pages.
+ */
+function singlePageFallback(): Plugin {
+  let outDir = 'dist'
+  return {
+    name: 'single-page-fallback',
+    apply: 'build',
+    configResolved(config) {
+      outDir = resolve(config.root, config.build.outDir)
+    },
+    closeBundle() {
+      const index = resolve(outDir, 'index.html')
+      if (existsSync(index)) copyFileSync(index, resolve(outDir, '404.html'))
+    },
+  }
+}
+
+export default defineConfig({
+  plugins: [react(), singlePageFallback()],
+  // This computer only: the preview and the dev server are not reachable from the network.
+  server: { host: '127.0.0.1' },
+  preview: { host: '127.0.0.1' },
+  test: {
+    environment: 'happy-dom',
+  },
+})

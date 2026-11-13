@@ -1,0 +1,23 @@
+{
+  "id": "electron",
+  "version": 1,
+  "pack": "software",
+  "label": "Electron desktop app",
+  "description": "A desktop app for Windows, macOS and Linux on Electron and TypeScript, with tests and a README.",
+  "brief": {
+    "fields": {
+      "projectType": { "choices": ["desktop"] },
+      "deliverable": { "choices": ["executable"] },
+      "platform": { "choices": ["windows", "macos", "linux"] },
+      "language": { "choices": ["typescript"] }
+    }
+  },
+  "task": "Scaffold an Electron desktop app with TypeScript in this empty folder. Create package.json with the scripts start (build, then launch Electron), build and test (vitest run); a main process in src/main.ts that opens one window with contextIsolation on, nodeIntegration off and a sandboxed renderer; a preload in src/preload.ts that exposes one small, typed API through contextBridge; and a renderer page (index.html with src/renderer.ts) that uses it. Set up Vitest with one test for a pure function the app uses. Add a .gitignore for node_modules and the build output, and a README.md that says what the app is and how to install, run, test and package it.",
+  "recipe": "new-web-app",
+  "create": {
+    "command": "npx create-electron-app@latest . --template=vite-typescript",
+    "shell": "any",
+    "note": "Electron Forge's starter. Run it in the new folder before you press Run; the run then builds on what it created."
+  },
+  "tags": ["desktop", "electron", "typescript"]
+}

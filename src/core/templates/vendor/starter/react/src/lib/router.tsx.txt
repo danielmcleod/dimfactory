@@ -1,0 +1,69 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// A small router for a single-page site: the address bar's path picks the page, links change it without a reload,
+// and the browser's Back and Forward buttons work. Hosts send every address to index.html (public/_redirects, and
+// dist/404.html for GitHub Pages), so an address typed or shared directly opens the right page too.
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from 'react'
+
+interface RouterValue {
+  path: string
+  hash: string
+  navigate: (to: string) => void
+}
+
+const RouterContext = createContext<RouterValue | null>(null)
+
+function current(): { path: string; hash: string } {
+  return { path: window.location.pathname || '/', hash: window.location.hash }
+}
+
+export function RouterProvider({ children }: { children: ReactNode }) {
+  const [where, setWhere] = useState(current)
+
+  useEffect(() => {
+    const onPop = () => setWhere(current())
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
+
+  const navigate = useCallback((to: string) => {
+    const url = new URL(to, window.location.href)
+    if (url.origin !== window.location.origin) {
+      window.location.assign(url.href)
+      return
+    }
+    window.history.pushState(null, '', url.pathname + url.search + url.hash)
+    setWhere({ path: url.pathname, hash: url.hash })
+  }, [])
+
+  const value = useMemo(() => ({ ...where, navigate }), [where, navigate])
+  return <RouterContext.Provider value={value}>{children}</RouterContext.Provider>
+}
+
+export function useRoute(): RouterValue {
+  const value = useContext(RouterContext)
+  if (value === null) throw new Error('useRoute is used outside RouterProvider')
+  return value
+}
+
+type LinkProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> & { to: string }
+
+/** A link inside the site: no page reload, and `aria-current="page"` on the link to the page you are on. */
+export function Link({ to, onClick, children, ...rest }: LinkProps) {
+  const { path, navigate } = useRoute()
+  const target = new URL(to, window.location.href)
+  const internal = target.origin === window.location.origin
+  const active = internal && target.pathname === path && target.hash === ''
+  const handle = (e: MouseEvent<HTMLAnchorElement>) => {
+    onClick?.(e)
+    if (e.defaultPrevented || !internal || e.button !== 0) return
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || rest.target === '_blank') return
+    e.preventDefault()
+    navigate(to)
+  }
+  return (
+    <a href={to} onClick={handle} aria-current={active ? 'page' : undefined} {...rest}>
+      {children}
+    </a>
+  )
+}

@@ -1,0 +1,19 @@
+{
+  "id": "fastapi",
+  "version": 1,
+  "pack": "software",
+  "label": "FastAPI service",
+  "description": "A Python web API on FastAPI, with pytest and a README.",
+  "brief": {
+    "fields": {
+      "projectType": { "choices": ["api"] },
+      "deliverable": { "choices": ["server-app"] },
+      "language": { "choices": ["python"] },
+      "uiFramework": { "choices": ["none"] },
+      "backend": { "choices": ["python-web"] }
+    }
+  },
+  "task": "Scaffold a Python FastAPI service in this empty folder. Create pyproject.toml (Python 3.11 or later) with the dependencies fastapi and uvicorn[standard] and the dev dependencies pytest and httpx; app/__init__.py and app/main.py with a FastAPI app that has GET /health answering {\"ok\": true} and one small example resource; tests/test_main.py using FastAPI's TestClient. Add a .gitignore for .venv, __pycache__ and .pytest_cache, and a README.md that says what the service is and how to create a virtual environment, install, run it (uvicorn app.main:app --reload) and test it (pytest).",
+  "recipe": "new-web-app",
+  "tags": ["api", "python", "fastapi"]
+}

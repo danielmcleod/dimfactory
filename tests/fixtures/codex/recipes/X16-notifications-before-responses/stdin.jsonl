@@ -1,0 +1,8 @@
+{"id":1,"method":"initialize","params":{"clientInfo":{"name":"dim-factory","title":null,"version":"0.1.0"},"capabilities":{"experimentalApi":false,"requestAttestation":false}}}
+{"$wait":{"id":1},"$timeoutMs":120000}
+{"method":"initialized"}
+{"id":2,"method":"thread/start","params":{"cwd":"$cwd","sandbox":"read-only","approvalPolicy":"never","approvalsReviewer":"user","ephemeral":true,"config":{"features.apps":false,"features.plugins":false,"features.hooks":false}}}
+{"$wait":{"id":2},"$timeoutMs":120000,"$capture":{"threadId":"result.thread.id"}}
+{"id":3,"method":"turn/start","params":{"threadId":"$threadId","input":[{"type":"text","text":"Review the change in src/index.ts against the plan. List findings as [must]/[should]/[nit].","text_elements":[]}]}}
+{"$wait":{"id":3},"$timeoutMs":120000,"$capture":{"turnId":"result.turn.id"}}
+{"$wait":{"method":"turn/completed"},"$timeoutMs":600000}

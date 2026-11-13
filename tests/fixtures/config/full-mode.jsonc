@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "yolo": {
+      "implement": { "vendor": "claude", "mode": "full" }
+    }
+  },
+  "passes": {
+    "fix": {
+      "mode": "full"
+    }
+  }
+}

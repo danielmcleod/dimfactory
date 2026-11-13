@@ -1,0 +1,21 @@
+{
+  "id": "data-report",
+  "version": 1,
+  "label": "Data report",
+  "description": "Turn data into a report: research on the question first, charts and a readable report, and a plain-language explanation of what it found.",
+  "toggles": {
+    "clarify": true,
+    "research": true,
+    "security": false,
+    "acceptance": true,
+    "explain": true
+  },
+  "brief": {
+    "category": "data",
+    "fields": {
+      "outputs": { "choices": ["html-report", "chart-images"] },
+      "tooling": { "choices": ["python"] }
+    }
+  },
+  "taskHint": "The question the report answers, the data it reads, and who will read it"
+}

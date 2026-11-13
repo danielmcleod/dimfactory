@@ -1,0 +1,8 @@
+{
+  "kind": "pass",
+  "step": "plan",
+  "mode": "readonly",
+  "planNative": true,
+  "prompt": "Plan how to add a --version flag to the CLI. Do not change files.",
+  "probe": "X01a-handshake-model-list"
+}

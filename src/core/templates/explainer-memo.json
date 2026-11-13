@@ -1,0 +1,18 @@
+{
+  "id": "explainer-memo",
+  "version": 1,
+  "pack": "research-writing",
+  "label": "Research explainer",
+  "description": "A short memo that explains a topic in plain words, with sources: what it is, how it works and what to watch out for.",
+  "brief": {
+    "fields": {
+      "questionType": { "choices": ["explain"] },
+      "depth": { "choices": ["standard"] },
+      "sources": { "choices": ["official", "community"] },
+      "output": { "choices": ["report"] }
+    }
+  },
+  "task": "Set up a research explainer in this empty folder. Write memo.md with these sections: the question in one or two sentences, a short answer first, then what it is and how it works, the key facts and numbers, common mistakes or myths, what it means for the reader, and where to read more. Cite every factual claim with a link in a Sources section at the end, and use only links you found and checked. Do not score options or recommend a choice unless the request asks for one. Keep it to about two pages, in plain words. Write in the language of the request. Add a README.md that says what the memo is about and how to update it.",
+  "recipe": "write-docs",
+  "tags": ["writing", "research", "explainer"]
+}

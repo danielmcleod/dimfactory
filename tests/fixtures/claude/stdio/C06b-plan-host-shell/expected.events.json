@@ -1,0 +1,282 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "plan"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4ede4f-c49b-42bb-8f90-ca3b5e3e9bad"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 27442,
+    "cacheRead": 21823,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eFy18WZruHaLdG6ZBccjc",
+    "name": "Bash",
+    "summary": "git conqua",
+    "phase": "start",
+    "fp": "6d15bdb4d460"
+  },
+  {
+    "type": "liveness",
+    "count": 10
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eAYYKNvcfrIUjFzfTF8gw",
+    "name": "Bash",
+    "summary": "node -e \"require('fs').writeFileSync('x.txt','1')\"",
+    "phase": "start",
+    "fp": "bc89b683bdf9"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eFy18WZruHaLdG6ZBccjc",
+    "name": "Bash",
+    "summary": "git conqua",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 15
+  },
+  {
+    "type": "auto-answered",
+    "requestId": "fa4e8330-049d-4082-8bd0-8aa8b9d27b6a",
+    "decision": "deny",
+    "tool": "Bash",
+    "why": "readonly"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e8330-049d-4082-8bd0-8aa8b9d27b6a",
+        "response": {
+          "behavior": "deny",
+          "message": "Read-only pass"
+        }
+      }
+    }
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eAYYKNvcfrIUjFzfTF8gw",
+    "name": "Bash",
+    "summary": "node -e \"require('fs').writeFileSync('x.txt','1')\"",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 4
+  },
+  {
+    "type": "liveness",
+    "count": 10
+  },
+  {
+    "type": "context",
+    "used": 27879,
+    "cacheRead": 27440,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efTudBVFuyKX9j5Lf7NBD",
+    "name": "Bash",
+    "summary": "git conqua --short",
+    "phase": "start",
+    "fp": "79a510247262"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efTudBVFuyKX9j5Lf7NBD",
+    "name": "Bash",
+    "summary": "git conqua --short",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 9
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Eisi"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n temal ipvenv"
+  },
+  {
+    "type": "text",
+    "delta": "e rem."
+  },
+  {
+    "type": "text",
+    "delta": "\n\n1. **`"
+  },
+  {
+    "type": "text",
+    "delta": "git status`**"
+  },
+  {
+    "type": "text",
+    "delta": " pit admodad. Us remporl"
+  },
+  {
+    "type": "text",
+    "delta": "o \"Sc ettemb turite, eti"
+  },
+  {
+    "type": "text",
+    "delta": "pqua ci ussitm, modlore sed"
+  },
+  {
+    "type": "text",
+    "delta": "m pielp\".\n2. **`"
+  },
+  {
+    "type": "text",
+    "delta": "node -e \"require('f"
+  },
+  {
+    "type": "text",
+    "delta": "s').writeFileSync('"
+  },
+  {
+    "type": "text",
+    "delta": "x.txt','1')\""
+  },
+  {
+    "type": "text",
+    "delta": "`** pit tesitci."
+  },
+  {
+    "type": "text",
+    "delta": " Us duntipbo con eiipu \"Gna"
+  },
+  {
+    "type": "text",
+    "delta": "c-eisi sitl\", lat con cil"
+  },
+  {
+    "type": "text",
+    "delta": "aregnas itlor sed lol"
+  },
+  {
+    "type": "text",
+    "delta": " qua us.\n\nC"
+  },
+  {
+    "type": "text",
+    "delta": " conadte lor"
+  },
+  {
+    "type": "text",
+    "delta": "a `"
+  },
+  {
+    "type": "text",
+    "delta": "git conqua --short` usdunt"
+  },
+  {
+    "type": "text",
+    "delta": "sitl. Us turipve etipqua"
+  },
+  {
+    "type": "text",
+    "delta": ", te co"
+  },
+  {
+    "type": "text",
+    "delta": "n modlore sedm sc porbo"
+  },
+  {
+    "type": "text",
+    "delta": " pielp lat `x.txt"
+  },
+  {
+    "type": "text",
+    "delta": "` pi"
+  },
+  {
+    "type": "text",
+    "delta": "t lol piamsit."
+  },
+  {
+    "type": "context",
+    "used": 27998,
+    "cacheRead": 27877,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 27998,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "plan-captured",
+    "markdown": "Eisi con temal ipvenve rem.\n\n1. **`git status`** pit admodad. Us remporlo \"Sc ettemb turite, etipqua ci ussitm, modlore sedm pielp\".\n2. **`node -e \"require('fs').writeFileSync('x.txt','1')\"`** pit tesitci. Us duntipbo con eiipu \"Gnac-eisi sitl\", lat con cilaregnas itlor sed lol qua us.\n\nC conadte lora `git conqua --short` usduntsitl. Us turipve etipqua, te con modlore sedm sc porbo pielp lat `x.txt` pit lol piamsit.",
+    "source": "final-message"
+  },
+  {
+    "type": "done",
+    "result": "Eisi con temal ipvenve rem.\n\n1. **`git status`** pit admodad. Us remporlo \"Sc ettemb turite, etipqua ci ussitm, modlore sedm pielp\".\n2. **`node -e \"require('fs').writeFileSync('x.txt','1')\"`** pit tesitci. Us duntipbo con eiipu \"Gnac-eisi sitl\", lat con cilaregnas itlor sed lol qua us.\n\nC conadte lora `git conqua --short` usduntsitl. Us turipve etipqua, te con modlore sedm sc porbo pielp lat `x.txt` pit lol piamsit.",
+    "usage": {
+      "input": 6,
+      "output": 563,
+      "cacheRead": 77140,
+      "cacheWrite": 6173,
+      "costUsd": 0.045762
+    }
+  }
+]

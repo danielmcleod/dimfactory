@@ -1,0 +1,18 @@
+{
+  "id": "easy-existing",
+  "version": 1,
+  "label": "Easy: work on a folder you have",
+  "description": "Easy mode's recipe for a change to a folder it did not make: questions only when the change is unclear, no research, the plan to check, an acceptance review, fixes until it passes, and a plain-language explanation. Easy's project permission never covers it.",
+  "toggles": {
+    "clarify": true,
+    "research": false,
+    "testFirst": false,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": { "afterPlan": true, "beforeFix": false },
+  "taskHint": "What should change in this folder?"
+}

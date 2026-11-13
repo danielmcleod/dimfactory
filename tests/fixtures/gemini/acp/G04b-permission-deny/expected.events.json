@@ -1,0 +1,41 @@
+[
+  {
+    "type": "session",
+    "id": "7c4e9a12-3b5d-4f60-8a1b-2c3d4e5f6005"
+  },
+  {
+    "type": "tool",
+    "id": "run_shell_command-1791602700101",
+    "phase": "start"
+  },
+  {
+    "type": "ask",
+    "kind": "shell",
+    "allowSession": true
+  },
+  {
+    "type": "tool",
+    "id": "run_shell_command-1791602700101",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "text",
+    "delta": "Skipped the dry run as asked."
+  },
+  {
+    "type": "meta",
+    "key": "usageApprox",
+    "value": {
+      "reason": "no-cached-split"
+    }
+  },
+  {
+    "type": "done",
+    "result": "Skipped the dry run as asked.",
+    "usage": {
+      "input": 12288,
+      "output": 220
+    }
+  }
+]

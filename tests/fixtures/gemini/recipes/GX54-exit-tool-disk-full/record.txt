@@ -1,0 +1,4 @@
+# GX54-exit-tool-disk-full: FatalToolExecutionError (exit 54; only NO_SPACE_LEFT is fatal) during the turn.
+# Only on a full disk: keep synthesized until observed.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/GX54-exit-tool-disk-full --id GX54 --slug exit-tool-disk-full --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/GX54-exit-tool-disk-full/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/GX54-exit-tool-disk-full/pass.json --responders tests/fixtures/gemini/recipes/GX54-exit-tool-disk-full/responders.mjs --keep-stdin --timeout 900000 -- --acp --skip-trust

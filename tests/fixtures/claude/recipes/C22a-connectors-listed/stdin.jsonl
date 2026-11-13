@@ -1,0 +1,8 @@
+{"type":"control_request","request_id":"init-1","request":{"subtype":"initialize"}}
+{"$wait":{"type":"control_response","response":{"request_id":"init-1"}},"$timeoutMs":30000}
+{"type":"control_request","request_id":"st-1","request":{"subtype":"mcp_status"}}
+{"$wait":{"type":"control_response","response":{"request_id":"st-1"}},"$timeoutMs":30000}
+{"$sleep":10000}
+{"type":"control_request","request_id":"st-2","request":{"subtype":"mcp_status"}}
+{"$wait":{"type":"control_response","response":{"request_id":"st-2"}},"$timeoutMs":30000}
+{"$close":true}

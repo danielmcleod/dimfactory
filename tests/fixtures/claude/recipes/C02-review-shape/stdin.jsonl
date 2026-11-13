@@ -1,0 +1,5 @@
+{"type":"control_request","request_id":"init-1","request":{"subtype":"initialize"}}
+{"$wait":{"type":"control_response","response":{"request_id":"init-1"}},"$timeoutMs":30000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"Read src/index.ts and list its exported names. Then try to run: node -e \"require('fs').writeFileSync('x.txt','1')\" and report whether it was allowed."}]},"parent_tool_use_id":null}
+{"$wait":{"type":"result"},"$timeoutMs":240000}
+{"$close":true}

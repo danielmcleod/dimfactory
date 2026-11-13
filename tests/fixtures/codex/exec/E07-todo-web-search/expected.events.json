@@ -1,0 +1,46 @@
+[
+  {
+    "type": "session",
+    "id": "019a1c3e-5b2f-7c41-9d8e-0a1b2c3d4e57"
+  },
+  {
+    "type": "tool",
+    "name": "todo"
+  },
+  {
+    "type": "tool",
+    "id": "item_1",
+    "name": "web_search",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_1",
+    "name": "web_search",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "name": "todo"
+  },
+  {
+    "type": "tool",
+    "name": "todo"
+  },
+  {
+    "type": "text",
+    "delta": "{\"generatedAt\":\"2026-10-09T23:30:00Z\",\"entries\":[],\"newModels\":[],\"unverifiable\":[]}"
+  },
+  {
+    "type": "done",
+    "result": "{\"generatedAt\":\"2026-10-09T23:30:00Z\",\"entries\":[],\"newModels\":[],\"unverifiable\":[]}",
+    "usage": {
+      "input": 8192,
+      "output": 400,
+      "cacheRead": 4096,
+      "cacheWrite": 0,
+      "reasoning": 200
+    }
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "id": "bug-fix",
+  "version": 1,
+  "label": "Bug fix",
+  "description": "Fix a bug: a failing test that reproduces it comes first, then the fix, re-checked until the checks pass.",
+  "toggles": {
+    "clarify": false,
+    "research": false,
+    "testFirst": true,
+    "acceptance": true,
+    "fixRounds": 2,
+    "explain": false
+  },
+  "verify": { "enabled": true },
+  "brief": {
+    "category": "software",
+    "fields": {
+      "constraints": { "choices": ["keep-style", "no-new-deps"] }
+    }
+  },
+  "taskHint": "What goes wrong, how to make it happen, and what should happen instead"
+}

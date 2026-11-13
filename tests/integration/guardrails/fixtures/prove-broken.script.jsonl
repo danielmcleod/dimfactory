@@ -1,0 +1,9 @@
+// Fake Claude for Prove it: no hook is asked, and the file changes anyway (as if a rule did not hold).
+{"op":"expectArgs","includes":["bypassPermissions"]}
+{"op":"expectStdin","match":{"type":"control_request","request":{"subtype":"initialize"}},"capture":{"rid":"request_id"}}
+{"op":"stdout","json":{"type":"control_response","response":{"subtype":"success","request_id":"$rid","response":{"models":[]}}}}
+{"op":"expectStdin","match":{"type":"user","message":{"role":"user"}}}
+{"op":"stdout","json":{"type":"system","subtype":"init","session_id":"prove-session-2","cwd":"$FAKE_CWD","model":"claude-haiku-4-5","permissionMode":"bypassPermissions"}}
+{"op":"writeFile","path":"protected.txt","content":"changed\n"}
+{"op":"stdout","json":{"type":"result","subtype":"success","is_error":false,"num_turns":2,"result":"Done.","session_id":"prove-session-2","total_cost_usd":0.001,"usage":{"input_tokens":100,"output_tokens":5}}}
+{"op":"exit","code":0}

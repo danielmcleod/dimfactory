@@ -1,0 +1,4 @@
+// Leaves a long-sleeping grandchild behind (kill-tree and orphan-sweep tests).
+{"op":"spawnGrandchild","sleepMs":30000}
+{"op":"stdout","json":{"type":"grandchild","pid":"$grandchildPid"}}
+{"op":"exit","code":0}

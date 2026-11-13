@@ -1,0 +1,1 @@
+Add a --version flag to the CLI that prints the package version.

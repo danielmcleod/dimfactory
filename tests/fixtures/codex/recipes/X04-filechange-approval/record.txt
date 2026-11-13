@@ -1,0 +1,8 @@
+# X04-filechange-approval: Implement with a write outside the folder (the thread X07 resumes). Live, the model made the write with a shell command, so the ask is a command approval; the fileChange approval stays synthesized as X04b.
+# Recorded with codex-cli 0.160.1 (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# The model is pinned as Dim Factory sends a picked one (gpt-6-luna, model/list default): the profile configures a model a ChatGPT login is refused (X09h).
+# Adapted: The prompt asks for a file ../X04-version.txt outside the folder.
+# responders.mjs answers every server request as the adapter does (recipes/dim-factory-responder.mjs).
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/app-server/X04-filechange-approval --id X04 --slug filechange-approval --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/X04-filechange-approval/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X04-filechange-approval/pass.json --responders tests/fixtures/codex/recipes/X04-filechange-approval/responders.mjs

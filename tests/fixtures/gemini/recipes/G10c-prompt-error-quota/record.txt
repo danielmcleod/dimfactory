@@ -1,0 +1,4 @@
+# G10c-prompt-error-quota: The model call fails after Gemini's own retries: session/prompt answers -32603 "Internal error" with the API error in data.details (a daily quota, RESOURCE_EXHAUSTED) → quota_exceeded.
+# Only when the account really hits its daily quota: keep synthesized until observed.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/G10c-prompt-error-quota --id G10c --slug prompt-error-quota --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/G10c-prompt-error-quota/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/G10c-prompt-error-quota/pass.json --responders tests/fixtures/gemini/recipes/G10c-prompt-error-quota/responders.mjs --timeout 900000 -- --acp --skip-trust

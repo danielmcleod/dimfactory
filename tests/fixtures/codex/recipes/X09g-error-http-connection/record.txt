@@ -1,0 +1,4 @@
+# X09g-error-http-connection: turn/completed failed with codexErrorInfo {"httpConnectionFailed":{"httpStatusCode":502}} → network.
+# Block chatgpt.com (e.g. a bad proxy) for the run.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X09g-error-http-connection --id X09g --slug error-http-connection --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X09g-error-http-connection/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X09g-error-http-connection/pass.json

@@ -1,0 +1,25 @@
+{
+  "id": "vite-react",
+  "version": 1,
+  "pack": "software",
+  "label": "Vite + React + TypeScript",
+  "description": "A single-page web app: Vite, React and TypeScript, with Vitest and a README.",
+  "brief": {
+    "fields": {
+      "projectType": { "choices": ["spa"] },
+      "deliverable": { "choices": ["spa-bundle"] },
+      "platform": { "choices": ["web"] },
+      "language": { "choices": ["typescript"] },
+      "uiFramework": { "choices": ["react"] },
+      "backend": { "choices": ["none"] }
+    }
+  },
+  "task": "Scaffold a Vite + React + TypeScript single-page app in this empty folder. Create package.json with the scripts dev (vite), build (tsc -b && vite build), preview (vite preview) and test (vitest run); index.html; vite.config.ts; tsconfig.json; src/main.tsx, src/App.tsx with a small working page, and src/App.css. Set up Vitest with @testing-library/react and jsdom, with one test for App. Add a .gitignore for node_modules and dist, and a README.md that says what the app is and how to install, run, test and build it.",
+  "recipe": "new-web-app",
+  "create": {
+    "command": "npm create vite@latest . -- --template react-ts",
+    "shell": "any",
+    "note": "Run it in the new folder before you press Run; the run then builds on what it created."
+  },
+  "tags": ["web", "react", "typescript", "vite"]
+}

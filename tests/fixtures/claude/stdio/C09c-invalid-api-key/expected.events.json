@@ -1,0 +1,48 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "acceptEdits"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e3d1d-1f78-4f15-816a-305d111e43e4"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "meta",
+    "key": "failureHints",
+    "value": [
+      "claude-env-key"
+    ]
+  },
+  {
+    "type": "error",
+    "message": "API key is invalid (401). ANTHROPIC_API_KEY is set and takes precedence over your Claude login.",
+    "raw": "{\"type\":\"assistant\",\"message\":{\"diagnostics\":null,\"id\":\"fa4e5ba3-bfea-4c82-82cf-9b2d3a843b29\",\"container\":null,\"model\":\"<synthetic>\",\"role\":\"assistant\",\"stop_details\":null,\"stop_reason\":\"stop_sequence\",\"stop_sequence\":\"\",\"type\":\"message\",\"usage\":{\"output_tokens_details\":null,\"input_tokens\":0,\"output_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":null,\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":null,\"iterations\":null,\"speed\":null,\"fallback_credit\":null},\"content\":[{\"type\":\"text\",\"text\":\"Invalid API key · Fix external API key\"}],\"context_management\":null},\"parent_tool_use_id\":null,\"session_id\":\"fa4e3d1d-1f78-4f15-816a-305d111e43e4\",\"uuid\":\"[REDACTED]\",\"timestamp\":\"2030-01-01T00:00:00.945Z\",\"error\":\"authentication_failed\",\"request_id\":\"req_fa4eR8eINSqWxaDw0A25gtma\",\"is_api_error_message\":true}",
+    "fatal": true,
+    "category": "auth_required"
+  }
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e342b-f2e8-4c87-8e1d-65094f5376fe"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "context",
+    "used": 26584,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "OK"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "context",
+    "used": 26584,
+    "window": 200000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "OK",
+    "usage": {
+      "input": 10,
+      "output": 46,
+      "cacheRead": 0,
+      "cacheWrite": 26574,
+      "costUsd": 0.053388
+    }
+  }
+]

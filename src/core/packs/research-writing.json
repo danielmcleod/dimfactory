@@ -1,0 +1,157 @@
+{
+  "id": "research-writing",
+  "version": 1,
+  "label": "Research and writing",
+  "description": "Questions answered from sources and written up: comparisons, reviews, investigations and memos.",
+  "detect": {
+    "keywords": [
+      "research report",
+      "research on",
+      "research into",
+      "research for",
+      "market analysis",
+      "competitive analysis",
+      "decision memo",
+      "investigate",
+      "compare",
+      "comparison",
+      "literature review",
+      "sources",
+      "survey",
+      "find out",
+      "look into",
+      "pros and cons",
+      "evaluate options",
+      "state of the art",
+      "study",
+      "studies",
+      "papers",
+      "which is better",
+      "alternatives",
+      "landscape",
+      "due diligence"
+    ],
+    "files": ["references.bib", "*.bib", "*.ris", "*.enl"]
+  },
+  "groups": [
+    {
+      "id": "questionType",
+      "label": "Question type",
+      "hint": "What kind of answer you need.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "compare",
+          "label": "Compare options",
+          "keywords": ["compare", "comparison", "versus", "vs", "which is better"]
+        },
+        { "id": "explain", "label": "Explain a topic", "keywords": ["explain", "how does", "what is"] },
+        {
+          "id": "recommend",
+          "label": "Recommend one",
+          "keywords": ["recommend", "recommendation", "best option"]
+        },
+        {
+          "id": "landscape",
+          "label": "Map the landscape",
+          "hint": "Who and what exists in a space.",
+          "keywords": ["landscape", "market map", "overview of"]
+        },
+        {
+          "id": "fact-check",
+          "label": "Check a claim",
+          "keywords": ["fact-check", "fact check", "verify the claim", "is it true"]
+        }
+      ]
+    },
+    {
+      "id": "depth",
+      "label": "Depth",
+      "hint": "How far to dig.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "quick",
+          "label": "Quick scan",
+          "hint": "A short answer from a few good sources.",
+          "keywords": ["quick", "brief", "short answer"]
+        },
+        { "id": "standard", "label": "Standard", "hint": "A solid answer with the main sources." },
+        {
+          "id": "deep",
+          "label": "Deep dive",
+          "hint": "Thorough, with many sources and caveats.",
+          "keywords": ["deep dive", "thorough", "comprehensive", "in-depth"]
+        }
+      ]
+    },
+    {
+      "id": "sources",
+      "label": "Sources",
+      "hint": "Which sources count.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "official",
+          "label": "Official docs and vendors",
+          "keywords": ["official docs", "official documentation"]
+        },
+        {
+          "id": "academic",
+          "label": "Academic papers",
+          "keywords": ["papers", "academic", "peer-reviewed", "arxiv"]
+        },
+        { "id": "news", "label": "News and industry", "keywords": ["news", "industry reports"] },
+        {
+          "id": "community",
+          "label": "Community",
+          "hint": "Forums, issues and discussions.",
+          "keywords": ["reddit", "forums", "community"]
+        },
+        {
+          "id": "local-files",
+          "label": "Files in this folder",
+          "keywords": ["these files", "this folder", "the attached"]
+        }
+      ]
+    },
+    {
+      "id": "output",
+      "label": "Output",
+      "hint": "How the findings are delivered.",
+      "multi": false,
+      "other": true,
+      "options": [
+        { "id": "summary", "label": "Short summary", "keywords": ["summary", "tl;dr", "summarize"] },
+        { "id": "report", "label": "Full report", "keywords": ["report", "write-up"] },
+        { "id": "table", "label": "Comparison table", "keywords": ["table", "comparison table", "matrix"] },
+        {
+          "id": "annotated-list",
+          "label": "Annotated source list",
+          "keywords": ["reading list", "annotated bibliography", "source list"]
+        }
+      ]
+    }
+  ],
+  "research": {
+    "lenses": [
+      {
+        "id": "literature",
+        "label": "Literature",
+        "ask": "Which reports, papers and primary sources cover this topic, and what do they conclude?",
+        "web": true
+      },
+      {
+        "id": "competitors",
+        "label": "Competitive landscape",
+        "ask": "Who are the main players or alternatives, and how do they compare?",
+        "web": true
+      }
+    ],
+    "defaults": ["literature", "competitors", "standards", "pitfalls"],
+    "on": true
+  }
+}

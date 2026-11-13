@@ -1,0 +1,251 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e34d9-d153-4cc4-8f30-0850bd01b332"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " qu"
+  },
+  {
+    "type": "text",
+    "delta": "a co"
+  },
+  {
+    "type": "text",
+    "delta": "n secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m npm"
+  },
+  {
+    "type": "text",
+    "delta": " lorsitse"
+  },
+  {
+    "type": "text",
+    "delta": " ipusmo"
+  },
+  {
+    "type": "text",
+    "delta": " temal"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d laremma"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " quagn"
+  },
+  {
+    "type": "text",
+    "delta": " sedma"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t ut"
+  },
+  {
+    "type": "text",
+    "delta": "c `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " laali"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n duntus"
+  },
+  {
+    "type": "text",
+    "delta": "e’u"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "q quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e modlorel"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e562d-6225-4485-8700-258d46c3cea1",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "context",
+    "used": 15433,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e22af-40f0-4b01-8f47-51db3dd31415",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "context",
+    "used": 15601,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e40e6-a586-4c53-8b20-c32b1df7c8c9",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e40e6-a586-4c53-8b20-c32b1df7c8c9",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 15886,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e1edf-9265-4010-8f71-8c5218e2e4b0",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e1edf-9265-4010-8f71-8c5218e2e4b0",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16077,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e5cce-0631-4687-8605-539645219681",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "ask",
+    "kind": "shell",
+    "allowSession": false
+  },
+  {
+    "type": "meta",
+    "key": "lateAllowRule"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e5cce-0631-4687-8605-539645219681",
+    "name": "shell",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "context",
+    "used": 16077,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "meta",
+    "key": "usage",
+    "value": {
+      "input": 17064,
+      "output": 621,
+      "cacheRead": 45312,
+      "cacheWrite": 0,
+      "reasoning": 320
+    }
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e562d-6225-4485-8700-258d46c3cea1",
+    "name": "shell",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e22af-40f0-4b01-8f47-51db3dd31415",
+    "name": "shell",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "error",
+    "fatal": true,
+    "category": "ask_timeout"
+  }
+]

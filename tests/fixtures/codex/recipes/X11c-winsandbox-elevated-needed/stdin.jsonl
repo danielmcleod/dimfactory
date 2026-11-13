@@ -1,0 +1,6 @@
+{"id":1,"method":"initialize","params":{"clientInfo":{"name":"dim-factory","title":null,"version":"0.1.0"},"capabilities":{"experimentalApi":false,"requestAttestation":false}}}
+{"$wait":{"id":1},"$timeoutMs":120000}
+{"method":"initialized"}
+{"id":2,"method":"windowsSandbox/setupStart","params":{"mode":"unelevated"}}
+{"$wait":{"id":2},"$timeoutMs":120000}
+{"$wait":{"method":"windowsSandbox/setupCompleted"},"$timeoutMs":600000}

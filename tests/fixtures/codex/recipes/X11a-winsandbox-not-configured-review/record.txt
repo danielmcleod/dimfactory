@@ -1,0 +1,4 @@
+# X11a-winsandbox-not-configured-review: Windows sandbox not set up (readiness notConfigured, as X01b recorded live): the read-only Review still runs, its shell read fails, and it reviews from the diff (the degraded copy).
+# The Codex Windows sandbox procedure, step 1 (README).
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X11a-winsandbox-not-configured-review --id X11a --slug winsandbox-not-configured-review --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X11a-winsandbox-not-configured-review/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X11a-winsandbox-not-configured-review/pass.json

@@ -1,0 +1,4 @@
+# GX52-exit-config: FatalConfigError (exit 52): a settings file Gemini cannot read.
+# A broken settings.json in the fixture profile (restore it afterwards).
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/GX52-exit-config --id GX52 --slug exit-config --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/GX52-exit-config/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/GX52-exit-config/pass.json --responders tests/fixtures/gemini/recipes/GX52-exit-config/responders.mjs --keep-stdin --timeout 900000 -- --acp --skip-trust

@@ -1,0 +1,1 @@
+Fix the findings below. [must] cli.ts: --version prints undefined when package.json has no version.

@@ -1,0 +1,19 @@
+{
+  "id": "data-report",
+  "version": 1,
+  "pack": "data",
+  "label": "Data report (Python + pandas)",
+  "description": "Load a CSV, clean it, chart it and write an HTML report, with Python and pandas.",
+  "brief": {
+    "fields": {
+      "sources": { "choices": ["csv"] },
+      "outputs": { "choices": ["html-report", "chart-images", "cleaned-data"] },
+      "chartTypes": { "choices": ["line", "bar", "table"] },
+      "refresh": { "choices": ["once"] },
+      "tooling": { "choices": ["python"] }
+    }
+  },
+  "task": "Set up a data report project in Python in this empty folder. Create pyproject.toml (Python 3.11 or later) with pandas and matplotlib, and pytest as a dev dependency; data/sample.csv with a small made-up example dataset; report/load.py (read and clean the data, with typed columns), report/charts.py (a line chart and a bar chart saved under out/), and report/build.py, which writes out/report.html with a summary table and the charts. Add tests/test_load.py for the cleaning. Add a .gitignore for .venv, __pycache__ and out/, and a README.md that says how to create a virtual environment, install, swap in real data, build the report (python -m report.build) and test it (pytest).",
+  "recipe": "data-report",
+  "tags": ["data", "python", "pandas"]
+}

@@ -1,0 +1,8 @@
+# X07-fix-resume-new-process: Fix in a new process: thread/resume re-sends the restored total, the pass reports only its own delta (X04 + X07 = the final cumulative total).
+# Recorded with codex-cli 0.160.1 (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# The model is pinned as Dim Factory sends a picked one (gpt-6-luna, model/list default): the profile configures a model a ChatGPT login is refused (X09h).
+# Record X04 first; threadId = its thread id, priorUsage = its last cumulative total.
+# responders.mjs answers every server request as the adapter does (recipes/dim-factory-responder.mjs).
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/app-server/X07-fix-resume-new-process --id X07 --slug fix-resume-new-process --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/X07-fix-resume-new-process/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X07-fix-resume-new-process/pass.json --responders tests/fixtures/codex/recipes/X07-fix-resume-new-process/responders.mjs --var threadId=<thread id>

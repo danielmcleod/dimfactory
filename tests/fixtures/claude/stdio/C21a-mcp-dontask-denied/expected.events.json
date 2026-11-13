@@ -1,0 +1,274 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4eaa00-f3be-4ad6-8ca0-2a6b8cd822e7"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25441,
+    "cacheRead": 17226,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "'ei etm"
+  },
+  {
+    "type": "text",
+    "delta": "a con duntd"
+  },
+  {
+    "type": "text",
+    "delta": "u qua con doit"
+  },
+  {
+    "type": "text",
+    "delta": "g-bosc ec"
+  },
+  {
+    "type": "text",
+    "delta": "ho sumi lat sumc"
+  },
+  {
+    "type": "text",
+    "delta": " us lora \""
+  },
+  {
+    "type": "text",
+    "delta": "in\"."
+  },
+  {
+    "type": "liveness",
+    "count": 11
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ewOKfAGuQRx2zwFVlnhyQ",
+    "name": "ToolSearch",
+    "summary": "select:mcp__probe-echo__echo",
+    "phase": "start",
+    "fp": "a25119ca4d85"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ewOKfAGuQRx2zwFVlnhyQ",
+    "name": "ToolSearch",
+    "summary": "select:mcp__probe-echo__echo",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 25765,
+    "cacheRead": 25431,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 5
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eQxiaWHLsrOAqe3dIP056",
+    "name": "mcp__<REDACTED>",
+    "summary": "mcp__<REDACTED>",
+    "phase": "start",
+    "fp": "448c2bf7b48e"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4eQxiaWHLsrOAqe3dIP056",
+    "name": "mcp__<REDACTED>",
+    "summary": "mcp__<REDACTED>",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 213
+  },
+  {
+    "type": "liveness",
+    "count": 7
+  },
+  {
+    "type": "context",
+    "used": 26068,
+    "cacheRead": 25755,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "text",
+    "delta": "Co"
+  },
+  {
+    "type": "text",
+    "delta": "n sumc"
+  },
+  {
+    "type": "text",
+    "delta": " pit conama"
+  },
+  {
+    "type": "text",
+    "delta": "l sci ci cilaregnas"
+  },
+  {
+    "type": "text",
+    "delta": " quasit"
+  },
+  {
+    "type": "text",
+    "delta": ". Lop"
+  },
+  {
+    "type": "text",
+    "delta": "o'u co"
+  },
+  {
+    "type": "text",
+    "delta": "n eiipu:"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n**Cilaregnas"
+  },
+  {
+    "type": "text",
+    "delta": " c"
+  },
+  {
+    "type": "text",
+    "delta": "i ami mcp__probe-"
+  },
+  {
+    "type": "text",
+    "delta": "echo__echo sec sede sedse"
+  },
+  {
+    "type": "text",
+    "delta": "c inuscon Eitura Adus sc eimodsi si"
+  },
+  {
+    "type": "text",
+    "delta": " tur'e pis pila.**"
+  },
+  {
+    "type": "text",
+    "delta": "\n\nTur"
+  },
+  {
+    "type": "text",
+    "delta": "s s"
+  },
+  {
+    "type": "text",
+    "delta": "c co"
+  },
+  {
+    "type": "text",
+    "delta": "n eiipu"
+  },
+  {
+    "type": "text",
+    "delta": " gnaream duntipb"
+  },
+  {
+    "type": "text",
+    "delta": "o ipei piutalimaa"
+  },
+  {
+    "type": "text",
+    "delta": " ci boali"
+  },
+  {
+    "type": "text",
+    "delta": "s con doit"
+  },
+  {
+    "type": "text",
+    "delta": "g-bosc ec"
+  },
+  {
+    "type": "text",
+    "delta": "ho sumi lor"
+  },
+  {
+    "type": "text",
+    "delta": "a \""
+  },
+  {
+    "type": "text",
+    "delta": "in\"."
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 26068,
+    "window": 200000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "Con sumc pit conamal sci ci cilaregnas quasit. Lopo'u con eiipu:\n\n**Cilaregnas ci ami mcp__probe-echo__echo sec sede sedsec inuscon Eitura Adus sc eimodsi si tur'e pis pila.**\n\nTurs sc con eiipu gnaream duntipbo ipei piutalimaa ci boalis con doitg-bosc echo sumi lora \"in\".",
+    "usage": {
+      "input": 28,
+      "output": 405,
+      "cacheRead": 68412,
+      "cacheWrite": 8834,
+      "costUsd": 0.0265622
+    }
+  }
+]

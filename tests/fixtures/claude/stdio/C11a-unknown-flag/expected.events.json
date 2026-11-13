@@ -1,0 +1,9 @@
+[
+  {
+    "type": "error",
+    "message": "error: unknown option '--not-a-real-flag'",
+    "raw": "error: unknown option '--not-a-real-flag'",
+    "fatal": true,
+    "category": "flag_drift"
+  }
+]

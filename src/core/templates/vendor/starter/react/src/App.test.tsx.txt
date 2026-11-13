@@ -1,0 +1,47 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { afterEach, describe, expect, it } from 'vitest'
+import App from './App'
+import { home } from './content'
+
+afterEach(() => {
+  cleanup()
+  window.history.pushState(null, '', '/')
+  delete document.documentElement.dataset.theme
+})
+
+describe('the site', () => {
+  it('shows the home page with its heading and the main navigation', async () => {
+    render(<App />)
+    expect(screen.getByRole('heading', { level: 1, name: home.title })).toBeTruthy()
+    expect(screen.getByRole('navigation', { name: 'Main' })).toBeTruthy()
+    // The updates load, then show (or say there are none yet).
+    expect(await screen.findByRole('heading', { name: home.updatesTitle })).toBeTruthy()
+  })
+
+  it('opens About from the navigation without reloading the page', () => {
+    render(<App />)
+    const nav = screen.getByRole('navigation', { name: 'Main' })
+    const link = Array.from(nav.querySelectorAll('a')).find((a) => a.textContent === 'About')
+    expect(link).toBeTruthy()
+    fireEvent.click(link as HTMLAnchorElement)
+    expect(window.location.pathname).toBe('/about')
+    expect(screen.getByRole('heading', { level: 1, name: 'About' })).toBeTruthy()
+    expect(link?.getAttribute('aria-current')).toBe('page')
+  })
+
+  it('shows the not-found page for an address the site does not have', () => {
+    window.history.pushState(null, '', '/no-such-page')
+    render(<App />)
+    expect(screen.getByRole('heading', { level: 1, name: 'We could not find that page' })).toBeTruthy()
+  })
+
+  it('switches between light and dark', () => {
+    render(<App />)
+    const toggle = screen.getByRole('button', { name: /switch to (dark|light) theme/i })
+    const before = toggle.getAttribute('aria-label')
+    fireEvent.click(toggle)
+    expect(document.documentElement.dataset.theme).toMatch(/^(light|dark)$/)
+    expect(toggle.getAttribute('aria-label')).not.toBe(before)
+  })
+})

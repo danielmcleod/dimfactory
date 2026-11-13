@@ -1,0 +1,68 @@
+[
+  {
+    "type": "session",
+    "id": "fa4ec6e7-16ee-424f-805e-001798afaa98"
+  },
+  {
+    "type": "text",
+    "delta": "C’ei lorqu con remsedu CLI lat duntuse modlorel, turd poripl con losumus-quasume lorp te `--version` bodod labove `undefined`."
+  },
+  {
+    "type": "tool",
+    "id": "item_1",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_1",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_2",
+    "name": "edit",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_2",
+    "name": "edit",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "item_3",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "item_3",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Eisumse `--version` ci sedit `unknown` ei `package.json` sec no vensec quasume, te us ett’e sedit `undefined`. C pibo’e qua vendo."
+  },
+  {
+    "type": "done",
+    "result": "Eisumse `--version` ci sedit `unknown` ei `package.json` sec no vensec quasume, te us ett’e sedit `undefined`. C pibo’e qua vendo.",
+    "usage": {
+      "input": 6827,
+      "output": 745,
+      "cacheRead": 68608,
+      "cacheWrite": 0,
+      "reasoning": 420
+    }
+  }
+]

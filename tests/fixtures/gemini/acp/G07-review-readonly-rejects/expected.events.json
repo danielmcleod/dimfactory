@@ -1,0 +1,68 @@
+[
+  {
+    "type": "session",
+    "id": "7c4e9a12-3b5d-4f60-8a1b-2c3d4e5f6011"
+  },
+  {
+    "type": "tool",
+    "id": "read_file-1791602700101",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "read_file-1791602700101",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "run_shell_command-1791602700202",
+    "phase": "start"
+  },
+  {
+    "type": "auto-answered",
+    "decision": "deny",
+    "why": "readonly"
+  },
+  {
+    "type": "tool",
+    "id": "run_shell_command-1791602700202",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "tool",
+    "id": "replace-1791602700303",
+    "phase": "start"
+  },
+  {
+    "type": "auto-answered",
+    "decision": "deny",
+    "why": "readonly"
+  },
+  {
+    "type": "tool",
+    "id": "replace-1791602700303",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "text",
+    "delta": "[should] cli.ts: --version prints undefined when package.json has no version."
+  },
+  {
+    "type": "meta",
+    "key": "usageApprox",
+    "value": {
+      "reason": "no-cached-split"
+    }
+  },
+  {
+    "type": "done",
+    "result": "[should] cli.ts: --version prints undefined when package.json has no version.",
+    "usage": {
+      "input": 15360,
+      "output": 420
+    }
+  }
+]

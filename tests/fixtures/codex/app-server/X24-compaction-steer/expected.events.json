@@ -1,0 +1,234 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e3bd0-1313-4b5a-8fef-569a77212bed"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " qu"
+  },
+  {
+    "type": "text",
+    "delta": "a ut"
+  },
+  {
+    "type": "text",
+    "delta": "te ipvenv"
+  },
+  {
+    "type": "text",
+    "delta": "e remamlorlo"
+  },
+  {
+    "type": "text",
+    "delta": " re"
+  },
+  {
+    "type": "text",
+    "delta": " ampors"
+  },
+  {
+    "type": "text",
+    "delta": "c,"
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d gna"
+  },
+  {
+    "type": "text",
+    "delta": "c con"
+  },
+  {
+    "type": "text",
+    "delta": " secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m remdun"
+  },
+  {
+    "type": "text",
+    "delta": " sumd"
+  },
+  {
+    "type": "text",
+    "delta": " con"
+  },
+  {
+    "type": "text",
+    "delta": " quasum"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4eba24-d203-4162-8c61-2eb338c8c9c4",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4eba24-d203-4162-8c61-2eb338c8c9c4",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 13293,
+    "window": 258400,
+    "cacheRead": 11008,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e870d-835f-4101-8d6c-2bcba86abc6f",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e870d-835f-4101-8d6c-2bcba86abc6f",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 26012,
+    "window": 258400,
+    "cacheRead": 12672,
+    "source": "request"
+  },
+  {
+    "type": "compaction",
+    "phase": "start"
+  },
+  {
+    "type": "context",
+    "used": 7274,
+    "window": 258400,
+    "cacheRead": 0,
+    "source": "request"
+  },
+  {
+    "type": "compaction",
+    "phase": "end"
+  },
+  {
+    "type": "meta",
+    "key": "compactionReminder",
+    "value": {
+      "sent": true
+    }
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e97ad-cc02-4414-8b3a-71deb6bf9dee",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e97ad-cc02-4414-8b3a-71deb6bf9dee",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 13342,
+    "window": 258400,
+    "cacheRead": 12672,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "3"
+  },
+  {
+    "type": "text",
+    "delta": "x"
+  },
+  {
+    "type": "text",
+    "delta": "n "
+  },
+  {
+    "type": "text",
+    "delta": "3"
+  },
+  {
+    "type": "text",
+    "delta": "sq"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "30"
+  },
+  {
+    "type": "text",
+    "delta": "w"
+  },
+  {
+    "type": "text",
+    "delta": "\n"
+  },
+  {
+    "type": "text",
+    "delta": "HER"
+  },
+  {
+    "type": "text",
+    "delta": "O"
+  },
+  {
+    "type": "text",
+    "delta": "N-"
+  },
+  {
+    "type": "text",
+    "delta": "42"
+  },
+  {
+    "type": "context",
+    "used": 26051,
+    "window": 258400,
+    "cacheRead": 13056,
+    "source": "request"
+  },
+  {
+    "type": "done",
+    "result": "3xn 3sq 30w\nHERON-42",
+    "usage": {
+      "input": 28564,
+      "output": 726,
+      "cacheRead": 49408,
+      "cacheWrite": 0,
+      "reasoning": 392
+    }
+  }
+]

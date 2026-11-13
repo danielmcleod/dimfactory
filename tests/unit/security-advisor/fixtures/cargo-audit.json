@@ -1,0 +1,128 @@
+{
+  "database": {
+    "advisory-count": 612,
+    "last-commit": "release-2024-05-01",
+    "last-updated": "2024-05-01T12:00:00+02:00"
+  },
+  "lockfile": { "dependency-count": 214 },
+  "settings": {
+    "target_arch": [],
+    "target_os": [],
+    "severity": null,
+    "ignore": [],
+    "informational_warnings": ["unmaintained", "unsound", "yanked"]
+  },
+  "vulnerabilities": {
+    "found": true,
+    "count": 2,
+    "list": [
+      {
+        "advisory": {
+          "id": "RUSTSEC-2023-0071",
+          "package": "rsa",
+          "title": "Marvin Attack: potential key recovery through timing sidechannels",
+          "description": "### Impact\nDue to a non-constant-time implementation, information about the private key is leaked through timing information.",
+          "date": "2023-11-22",
+          "aliases": ["CVE-2023-49092", "GHSA-c38w-74pg-36hr"],
+          "related": [],
+          "collection": "crates",
+          "categories": ["crypto-failure"],
+          "keywords": ["cryptography"],
+          "cvss": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "informational": null,
+          "references": [],
+          "source": null,
+          "url": null,
+          "withdrawn": null,
+          "license": "CC0-1.0"
+        },
+        "versions": { "patched": [], "unaffected": [] },
+        "affected": null,
+        "package": {
+          "name": "rsa",
+          "version": "0.9.6",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "dependencies": [{ "name": "num-bigint-dig", "version": "0.8.4", "source": null }],
+          "replace": null
+        }
+      },
+      {
+        "advisory": {
+          "id": "RUSTSEC-2024-0332",
+          "package": "h2",
+          "title": "Degradation of service in h2 servers with CONTINUATION Flood",
+          "description": "An attacker can send a flood of CONTINUATION frames, causing `h2` to process them indefinitely.",
+          "date": "2024-04-03",
+          "aliases": ["GHSA-q6cp-qfwq-4gcv"],
+          "related": [],
+          "collection": "crates",
+          "categories": ["denial-of-service"],
+          "keywords": ["http", "http2"],
+          "cvss": null,
+          "informational": null,
+          "references": [],
+          "source": null,
+          "url": "https://example.com/advisories/h2-continuation-flood",
+          "withdrawn": null,
+          "license": "CC0-1.0"
+        },
+        "versions": { "patched": ["^0.3.26", ">=0.4.4"], "unaffected": [] },
+        "affected": null,
+        "package": {
+          "name": "h2",
+          "version": "0.3.22",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "replace": null
+        }
+      }
+    ]
+  },
+  "warnings": {
+    "unmaintained": [
+      {
+        "kind": "unmaintained",
+        "package": {
+          "name": "instant",
+          "version": "0.1.12",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "replace": null
+        },
+        "advisory": {
+          "id": "RUSTSEC-2024-0384",
+          "package": "instant",
+          "title": "`instant` is unmaintained",
+          "description": "This crate is no longer maintained.",
+          "date": "2024-09-01",
+          "aliases": [],
+          "related": [],
+          "collection": "crates",
+          "categories": [],
+          "keywords": [],
+          "cvss": null,
+          "informational": "unmaintained",
+          "references": [],
+          "source": null,
+          "url": null,
+          "withdrawn": null,
+          "license": "CC0-1.0"
+        },
+        "versions": { "patched": [], "unaffected": [] },
+        "affected": null
+      }
+    ],
+    "yanked": [
+      {
+        "kind": "yanked",
+        "package": {
+          "name": "futures-util",
+          "version": "0.3.29",
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "replace": null
+        },
+        "advisory": null,
+        "versions": null,
+        "affected": null
+      }
+    ]
+  }
+}

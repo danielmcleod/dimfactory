@@ -1,0 +1,24 @@
+{
+  "id": "refactor-safely",
+  "version": 1,
+  "label": "Refactor safely",
+  "description": "Restructure code without changing what it does: characterization tests pin today's behaviour first, and the checks must stay green.",
+  "toggles": {
+    "clarify": false,
+    "research": false,
+    "testFirst": false,
+    "security": false,
+    "acceptance": true,
+    "fixRounds": 2,
+    "explain": false
+  },
+  "verify": { "enabled": true },
+  "brief": {
+    "category": "software",
+    "fields": {
+      "constraints": { "choices": ["keep-style", "no-new-deps"] },
+      "approach": { "choices": ["characterization-tests"] }
+    }
+  },
+  "taskHint": "What to restructure, and what must keep working exactly as it does now"
+}

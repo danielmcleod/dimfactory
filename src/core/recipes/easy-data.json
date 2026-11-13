@@ -1,0 +1,20 @@
+{
+  "id": "easy-data",
+  "version": 1,
+  "label": "Easy: a report from data",
+  "description": "Easy mode's recipe for a report made from data in a new folder: plain questions about what the report should answer, the plan to check, an acceptance and security review (people's data stays out of the page), fixes until it passes, and a plain-language explanation.",
+  "toggles": {
+    "clarify": true,
+    "research": false,
+    "testFirst": false,
+    "security": true,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": { "afterPlan": true, "beforeFix": false },
+  "brief": { "category": "data", "fields": {} },
+  "taskHint": "Which question should the report answer, and from which data?"
+}

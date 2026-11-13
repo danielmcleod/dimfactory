@@ -1,0 +1,60 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// Everything the site says lives here, so the words are easy to change in one place.
+// [Fill in: ...] marks a fact only the owner knows (a name, opening hours, prices, an address, a quote from a
+// customer). Replace it with the real fact; never make one up. The README lists what is still to fill in.
+
+export interface NavItem {
+  to: string
+  label: string
+}
+
+export interface Feature {
+  title: string
+  text: string
+  icon: 'spark' | 'heart' | 'clock'
+}
+
+export interface Update {
+  id: string
+  date: string
+  title: string
+  text: string
+}
+
+export const site = {
+  name: '[Fill in: site name]',
+  tagline: '[Fill in: one line that says what you offer]',
+  description: '[Fill in: one sentence that says what the site is for]',
+  nav: [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+  ] satisfies NavItem[],
+  footer: '[Fill in: a short line for the bottom of every page, such as where you are]',
+}
+
+export const home = {
+  eyebrow: 'Welcome',
+  title: '[Fill in: the main headline]',
+  lead: '[Fill in: two sentences that tell a visitor what they can do here]',
+  primaryAction: { to: '/about', label: 'Find out more' },
+  secondaryAction: { to: '/about#contact', label: 'Get in touch' },
+  featuresTitle: 'What you will find here',
+  features: [
+    { icon: 'spark', title: '[Fill in: first thing you offer]', text: '[Fill in: one sentence about it]' },
+    { icon: 'heart', title: '[Fill in: second thing you offer]', text: '[Fill in: one sentence about it]' },
+    { icon: 'clock', title: '[Fill in: third thing you offer]', text: '[Fill in: one sentence about it]' },
+  ] satisfies Feature[],
+  updatesTitle: 'Latest updates',
+  updatesEmpty: 'There are no updates yet. New ones will show here.',
+}
+
+export const about = {
+  title: 'About',
+  lead: '[Fill in: who is behind this and why]',
+  body: ['[Fill in: a paragraph about you or your organisation]'],
+  contactTitle: 'Get in touch',
+  contact: '[Fill in: how people can reach you, such as an email address]',
+}
+
+/** News, events or other short entries shown on the home page (newest first). */
+export const updates: Update[] = []

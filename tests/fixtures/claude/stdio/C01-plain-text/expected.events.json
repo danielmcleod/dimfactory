@@ -1,0 +1,65 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4ecea3-f607-462b-8721-bb371cb986c7"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "modsi"
+  },
+  {
+    "type": "context",
+    "used": 25574,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "context",
+    "used": 25574,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "modsi",
+    "usage": {
+      "input": 2,
+      "output": 4,
+      "cacheRead": 15790,
+      "cacheWrite": 9782,
+      "costUsd": 0.042330000000000007
+    }
+  }
+]

@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dim-factory:muse/exec-records/synthesized-v1.4.2",
+  "title": "muse exec --json records (SYNTHESIZED)",
+  "description": "One stdout line of `muse exec --json` is one record: an event-sourced journal envelope with a typed payload. SYNTHESIZED for Dim Factory without a Muse CLI: the envelope and payload shapes come from the community SDK muse-codes 0.1.4 (built from captured `muse exec --json` output of Muse Code 0.1.0-R708.1) and from the official Muse Code docs; nothing here was printed by `muse schema`. Payloads marked x-assumed are Dim Factory's assumptions (see README.md). Replace with a live schema from a real install (README.md \"Re-pinning\").",
+  "x-synthesized": true,
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "stream",
+    "sequence",
+    "recorded_at",
+    "record_type",
+    "durability",
+    "causation_id",
+    "payload_type",
+    "payload_schema_version",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "id": { "type": "string", "description": "Record id (UUIDv7); unique within its stream only." },
+    "stream": { "$ref": "#/$defs/StreamRef" },
+    "sequence": { "type": "integer", "minimum": 1 },
+    "recorded_at": { "type": "integer", "description": "Microseconds since the Unix epoch." },
+    "record_type": { "enum": ["reconciliation", "event", "status"] },
+    "durability": { "enum": ["durable", "ephemeral"] },
+    "causation_id": { "type": "string", "description": "The command (turn) that caused the record." },
+    "payload_type": { "type": "string", "description": "Dotted discriminator, e.g. run.output.delta." },
+    "payload_schema_version": { "type": "integer", "const": 1 },
+    "payload": { "type": "object" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "payload_type": { "const": "run.output.delta" } } },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/RunOutputDelta" } } }
+    },
+    {
+      "if": { "properties": { "payload_type": { "pattern": "^run\\.terminal\\." } } },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/RunTerminal" } } }
+    },
+    {
+      "if": { "properties": { "payload_type": { "pattern": "^task\\.lifecycle\\." } } },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/TaskLifecycle" } } }
+    },
+    {
+      "if": { "properties": { "payload_type": { "const": "tool.result" } } },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/ToolResult" } } }
+    },
+    {
+      "if": { "properties": { "payload_type": { "const": "run.model.configured" } } },
+      "then": { "properties": { "payload": { "$ref": "#/$defs/ModelConfigured" } } }
+    }
+  ],
+  "$defs": {
+    "StreamRef": {
+      "type": "object",
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": { "enum": ["session", "run", "task"] },
+        "id": { "type": "string" }
+      }
+    },
+    "RunOutputDelta": {
+      "type": "object",
+      "required": ["kind", "command_id", "text"],
+      "properties": {
+        "kind": { "const": "run_output_delta" },
+        "command_id": { "type": "string" },
+        "run_stream": { "$ref": "#/$defs/StreamRef" },
+        "text": { "type": "string" }
+      }
+    },
+    "RunTerminal": {
+      "type": "object",
+      "required": ["kind", "command_id", "terminal"],
+      "properties": {
+        "kind": { "const": "run_terminal" },
+        "command_id": { "type": "string" },
+        "run_stream": { "$ref": "#/$defs/StreamRef" },
+        "terminal": {
+          "type": "string",
+          "description": "`completed` is the only value seen; any other value (x-assumed: failed, cancelled) ends the run unsuccessfully."
+        },
+        "reason": { "type": ["string", "null"], "description": "Set on abnormal endings." },
+        "text": { "type": ["string", "null"], "description": "The final answer." },
+        "usage": { "$ref": "#/$defs/Usage" }
+      }
+    },
+    "TaskLifecycle": {
+      "type": "object",
+      "required": ["kind", "command_id", "task_id", "event"],
+      "properties": {
+        "kind": { "const": "task_lifecycle" },
+        "command_id": { "type": "string" },
+        "run_stream": { "$ref": "#/$defs/StreamRef" },
+        "task_id": { "type": "string" },
+        "task_stream": { "$ref": "#/$defs/StreamRef" },
+        "event": {
+          "type": "object",
+          "required": ["kind", "task_id"],
+          "properties": {
+            "kind": {
+              "enum": [
+                "proposed",
+                "accepted",
+                "scheduled",
+                "side_effect_intent",
+                "started",
+                "status",
+                "output",
+                "completed",
+                "failed",
+                "rejected",
+                "cancelled"
+              ]
+            },
+            "task_id": { "type": "string" },
+            "task_kind": {
+              "type": "string",
+              "description": "proposed: tool.<name>, model.meta.response, reminder.agent.plugin:<plugin>:<name>."
+            },
+            "idempotency_key": { "type": "string", "description": "scheduled: tool:<call_id> or model:<command>:<task>." },
+            "operation": { "type": "string" },
+            "policy_decision": {
+              "type": "string",
+              "description": "side_effect_intent: not_applicable, allow:policy; x-assumed: deny:<why> when the sandbox or the approval mode refuses."
+            },
+            "parent_task_id": { "type": ["string", "null"] },
+            "cancellation_handle": {},
+            "span_id": { "type": ["string", "null"] },
+            "message": { "type": "string" },
+            "details": {
+              "type": "object",
+              "description": "status: {phase, facets[]}; a producer facet's detail may carry the model call's usage (x-assumed)."
+            },
+            "chunk": { "type": "string" },
+            "reason": { "type": "string" }
+          }
+        }
+      }
+    },
+    "ToolResult": {
+      "type": "object",
+      "required": ["kind", "command_id", "call_id"],
+      "properties": {
+        "kind": { "const": "tool_result" },
+        "command_id": { "type": "string" },
+        "run_stream": { "$ref": "#/$defs/StreamRef" },
+        "call_id": { "type": "string" },
+        "text": { "type": "string" },
+        "correlation_facts": {
+          "type": "object",
+          "properties": {
+            "outcome": { "type": "string", "description": "success; x-assumed: denied, error." },
+            "tool_name": { "type": "string" }
+          }
+        },
+        "edit_facts": {
+          "type": ["object", "null"],
+          "properties": {
+            "added": { "type": "integer" },
+            "path": { "type": "string" },
+            "tool_name": { "type": "string" }
+          }
+        }
+      }
+    },
+    "ModelConfigured": {
+      "type": "object",
+      "required": ["kind", "command_id", "model_id"],
+      "properties": {
+        "kind": { "type": "string" },
+        "command_id": { "type": "string" },
+        "model_id": { "type": "string" },
+        "display_label": { "type": "string" },
+        "profile_id": { "type": "string" },
+        "provider_id": { "type": "string" },
+        "source": { "type": "string" }
+      }
+    },
+    "Usage": {
+      "type": "object",
+      "x-assumed": true,
+      "description": "Token usage in the Responses API's words (the Meta Model API is Responses-compatible). Not seen in any capture: an exec run's usage shape is an open question.",
+      "properties": {
+        "input_tokens": { "type": "integer", "minimum": 0 },
+        "output_tokens": { "type": "integer", "minimum": 0 },
+        "input_tokens_details": {
+          "type": "object",
+          "properties": { "cached_tokens": { "type": "integer", "minimum": 0 } }
+        },
+        "output_tokens_details": {
+          "type": "object",
+          "properties": { "reasoning_tokens": { "type": "integer", "minimum": 0 } }
+        },
+        "total_tokens": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "pass",
+  "step": "catalog",
+  "mode": "readonly",
+  "planNative": false,
+  "prompt": "<REDACTED>",
+  "model": "gpt-6-luna",
+  "structured": true
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "type": "session",
+    "id": "7c4e9a12-3b5d-4f60-8a1b-2c3d4e5f6021"
+  },
+  {
+    "type": "tool",
+    "id": "read_file-1791602700101",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "read_file-1791602700101",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "The change matches the plan. "
+  },
+  {
+    "type": "text",
+    "delta": "No findings."
+  },
+  {
+    "type": "meta",
+    "key": "usageApprox",
+    "value": {
+      "reason": "no-cached-split"
+    }
+  },
+  {
+    "type": "done",
+    "result": "The change matches the plan. No findings.",
+    "usage": {
+      "input": 18432,
+      "output": 612
+    }
+  }
+]

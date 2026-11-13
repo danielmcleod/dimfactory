@@ -1,0 +1,6 @@
+// Fake Claude that never answers a self-heal prompt (the healer's timeout stops it).
+{"op":"expectStdin","match":{"type":"control_request","request":{"subtype":"initialize"}},"capture":{"rid":"request_id"}}
+{"op":"stdout","json":{"type":"control_response","response":{"subtype":"success","request_id":"$rid","response":{"models":[]}}}}
+{"op":"expectStdin","match":{"type":"user"}}
+{"op":"sleep","ms":120000}
+{"op":"exit","code":0}

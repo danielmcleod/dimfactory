@@ -1,0 +1,3 @@
+# X19-research-web-search: Research: read-only, ephemeral, web_search live and the research outputSchema; one web search, then the cited JSON answer. Synthesized: Research was never recorded live.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X19-research-web-search --id X19 --slug research-web-search --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X19-research-web-search/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X19-research-web-search/pass.json

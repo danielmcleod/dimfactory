@@ -1,0 +1,4 @@
+# GX44-exit-sandbox: FatalSandboxError (exit 44): the user's settings turn the Gemini sandbox on and it cannot start.
+# Needs tools.sandbox on in the fixture profile without Docker running.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/GX44-exit-sandbox --id GX44 --slug exit-sandbox --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/GX44-exit-sandbox/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/GX44-exit-sandbox/pass.json --responders tests/fixtures/gemini/recipes/GX44-exit-sandbox/responders.mjs --keep-stdin --timeout 900000 -- --acp --skip-trust

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 16 16">
+  <title>Dim Factory tray glyph</title>
+  <!-- The single-colour tray glyph, drawn on a 16 px grid: the factory body and chimney of build/logo.svg with its
+       [_] knocked out. scripts/make-tray-icons.mjs reads the two paths by id: "silhouette" and "mark" (the knockout;
+       on Windows and Linux a count takes its place). -->
+  <defs>
+    <mask id="knockout">
+      <rect width="16" height="16" fill="#fff"/>
+      <path id="mark" fill="#000" d="M4,8 H6 V9 H5 V13 H6 V14 H4 Z M7,13 H9 V14 H7 Z M10,8 H12 V14 H10 V13 H11 V9 H10 Z"/>
+    </mask>
+  </defs>
+  <path id="silhouette" fill="#000" mask="url(#knockout)" d="M0,6.5 L2,6.078947 V0 H5 V5.447368 L9.5,4.5 L16,6.5 V16 H0 Z"/>
+</svg>

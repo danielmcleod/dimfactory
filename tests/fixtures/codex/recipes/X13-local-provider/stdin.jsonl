@@ -1,0 +1,8 @@
+{"id":1,"method":"initialize","params":{"clientInfo":{"name":"dim-factory","title":null,"version":"0.1.0"},"capabilities":{"experimentalApi":false,"requestAttestation":false}}}
+{"$wait":{"id":1},"$timeoutMs":120000}
+{"method":"initialized"}
+{"id":2,"method":"thread/start","params":{"cwd":"$cwd","model":"qwen3-coder:30b","modelProvider":"dim_factory_local","sandbox":"workspace-write","approvalPolicy":"on-request","approvalsReviewer":"user","ephemeral":false,"config":{"model_providers.dim_factory_local":{"name":"Ollama","base_url":"http://127.0.0.1:11434/v1","wire_api":"responses"}}}}
+{"$wait":{"id":2},"$timeoutMs":120000,"$capture":{"threadId":"result.thread.id"}}
+{"id":3,"method":"turn/start","params":{"threadId":"$threadId","input":[{"type":"text","text":"Add a --version flag to the CLI that prints the package version.","text_elements":[]}]}}
+{"$wait":{"id":3},"$timeoutMs":120000,"$capture":{"turnId":"result.turn.id"}}
+{"$wait":{"method":"turn/completed"},"$timeoutMs":600000}

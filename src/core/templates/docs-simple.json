@@ -1,0 +1,19 @@
+{
+  "id": "docs-simple",
+  "version": 1,
+  "pack": "documents",
+  "label": "Simple guide or docs",
+  "description": "Pages written in Markdown plus a ready-made index.html that shows them: nothing to install, opens in any browser.",
+  "brief": {
+    "fields": {
+      "audience": { "choices": ["general-public"] },
+      "tone": { "choices": ["friendly"] },
+      "format": { "choices": ["markdown", "html-site"] },
+      "citations": { "choices": ["links"] },
+      "approach": { "choices": ["outline-first"] }
+    }
+  },
+  "task": "Set up a small documentation site in this empty folder that needs nothing installed. Write the pages in Markdown under docs/: index.md (what this is and who it is for), getting-started.md (the first steps), and one page per main topic. Add index.html at the top of the folder: a plain HTML page with a navigation list of the pages and the text of each page written out in HTML (no build step, no scripts from the internet), styled by styles.css so it reads well on a phone and a desktop, with good contrast. Keep the Markdown files and index.html saying the same thing. Every link must point to a page that exists. No lorem ipsum or filler: write real, specific words. Never invent the owner's facts (prices, hours, addresses, shipping costs, policies, testimonials, team names): where one belongs, write a marked [Fill in: what goes here] slot, keep it the same in the Markdown and in index.html, and list every slot in the README under Things to fill in. Write every word in the language of the request, and set <html lang> on every page to that language. Add a README.md that says how to open the guide (open index.html), that the guide is kept twice (the Markdown in docs/ and the same words in index.html), so to change it ask for the change with Make a change in Dim Factory, which keeps both in step (editing only one of them leaves the other as it was), and Things to fill in.",
+  "recipe": "write-docs",
+  "tags": ["docs", "markdown", "no-install"]
+}

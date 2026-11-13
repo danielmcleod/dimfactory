@@ -1,0 +1,78 @@
+// Part of the Dim Factory web starter. MIT License: copy, change and share it freely.
+// Every page's frame: a skip link, the header with the site's name and navigation (a menu button on a phone), the
+// page itself in <main>, and the footer.
+import { useEffect, useState } from 'react'
+import type { ReactNode } from 'react'
+import { site } from '../content'
+import { Link, useRoute } from '../lib/router'
+import { ThemeToggle } from './ThemeToggle'
+
+export function Layout({ children }: { children: ReactNode }) {
+  const { path, hash } = useRoute()
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  // A new page starts at its top (or at the part its link points to), and the phone menu closes.
+  useEffect(() => {
+    setMenuOpen(false)
+    const target = hash !== '' ? document.getElementById(decodeURIComponent(hash.slice(1))) : null
+    if (target !== null) target.scrollIntoView()
+    else window.scrollTo(0, 0)
+  }, [path, hash])
+
+  return (
+    <div className="shell">
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <header className="header">
+        <div className="container header__inner">
+          <Link to="/" className="brand">
+            <span className="brand__mark" aria-hidden="true" />
+            <span>{site.name}</span>
+          </Link>
+          <nav aria-label="Main" className={menuOpen ? 'nav nav--open' : 'nav'} id="main-nav">
+            <ul>
+              {site.nav.map((item) => (
+                <li key={item.to}>
+                  <Link to={item.to} className="nav__link">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="header__actions">
+            <ThemeToggle />
+            <button
+              type="button"
+              className="icon-button menu-button"
+              aria-expanded={menuOpen}
+              aria-controls="main-nav"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              onClick={() => setMenuOpen((open) => !open)}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main id="main" tabIndex={-1} className="main">
+        {children}
+      </main>
+      <footer className="footer">
+        <div className="container footer__inner">
+          <p>{site.footer}</p>
+          <ul className="footer__links">
+            {site.nav.map((item) => (
+              <li key={item.to}>
+                <Link to={item.to}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </footer>
+    </div>
+  )
+}

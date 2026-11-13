@@ -1,0 +1,20 @@
+{
+  "id": "add-feature",
+  "version": 1,
+  "label": "Add feature",
+  "description": "Add a feature to an existing project: a few questions first, the project's own style kept, and the plan's acceptance criteria checked at the end.",
+  "toggles": {
+    "clarify": true,
+    "research": false,
+    "acceptance": true,
+    "fixRounds": 2,
+    "explain": false
+  },
+  "brief": {
+    "category": "software",
+    "fields": {
+      "constraints": { "choices": ["keep-style"] }
+    }
+  },
+  "taskHint": "The feature: what someone can do with it, and where it shows up"
+}

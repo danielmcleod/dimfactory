@@ -1,0 +1,20 @@
+{
+  "id": "easy-operations",
+  "version": 1,
+  "label": "Easy: a checklist or how-to",
+  "description": "Easy mode's recipe for a checklist or step-by-step how-to made from an idea in a new folder: plain questions first, the plan to check, an acceptance review, fixes until it passes, and a plain-language explanation.",
+  "toggles": {
+    "clarify": true,
+    "research": false,
+    "testFirst": false,
+    "security": false,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": { "afterPlan": true, "beforeFix": false },
+  "brief": { "category": "operations", "fields": {} },
+  "taskHint": "What should the checklist help someone do, step by step?"
+}

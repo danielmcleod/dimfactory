@@ -1,0 +1,21 @@
+{
+  "id": "easy-research",
+  "version": 1,
+  "label": "Easy: a research memo",
+  "description": "Easy mode's recipe for a research memo made from a question in a new folder: plain questions first, research with sources, the plan to check, an acceptance review, fixes until it passes, and a plain-language explanation.",
+  "toggles": {
+    "clarify": true,
+    "research": true,
+    "testFirst": false,
+    "security": false,
+    "acceptance": true,
+    "fixRounds": 3,
+    "deploy": false,
+    "explain": true
+  },
+  "auto": false,
+  "gates": { "afterPlan": true, "beforeFix": false },
+  "researchLenses": ["comparable", "standards", "pitfalls"],
+  "brief": { "category": "research-writing", "fields": {} },
+  "taskHint": "Which decision or question should the memo help with?"
+}

@@ -1,0 +1,11 @@
+// Claude-style stream-json handshake: capture the host's request_id and echo it back.
+{"op":"expectArgs","includes":["--input-format","stream-json"],"excludes":["--resume*"]}
+{"op":"stdout","json":{"type":"system","subtype":"init","session_id":"fake-session-0001","cwd":"$FAKE_CWD"}}
+{"op":"expectStdin","match":{"type":"control_request","request":{"subtype":"initialize"}},"capture":{"rid":"request_id"}}
+{"op":"stdout","json":{"type":"control_response","response":{"subtype":"success","request_id":"$rid","response":{"models":[]}}}}
+{"op":"expectStdin","match":{"type":"user","message":{"role":"user"}},"capture":{"prompt":"message.content.0.text"}}
+{"op":"writeFile","path":"out/hello.txt","content":"hello from fake\n"}
+{"op":"stdout","json":{"type":"assistant","message":{"content":[{"type":"text","text":"echo: $prompt"}]}}}
+{"op":"stderr","line":"fake: finished turn for $rid"}
+{"op":"stdout","line":"{\"type\":\"result\",\"subtype\":\"success\",\"request_id\":\"$rid\",\"session_id\":\"fake-session-0001\"}"}
+{"op":"exit","code":0}

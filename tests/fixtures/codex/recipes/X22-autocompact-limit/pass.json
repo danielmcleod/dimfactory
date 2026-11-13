@@ -1,0 +1,8 @@
+{
+  "kind": "pass",
+  "step": "review",
+  "mode": "readonly",
+  "planNative": false,
+  "prompt": "Run these three commands one at a time, each exactly as written, without piping, filtering or summarising their output: node -e \"for (let i = 0; i < 1500; i++) console.log(i, (i * 7919 % 10007).toString(36), (i * 104729 % 99991).toString(36))\" then node -e \"for (let i = 0; i < 1500; i++) console.log(i, (i * 7907 % 10009).toString(36), (i * 104723 % 99989).toString(36))\" then node -e \"for (let i = 0; i < 1500; i++) console.log(i, (i * 7901 % 10037).toString(36), (i * 104717 % 99971).toString(36))\" . Then reply with one line: the second value on row 750 of each output.",
+  "model": "gpt-6-luna"
+}

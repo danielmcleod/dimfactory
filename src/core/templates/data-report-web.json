@@ -1,0 +1,20 @@
+{
+  "id": "data-report-web",
+  "version": 1,
+  "pack": "data",
+  "label": "Data report (opens in a browser)",
+  "description": "A report page with charts made from a CSV file, in plain HTML and JavaScript: nothing to install, opens in any browser.",
+  "brief": {
+    "fields": {
+      "sources": { "choices": ["csv"] },
+      "outputs": { "choices": ["html-report", "cleaned-data"] },
+      "chartTypes": { "choices": ["line", "bar", "table"] },
+      "refresh": { "choices": ["once"] },
+      "tooling": { "choices": ["javascript"] }
+    }
+  },
+  "task": "Set up a data report in this empty folder that needs nothing installed. Put the data in data/ (use data/sample.csv with a small made-up example dataset when no data file is there yet). Write report.html with styles.css and js/report.js (and an index.html that sends visitors on to report.html with a meta refresh and a link, so a host that opens index.html shows the report): report.js reads the CSV with plain JavaScript (no libraries from the internet), cleans it, works out the figures and draws the charts as inline SVG (at least one line chart and one bar chart) with a summary table. Caption every chart with the column it comes from, make every number in the text match the data, and make the page load with no console errors and read well on a phone and a desktop. Also write the cleaned data to data/cleaned.csv. Because browsers block reading local files from a page opened straight from disk, also embed the data in js/data.js as a fallback the page uses when it cannot fetch the CSV. When the report uses the made-up example data (no data file of the user's is in data/), show a clear \"Example data\" banner at the top of report.html that says the numbers are made up and how to use real data; leave it out once real data is in. js/data.js is a generated copy of the data: write it from the CSV, and whenever the data in data/ changes, write it again so the page never shows the old numbers. Personal data stays private: show totals, counts and averages, never names, email addresses, phone numbers, street addresses or other personal columns, and leave such columns out of js/data.js and data/cleaned.csv. Write every word in the language of the request, and set <html lang> on every page to that language. Add a README.md that says how to open the report (open report.html, or serve the folder with any static server), that to use other data you ask for a change in Dim Factory (for example \"swap in my new sales file\"), which also updates the copy in js/data.js, and what each chart shows.",
+  "recipe": "data-report",
+  "checks": [{ "name": "Page loads (Dim Factory)", "run": ["dimf:pageload", "report.html"] }],
+  "tags": ["data", "charts", "no-install"]
+}

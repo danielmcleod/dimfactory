@@ -1,0 +1,8 @@
+nodeLinker: hoisted
+onlyBuiltDependencies:
+  - electron
+  - esbuild
+# @anthropic-ai/claude-agent-sdk is a devDependency for its type declarations only; its per-platform optional packages
+# (each a bundled native Claude Code CLI) are never installed.
+ignoredOptionalDependencies:
+  - '@anthropic-ai/claude-agent-sdk-*'

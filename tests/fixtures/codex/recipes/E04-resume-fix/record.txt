@@ -1,0 +1,9 @@
+# E04-resume-fix: Fix on exec: every flag before `resume <UUID>`, prompt `-`; thread.started echoes the thread; turn.completed.usage is the thread total, so the pass reports the delta.
+# Recorded with codex-cli 0.160.1 (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# The model is pinned as Dim Factory sends a picked one (gpt-6-luna, model/list default): the profile configures a model a ChatGPT login is refused (X09h).
+# Adapted: The prompt names its finding on one line (the exec prompt is one stdin line).
+# Record E02 first; the resume UUID = its thread_id, priorUsage = its turn.completed.usage.
+# The -o folder <sandbox>\.dimfactory must exist (Dim Factory itself uses a temp folder; the replay masks the path).
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --vendor codex --route exec --output-file -o --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/exec/E04-resume-fix --id E04 --slug resume-fix --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/E04-resume-fix/stdin.jsonl --pass-file tests/fixtures/codex/recipes/E04-resume-fix/pass.json -- exec --json --color never --skip-git-repo-check --sandbox workspace-write --cd "<sandbox>" -c "approvals_reviewer=\"user\"" -m gpt-6-luna -o "<sandbox>\.dimfactory\last-message.txt" resume <E02 thread id> -

@@ -1,0 +1,673 @@
+[
+  {
+    "type": "session",
+    "id": "fa4e3752-3f04-4ff5-8f48-ae0bcacdb945"
+  },
+  {
+    "type": "text",
+    "delta": "C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " laremma"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " quagn"
+  },
+  {
+    "type": "text",
+    "delta": " sedma"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t duntus"
+  },
+  {
+    "type": "text",
+    "delta": "e modlorel"
+  },
+  {
+    "type": "text",
+    "delta": " ci"
+  },
+  {
+    "type": "text",
+    "delta": " bo"
+  },
+  {
+    "type": "text",
+    "delta": "e ali"
+  },
+  {
+    "type": "text",
+    "delta": " us"
+  },
+  {
+    "type": "text",
+    "delta": " sedmoditd"
+  },
+  {
+    "type": "text",
+    "delta": " remutbo"
+  },
+  {
+    "type": "text",
+    "delta": " lavenmaip"
+  },
+  {
+    "type": "text",
+    "delta": ","
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": "d ut"
+  },
+  {
+    "type": "text",
+    "delta": "c `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`."
+  },
+  {
+    "type": "text",
+    "delta": " Co"
+  },
+  {
+    "type": "text",
+    "delta": "n secconsu"
+  },
+  {
+    "type": "text",
+    "delta": "m quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e ipp"
+  },
+  {
+    "type": "text",
+    "delta": "o sc"
+  },
+  {
+    "type": "text",
+    "delta": " etels"
+  },
+  {
+    "type": "text",
+    "delta": "ed co"
+  },
+  {
+    "type": "text",
+    "delta": "n boipmav"
+  },
+  {
+    "type": "text",
+    "delta": "e ussumtes"
+  },
+  {
+    "type": "text",
+    "delta": "i,"
+  },
+  {
+    "type": "text",
+    "delta": " te"
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": "’ei"
+  },
+  {
+    "type": "text",
+    "delta": " adsecei"
+  },
+  {
+    "type": "text",
+    "delta": " seclaiprem"
+  },
+  {
+    "type": "text",
+    "delta": " aliporse"
+  },
+  {
+    "type": "text",
+    "delta": " qua"
+  },
+  {
+    "type": "text",
+    "delta": " ital"
+  },
+  {
+    "type": "text",
+    "delta": " utci"
+  },
+  {
+    "type": "text",
+    "delta": "g gna"
+  },
+  {
+    "type": "text",
+    "delta": "g C"
+  },
+  {
+    "type": "text",
+    "delta": "’u"
+  },
+  {
+    "type": "text",
+    "delta": "t usitveng"
+  },
+  {
+    "type": "text",
+    "delta": "n co"
+  },
+  {
+    "type": "text",
+    "delta": "n quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e la"
+  },
+  {
+    "type": "text",
+    "delta": "t dunti"
+  },
+  {
+    "type": "text",
+    "delta": " lorsitporp"
+  },
+  {
+    "type": "text",
+    "delta": "i."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ecd5d-618a-46df-8630-02e0c5689869",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ecd5d-618a-46df-8630-02e0c5689869",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 15451,
+    "window": 258400,
+    "cacheRead": 1792,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e1e0e-e9c9-4197-8f85-eec7fe6b45d4",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e1e0e-e9c9-4197-8f85-eec7fe6b45d4",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 15728,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ec2d3-622e-4747-8fa1-4cd97ed67d2a",
+    "name": "edit",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4ec2d3-622e-4747-8fa1-4cd97ed67d2a",
+    "name": "edit",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16449,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Co"
+  },
+  {
+    "type": "text",
+    "delta": "n duntus"
+  },
+  {
+    "type": "text",
+    "delta": "e quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e sc"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "`,"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t co"
+  },
+  {
+    "type": "text",
+    "delta": "n CLI"
+  },
+  {
+    "type": "text",
+    "delta": " tur"
+  },
+  {
+    "type": "text",
+    "delta": " scitea"
+  },
+  {
+    "type": "text",
+    "delta": " qua"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " modse"
+  },
+  {
+    "type": "text",
+    "delta": "d quabosec"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": "’u"
+  },
+  {
+    "type": "text",
+    "delta": " intemcisci"
+  },
+  {
+    "type": "text",
+    "delta": " aliporse"
+  },
+  {
+    "type": "text",
+    "delta": " ci"
+  },
+  {
+    "type": "text",
+    "delta": " venet"
+  },
+  {
+    "type": "text",
+    "delta": "r `"
+  },
+  {
+    "type": "text",
+    "delta": "X"
+  },
+  {
+    "type": "text",
+    "delta": "04"
+  },
+  {
+    "type": "text",
+    "delta": "-versio"
+  },
+  {
+    "type": "text",
+    "delta": "n.txt"
+  },
+  {
+    "type": "text",
+    "delta": "`"
+  },
+  {
+    "type": "text",
+    "delta": " s"
+  },
+  {
+    "type": "text",
+    "delta": "i co"
+  },
+  {
+    "type": "text",
+    "delta": "n sedtur"
+  },
+  {
+    "type": "text",
+    "delta": " loboreelc"
+  },
+  {
+    "type": "text",
+    "delta": " lor"
+  },
+  {
+    "type": "text",
+    "delta": "a ital"
+  },
+  {
+    "type": "text",
+    "delta": " modr"
+  },
+  {
+    "type": "text",
+    "delta": "e."
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e4c22-541e-431b-8000-8a0022256ce5",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "ask",
+    "kind": "shell",
+    "allowSession": false
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e4c22-541e-431b-8000-8a0022256ce5",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16739,
+    "window": 258400,
+    "cacheRead": 15104,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e9362-ed7a-4756-8a99-1054e7e990e8",
+    "name": "shell",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "exec-fa4e9362-ed7a-4756-8a99-1054e7e990e8",
+    "name": "shell",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "context",
+    "used": 16978,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "text",
+    "delta": "\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "Elmo"
+  },
+  {
+    "type": "text",
+    "delta": "d `"
+  },
+  {
+    "type": "text",
+    "delta": "--"
+  },
+  {
+    "type": "text",
+    "delta": "versio"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " ci"
+  },
+  {
+    "type": "text",
+    "delta": " sedit"
+  },
+  {
+    "type": "text",
+    "delta": " co"
+  },
+  {
+    "type": "text",
+    "delta": "n quasum"
+  },
+  {
+    "type": "text",
+    "delta": "e sumd"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "packag"
+  },
+  {
+    "type": "text",
+    "delta": "e.jso"
+  },
+  {
+    "type": "text",
+    "delta": "n`"
+  },
+  {
+    "type": "text",
+    "delta": " la"
+  },
+  {
+    "type": "text",
+    "delta": "t piamsi"
+  },
+  {
+    "type": "text",
+    "delta": "t `"
+  },
+  {
+    "type": "text",
+    "delta": ".."
+  },
+  {
+    "type": "text",
+    "delta": "/X"
+  },
+  {
+    "type": "text",
+    "delta": "04"
+  },
+  {
+    "type": "text",
+    "delta": "-versio"
+  },
+  {
+    "type": "text",
+    "delta": "n.txt"
+  },
+  {
+    "type": "text",
+    "delta": "`"
+  },
+  {
+    "type": "text",
+    "delta": " alisitsect"
+  },
+  {
+    "type": "text",
+    "delta": " `"
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "1"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "text",
+    "delta": "0"
+  },
+  {
+    "type": "text",
+    "delta": "`."
+  },
+  {
+    "type": "text",
+    "delta": " C"
+  },
+  {
+    "type": "text",
+    "delta": " se"
+  },
+  {
+    "type": "text",
+    "delta": "d lol"
+  },
+  {
+    "type": "text",
+    "delta": " qu"
+  },
+  {
+    "type": "text",
+    "delta": "a vendo"
+  },
+  {
+    "type": "text",
+    "delta": "."
+  },
+  {
+    "type": "context",
+    "used": 17188,
+    "window": 258400,
+    "cacheRead": 16128,
+    "source": "request"
+  },
+  {
+    "type": "done",
+    "result": "Elmod `--version` ci sedit con quasume sumd `package.json` lat piamsit `../X04-version.txt` alisitsect `0.1.0`. C sed lol qua vendo.",
+    "usage": {
+      "input": 18066,
+      "output": 1107,
+      "cacheRead": 79360,
+      "cacheWrite": 0,
+      "reasoning": 413
+    }
+  }
+]

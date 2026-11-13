@@ -1,0 +1,9 @@
+{
+  "kind": "pass",
+  "step": "implement",
+  "mode": "full",
+  "planNative": false,
+  "prompt": "Add a --version flag to the CLI that prints the package version.",
+  "trustFolder": false,
+  "auto": true
+}

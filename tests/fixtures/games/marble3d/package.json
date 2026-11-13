@@ -1,0 +1,13 @@
+{
+  "name": "tilt-garden",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small 3D marble game on three.js, installed with npm.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  }
+}

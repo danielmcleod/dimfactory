@@ -1,0 +1,26 @@
+[
+ {
+  "when": {
+   "type": "control_request",
+   "request_id": "$rid",
+   "request": { "subtype": "hook_callback", "callback_id": "compaction-reminder", "input": { "source": "compact" } }
+  },
+  "reply": {
+   "type": "control_response",
+   "response": {
+    "subtype": "success",
+    "request_id": "$rid",
+    "response": {
+     "hookSpecificOutput": {
+      "hookEventName": "SessionStart",
+      "additionalContext": "Reminder after the context was summarised: the project codeword is HERON-42. Keep to the plan."
+     }
+    }
+   }
+  }
+ },
+ {
+  "when": { "type": "control_request", "request_id": "$rid", "request": { "subtype": "hook_callback" } },
+  "reply": { "type": "control_response", "response": { "subtype": "success", "request_id": "$rid", "response": {} } }
+ }
+]

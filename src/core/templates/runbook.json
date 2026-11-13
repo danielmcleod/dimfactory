@@ -1,0 +1,16 @@
+{
+  "id": "runbook",
+  "version": 1,
+  "pack": "operations",
+  "label": "Runbook",
+  "description": "An operations runbook with step-by-step procedures, checks and rollback.",
+  "brief": {
+    "fields": {
+      "deliverable": { "choices": ["runbook"] },
+      "risk": { "choices": ["dry-run"] }
+    }
+  },
+  "task": "Set up an operations runbook in this empty folder. Write runbook.md with: what the service is and who owns it, how to tell it is healthy (the checks and what good looks like), and one procedure per common task (deploy, restart, roll back, rotate a secret), each with its preconditions, numbered steps with the exact commands, how to verify each step and how to undo it. Add an incidents.md template (timeline, impact, cause, follow-ups). Put any helper script under scripts/ with a dry-run mode that is the default. Add a README.md that says how the runbook is organised and how to keep it current.",
+  "recipe": "write-docs",
+  "tags": ["operations", "runbook"]
+}

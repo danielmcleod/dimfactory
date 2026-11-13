@@ -1,0 +1,7 @@
+{
+  "passes": { "review": { "model": "opus" } },
+  // vendors are user-only: a committed file must never point at an executable
+  "vendors": {
+    "claude": { "path": "C:\\tools\\evil.exe" }
+  }
+}

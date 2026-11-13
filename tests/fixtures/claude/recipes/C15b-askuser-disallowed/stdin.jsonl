@@ -1,0 +1,5 @@
+{"type":"control_request","request_id":"init-1","request":{"subtype":"initialize"}}
+{"$wait":{"type":"control_response","response":{"request_id":"init-1"}},"$timeoutMs":15000}
+{"type":"user","message":{"role":"user","content":[{"type":"text","text":"I want to change the greeting that src/index.ts prints, but first ask me a clarifying question: should it be in English or French? Do not edit any files and do not guess; ask me."}]},"parent_tool_use_id":null}
+{"$wait":{"type":"result"},"$timeoutMs":300000}
+{"$close":true}

@@ -1,0 +1,4 @@
+# G10d-max-turn-requests: The prompt ends with stopReason max_turn_requests (the session turn limit) → turn_limit.
+# Needs maxSessionTurns set low in the fixture profile's settings.json.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never the everyday ~/.gemini.
+node scripts/record-fixture.mjs --acp --vendor gemini --gemini-home "<fixture GEMINI_CLI_HOME>" --bin "<node>" --entry "<the gemini package entry .js>" --cwd "<sandbox>" --out tests/fixtures/gemini/acp/G10d-max-turn-requests --id G10d --slug max-turn-requests --cli-version <x.y.z> --timing off --stdin tests/fixtures/gemini/recipes/G10d-max-turn-requests/stdin.jsonl --pass-file tests/fixtures/gemini/recipes/G10d-max-turn-requests/pass.json --responders tests/fixtures/gemini/recipes/G10d-max-turn-requests/responders.mjs --timeout 900000 -- --acp --skip-trust

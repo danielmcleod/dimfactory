@@ -1,0 +1,243 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "d7b2e4a1-3c6f-4e8d-9a15-2f0c8b7e6d31"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "I'll check what this repository h"
+  },
+  {
+    "type": "text",
+    "delta": "as and what CLI conventions say."
+  },
+  {
+    "type": "context",
+    "used": 37204,
+    "cacheRead": 15202,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "context",
+    "used": 37204,
+    "cacheRead": 37202,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthResRead0001",
+    "name": "Read",
+    "summary": "<CWD>/package.json",
+    "phase": "start",
+    "fp": "e210abb6a190"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthResRead0001",
+    "name": "Read",
+    "summary": "<CWD>/package.json",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 13
+  },
+  {
+    "type": "context",
+    "used": 38004,
+    "cacheRead": 37602,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthResSearch01",
+    "name": "WebSearch",
+    "summary": "command line interface guidelines --version flag",
+    "phase": "start",
+    "fp": "42813600ac0a"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthResSearch01",
+    "name": "WebSearch",
+    "summary": "command line interface guidelines --version flag",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 46
+  },
+  {
+    "type": "context",
+    "used": 38804,
+    "cacheRead": 38202,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthResFetch001",
+    "name": "WebFetch",
+    "summary": "https://clig.dev/",
+    "phase": "start",
+    "fp": "42308f1cba82"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthResFetch001",
+    "name": "WebFetch",
+    "summary": "https://clig.dev/",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 61
+  },
+  {
+    "type": "context",
+    "used": 39404,
+    "cacheRead": 39102,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthResStruct01",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "start",
+    "fp": "3b7158effc77"
+  },
+  {
+    "type": "liveness",
+    "count": 2
+  },
+  {
+    "type": "tool",
+    "id": "toolu_01SynthResStruct01",
+    "name": "StructuredOutput",
+    "summary": "answer ready",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 11
+  },
+  {
+    "type": "context",
+    "used": 39404,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "meta",
+    "key": "structuredOutput",
+    "value": {
+      "summary": [
+        "A --version flag is expected of every CLI.",
+        "Print to stdout and exit 0."
+      ],
+      "features": [
+        {
+          "feature": "Print the version with --version",
+          "priority": "must",
+          "sources": [
+            "https://clig.dev/"
+          ]
+        },
+        {
+          "feature": "Short -V alias",
+          "priority": "could",
+          "sources": [
+            "https://clig.dev/"
+          ]
+        }
+      ],
+      "standards": [
+        {
+          "standard": "GNU --version output",
+          "why": "Users and scripts parse it",
+          "sources": [
+            "https://clig.dev/"
+          ]
+        }
+      ],
+      "options": [
+        {
+          "topic": "Where the version comes from",
+          "options": [
+            "package.json",
+            "a constant"
+          ],
+          "recommendation": "package.json",
+          "rationale": "One source of truth already in the repository",
+          "sources": [
+            "repo:package.json"
+          ]
+        }
+      ],
+      "risks": [
+        {
+          "risk": "A bundled build can print a stale version",
+          "sources": [
+            "https://clig.dev/"
+          ]
+        }
+      ],
+      "questions": [
+        "Should --version also print the commit hash?"
+      ],
+      "sources": [
+        {
+          "url": "https://clig.dev/",
+          "title": "Command Line Interface Guidelines"
+        }
+      ]
+    }
+  },
+  {
+    "type": "done",
+    "result": "{\"summary\":[\"A --version flag is expected of every CLI.\",\"Print to stdout and exit 0.\"],\"features\":[{\"feature\":\"Print the version with --version\",\"priority\":\"must\",\"sources\":[\"https://clig.dev/\"]},{\"feature\":\"Short -V alias\",\"priority\":\"could\",\"sources\":[\"https://clig.dev/\"]}],\"standards\":[{\"standard\":\"GNU --version output\",\"why\":\"Users and scripts parse it\",\"sources\":[\"https://clig.dev/\"]}],\"options\":[{\"topic\":\"Where the version comes from\",\"options\":[\"package.json\",\"a constant\"],\"recommendation\":\"package.json\",\"rationale\":\"One source of truth already in the repository\",\"sources\":[\"repo:package.json\"]}],\"risks\":[{\"risk\":\"A bundled build can print a stale version\",\"sources\":[\"https://clig.dev/\"]}],\"questions\":[\"Should --version also print the commit hash?\"],\"sources\":[{\"url\":\"https://clig.dev/\",\"title\":\"Command Line Interface Guidelines\"}]}",
+    "usage": {
+      "input": 12,
+      "output": 516,
+      "cacheRead": 167308,
+      "cacheWrite": 23300,
+      "costUsd": 0.1318456
+    }
+  }
+]

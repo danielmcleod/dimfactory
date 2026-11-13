@@ -1,0 +1,44 @@
+[
+ {
+  "when": {
+   "type": "control_request",
+   "request_id": "$rid",
+   "request": {
+    "subtype": "can_use_tool",
+    "tool_name": "ExitPlanMode"
+   }
+  },
+  "reply": {
+   "type": "control_response",
+   "response": {
+    "subtype": "success",
+    "request_id": "$rid",
+    "response": {
+     "behavior": "deny",
+     "message": "Plan captured by Dim Factory. Stop now; do not implement.",
+     "interrupt": true
+    }
+   }
+  }
+ },
+ {
+  "when": {
+   "type": "control_request",
+   "request_id": "$rid",
+   "request": {
+    "subtype": "can_use_tool"
+   }
+  },
+  "reply": {
+   "type": "control_response",
+   "response": {
+    "subtype": "success",
+    "request_id": "$rid",
+    "response": {
+     "behavior": "deny",
+     "message": "Read-only pass"
+    }
+   }
+  }
+ }
+]

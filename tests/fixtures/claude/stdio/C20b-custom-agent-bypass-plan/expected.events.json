@@ -1,0 +1,262 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-haiku-4-5-20251001"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "plan"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e898b-18d9-4abc-8c05-ec51be68be5a"
+  },
+  {
+    "type": "liveness",
+    "count": 14
+  },
+  {
+    "type": "context",
+    "used": 27525,
+    "cacheRead": 21823,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 9
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "name": "Agent",
+    "summary": "Qua doitg-cialir",
+    "phase": "start",
+    "fp": "a61112822c60"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "name": "Agent",
+    "summary": "Qua doitg-cialir · <REDACTED>",
+    "phase": "start"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "subagent-tokens",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "tokens": 3260
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "name": "Agent",
+    "summary": "Qua doitg-cialir · <REDACTED> · Write · 3.3k tokens",
+    "phase": "start"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "auto-answered",
+    "requestId": "fa4e9596-41bb-47b5-8480-4b9581f5641c",
+    "decision": "deny",
+    "tool": "Write",
+    "why": "readonly"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e9596-41bb-47b5-8480-4b9581f5641c",
+        "response": {
+          "behavior": "deny",
+          "message": "Read-only pass"
+        }
+      }
+    }
+  },
+  {
+    "type": "subagent-tokens",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "tokens": 3276
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "name": "Agent",
+    "summary": "Qua doitg-cialir · <REDACTED> · Bash · 3.3k tokens",
+    "phase": "start"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "auto-answered",
+    "requestId": "fa4e2c49-d314-4f4e-89f4-3ba1578f8ebe",
+    "decision": "deny",
+    "tool": "Bash",
+    "why": "readonly"
+  },
+  {
+    "type": "stdin",
+    "frame": {
+      "type": "control_response",
+      "response": {
+        "subtype": "success",
+        "request_id": "fa4e2c49-d314-4f4e-89f4-3ba1578f8ebe",
+        "response": {
+          "behavior": "deny",
+          "message": "Read-only pass"
+        }
+      }
+    }
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "subagent-tokens",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "tokens": 4250
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "name": "Agent",
+    "summary": "Qua doitg-cialir · <REDACTED> · 4.3k tokens",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ew7b1lu4mdyKjmzKgv9ww",
+    "name": "Agent",
+    "summary": "Qua doitg-cialir · <REDACTED> · 4.3k tokens",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 259
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Con doitg-cialir'"
+  },
+  {
+    "type": "text",
+    "delta": "u Utcig lat Bash quat"
+  },
+  {
+    "type": "text",
+    "delta": "u reml ipe"
+  },
+  {
+    "type": "text",
+    "delta": "l sedsec lora \""
+  },
+  {
+    "type": "text",
+    "delta": "Gnac-eisi sitl\""
+  },
+  {
+    "type": "text",
+    "delta": " inus"
+  },
+  {
+    "type": "text",
+    "delta": "con scib pila s"
+  },
+  {
+    "type": "text",
+    "delta": "c boelpi, te e"
+  },
+  {
+    "type": "text",
+    "delta": "ielsit probe-write.txt"
+  },
+  {
+    "type": "text",
+    "delta": " sed probe-bash."
+  },
+  {
+    "type": "text",
+    "delta": "txt pit piamsit."
+  },
+  {
+    "type": "context",
+    "used": 28598,
+    "cacheRead": 27523,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 28598,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "plan-captured",
+    "markdown": "Con doitg-cialir'u Utcig lat Bash quatu reml ipel sedsec lora \"Gnac-eisi sitl\" inuscon scib pila sc boelpi, te eielsit probe-write.txt sed probe-bash.txt pit piamsit.",
+    "source": "final-message"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ec4LeTFlSwRDJw2wV5mle",
+    "name": "Write",
+    "summary": "",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ex8JhxrmV0821f95QDA1G",
+    "name": "Bash",
+    "summary": "",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "done",
+    "result": "Con doitg-cialir'u Utcig lat Bash quatu reml ipel sedsec lora \"Gnac-eisi sitl\" inuscon scib pila sc boelpi, te eielsit probe-write.txt sed probe-bash.txt pit piamsit.",
+    "usage": {
+      "input": 8,
+      "output": 1260,
+      "cacheRead": 52561,
+      "cacheWrite": 10633,
+      "costUsd": 0.0598702
+    }
+  }
+]

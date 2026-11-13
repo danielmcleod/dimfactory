@@ -1,0 +1,1 @@
+{ "category": "turn_limit", "classifiedBy": "structured", "rule": "claude.result.error_max_budget_usd" }

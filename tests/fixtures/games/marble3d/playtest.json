@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "seed": 1,
+  "scenarios": [
+    {
+      "name": "Space starts the game",
+      "steps": [
+        { "key": "Space" },
+        { "wait": { "ms": 200 } },
+        { "expect": "scene", "eq": "playing" },
+        { "expect": "webgl", "eq": true },
+        { "screenshot": "playing" }
+      ]
+    },
+    {
+      "name": "Arrow keys roll the marble",
+      "steps": [
+        { "key": "Space" },
+        { "hold": "ArrowRight", "ms": 400 },
+        { "wait": { "ms": 200 } },
+        { "expect": "marble.x", "changed": true }
+      ]
+    },
+    {
+      "name": "P pauses the game",
+      "steps": [
+        { "key": "Space" },
+        { "wait": { "ms": 150 } },
+        { "key": "KeyP" },
+        { "wait": { "ms": 150 } },
+        { "expect": "scene", "eq": "paused" }
+      ]
+    },
+    { "name": "The score starts at zero", "must": false, "steps": [{ "expect": "score", "eq": 0 }] }
+  ]
+}

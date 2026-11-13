@@ -1,0 +1,317 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "plan"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4eba0c-3b53-4aa0-8080-9bde0f5ee8fd"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "context",
+    "used": 27286,
+    "cacheRead": 15790,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 9
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ew5Q8XGJyqPGog4TbHY6n",
+    "name": "Bash",
+    "summary": "git conqua",
+    "phase": "start",
+    "fp": "6d15bdb4d460"
+  },
+  {
+    "type": "liveness",
+    "count": 10
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4elINLvZ9peuKLdTkIktcO",
+    "name": "Bash",
+    "summary": "node -e \"require('fs').writeFileSync('x.txt','1')\"",
+    "phase": "start",
+    "fp": "ee3f71d19955"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4ew5Q8XGJyqPGog4TbHY6n",
+    "name": "Bash",
+    "summary": "git conqua",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 15
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4elINLvZ9peuKLdTkIktcO",
+    "name": "Bash",
+    "summary": "node -e \"require('fs').writeFileSync('x.txt','1')\"",
+    "phase": "end",
+    "status": "declined",
+    "outTokens": 159
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Tur C'ei doturu"
+  },
+  {
+    "type": "text",
+    "delta": "s temreip x"
+  },
+  {
+    "type": "text",
+    "delta": ".txt lousip."
+  },
+  {
+    "type": "context",
+    "used": 27840,
+    "cacheRead": 27284,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 8
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efp1Iu0xk95SrX2GttnmT",
+    "name": "Bash",
+    "summary": "git conqua",
+    "phase": "start",
+    "fp": "4ceb4f415264"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efp1Iu0xk95SrX2GttnmT",
+    "name": "Bash",
+    "summary": "git conqua",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 15
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "Secutal:\n\n"
+  },
+  {
+    "type": "text",
+    "delta": "1. `git status`"
+  },
+  {
+    "type": "text",
+    "delta": ": **adm"
+  },
+  {
+    "type": "text",
+    "delta": "odad**. Us rem la"
+  },
+  {
+    "type": "text",
+    "delta": "t r"
+  },
+  {
+    "type": "text",
+    "delta": "emporlo "
+  },
+  {
+    "type": "text",
+    "delta": "r pielp modlore"
+  },
+  {
+    "type": "text",
+    "delta": " sedm sc `master`."
+  },
+  {
+    "type": "text",
+    "delta": "\n2. `node -e \"requir"
+  },
+  {
+    "type": "text",
+    "delta": "e('fs').writeFil"
+  },
+  {
+    "type": "text",
+    "delta": "eSync('x.txt','"
+  },
+  {
+    "type": "text",
+    "delta": "1')\"`: **sedse"
+  },
+  {
+    "type": "text",
+    "delta": "c**. Con ipvenve sec"
+  },
+  {
+    "type": "text",
+    "delta": "ciu aliporse, lat tur"
+  },
+  {
+    "type": "text",
+    "delta": "s sciladu se"
+  },
+  {
+    "type": "text",
+    "delta": "c no gna"
+  },
+  {
+    "type": "text",
+    "delta": " ci alisit r duntip,"
+  },
+  {
+    "type": "text",
+    "delta": " te us pit sed"
+  },
+  {
+    "type": "text",
+    "delta": "sec ipteussumlasc la"
+  },
+  {
+    "type": "text",
+    "delta": "t sed lol qua.\n\nCiciu ipe"
+  },
+  {
+    "type": "text",
+    "delta": "l qua"
+  },
+  {
+    "type": "text",
+    "delta": "tu, r etsec"
+  },
+  {
+    "type": "text",
+    "delta": "l `git status` porbo"
+  },
+  {
+    "type": "text",
+    "delta": " matec "
+  },
+  {
+    "type": "text",
+    "delta": "r pielp modlore sedm lora no dun"
+  },
+  {
+    "type": "text",
+    "delta": "tadute dunt"
+  },
+  {
+    "type": "text",
+    "delta": "l, te `x.txt`"
+  },
+  {
+    "type": "text",
+    "delta": " pi"
+  },
+  {
+    "type": "text",
+    "delta": "t lol"
+  },
+  {
+    "type": "text",
+    "delta": " piamsit."
+  },
+  {
+    "type": "text",
+    "delta": "\n\nCon cil"
+  },
+  {
+    "type": "text",
+    "delta": "aregnas itlor adm"
+  },
+  {
+    "type": "text",
+    "delta": "odad co"
+  },
+  {
+    "type": "text",
+    "delta": "n gnac-eisi ipvenv"
+  },
+  {
+    "type": "text",
+    "delta": "e lat tesitci con ipp"
+  },
+  {
+    "type": "text",
+    "delta": "o-sedtemu sec."
+  },
+  {
+    "type": "context",
+    "used": 27982,
+    "cacheRead": 27838,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 27982,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "plan-captured",
+    "markdown": "Secutal:\n\n1. `git status`: **admodad**. Us rem lat remporlo r pielp modlore sedm sc `master`.\n2. `node -e \"require('fs').writeFileSync('x.txt','1')\"`: **sedsec**. Con ipvenve secciu aliporse, lat turs sciladu sec no gna ci alisit r duntip, te us pit sedsec ipteussumlasc lat sed lol qua.\n\nCiciu ipel quatu, r etsecl `git status` porbo matec r pielp modlore sedm lora no duntadute duntl, te `x.txt` pit lol piamsit.\n\nCon cilaregnas itlor admodad con gnac-eisi ipvenve lat tesitci con ippo-sedtemu sec.",
+    "source": "final-message"
+  },
+  {
+    "type": "done",
+    "result": "Secutal:\n\n1. `git status`: **admodad**. Us rem lat remporlo r pielp modlore sedm sc `master`.\n2. `node -e \"require('fs').writeFileSync('x.txt','1')\"`: **sedsec**. Con ipvenve secciu aliporse, lat turs sciladu sec no gna ci alisit r duntip, te us pit sedsec ipteussumlasc lat sed lol qua.\n\nCiciu ipel quatu, r etsecl `git status` porbo matec r pielp modlore sedm lora no duntadute duntl, te `x.txt` pit lol piamsit.\n\nCon cilaregnas itlor admodad con gnac-eisi ipvenve lat tesitci con ippo-sedtemu sec.",
+    "usage": {
+      "input": 6,
+      "output": 572,
+      "cacheRead": 70912,
+      "cacheWrite": 12190,
+      "costUsd": 0.06867440000000001
+    }
+  }
+]

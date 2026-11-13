@@ -1,0 +1,11 @@
+{"kind":"header","schemaVersion":1,"vendor":"codex","route":"exec","scenario":"E03-escalation-auto-denied","cliVersion":"0.160.1","os":"any","arch":"any","synthesized":true,"synthesizedFrom":"src/core/adapters/codex/protocol/v0.160.0 (generate-ts / generate-json-schema of codex-cli 0.160.1); the live X01b handshake (emittedAtMs, initialize result)","note":"No relay on exec: a command needing the network is declined without an ask (the degraded autoedit copy). Generator: tests/fixtures/codex/recipes/synthesize.mjs. Re-record live: tests/fixtures/codex/README.md.","argv":["codex.exe","exec","--json","--color","never","--skip-git-repo-check","--sandbox","workspace-write","--cd","<CWD>","-c","approvals_reviewer=\"user\"","-o","<CWD>/.dimfactory/last-message.txt","-"],"envKeys":["CODEX_HOME"],"envDrop":["^OPENAI_","^CODEX_"],"pass":{"kind":"pass","route":"exec","step":"implement","mode":"autoedit","planNative":false,"prompt":"Add a --version flag to the CLI that prints the package version."},"hostVersion":"0.1.0"}
+{"t":0,"dir":"in","line":"Add a --version flag to the CLI that prints the package version."}
+{"t":5,"dir":"eof"}
+{"t":10,"dir":"out","line":"{\"type\":\"thread.started\",\"thread_id\":\"019a1c3e-5b2f-7c41-9d8e-0a1b2c3d4e53\"}"}
+{"t":15,"dir":"out","line":"{\"type\":\"turn.started\"}"}
+{"t":20,"dir":"out","line":"{\"type\":\"item.started\",\"item\":{\"id\":\"item_0\",\"type\":\"command_execution\",\"command\":\"npm view typescript version\",\"aggregated_output\":\"\",\"exit_code\":null,\"status\":\"in_progress\"}}"}
+{"t":25,"dir":"out","line":"{\"type\":\"item.completed\",\"item\":{\"id\":\"item_0\",\"type\":\"command_execution\",\"command\":\"npm view typescript version\",\"aggregated_output\":\"\",\"exit_code\":null,\"status\":\"declined\"}}"}
+{"t":30,"dir":"out","line":"{\"type\":\"item.completed\",\"item\":{\"id\":\"item_1\",\"type\":\"agent_message\",\"text\":\"The registry lookup was not allowed; I kept the pinned version.\"}}"}
+{"t":35,"dir":"out","line":"{\"type\":\"turn.completed\",\"usage\":{\"input_tokens\":9216,\"cached_input_tokens\":4096,\"output_tokens\":200,\"reasoning_output_tokens\":64}}"}
+{"t":40,"dir":"file","argvPath":"-o","content":"The registry lookup was not allowed; I kept the pinned version.\n"}
+{"t":45,"dir":"exit","code":0,"signal":null}

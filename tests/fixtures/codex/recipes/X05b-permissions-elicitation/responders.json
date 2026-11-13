@@ -1,0 +1,44 @@
+[
+  {
+    "when": {
+      "method": "mcpServer/elicitation/request",
+      "id": "$id"
+    },
+    "reply": {
+      "id": "$id",
+      "result": {
+        "action": "cancel",
+        "content": null,
+        "_meta": null
+      }
+    },
+    "once": true
+  },
+  {
+    "when": {
+      "method": "item/tool/requestUserInput",
+      "id": "$id"
+    },
+    "reply": {
+      "id": "$id",
+      "error": {
+        "code": -32000,
+        "message": "Not supported by Dim Factory; continue without it."
+      }
+    },
+    "once": true
+  },
+  {
+    "when": {
+      "method": "item/permissions/requestApproval",
+      "id": "$id"
+    },
+    "reply": {
+      "id": "$id",
+      "result": {
+        "permissions": {}
+      }
+    },
+    "once": true
+  }
+]

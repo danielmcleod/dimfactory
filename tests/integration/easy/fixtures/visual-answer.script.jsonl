@@ -1,0 +1,9 @@
+// Fake Claude answering Easy's "Look it over" (tests/integration/easy): the read-only pass flags are required, the
+// first user message carries the picture and the prompt, and the answer is one fenced JSON block of findings.
+{"op":"expectArgs","includes":["--permission-mode","dontAsk","--permission-prompts","none","--no-session-persistence"],"excludes":["--permission-prompt-tool","--session-id*","--resume*"]}
+{"op":"expectStdin","match":{"type":"control_request","request":{"subtype":"initialize"}},"capture":{"rid":"request_id"}}
+{"op":"stdout","json":{"type":"control_response","response":{"subtype":"success","request_id":"$rid","response":{"models":[]}}}}
+{"op":"expectStdin","match":{"type":"user","message":{"role":"user"}}}
+{"op":"stdout","json":{"type":"system","subtype":"init","session_id":"visual-session-1","cwd":"$FAKE_CWD","model":"claude-haiku-4","permissionMode":"dontAsk"}}
+{"op":"stdout","json":{"type":"result","subtype":"success","is_error":false,"num_turns":1,"result":"```json\n{\"findings\":[{\"title\":\"The grey text on the white hero is hard to read.\",\"detail\":\"At the top: make the text darker.\"},{\"title\":\"The sign-up button is cut off on the right.\",\"detail\":\"In the form: let the button wrap.\"}]}\n```\n","session_id":"visual-session-1","total_cost_usd":0.001,"usage":{"input_tokens":900,"output_tokens":40}}}
+{"op": "exit", "code": 0}

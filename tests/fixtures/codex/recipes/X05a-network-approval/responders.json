@@ -1,0 +1,15 @@
+[
+  {
+    "when": {
+      "method": "item/commandExecution/requestApproval",
+      "id": "$id"
+    },
+    "reply": {
+      "id": "$id",
+      "result": {
+        "decision": "accept"
+      }
+    },
+    "once": true
+  }
+]

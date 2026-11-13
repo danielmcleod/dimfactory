@@ -1,0 +1,48 @@
+[
+  {
+    "type": "session",
+    "id": "7c4e9a12-3b5d-4f60-8a1b-2c3d4e5f6010"
+  },
+  {
+    "type": "tool",
+    "id": "search-1791602700101",
+    "phase": "start"
+  },
+  {
+    "type": "ask",
+    "kind": "other",
+    "allowSession": true
+  },
+  {
+    "type": "allow-rule",
+    "rule": {
+      "vendor": "gemini",
+      "kind": "other"
+    }
+  },
+  {
+    "type": "tool",
+    "id": "search-1791602700101",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "text",
+    "delta": "The docs agree: print the package version."
+  },
+  {
+    "type": "meta",
+    "key": "usageApprox",
+    "value": {
+      "reason": "no-cached-split"
+    }
+  },
+  {
+    "type": "done",
+    "result": "The docs agree: print the package version.",
+    "usage": {
+      "input": 9216,
+      "output": 180
+    }
+  }
+]

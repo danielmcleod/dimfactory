@@ -1,0 +1,9 @@
+{
+  "kind": "pass",
+  "route": "exec",
+  "step": "implement",
+  "mode": "full",
+  "planNative": false,
+  "trustFolder": true,
+  "prompt": "Upgrade the dev dependencies and fix anything that breaks."
+}

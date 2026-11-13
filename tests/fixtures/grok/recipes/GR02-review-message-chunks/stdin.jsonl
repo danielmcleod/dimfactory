@@ -1,0 +1,6 @@
+{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":1,"clientCapabilities":{"fs":{"readTextFile":false,"writeTextFile":false},"terminal":false},"clientInfo":{"name":"dim-factory","title":"Dim Factory","version":"0.1.0"}}}
+{"$wait":{"id":1,"method":{"$absent":true}},"$timeoutMs":120000}
+{"jsonrpc":"2.0","id":2,"method":"session/new","params":{"cwd":"$cwd","mcpServers":[],"_meta":{"yoloMode":false,"autoMode":false}}}
+{"$wait":{"id":2,"method":{"$absent":true}},"$timeoutMs":120000,"$capture":{"sessionId":"result.sessionId"}}
+{"jsonrpc":"2.0","id":3,"method":"session/prompt","params":{"sessionId":"$sessionId","prompt":[{"type":"text","text":"Review the change in src/cli.ts against the plan. List findings as [must]/[should]/[nit]."}]}}
+{"$wait":{"id":3,"method":{"$absent":true}},"$timeoutMs":900000}

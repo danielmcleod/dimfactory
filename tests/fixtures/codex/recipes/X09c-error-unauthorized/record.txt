@@ -1,0 +1,4 @@
+# X09c-error-unauthorized: turn/completed failed with codexErrorInfo "unauthorized" → auth_expired.
+# Needs an expired login in the fixture profile.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X09c-error-unauthorized --id X09c --slug error-unauthorized --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X09c-error-unauthorized/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X09c-error-unauthorized/pass.json

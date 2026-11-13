@@ -1,0 +1,79 @@
+[
+  {
+    "type": "session",
+    "id": "0199d2a4-7c1e-7a3b-9f20-3c4d5e6f7005"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR04_01",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR04_01",
+    "phase": "end",
+    "status": "ok"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR04_02",
+    "phase": "start"
+  },
+  {
+    "type": "auto-answered",
+    "decision": "deny",
+    "why": "readonly"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR04_02",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR04_03",
+    "phase": "start"
+  },
+  {
+    "type": "auto-answered",
+    "decision": "deny",
+    "why": "readonly"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR04_03",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR04_04",
+    "phase": "start"
+  },
+  {
+    "type": "auto-answered",
+    "decision": "deny",
+    "why": "readonly"
+  },
+  {
+    "type": "tool",
+    "id": "call_GR04_04",
+    "phase": "end",
+    "status": "declined"
+  },
+  {
+    "type": "text",
+    "delta": "[should] cli.ts: --version prints undefined when package.json has no version."
+  },
+  {
+    "type": "done",
+    "result": "[should] cli.ts: --version prints undefined when package.json has no version.",
+    "usage": {
+      "input": 9216,
+      "output": 330,
+      "cacheRead": 27648,
+      "costUsd": 0.0318
+    }
+  }
+]

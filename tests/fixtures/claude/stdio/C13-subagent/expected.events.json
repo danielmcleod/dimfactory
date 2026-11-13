@@ -1,0 +1,203 @@
+[
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "meta",
+    "key": "model",
+    "value": "claude-sonnet-5-5"
+  },
+  {
+    "type": "meta",
+    "key": "permissionMode",
+    "value": "dontAsk"
+  },
+  {
+    "type": "meta",
+    "key": "claude_code_version",
+    "value": "2.1.289"
+  },
+  {
+    "type": "meta",
+    "key": "apiKeySource",
+    "value": "<TOKEN>"
+  },
+  {
+    "type": "session",
+    "id": "fa4e90c8-f8cd-4819-8e24-b645ede55c9e"
+  },
+  {
+    "type": "liveness",
+    "count": 20
+  },
+  {
+    "type": "context",
+    "used": 25155,
+    "cacheRead": 21239,
+    "source": "request"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efYpQH3k0QNo6N6H50z3X",
+    "name": "Agent",
+    "summary": "Tecisumma src/index.ts",
+    "phase": "start",
+    "fp": "58b1d6268bdd"
+  },
+  {
+    "type": "liveness",
+    "count": 1
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efYpQH3k0QNo6N6H50z3X",
+    "name": "Agent",
+    "summary": "Tecisumma src/index.ts · general-purpose",
+    "phase": "start"
+  },
+  {
+    "type": "liveness",
+    "count": 4
+  },
+  {
+    "type": "subagent-tokens",
+    "id": "toolu_fa4efYpQH3k0QNo6N6H50z3X",
+    "tokens": 12664
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efYpQH3k0QNo6N6H50z3X",
+    "name": "Agent",
+    "summary": "Tecisumma src/index.ts · general-purpose · Read · 12.7k tokens",
+    "phase": "start"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "subagent-tokens",
+    "id": "toolu_fa4efYpQH3k0QNo6N6H50z3X",
+    "tokens": 14584
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efYpQH3k0QNo6N6H50z3X",
+    "name": "Agent",
+    "summary": "Tecisumma src/index.ts · general-purpose · 14.6k tokens",
+    "phase": "start"
+  },
+  {
+    "type": "tool",
+    "id": "toolu_fa4efYpQH3k0QNo6N6H50z3X",
+    "name": "Agent",
+    "summary": "Tecisumma src/index.ts · general-purpose · 14.6k tokens",
+    "phase": "end",
+    "status": "ok",
+    "outTokens": 398
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "text",
+    "delta": "`src/index.ts`"
+  },
+  {
+    "type": "text",
+    "delta": " adlorbo ci"
+  },
+  {
+    "type": "text",
+    "delta": " `Options` sititsumv,"
+  },
+  {
+    "type": "text",
+    "delta": " r `parseArgs`"
+  },
+  {
+    "type": "text",
+    "delta": " gnaeilai ("
+  },
+  {
+    "type": "text",
+    "delta": "ets"
+  },
+  {
+    "type": "text",
+    "delta": "cibod c"
+  },
+  {
+    "type": "text",
+    "delta": "i etv"
+  },
+  {
+    "type": "text",
+    "delta": "e \"usmod\", pii"
+  },
+  {
+    "type": "text",
+    "delta": "pvend r `--shout` ei"
+  },
+  {
+    "type": "text",
+    "delta": "tu, lat temla con gnat ipl"
+  },
+  {
+    "type": "text",
+    "delta": "-eitu usseclor re con etv"
+  },
+  {
+    "type": "text",
+    "delta": "e), lat r `greet` gnaeilai"
+  },
+  {
+    "type": "text",
+    "delta": " ital duntsit `Hello,"
+  },
+  {
+    "type": "text",
+    "delta": " "
+  },
+  {
+    "type": "text",
+    "delta": "${name}!`"
+  },
+  {
+    "type": "text",
+    "delta": ", etsedinusa ipei `s"
+  },
+  {
+    "type": "text",
+    "delta": "hout` sc uset."
+  },
+  {
+    "type": "context",
+    "used": 25905,
+    "cacheRead": 25153,
+    "source": "request"
+  },
+  {
+    "type": "liveness",
+    "count": 3
+  },
+  {
+    "type": "context",
+    "used": 25905,
+    "window": 1000000,
+    "source": "session"
+  },
+  {
+    "type": "done",
+    "result": "`src/index.ts` adlorbo ci `Options` sititsumv, r `parseArgs` gnaeilai (etscibod ci etve \"usmod\", piipvend r `--shout` eitu, lat temla con gnat ipl-eitu usseclor re con etve), lat r `greet` gnaeilai ital duntsit `Hello, ${name}!`, etsedinusa ipei `shout` sc uset.",
+    "usage": {
+      "input": 8,
+      "output": 665,
+      "cacheRead": 59034,
+      "cacheWrite": 18786,
+      "costUsd": 0.07243379999999999
+    }
+  }
+]

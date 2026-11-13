@@ -1,0 +1,7 @@
+# X12a-plan-native-item: Native Plan: collaborationMode plan is accepted (thread/settings/updated echoes it); request_user_input is refused (-32000) and the plan proceeds on assumptions; the plan arrives as a plan item (item/plan/delta, item/completed type plan) with no final message.
+# Recorded with codex-cli 0.160.1 (read-only feature switches: features.apps, features.plugins, features.hooks = false) (a ChatGPT login, the Windows sandbox ready); the published fixture is synthesized from that recording (scripts/synthesize-fixtures.mjs), which stays private.
+# The model is pinned as Dim Factory sends a picked one (gpt-6-luna, model/list default): the profile configures a model a ChatGPT login is refused (X09h).
+# responders.mjs answers every server request as the adapter does (recipes/dim-factory-responder.mjs).
+# --allow-user-codex-home only when <CODEX_HOME> is your own ~/.codex.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<CODEX_HOME>" --allow-user-codex-home --cwd "<sandbox>" --out tests/fixtures-private/codex/app-server/X12a-plan-native-item --id X12a --slug plan-native-item --cli-version <x.y.z> --timing off --timeout 900000 --stdin tests/fixtures/codex/recipes/X12a-plan-native-item/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X12a-plan-native-item/pass.json --responders tests/fixtures/codex/recipes/X12a-plan-native-item/responders.mjs

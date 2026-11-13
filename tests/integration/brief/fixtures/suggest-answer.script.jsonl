@@ -1,0 +1,9 @@
+// Fake Claude answering a brief suggestion prompt (tests/integration/brief): the read-only pass flags are required,
+// the prompt arrives as the first user message, and the answer is one fenced JSON block in the result.
+{"op":"expectArgs","includes":["--permission-mode","dontAsk","--permission-prompts","none","--no-session-persistence"],"excludes":["--permission-prompt-tool","--session-id*","--resume*"]}
+{"op":"expectStdin","match":{"type":"control_request","request":{"subtype":"initialize"}},"capture":{"rid":"request_id"}}
+{"op":"stdout","json":{"type":"control_response","response":{"subtype":"success","request_id":"$rid","response":{"models":[]}}}}
+{"op":"expectStdin","match":{"type":"user","message":{"role":"user"}}}
+{"op":"stdout","json":{"type":"system","subtype":"init","session_id":"suggest-session-1","cwd":"$FAKE_CWD","model":"claude-sonnet-4","permissionMode":"dontAsk"}}
+{"op":"stdout","json":{"type":"result","subtype":"success","is_error":false,"num_turns":1,"result":"Based on the task:\n\n```json\n{\n  \"suggestions\": [\n    {\n      \"group\": \"projectType\",\n      \"choices\": [\n        \"cli\"\n      ],\n      \"reason\": \"The task asks for a command line tool.\"\n    },\n    {\n      \"group\": \"language\",\n      \"choices\": [\n        \"go\",\n        \"cobol\"\n      ],\n      \"reason\": \"Go is named in the task.\"\n    },\n    {\n      \"group\": \"styling\",\n      \"choices\": [\n        \"tailwind\"\n      ],\n      \"reason\": \"Not wanted here.\"\n    }\n  ]\n}\n```\n","session_id":"suggest-session-1","total_cost_usd":0.002,"usage":{"input_tokens":1500,"output_tokens":80}}}
+{"op":"exit","code":0}

@@ -1,0 +1,1301 @@
+{
+  "id": "software",
+  "version": 1,
+  "label": "Software",
+  "description": "Apps, sites, services, tools and libraries: code that runs.",
+  "detect": {
+    "keywords": [
+      "app",
+      "website",
+      "web app",
+      "api",
+      "endpoint",
+      "backend",
+      "frontend",
+      "component",
+      "page",
+      "login",
+      "bug",
+      "fix",
+      "refactor",
+      "feature",
+      "function",
+      "class",
+      "module",
+      "test",
+      "tests",
+      "unit test",
+      "build",
+      "compile",
+      "deploy",
+      "server",
+      "database",
+      "cli",
+      "script",
+      "library",
+      "sdk",
+      "package",
+      "typescript",
+      "javascript",
+      "python",
+      "react",
+      "code",
+      "implement",
+      "crash",
+      "error",
+      "button",
+      "form",
+      "route",
+      "migration"
+    ],
+    "files": [
+      "package.json",
+      "pyproject.toml",
+      "requirements.txt",
+      "Pipfile",
+      "setup.py",
+      "Cargo.toml",
+      "go.mod",
+      "*.csproj",
+      "*.fsproj",
+      "*.sln",
+      "pom.xml",
+      "build.gradle",
+      "build.gradle.kts",
+      "Gemfile",
+      "composer.json",
+      "Package.swift",
+      "Dockerfile",
+      "tsconfig.json",
+      "Makefile",
+      "CMakeLists.txt",
+      "index.html",
+      "src",
+      "*.go",
+      "*.py",
+      "*.rs",
+      "*.js",
+      "*.ts"
+    ]
+  },
+  "groups": [
+    {
+      "id": "projectType",
+      "label": "Project type",
+      "hint": "What kind of software this is.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "spa",
+          "label": "Single-page app",
+          "hint": "One page that updates in the browser.",
+          "keywords": ["single-page app", "single page app", "single-page application"]
+        },
+        {
+          "id": "multi-page",
+          "label": "Multi-page site",
+          "hint": "Several linked pages, rendered on a server or ahead of time.",
+          "keywords": ["multi-page site", "multi-page website", "multi page site"]
+        },
+        {
+          "id": "static-site",
+          "label": "Static site",
+          "hint": "Plain files served as they are, no server code.",
+          "keywords": ["static site", "static website", "landing page", "portfolio site"]
+        },
+        {
+          "id": "full-stack",
+          "label": "Full-stack web app",
+          "hint": "A browser front end with its own server and data.",
+          "keywords": ["full-stack", "full stack", "fullstack"]
+        },
+        {
+          "id": "api",
+          "label": "API or backend service",
+          "hint": "A service other programs call over the network.",
+          "keywords": [
+            "rest api",
+            "graphql api",
+            "backend service",
+            "microservice",
+            "web service",
+            "api server"
+          ]
+        },
+        {
+          "id": "cli",
+          "label": "CLI or script",
+          "hint": "A program run from a terminal.",
+          "keywords": [
+            "cli",
+            "command-line",
+            "command line tool",
+            "command line",
+            "terminal tool",
+            "shell script"
+          ]
+        },
+        {
+          "id": "desktop",
+          "label": "Desktop app",
+          "hint": "An app installed on Windows, macOS or Linux.",
+          "keywords": ["desktop app", "desktop application", "electron app", "tauri app"]
+        },
+        {
+          "id": "mobile",
+          "label": "Mobile app",
+          "hint": "An app for phones and tablets.",
+          "keywords": ["mobile app", "ios app", "android app", "react native", "flutter app", "iphone app"]
+        },
+        {
+          "id": "browser-extension",
+          "label": "Browser extension",
+          "hint": "An add-on for Chrome, Firefox or Edge.",
+          "keywords": [
+            "browser extension",
+            "chrome extension",
+            "firefox extension",
+            "firefox add-on",
+            "edge extension"
+          ]
+        },
+        {
+          "id": "library",
+          "label": "Library or SDK",
+          "hint": "Code other projects import.",
+          "keywords": [
+            "sdk",
+            "client library",
+            "build a library",
+            "write a library",
+            "npm package",
+            "pypi package",
+            "rust crate"
+          ]
+        },
+        {
+          "id": "game",
+          "label": "Game",
+          "hint": "Something to play. For a browser game, the Games category has its own choices.",
+          "keywords": ["game", "video game", "browser game", "platformer", "puzzle game"]
+        },
+        {
+          "id": "automation",
+          "label": "Automation or bot",
+          "hint": "Runs a job by itself, on a schedule or on events.",
+          "keywords": [
+            "bot",
+            "discord bot",
+            "slack bot",
+            "telegram bot",
+            "scraper",
+            "web scraper",
+            "cron job"
+          ]
+        },
+        {
+          "id": "infrastructure",
+          "label": "Infrastructure or DevOps",
+          "hint": "Build, deploy and environment setup.",
+          "keywords": ["ci pipeline", "ci/cd", "github actions", "terraform", "kubernetes", "helm chart"]
+        },
+        {
+          "id": "data-pipeline",
+          "label": "Data or ML pipeline",
+          "hint": "Moves, transforms or learns from data.",
+          "keywords": ["etl", "data pipeline", "ml pipeline", "machine learning", "model training"]
+        }
+      ]
+    },
+    {
+      "id": "deliverable",
+      "label": "Deliverable",
+      "hint": "What the finished work is shipped as.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "static-html",
+          "label": "Static HTML files",
+          "hint": "Files you can open or upload anywhere.",
+          "keywords": ["static html", "html file", "single html file"]
+        },
+        {
+          "id": "spa-bundle",
+          "label": "Front-end bundle",
+          "hint": "Built JavaScript and CSS for a browser app.",
+          "keywords": ["bundle", "vite build"]
+        },
+        {
+          "id": "pwa",
+          "label": "Installable web app (PWA)",
+          "hint": "A web app that installs and works offline.",
+          "keywords": ["pwa", "progressive web app", "service worker"]
+        },
+        {
+          "id": "server-app",
+          "label": "Server app",
+          "hint": "A long-running process that serves requests.",
+          "keywords": ["server app", "web server"]
+        },
+        {
+          "id": "docker-image",
+          "label": "Docker image",
+          "hint": "A container image ready to run.",
+          "keywords": ["docker image", "container image", "dockerfile", "dockerize", "docker"]
+        },
+        {
+          "id": "package",
+          "label": "npm or PyPI package",
+          "hint": "Published to a package registry.",
+          "keywords": ["npm package", "pypi package", "publish to npm", "publish to pypi"]
+        },
+        {
+          "id": "executable",
+          "label": "Executable or installer",
+          "hint": "A program file or setup users download.",
+          "keywords": ["executable", "installer", "exe", "msi", "dmg", "appimage"]
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "label": "Platform",
+      "hint": "Where it has to run.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "web",
+          "label": "Web",
+          "hint": "Any modern browser.",
+          "keywords": ["web browser", "in the browser"]
+        },
+        {
+          "id": "windows",
+          "label": "Windows",
+          "keywords": ["on windows", "for windows", "windows app", "windows 10", "windows 11"]
+        },
+        {
+          "id": "macos",
+          "label": "macOS",
+          "keywords": ["macos", "mac os", "os x"]
+        },
+        {
+          "id": "linux",
+          "label": "Linux",
+          "keywords": ["linux", "ubuntu", "debian"]
+        },
+        {
+          "id": "ios",
+          "label": "iOS",
+          "keywords": ["ios", "iphone", "ipad"]
+        },
+        {
+          "id": "android",
+          "label": "Android",
+          "keywords": ["android"]
+        }
+      ]
+    },
+    {
+      "id": "language",
+      "label": "Language",
+      "hint": "The programming languages to write it in.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "typescript",
+          "label": "TypeScript",
+          "keywords": ["typescript"]
+        },
+        {
+          "id": "javascript",
+          "label": "JavaScript",
+          "keywords": ["javascript", "vanilla js"]
+        },
+        {
+          "id": "python",
+          "label": "Python",
+          "keywords": ["python"]
+        },
+        {
+          "id": "go",
+          "label": "Go",
+          "keywords": [
+            "golang",
+            "in go",
+            "go module",
+            "go service",
+            "go program",
+            "go cli",
+            "using go",
+            "written in go"
+          ]
+        },
+        {
+          "id": "rust",
+          "label": "Rust",
+          "keywords": ["rust", "in rust", "cargo"]
+        },
+        {
+          "id": "csharp",
+          "label": "C#",
+          "keywords": ["c#", "csharp", "dotnet", ".net"]
+        },
+        {
+          "id": "java-kotlin",
+          "label": "Java or Kotlin",
+          "keywords": ["java", "kotlin"]
+        },
+        {
+          "id": "swift",
+          "label": "Swift",
+          "keywords": ["swift", "swiftui"]
+        }
+      ]
+    },
+    {
+      "id": "uiFramework",
+      "label": "UI framework",
+      "hint": "What the user interface is built with.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "react",
+          "label": "React",
+          "keywords": ["react", "reactjs", "react.js"]
+        },
+        {
+          "id": "vue",
+          "label": "Vue",
+          "keywords": ["vue", "vuejs", "vue.js"]
+        },
+        {
+          "id": "svelte",
+          "label": "Svelte",
+          "keywords": ["svelte"]
+        },
+        {
+          "id": "solid",
+          "label": "Solid",
+          "keywords": ["solidjs", "solid.js"]
+        },
+        {
+          "id": "angular",
+          "label": "Angular",
+          "keywords": ["angular"]
+        },
+        {
+          "id": "plain-html",
+          "label": "Plain HTML and JS",
+          "hint": "No framework, just the platform.",
+          "keywords": ["vanilla js", "plain html", "vanilla javascript", "no framework"]
+        },
+        {
+          "id": "none",
+          "label": "No UI",
+          "hint": "Nothing on screen: a service, tool or library."
+        }
+      ]
+    },
+    {
+      "id": "styling",
+      "label": "Styling",
+      "hint": "How the interface gets its look.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "tailwind",
+          "label": "Tailwind CSS",
+          "keywords": ["tailwind", "tailwindcss"]
+        },
+        {
+          "id": "css-modules",
+          "label": "CSS Modules",
+          "keywords": ["css modules"]
+        },
+        {
+          "id": "plain-css",
+          "label": "Plain CSS",
+          "keywords": ["plain css", "vanilla css"]
+        },
+        {
+          "id": "css-in-js",
+          "label": "CSS-in-JS",
+          "hint": "Styles written in code, like styled-components or Emotion.",
+          "keywords": ["styled-components", "css-in-js", "emotion css"]
+        },
+        {
+          "id": "component-library",
+          "label": "Component library (shadcn, MUI, Chakra)",
+          "hint": "Ready-made components with their own styles.",
+          "keywords": ["shadcn", "material ui", "mui", "chakra", "chakra ui", "ant design", "bootstrap css"]
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "hint": "What runs on the server, if anything.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "node",
+          "label": "Node (Express, Fastify, Hono)",
+          "keywords": [
+            "express.js",
+            "expressjs",
+            "express server",
+            "express app",
+            "fastify",
+            "hono",
+            "koa",
+            "node.js",
+            "nodejs"
+          ]
+        },
+        {
+          "id": "nextjs",
+          "label": "Next.js, Nuxt or SvelteKit",
+          "hint": "A full-stack framework that renders on the server.",
+          "keywords": ["next.js", "nextjs", "nuxt", "sveltekit", "remix"]
+        },
+        {
+          "id": "python-web",
+          "label": "Python (FastAPI, Django, Flask)",
+          "keywords": ["fastapi", "django", "flask"]
+        },
+        {
+          "id": "go",
+          "label": "Go",
+          "keywords": ["golang", "go server", "go backend", "gin", "go service"]
+        },
+        {
+          "id": "dotnet",
+          "label": ".NET",
+          "keywords": ["asp.net", "aspnet", "asp.net core"]
+        },
+        {
+          "id": "serverless",
+          "label": "Serverless functions",
+          "hint": "Small functions run on demand by a cloud host.",
+          "keywords": [
+            "serverless",
+            "aws lambda",
+            "lambda function",
+            "cloud functions",
+            "edge functions",
+            "cloudflare workers"
+          ]
+        },
+        {
+          "id": "none",
+          "label": "No backend",
+          "hint": "Everything runs in the browser or on the device.",
+          "keywords": ["no backend", "client-side only", "without a backend"]
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data storage",
+      "hint": "Where the app keeps its data.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "none",
+          "label": "No stored data",
+          "keywords": ["no database"]
+        },
+        {
+          "id": "browser-storage",
+          "label": "Browser storage",
+          "hint": "localStorage or IndexedDB on the user's device.",
+          "keywords": ["localstorage", "local storage", "indexeddb"]
+        },
+        {
+          "id": "sqlite",
+          "label": "SQLite",
+          "keywords": ["sqlite"]
+        },
+        {
+          "id": "postgres",
+          "label": "PostgreSQL",
+          "keywords": ["postgres", "postgresql"]
+        },
+        {
+          "id": "mysql",
+          "label": "MySQL",
+          "keywords": ["mysql", "mariadb"]
+        },
+        {
+          "id": "mongodb",
+          "label": "MongoDB",
+          "keywords": ["mongodb", "mongo", "mongoose"]
+        },
+        {
+          "id": "files",
+          "label": "Files on disk",
+          "hint": "JSON, CSV or other files the app reads and writes.",
+          "keywords": ["json file", "csv file", "flat file"]
+        },
+        {
+          "id": "hosted",
+          "label": "Hosted (Supabase, Firebase)",
+          "hint": "A managed database service.",
+          "keywords": ["supabase", "firebase", "firestore", "planetscale", "neon"]
+        }
+      ]
+    },
+    {
+      "id": "auth",
+      "label": "Sign-in",
+      "hint": "How users prove who they are.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "none",
+          "label": "No sign-in",
+          "keywords": ["no login", "no sign-in", "no auth"]
+        },
+        {
+          "id": "email-password",
+          "label": "Email and password",
+          "keywords": ["email and password", "username and password", "password login"]
+        },
+        {
+          "id": "oauth",
+          "label": "OAuth (Google, GitHub)",
+          "hint": "Sign in with an existing account elsewhere.",
+          "keywords": [
+            "oauth",
+            "google login",
+            "sign in with google",
+            "github login",
+            "sign in with github",
+            "sso"
+          ]
+        },
+        {
+          "id": "magic-link",
+          "label": "Magic link",
+          "hint": "A one-time sign-in link sent by email.",
+          "keywords": ["magic link", "passwordless"]
+        },
+        {
+          "id": "hosted-auth",
+          "label": "Hosted auth (Clerk, Auth0)",
+          "hint": "A service that handles sign-in for you.",
+          "keywords": ["clerk", "auth0", "supabase auth", "firebase auth", "cognito"]
+        }
+      ]
+    },
+    {
+      "id": "hosting",
+      "label": "Hosting",
+      "hint": "Where it will run once shipped.",
+      "multi": false,
+      "other": true,
+      "options": [
+        {
+          "id": "decide-later",
+          "label": "Decide later",
+          "hint": "Keep it portable for now."
+        },
+        {
+          "id": "static-host",
+          "label": "Static host",
+          "hint": "GitHub Pages or any plain file host.",
+          "keywords": ["github pages", "gitlab pages", "s3 bucket"]
+        },
+        {
+          "id": "vercel-netlify",
+          "label": "Vercel, Netlify or Cloudflare",
+          "keywords": ["vercel", "netlify", "cloudflare pages", "cloudflare"]
+        },
+        {
+          "id": "render-fly",
+          "label": "Render, Fly or Railway",
+          "keywords": ["render.com", "fly.io", "railway", "heroku"]
+        },
+        {
+          "id": "container",
+          "label": "Container platform",
+          "hint": "Docker on a cloud service or cluster.",
+          "keywords": ["kubernetes", "docker compose", "cloud run", "ecs"]
+        },
+        {
+          "id": "self-hosted",
+          "label": "Self-hosted",
+          "hint": "Your own server or machine.",
+          "keywords": ["self-hosted", "self hosted", "my own server", "vps", "raspberry pi"]
+        },
+        {
+          "id": "app-stores",
+          "label": "App stores",
+          "hint": "Apple App Store, Google Play or a desktop store.",
+          "keywords": ["app store", "play store", "google play", "microsoft store"]
+        }
+      ]
+    },
+    {
+      "id": "quality",
+      "label": "Quality bar",
+      "hint": "Qualities the result must have.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "responsive",
+          "label": "Responsive",
+          "hint": "Works from phone to desktop widths.",
+          "keywords": ["responsive", "mobile-friendly", "mobile friendly"]
+        },
+        {
+          "id": "accessible",
+          "label": "Accessible (WCAG AA)",
+          "hint": "Usable with a keyboard and a screen reader.",
+          "keywords": ["accessibility", "a11y", "wcag", "screen reader", "screen readers"]
+        },
+        {
+          "id": "dark-mode",
+          "label": "Dark mode",
+          "keywords": ["dark mode", "dark theme"]
+        },
+        {
+          "id": "i18n",
+          "label": "Translations (i18n)",
+          "hint": "Text ready for more than one language.",
+          "keywords": ["i18n", "internationalization", "translations", "localization", "multilingual"]
+        },
+        {
+          "id": "offline",
+          "label": "Works offline",
+          "keywords": ["offline", "offline-first", "works offline"]
+        },
+        {
+          "id": "performance-budget",
+          "label": "Performance budget",
+          "hint": "Fast to load, with sizes and timings kept in check.",
+          "keywords": ["performance", "fast loading", "lighthouse", "core web vitals"]
+        },
+        {
+          "id": "seo",
+          "label": "SEO",
+          "hint": "Easy for search engines to find.",
+          "keywords": ["seo", "search engine"]
+        }
+      ]
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "hint": "Limits the work must respect.",
+      "multi": true,
+      "other": true,
+      "options": [
+        {
+          "id": "no-new-deps",
+          "label": "No new dependencies",
+          "keywords": ["no new dependencies", "no dependencies", "without dependencies", "zero dependencies"]
+        },
+        {
+          "id": "keep-style",
+          "label": "Keep the existing style",
+          "hint": "Match the code style and patterns already here.",
+          "keywords": ["keep the existing style", "match the existing style", "follow the existing style"]
+        },
+        {
+          "id": "free-tiers",
+          "label": "Free tiers only",
+          "hint": "No paid services.",
+          "keywords": ["free tier", "free tiers", "no paid services"]
+        },
+        {
+          "id": "mit-compatible",
+          "label": "MIT-compatible licences only",
+          "hint": "No copyleft or restrictive licences in dependencies.",
+          "keywords": ["mit-compatible", "permissive licence", "permissive license", "no gpl"]
+        }
+      ]
+    },
+    {
+      "id": "approach",
+      "label": "Approach",
+      "hint": "How Dim Factory should shape the plan and the steps.",
+      "multi": true,
+      "other": false,
+      "options": [
+        {
+          "id": "test-first",
+          "label": "Test-first",
+          "hint": "Write failing tests from the goals first, then make them pass.",
+          "effect": "pipeline",
+          "guidance": "Make the \"Acceptance criteria\" list concrete criteria that automated tests can check, one criterion per line. A Tests step writes failing tests from those criteria before Implement, and Implement makes them pass without weakening them."
+        },
+        {
+          "id": "contract-first",
+          "label": "Contract first",
+          "hint": "Agree the interfaces, types or API shape before the code behind them.",
+          "effect": "plan",
+          "guidance": "Start the plan by defining the contracts: public types, function signatures, API routes and data shapes. Later steps implement against those contracts and do not change them without saying so."
+        },
+        {
+          "id": "walking-skeleton",
+          "label": "Walking skeleton",
+          "hint": "Get a thin version working end to end first, then fill it in.",
+          "effect": "plan",
+          "guidance": "Plan a thin end-to-end slice first that runs through every layer with minimal behaviour, then add depth step by step. Every step leaves the project runnable."
+        },
+        {
+          "id": "milestones",
+          "label": "Milestones",
+          "hint": "Split the work into stages that each work on their own.",
+          "effect": "plan",
+          "guidance": "Split the plan into a few ordered milestones. Each milestone ends in a working, checkable state and says how to verify it before the next one starts."
+        },
+        {
+          "id": "ui-mock-first",
+          "label": "UI mock first",
+          "hint": "Build the screens with fake data before wiring up real logic.",
+          "effect": "plan",
+          "guidance": "Plan the user interface first with static or fake data so the screens and flows can be reviewed, then connect real data and logic behind them."
+        },
+        {
+          "id": "characterization-tests",
+          "label": "Characterization tests",
+          "hint": "Pin down what existing code does today before changing it.",
+          "effect": "plan",
+          "guidance": "Before changing existing behaviour, add tests that record what the current code does for the paths the change touches. Keep them passing unless the task asks for that behaviour to change, and say so where it does."
+        }
+      ]
+    }
+  ],
+  "preview": [
+    {
+      "id": "php",
+      "when": {
+        "files": ["index.php"]
+      },
+      "run": ["php", "-S", "127.0.0.1:8000"],
+      "kind": "server",
+      "note": "PHP's built-in development server.",
+      "url": "http://127.0.0.1:8000/"
+    }
+  ],
+  "research": {
+    "lenses": [
+      {
+        "id": "seo",
+        "label": "SEO",
+        "ask": "For a web app or site: what do search engines need (metadata, structured data, rendering, sitemaps)?",
+        "web": true
+      },
+      {
+        "id": "performance",
+        "label": "Performance budgets",
+        "ask": "Which performance budgets and metrics apply (for example Core Web Vitals, bundle size, response times)?",
+        "web": true
+      },
+      {
+        "id": "responsive",
+        "label": "Responsive breakpoints",
+        "ask": "Which screen sizes and breakpoints should the interface support, and how do similar products adapt?",
+        "web": true
+      },
+      {
+        "id": "app-store",
+        "label": "App store guidelines",
+        "ask": "For a mobile or desktop app: which store review guidelines and platform rules apply?",
+        "web": true
+      },
+      {
+        "id": "api-design",
+        "label": "API versioning, auth and limits",
+        "ask": "For an API: how should it be versioned, authenticated and rate limited, following common practice?",
+        "web": true
+      },
+      {
+        "id": "game-design",
+        "label": "Game engine, controls and saves",
+        "ask": "For a game: which engine fits, what controls do players expect, and how is progress saved?",
+        "web": true
+      }
+    ]
+  },
+  "deploy": {
+    "targets": [
+      {
+        "id": "github-pages",
+        "label": "GitHub Pages",
+        "classes": ["static-site", "spa", "docs-site"],
+        "hosting": ["static-host"],
+        "freeTier": "Included with GitHub's plans for public repositories, within GitHub's usage limits; private sites need a paid plan.",
+        "cost": "Usually no extra charge for a small public site; check the limits on size, bandwidth and builds.",
+        "coldStarts": "None: the built files are served as they are.",
+        "customDomains": "Supported, with an HTTPS certificate once DNS points at GitHub.",
+        "dataResidency": "Served from GitHub's global network; you cannot choose a region.",
+        "configs": ["github-actions"],
+        "needs": "git, and the GitHub CLI (gh) to open the repository",
+        "steps": [
+          {
+            "label": "Commit the workflow, then push it",
+            "run": "git push origin {branch}"
+          },
+          {
+            "label": "In the repository settings, open Pages and set Source to GitHub Actions",
+            "note": "The workflow then publishes the site on every push to the branch it watches."
+          },
+          {
+            "label": "Open the repository in your browser",
+            "run": "gh browse"
+          }
+        ]
+      },
+      {
+        "id": "netlify",
+        "label": "Netlify",
+        "classes": ["static-site", "spa", "docs-site", "serverless"],
+        "hosting": ["vercel-netlify"],
+        "freeTier": "A starter tier for personal projects, with monthly limits on bandwidth, build minutes and function calls.",
+        "cost": "Paid plans are billed per team member; usage over the limits is billed or paused, depending on the plan.",
+        "coldStarts": "Static files: none. Functions can take a moment on the first call after they were idle.",
+        "customDomains": "Supported, with HTTPS certificates Netlify manages.",
+        "dataResidency": "Static files come from a global network; where functions run depends on the plan.",
+        "configs": ["netlify"],
+        "needs": "Node.js (the Netlify CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Netlify",
+            "run": "npx netlify-cli login"
+          },
+          {
+            "label": "Link this folder to a Netlify site",
+            "run": "npx netlify-cli init"
+          },
+          {
+            "label": "Deploy a draft to check it",
+            "run": "npx netlify-cli deploy --dir {dir}"
+          },
+          {
+            "label": "Deploy to production",
+            "run": "npx netlify-cli deploy --prod --dir {dir}"
+          }
+        ]
+      },
+      {
+        "id": "vercel",
+        "label": "Vercel",
+        "classes": ["static-site", "spa", "server-app", "serverless"],
+        "hosting": ["vercel-netlify"],
+        "freeTier": "A hobby tier for personal, non-commercial projects, with limits on bandwidth, builds and function time.",
+        "cost": "Commercial use needs a paid plan, billed per member, plus usage over the included amounts.",
+        "coldStarts": "Static files: none. Server functions can start slowly after being idle.",
+        "customDomains": "Supported, with HTTPS certificates Vercel manages.",
+        "dataResidency": "Functions run in a region you pick in the project settings; static files come from a global network.",
+        "configs": ["vercel"],
+        "needs": "Node.js (the Vercel CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Vercel",
+            "run": "npx vercel login"
+          },
+          {
+            "label": "Deploy a preview to check it",
+            "run": "npx vercel"
+          },
+          {
+            "label": "Deploy to production",
+            "run": "npx vercel --prod"
+          }
+        ]
+      },
+      {
+        "id": "cloudflare-pages",
+        "label": "Cloudflare Pages",
+        "classes": ["static-site", "spa", "docs-site"],
+        "hosting": ["vercel-netlify"],
+        "freeTier": "A starter tier with a monthly build limit and generous bandwidth for static files.",
+        "cost": "Paid plans add builds and features; Workers functions are billed by requests over the included amount.",
+        "coldStarts": "Static files: none. Functions start quickly, but have CPU time limits.",
+        "customDomains": "Supported, with HTTPS; easiest when the domain uses Cloudflare DNS.",
+        "dataResidency": "Served from Cloudflare's global network; regional rules need a paid plan.",
+        "configs": [],
+        "needs": "Node.js (Wrangler, the Cloudflare CLI, runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Cloudflare",
+            "run": "npx wrangler login"
+          },
+          {
+            "label": "Build the site first if it has a build step",
+            "note": "The command below uploads the built folder."
+          },
+          {
+            "label": "Deploy the built files",
+            "run": "npx wrangler pages deploy {dir} --project-name {name}"
+          }
+        ]
+      },
+      {
+        "id": "render",
+        "label": "Render",
+        "classes": ["server-app", "container"],
+        "hosting": ["render-fly"],
+        "freeTier": "A starter instance type for trying things out; it sleeps when idle and has monthly hour limits.",
+        "cost": "Always-on instances and databases are billed per month by size.",
+        "coldStarts": "Starter instances sleep after idle time, so the first request after that is slow.",
+        "customDomains": "Supported, with HTTPS certificates Render manages.",
+        "dataResidency": "You pick a region per service (a few regions in the US, Europe and Asia).",
+        "configs": ["dockerfile", "env-example"],
+        "needs": "git, and a Render account connected to your Git host",
+        "steps": [
+          {
+            "label": "Push the branch to your Git host",
+            "run": "git push origin {branch}"
+          },
+          {
+            "label": "In the Render dashboard, create a Web Service from this repository and choose Docker",
+            "note": "Set each variable from .env.example in the service settings, never in the repository."
+          }
+        ]
+      },
+      {
+        "id": "fly",
+        "label": "Fly.io",
+        "classes": ["server-app", "container"],
+        "hosting": ["render-fly", "container"],
+        "freeTier": "No standing free tier for new accounts; small machines cost little and can stop when idle.",
+        "cost": "Billed by machine size and running time, plus storage and bandwidth.",
+        "coldStarts": "Machines set to stop when idle take a moment to start on the next request.",
+        "customDomains": "Supported, with HTTPS certificates Fly manages.",
+        "dataResidency": "You choose the regions your machines run in.",
+        "configs": ["fly", "dockerfile", "env-example"],
+        "needs": "flyctl, the Fly.io CLI",
+        "steps": [
+          {
+            "label": "Sign in to Fly.io",
+            "run": "fly auth login"
+          },
+          {
+            "label": "Create the app from fly.toml (no deploy yet)",
+            "run": "fly launch --no-deploy --copy-config --name {name}"
+          },
+          {
+            "label": "Set each secret the app reads (one per variable in .env.example)",
+            "run": "fly secrets set NAME=value",
+            "note": "Replace NAME and value; secrets are stored by Fly, never in the repository."
+          },
+          {
+            "label": "Deploy",
+            "run": "fly deploy"
+          }
+        ]
+      },
+      {
+        "id": "railway",
+        "label": "Railway",
+        "classes": ["server-app", "container"],
+        "hosting": ["render-fly"],
+        "freeTier": "A trial credit for new accounts; after that a monthly plan with included usage.",
+        "cost": "Billed by the CPU, memory and network your services use, on top of the plan.",
+        "coldStarts": "Services keep running unless you turn on sleeping, so no cold starts by default.",
+        "customDomains": "Supported, with HTTPS certificates Railway manages.",
+        "dataResidency": "You pick a region per service from the regions Railway offers.",
+        "configs": ["dockerfile", "env-example"],
+        "needs": "Node.js (the Railway CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Railway",
+            "run": "npx @railway/cli login"
+          },
+          {
+            "label": "Create a project for this folder",
+            "run": "npx @railway/cli init"
+          },
+          {
+            "label": "Deploy",
+            "run": "npx @railway/cli up"
+          }
+        ]
+      },
+      {
+        "id": "vps-docker",
+        "label": "Your own server (Docker)",
+        "classes": ["server-app", "container"],
+        "hosting": ["self-hosted"],
+        "freeTier": "No provider tier: you pay for the server you rent, or use a machine you have.",
+        "cost": "A small virtual server typically costs a few dollars a month; you also run updates and backups yourself.",
+        "coldStarts": "None while the container keeps running.",
+        "customDomains": "Up to you: point DNS at the server and put a reverse proxy with HTTPS in front.",
+        "dataResidency": "Wherever the server is.",
+        "configs": ["dockerfile", "env-example"],
+        "needs": "Docker on the server",
+        "steps": [
+          {
+            "label": "Build the image (on the server, or build and push it from here)",
+            "run": "docker build -t {name} ."
+          },
+          {
+            "label": "Run it with the variables from your .env file",
+            "run": "docker run -d --name {name} --restart unless-stopped --env-file .env -p {port}:{port} {name}",
+            "note": "Keep .env on the server only; put a reverse proxy with HTTPS in front of the port."
+          }
+        ]
+      },
+      {
+        "id": "container-host",
+        "label": "Any container host",
+        "classes": ["container", "server-app"],
+        "hosting": ["container"],
+        "freeTier": "Depends on the host: some managed container services include a small monthly allowance.",
+        "cost": "Billed by the host for CPU, memory and requests; a registry may bill for storage.",
+        "coldStarts": "Hosts that scale to zero start a container on the first request after idle time.",
+        "customDomains": "Supported by most hosts, usually with managed HTTPS.",
+        "dataResidency": "You choose the region when you create the service.",
+        "configs": ["dockerfile", "env-example"],
+        "needs": "Docker, and a container registry you can push to",
+        "steps": [
+          {
+            "label": "Build the image",
+            "run": "docker build -t {name}:{version} ."
+          },
+          {
+            "label": "Tag it for your registry (replace REGISTRY with yours)",
+            "run": "docker tag {name}:{version} REGISTRY/{name}:{version}"
+          },
+          {
+            "label": "Push it",
+            "run": "docker push REGISTRY/{name}:{version}"
+          },
+          {
+            "label": "Create a service from the image in your host's console",
+            "note": "Set the variables from .env.example there, never in the image."
+          }
+        ]
+      },
+      {
+        "id": "cloudflare-workers",
+        "label": "Cloudflare Workers",
+        "classes": ["serverless"],
+        "freeTier": "A starter tier with a daily request limit and short CPU time per request.",
+        "cost": "A paid plan raises the limits; requests and CPU time over the included amounts are billed.",
+        "coldStarts": "Workers start quickly; heavy dependencies make the first request slower.",
+        "customDomains": "Supported, easiest with Cloudflare DNS.",
+        "dataResidency": "Runs on Cloudflare's global network; regional rules need a paid plan.",
+        "configs": ["env-example"],
+        "needs": "Node.js (Wrangler runs through npx)",
+        "steps": [
+          {
+            "label": "Sign in to Cloudflare",
+            "run": "npx wrangler login"
+          },
+          {
+            "label": "Deploy the worker",
+            "run": "npx wrangler deploy"
+          }
+        ]
+      },
+      {
+        "id": "npm",
+        "label": "npm registry",
+        "classes": ["package"],
+        "freeTier": "Publishing public packages has no fee; private packages need a paid plan.",
+        "cost": "Organizations with private packages pay per member.",
+        "coldStarts": "Not applicable: people install the package.",
+        "customDomains": "Not applicable.",
+        "dataResidency": "Packages are public and mirrored worldwide once published; a version cannot be changed later.",
+        "configs": [],
+        "needs": "Node.js and an npm account (two-factor sign-in recommended)",
+        "steps": [
+          {
+            "label": "Sign in to npm",
+            "run": "npm login"
+          },
+          {
+            "label": "See exactly which files would be published",
+            "run": "npm publish --dry-run"
+          },
+          {
+            "label": "Publish",
+            "run": "npm publish"
+          }
+        ]
+      },
+      {
+        "id": "pypi",
+        "label": "PyPI",
+        "classes": ["package"],
+        "freeTier": "Publishing to PyPI has no fee.",
+        "cost": "No hosting cost for public packages.",
+        "coldStarts": "Not applicable: people install the package.",
+        "customDomains": "Not applicable.",
+        "dataResidency": "Packages are public and mirrored worldwide once published; a file cannot be replaced later.",
+        "configs": [],
+        "needs": "Python, and a PyPI account with an API token kept outside the repository",
+        "steps": [
+          {
+            "label": "Install the build tools",
+            "run": "python -m pip install --upgrade build twine"
+          },
+          {
+            "label": "Build the package",
+            "run": "python -m build"
+          },
+          {
+            "label": "Check the built files",
+            "run": "python -m twine check dist/*"
+          },
+          {
+            "label": "Upload to PyPI (it asks for your token)",
+            "run": "python -m twine upload dist/*"
+          }
+        ]
+      },
+      {
+        "id": "github-releases",
+        "label": "GitHub Releases",
+        "classes": ["desktop-installer", "package"],
+        "freeTier": "Included with GitHub's plans, within its limits on file size and bandwidth.",
+        "cost": "Usually no extra charge for release files; check the size limits for large installers.",
+        "coldStarts": "Not applicable: people download the files.",
+        "customDomains": "Not applicable (downloads come from github.com).",
+        "dataResidency": "Files are served from GitHub's global network.",
+        "configs": ["github-actions"],
+        "needs": "git and the GitHub CLI (gh)",
+        "steps": [
+          {
+            "label": "Tag the version",
+            "run": "git tag v{version}"
+          },
+          {
+            "label": "Push the tag",
+            "run": "git push origin v{version}"
+          },
+          {
+            "label": "Create the release with notes",
+            "run": "gh release create v{version} --generate-notes"
+          },
+          {
+            "label": "Attach the installers your build made (or let the workflow attach them)",
+            "note": "Unsigned installers trigger warnings on Windows and macOS; sign them before wide release."
+          }
+        ]
+      },
+      {
+        "id": "app-stores",
+        "label": "App Store and Google Play",
+        "classes": ["mobile-app"],
+        "hosting": ["app-stores"],
+        "freeTier": "Not a hosting tier: each store charges its own developer account fee.",
+        "cost": "Apple's developer program has a yearly fee and Google Play a one-time fee; both take a share of sales.",
+        "coldStarts": "Not applicable: people install the app.",
+        "customDomains": "Not applicable.",
+        "dataResidency": "The app runs on the device; any backend it calls has its own region.",
+        "configs": [],
+        "needs": "An Apple Developer account and a Google Play Console account",
+        "steps": [
+          {
+            "label": "Apple: enroll in the Apple Developer Program, then upload a signed build with Xcode or Transporter"
+          },
+          {
+            "label": "Google: create the app in Play Console and upload a signed Android App Bundle"
+          },
+          {
+            "label": "Both: prepare the store listing (screenshots, description, a privacy policy URL, the content rating)",
+            "note": "Each store reviews the app before it goes live; plan for a few days."
+          }
+        ]
+      },
+      {
+        "id": "surge",
+        "label": "Surge",
+        "classes": ["static-site", "docs-site", "spa"],
+        "freeTier": "A free plan for static sites on a surge.sh address, with limits. Check the provider's current pricing.",
+        "cost": "A paid plan adds features such as HTTPS on your own domain and password protection.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported: point the domain at Surge, then publish with the domain instead of the surge.sh name. HTTPS on your own domain needs the paid plan.",
+        "dataResidency": "Files are served from Surge's own network; there is no region to choose.",
+        "configs": [],
+        "needs": "Node.js (the Surge CLI runs through npx)",
+        "steps": [
+          {
+            "label": "Build the site first if it has a build step",
+            "note": "The command below publishes the folder as it is: the built files, with index.html at its top."
+          },
+          {
+            "label": "Publish the folder to a surge.sh address",
+            "run": "npx surge {dir} {name}.surge.sh",
+            "note": "The first time, the Surge CLI asks for an email and a password in the terminal to make your account. If the name is taken, pick another."
+          },
+          {
+            "label": "For a single-page app, answer every address with the app",
+            "note": "Copy index.html to 200.html in the same folder before you publish, so links to inner pages load the app."
+          },
+          {
+            "label": "Use your own domain (optional)",
+            "note": "Point the domain at Surge as its help pages say, then run the publish command with your domain in place of the surge.sh address."
+          },
+          {
+            "label": "Take it down when you no longer want it online",
+            "run": "npx surge teardown {name}.surge.sh"
+          }
+        ]
+      },
+      {
+        "id": "firebase-hosting",
+        "label": "Firebase Hosting",
+        "classes": ["static-site", "spa"],
+        "freeTier": "The Spark plan includes a no-cost allowance of storage and transfer for Hosting. Check the provider's current pricing.",
+        "cost": "The pay-as-you-go Blaze plan is only needed for some features (such as Cloud Functions); usage past the allowance is billed there.",
+        "coldStarts": "Static files: none.",
+        "customDomains": "Supported, with HTTPS certificates Firebase provisions.",
+        "dataResidency": "Static files are served from a global CDN; the Firebase project has a default location.",
+        "configs": ["firebase", "firebaserc"],
+        "needs": "Node.js and the Firebase CLI (firebase-tools, installed with npm)",
+        "steps": [
+          {
+            "label": "Install the Firebase CLI",
+            "run": "npm install -g firebase-tools"
+          },
+          {
+            "label": "Sign in to Firebase",
+            "run": "firebase login",
+            "note": "It opens your browser to sign in. Dim Factory never signs in for you and never keeps the token."
+          },
+          {
+            "label": "Set up Hosting for this folder",
+            "run": "firebase init hosting",
+            "note": "Pick or create a Firebase project. For the public directory, give the folder with your built files (index.html at its top). For a single-page app, answer Yes to rewriting all URLs to /index.html. Do not let it overwrite your index.html."
+          },
+          {
+            "label": "Check the project id",
+            "note": "If the Deploy step wrote .firebaserc, replace your-firebase-project-id with your own project id (firebase init does this when you pick a project)."
+          },
+          {
+            "label": "Deploy",
+            "run": "firebase deploy --only hosting"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "focus": [
+      "No secret key, token or password in browser code, in the built files or in a VITE_, NEXT_PUBLIC_, REACT_APP_ or PUBLIC_ variable: everything the page loads is public.",
+      "Prefer APIs that need no key. A paid or private key is used only from a small server function (Netlify or Cloudflare functions) that reads it from the host's settings; the page calls that function.",
+      "Keys that are public by design (a Supabase anon key, a Google Maps browser key) are fine in the page only when restricted: row level security on every table, or the key limited to the site's own domain.",
+      "Form input, the address bar and anything an API returns are untrusted: shown as text (React's normal rendering, textContent), never as HTML (no dangerouslySetInnerHTML or innerHTML).",
+      "No third-party trackers, ads or analytics unless the user asked for them, and no scripts, fonts or pictures loaded from other websites.",
+      "A form that sends personal details says what happens to them, and sends them only to the place the user chose."
+    ]
+  }
+}

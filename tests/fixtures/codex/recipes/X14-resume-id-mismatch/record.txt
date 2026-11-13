@@ -1,0 +1,4 @@
+# X14-resume-id-mismatch: thread/resume answers another thread than the one asked for: the echoed id must match, so the pass fails resume_failed (retried fresh by the engine) and no turn starts.
+# Cannot be provoked (the server never answers another thread): stays synthesized.
+# A fresh git-init copy of tests/fixtures/sandboxes/ts-small as <sandbox>; never your own ~/.codex.
+node scripts/record-fixture.mjs --codex-app-server --bin "<codex.exe>" --codex-home "<fixture CODEX_HOME>" --cwd "<sandbox>" --out tests/fixtures/codex/app-server/X14-resume-id-mismatch --id X14 --slug resume-id-mismatch --cli-version <x.y.z> --timing off --stdin tests/fixtures/codex/recipes/X14-resume-id-mismatch/stdin.jsonl --pass-file tests/fixtures/codex/recipes/X14-resume-id-mismatch/pass.json --var threadId=<thread id>
